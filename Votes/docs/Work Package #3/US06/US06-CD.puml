@@ -1,0 +1,55 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+hide circle
+skinparam classAttributeIconSize 0
+
+
+class ReviewController {
+    +Vote(Vote newVote): ResponseEntity<Vote>
+    +findReviewsBySkuSortedByVotesAndDate(final String sku): Iterable<Object>
+    +create(Review newReview): ResponseEntity<Review>
+    +withdrawReview(final Long reviewId): ResponseEntity<Review>
+}
+
+interface VoteService <<interface>> {
+    +create(Vote newVote): Vote
+}
+
+class VoteServiceImpl{
+    +create(Vote newVote): Vote
+}
+
+class Review {
+    - productID
+    - reviewID
+    - text
+    - rating
+    Review(Long reviewId, Long productId, String text, Long rating)
+}
+
+class Vote {
+    - voteId
+    - userId
+    - reviewId
+    - vote
+    - reason
+    Vote(Long voteId, boolean vote, String reason, Long userId, Long reviewId)
+}
+
+class VoteRepository {
+    +save(Vote newVote): Vote
+}
+
+VoteRepository "1" --> "0.." Review:  records
+
+ReviewController ..> VoteService
+VoteServiceImpl ..> VoteRepository
+VoteServiceImpl ..> Review
+VoteService ..> Review
+Review "1" ..> "0..*" Vote: has
+
+VoteServiceImpl .up.|> VoteService
+
+
+@enduml

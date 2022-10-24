@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="520px" preserveAspectRatio="none" style="width:948px;height:520px;background:#FFFFFF;" version="1.1" viewBox="0 0 948 520" width="948px" zoomAndPan="magnify"><defs/><g><rect fill="#FFFFFF" height="336.8672" style="stroke:#181818;stroke-width:1.0;" width="10" x="48.5" y="92.6094"/><rect fill="#FFFFFF" height="298.5156" style="stroke:#181818;stroke-width:1.0;" width="10" x="257.5" y="114.9609"/><rect fill="#FFFFFF" height="284.1641" style="stroke:#181818;stroke-width:1.0;" width="10" x="436.5" y="145.3125"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="441.5" y="206.0156"/><rect fill="#FFFFFF" height="253.8125" style="stroke:#181818;stroke-width:1.0;" width="10" x="676.5" y="175.6641"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="869.5" y="292.0703"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="869.5" y="352.7734"/><rect height="170.1094" style="stroke:#000000;stroke-width:1.5;fill:none;" width="932" x="10" y="251.3672"/><line style="stroke:#181818;stroke-width:0.5;fill:none;stroke-dasharray:5.0,5.0;" x1="53" x2="53" y1="82.6094" y2="438.4766"/><line style="stroke:#181818;stroke-width:0.5;fill:none;stroke-dasharray:5.0,5.0;" x1="262" x2="262" y1="82.6094" y2="438.4766"/><line style="stroke:#181818;stroke-width:0.5;fill:none;stroke-dasharray:5.0,5.0;" x1="441" x2="441" y1="82.6094" y2="438.4766"/><line style="stroke:#181818;stroke-width:0.5;fill:none;stroke-dasharray:5.0,5.0;" x1="681" x2="681" y1="82.6094" y2="438.4766"/><line style="stroke:#181818;stroke-width:0.5;fill:none;stroke-dasharray:5.0,5.0;" x1="874" x2="874" y1="82.6094" y2="438.4766"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="20" y="79.5332">Customer</text><ellipse cx="53.5" cy="13.5" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M53.5,21.5 L53.5,48.5 M40.5,29.5 L66.5,29.5 M53.5,48.5 L40.5,63.5 M53.5,48.5 L66.5,63.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="20" y="452.0098">Customer</text><ellipse cx="53.5" cy="463.5859" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M53.5,471.5859 L53.5,498.5859 M40.5,479.5859 L66.5,479.5859 M53.5,498.5859 L40.5,513.5859 M53.5,498.5859 L66.5,513.5859 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="129" x="198" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="205" y="71.5332">:ProductController</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="129" x="198" y="437.4766"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="205" y="459.0098">:ProductController</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="209" x="337" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="195" x="344" y="71.5332">productService:ProductService</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="209" x="337" y="437.4766"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="195" x="344" y="459.0098">productService:ProductService</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="251" x="556" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="237" x="563" y="71.5332">productRepository:ProductRepository</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="251" x="556" y="437.4766"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="237" x="563" y="459.0098">productRepository:ProductRepository</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="115" x="817" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="101" x="824" y="71.5332">product:Product</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="115" x="817" y="437.4766"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="101" x="824" y="459.0098">product:Product</text><rect fill="#FFFFFF" height="336.8672" style="stroke:#181818;stroke-width:1.0;" width="10" x="48.5" y="92.6094"/><rect fill="#FFFFFF" height="298.5156" style="stroke:#181818;stroke-width:1.0;" width="10" x="257.5" y="114.9609"/><rect fill="#FFFFFF" height="284.1641" style="stroke:#181818;stroke-width:1.0;" width="10" x="436.5" y="145.3125"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="441.5" y="206.0156"/><rect fill="#FFFFFF" height="253.8125" style="stroke:#181818;stroke-width:1.0;" width="10" x="676.5" y="175.6641"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="869.5" y="292.0703"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="869.5" y="352.7734"/><polygon fill="#181818" points="245.5,110.9609,255.5,114.9609,245.5,118.9609,249.5,114.9609" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="58.5" x2="251.5" y1="114.9609" y2="114.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="65.5" y="110.1045">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="118" x="76.5" y="110.1045">asks to list products</text><polygon fill="#181818" points="424.5,141.3125,434.5,145.3125,424.5,149.3125,428.5,145.3125" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="267.5" x2="430.5" y1="145.3125" y2="145.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="274.5" y="140.4561">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="72" x="285.5" y="140.4561">findCatalog()</text><polygon fill="#181818" points="664.5,171.6641,674.5,175.6641,664.5,179.6641,668.5,175.6641" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="446.5" x2="670.5" y1="175.6641" y2="175.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="453.5" y="170.8076">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="72" x="464.5" y="170.8076">findCatalog()</text><polygon fill="#181818" points="462.5,202.0156,452.5,206.0156,462.5,210.0156,458.5,206.0156" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="456.5" x2="675.5" y1="206.0156" y2="206.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="468.5" y="201.1592">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="17" x="479.5" y="201.1592">list</text><polygon fill="#181818" points="278.5,232.3672,268.5,236.3672,278.5,240.3672,274.5,236.3672" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="272.5" x2="435.5" y1="236.3672" y2="236.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="284.5" y="231.5107">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="17" x="295.5" y="231.5107">list</text><path d="M10,251.3672 L83,251.3672 L83,259.7188 L73,269.7188 L10,269.7188 L10,251.3672 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;"/><rect fill="none" height="170.1094" style="stroke:#000000;stroke-width:1.5;" width="932" x="10" y="251.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="28" x="25" y="265.8623">loop</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="144" x="98" y="264.7861">[for each 'product' in 'list']</text><polygon fill="#181818" points="857.5,288.0703,867.5,292.0703,857.5,296.0703,861.5,292.0703" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="267.5" x2="863.5" y1="292.0703" y2="292.0703"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="274.5" y="287.2139">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="94" x="285.5" y="287.2139">getDesignation()</text><polygon fill="#181818" points="278.5,318.4219,268.5,322.4219,278.5,326.4219,274.5,322.4219" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="272.5" x2="873.5" y1="322.4219" y2="322.4219"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="284.5" y="317.5654">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="66" x="295.5" y="317.5654">designation</text><polygon fill="#181818" points="857.5,348.7734,867.5,352.7734,857.5,356.7734,861.5,352.7734" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="267.5" x2="863.5" y1="352.7734" y2="352.7734"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="274.5" y="347.917">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="49" x="285.5" y="347.917">getSku()</text><polygon fill="#181818" points="278.5,379.125,268.5,383.125,278.5,387.125,274.5,383.125" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="272.5" x2="873.5" y1="383.125" y2="383.125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="284.5" y="378.2686">9</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="21" x="295.5" y="378.2686">sku</text><polygon fill="#181818" points="69.5,409.4766,59.5,413.4766,69.5,417.4766,65.5,413.4766" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="63.5" x2="261.5" y1="413.4766" y2="413.4766"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="75.5" y="408.6201">10</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="157" x="93.5" y="408.6201">shows designation and sku</text><!--MD5=[2841b6dc7000e55e0f625cc7ff0144b8]
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autoactivate on
+autonumber
+
+actor "Customer" as User
+participant ":ProductController" as Ctrl
+participant "productService:ProductService" as Service
+participant "productRepository:ProductRepository" as Repo
+participant "product:Product" as Product
+
+activate User
+
+User -> Ctrl: asks to list products
+Ctrl -> Service: findCatalog()
+Service -> Repo: findCatalog()
+Repo -> Service: list
+Service - -> Ctrl: list
+loop for each 'product' in 'list'
+    Ctrl -> Product: getDesignation()
+    Product - -> Ctrl: designation
+    Ctrl -> Product: getSku()
+    Product - -> Ctrl: sku
+    Ctrl - -> User: shows designation and sku
+end loop
+
+@enduml
+
+@startuml
+
+autoactivate on
+autonumber
+
+actor "Customer" as User
+participant ":ProductController" as Ctrl
+participant "productService:ProductService" as Service
+participant "productRepository:ProductRepository" as Repo
+participant "product:Product" as Product
+
+activate User
+
+User -> Ctrl: asks to list products
+Ctrl -> Service: findCatalog()
+Service -> Repo: findCatalog()
+Repo -> Service: list
+Service - -> Ctrl: list
+loop for each 'product' in 'list'
+    Ctrl -> Product: getDesignation()
+    Product - -> Ctrl: designation
+    Ctrl -> Product: getSku()
+    Product - -> Ctrl: sku
+    Ctrl - -> User: shows designation and sku
+end loop
+
+@enduml
+
+PlantUML version 1.2022.4(Sat Apr 09 14:29:17 BST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

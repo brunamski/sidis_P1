@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autoactivate on
+autonumber
+
+actor "Registered Customer" as User
+participant ":ReviewController" as Ctrl
+participant "reviewService:ReviewService" as Service
+participant "reviewRepository:ReviewRepository" as Repo
+participant "review:Review" as Review
+
+activate User
+
+User -> Ctrl: asks to review and rate a product
+Ctrl -> Service: create(Review newReview)
+Service -> Review**: create(Review newReview)
+Service --> Repo**: save(review)
+Service --> Ctrl: review
+Ctrl --> User: shows review
+
+@enduml
+

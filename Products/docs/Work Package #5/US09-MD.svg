@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="434px" preserveAspectRatio="none" style="width:265px;height:434px;background:#FFFFFF;" version="1.1" viewBox="0 0 265 434" width="265px" zoomAndPan="magnify"><defs><filter height="300%" id="f1uuwsr1ydin61" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[ae4a37ce8a7b9f65daef4adfd1c7dc39]
+class AggregatedRating--><rect codeLine="7" fill="#FEFECE" filter="url(#f1uuwsr1ydin61)" height="129.9453" id="AggregatedRating" style="stroke:#A80036;stroke-width:1.5;" width="105" x="7" y="291"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="99" x="10" y="308.457">AggregatedRating</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="111" y1="316.0938" y2="316.0938"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="48" x="13" y="331.5127">-one_Star</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="49" x="13" y="345.3486">-two_Star</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="55" x="13" y="359.1846">-three_Star</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="50" x="13" y="373.0205">-four_Star</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="48" x="13" y="386.8564">-five_Star</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="44" x="13" y="400.6924">-average</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="60" x="13" y="414.5283">-totalRatings</text><!--MD5=[eb0e8f8ddfdc21c3fdb48447501fec67]
+class Review--><rect codeLine="17" fill="#FEFECE" filter="url(#f1uuwsr1ydin61)" height="143.7813" id="Review" style="stroke:#A80036;stroke-width:1.5;" width="86" x="165.5" y="7"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="40" x="188.5" y="24.457">Review</text><line style="stroke:#A80036;stroke-width:1.5;" x1="166.5" x2="250.5" y1="32.0938" y2="32.0938"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="46" x="171.5" y="47.5127">-reviewId</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="31" x="171.5" y="61.3486">-rating</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="22" x="171.5" y="75.1846">-text</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="21" x="171.5" y="89.0205">-sku</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="34" x="171.5" y="102.8564">-userId</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="74" x="171.5" y="116.6924">-publishingDate</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="34" x="171.5" y="130.5283">-status</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="39" x="171.5" y="144.3643">-funfact</text><!--MD5=[72136138052d025cffdce3c22fbd185f]
+class Product--><rect codeLine="28" fill="#FEFECE" filter="url(#f1uuwsr1ydin61)" height="102.2734" id="Product" style="stroke:#A80036;stroke-width:1.5;" width="71" x="24" y="28"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="42" x="38.5" y="45.457">Product</text><line style="stroke:#A80036;stroke-width:1.5;" x1="25" x2="94" y1="53.0938" y2="53.0938"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="59" x="30" y="68.5127">-designation</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="57" x="30" y="82.3486">-description</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="50" x="30" y="96.1846">-productID</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="47" x="30" y="110.0205">-setOfImg</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="21" x="30" y="123.8564">-sku</text><!--MD5=[418687281c593c8dd812c04f2d15bfcd]
+link Product to Review--><path codeLine="36" d="M95.19,79 C116.28,79 143.13,79 165.4,79 " fill="none" id="Product-Review" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="122.25,67.1758,113.2049,64.2369,113.2049,70.1147,122.25,67.1758" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="21" x="126.25" y="72.4951">has</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="102.9055" y="74.9278">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="137.6009" y="93.712">0..*</text><!--MD5=[b90d00b95330d3d59da11c4b5c742abc]
+link Product to AggregatedRating--><path codeLine="37" d="M59.5,130.12 C59.5,175.28 59.5,241.91 59.5,290.93 " fill="none" id="Product-AggregatedRating" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="64.5,226.1758,67.4389,217.1307,61.5611,217.1307,64.5,226.1758" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="21" x="73.5" y="226.4951">has</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="52.0078" y="151.9344">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="52.0953" y="279.9999">1</text><!--MD5=[4e44a4eee833345149fa4a9cc2c40472]
+@startuml
+'https://plantuml.com/class-diagram
+
+skinparam classAttributeIconSize 0
+hide circle
+hide methods
+
+class AggregatedRating {
+    - one_Star
+    - two_Star
+    - three_Star
+    - four_Star
+    - five_Star
+    - average
+    - totalRatings
+}
+
+class Review {
+    - reviewId
+    - rating
+    - text
+    - sku
+    - userId
+    - publishingDate
+    - status
+    - funfact
+}
+
+class Product {
+    -designation
+    -description
+    -productID
+    -setOfImg
+    -sku
+}
+
+Product "1" -right- - "0..*" Review:  has >
+Product "1" -down- - "1" AggregatedRating:  has >
+
+
+
+@enduml
+
+@startuml
+
+skinparam classAttributeIconSize 0
+hide circle
+hide methods
+
+class AggregatedRating {
+    - one_Star
+    - two_Star
+    - three_Star
+    - four_Star
+    - five_Star
+    - average
+    - totalRatings
+}
+
+class Review {
+    - reviewId
+    - rating
+    - text
+    - sku
+    - userId
+    - publishingDate
+    - status
+    - funfact
+}
+
+class Product {
+    -designation
+    -description
+    -productID
+    -setOfImg
+    -sku
+}
+
+Product "1" -right- - "0..*" Review:  has >
+Product "1" -down- - "1" AggregatedRating:  has >
+
+
+
+@enduml
+
+PlantUML version 1.2022.1(Tue Feb 01 18:19:58 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

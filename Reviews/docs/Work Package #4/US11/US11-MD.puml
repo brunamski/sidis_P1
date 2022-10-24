@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/class-diagram
+skinparam classAttributeIconSize 0
+hide circle
+hide methods
+
+class Moderator {
+}
+
+class Review {
+     - reviewId
+     - userId
+     - productId
+     - rating
+     - text
+     - publishingDate
+     - funfact
+     - statusId
+}
+
+Moderator "1" -right-- "0..*" Review:  moderates >
+
+
+@enduml

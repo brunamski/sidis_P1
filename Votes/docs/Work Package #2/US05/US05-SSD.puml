@@ -1,0 +1,15 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autoactivate on
+autonumber
+
+actor "Registered/Anonymous Customer" as User
+participant ":System" as System
+
+activate User
+
+User -> System: requests reviews of a product
+User <-- System: shows reviews of a product
+
+@enduml

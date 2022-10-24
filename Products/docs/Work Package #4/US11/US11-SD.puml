@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autoactivate on
+autonumber
+
+actor "Moderator" as Mod
+participant ":ReviewController" as Ctrl
+participant "reviewService:ReviewService" as Service
+participant "reviewServiceImpl:ReviewServiceImpl" as Impl
+participant "reviewRepo:ReviewRepository" as Repo
+
+activate Mod
+
+Mod -> Ctrl: asks to moderate a review
+Ctrl -> Service: findReviewsByUserId
+Service -> Impl :findReviewsByUserId
+Impl -> Repo :findReviewsByUserId
+Repo --> Service: moderated review
+Service --> Ctrl: moderated review
+Ctrl --> Mod: shows moderated review
+
+@enduml

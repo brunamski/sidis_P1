@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autoactivate on
+autonumber
+
+actor "Customer" as User
+participant ":ProductController" as Ctrl
+participant "productService:ProductService" as Service
+participant "productRepository:ProductRepository" as Repo
+participant "product:Product" as Product
+
+activate User
+
+User -> Ctrl: asks to list products
+Ctrl -> Service: findCatalog()
+Service -> Repo: findCatalog()
+Repo -> Service: list
+Service --> Ctrl: list
+loop for each 'product' in 'list'
+    Ctrl -> Product: getDesignation()
+    Product --> Ctrl: designation
+    Ctrl -> Product: getSku()
+    Product --> Ctrl: sku
+    Ctrl --> User: shows designation and sku
+end loop
+
+@enduml

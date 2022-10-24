@@ -1,0 +1,75 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+hide circle
+skinparam classAttributeIconSize 0
+
+
+class ReviewController {
+    +findReviewsBySkuSortedByVotesAndDate(final String sku): Iterable<Object>
+    +create(Review newReview): ResponseEntity<Review>
+    +withdrawReview(final Long reviewId): ResponseEntity<Review>
+}
+
+interface ReviewService <<interface>> {
+    +findReviewsBySkuSortedByVotesAndDate(final String sku): Iterable<Object>
+    +create(Review newReview): Review
+    +deleteById(Long reviewId): void
+}
+
+class ReviewServiceImpl{
+    +findReviewsBySkuSortedByVotesAndDate(final String sku): Iterable<Object>
+    +create(Review newReview): Review
+    +deleteById(Long reviewId): void
+}
+
+class Review {
+    - productID
+    - reviewID
+    - text
+    - rating
+    - userId
+    - publishingDate
+    - funFact
+    - statusId
+    Review(Long reviewId, String sku, String text, Long rating)
+}
+
+class Product {
+    - productId
+    - designation
+    - description
+    - setOfImages
+    - sku
+    - aggregatedRating
+    Product(Long productId, String designation, String description, String setOfImages, Long sku, Long aggregatedRating)
+}
+
+class Vote {
+    - voteId
+    - userId
+    - reviewId
+    - vote
+    - reason
+    Vote(Long voteId, boolean vote, String reason, Long userId, Long reviewId)
+}
+
+class ReviewRepository {
+    +save(Review newReview) : Review
+    +findReviewsBySkuSortedByVotesAndDate(final String sku): List<Object>
+    +deleteByIdIfMatch(Long reviewId): void
+}
+
+ReviewRepository "1" --> "0..*" Review:  records
+
+ReviewController ..> ReviewService
+ReviewServiceImpl ..> ReviewRepository
+ReviewServiceImpl ..> Review
+ReviewService ..> Review
+Review "0..*" ..> "1" Product: has a
+Review "1" ..> "0..*" Vote: has
+
+ReviewServiceImpl .up.|> ReviewService
+
+
+@enduml
