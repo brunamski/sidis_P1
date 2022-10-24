@@ -19,12 +19,14 @@
         </processorPath>
         <module name="Aplication_1" />
         <module name="projeto" />
+        <module name="Autentication" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Aplication_1" options="-parameters" />
+      <module name="Autentication" options="-parameters" />
       <module name="projeto" options="-parameters" />
     </option>
   </component>
