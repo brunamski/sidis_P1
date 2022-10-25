@@ -4,7 +4,6 @@ import java.util.Optional;
 
 import com.example.projeto.domain.models.AggregatedRating;
 import com.example.projeto.domain.models.Product;
-import com.example.projeto.domain.models.Review;
 import com.example.projeto.domain.views.CatalogView;
 
 

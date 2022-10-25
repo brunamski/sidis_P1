@@ -2,7 +2,6 @@ package com.example.projeto.domain.services;
 
 import com.example.projeto.domain.models.AggregatedRating;
 import com.example.projeto.domain.models.Product;
-import com.example.projeto.domain.models.Review;
 import com.example.projeto.domain.repositories.ProductRepository;
 import com.example.projeto.domain.views.CatalogView;
 import org.springframework.beans.factory.annotation.Autowired;

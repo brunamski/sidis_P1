@@ -1,9 +1,7 @@
 package com.example.projeto.controllers;
 
 import com.example.projeto.domain.models.Review;
-import com.example.projeto.domain.models.Vote;
 import com.example.projeto.domain.services.ReviewService;
-import com.example.projeto.domain.services.VoteService;
 import com.example.projeto.domain.views.ReviewView;
 import com.example.projeto.usermanagement.models.Role;
 

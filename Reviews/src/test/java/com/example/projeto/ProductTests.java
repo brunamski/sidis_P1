@@ -1,6 +1,5 @@
 package com.example.projeto;
 
-import com.example.projeto.domain.models.Product;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 
