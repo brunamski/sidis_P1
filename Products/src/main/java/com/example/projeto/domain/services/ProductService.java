@@ -2,7 +2,6 @@ package com.example.projeto.domain.services;
 
 import java.util.Optional;
 
-import com.example.projeto.domain.models.AggregatedRating;
 import com.example.projeto.domain.models.Product;
 import com.example.projeto.domain.views.CatalogView;
 
@@ -26,5 +25,5 @@ public interface ProductService {
 
     void addImage(String filename, String sku);
 
-    AggregatedRating getProductAggregatedRating(Iterable<Review> reviews);
+
 }

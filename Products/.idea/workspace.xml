@@ -5,130 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e136609a-c43b-41e2-8831-0774302936d9" name="Changes" comment="Workpackage#5 documentation finished">
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/src/main/java/com/example/projeto/controllers/ProductController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/src/main/java/com/example/projeto/controllers/ReviewController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/src/main/java/com/example/projeto/controllers/UploadFileResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/src/main/java/com/example/projeto/domain/models/AggregatedRating.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/src/main/java/com/example/projeto/domain/models/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/src/main/java/com/example/projeto/domain/models/ProductDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/src/main/java/com/example/projeto/domain/models/Review.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/src/main/java/com/example/projeto/domain/models/Status.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/src/main/java/com/example/projeto/domain/models/Vote.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/src/main/java/com/example/projeto/domain/repositories/ProductRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/src/main/java/com/example/projeto/domain/repositories/ReviewRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/src/main/java/com/example/projeto/domain/repositories/VoteRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/src/main/java/com/example/projeto/domain/services/FileStorageProperties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/src/main/java/com/example/projeto/domain/services/FileStorageService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/src/main/java/com/example/projeto/domain/services/ProductService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/src/main/java/com/example/projeto/domain/services/ReviewService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/src/main/java/com/example/projeto/domain/services/VoteService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/src/main/java/com/example/projeto/domain/views/CatalogView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/src/main/java/com/example/projeto/domain/views/ReviewView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/models/AggregatedRating.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Votes/.idea/Votes.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Votes/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/auth/api/AuthApi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/auth/api/AuthRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/bootstrap/UserBootstrapper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/projeto/controllers/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/controllers/ReviewController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/models/Review.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/models/Status.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/models/Vote.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/repositories/ReviewRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/repositories/VoteRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/models/AggregatedRating.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/models/ProductDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/models/ProductDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/services/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/services/ReviewService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/services/VoteService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/views/ReviewView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/usermanagement/api/CreateUserRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/usermanagement/api/UpdateUserRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/usermanagement/api/UserAdminApi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/usermanagement/api/UserEditMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/usermanagement/api/UserView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/usermanagement/api/UserViewMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/usermanagement/models/Role.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/usermanagement/models/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/usermanagement/repositories/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/usermanagement/services/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/utils/Utils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/rsa.private.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Reviews/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/SpringConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/auth/api/AuthApi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/auth/api/AuthRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/bootstrap/UserBootstrapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/controllers/ProductController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/controllers/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/controllers/ReviewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/controllers/UploadFileResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/models/AggregatedRating.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/models/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/models/ProductDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/models/Vote.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/repositories/ProductRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/repositories/VoteRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/services/FileStorageProperties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/services/FileStorageService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/services/ProductService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/services/VoteService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/views/CatalogView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/usermanagement/api/CreateUserRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/usermanagement/api/UpdateUserRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/usermanagement/api/UserAdminApi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/usermanagement/api/UserEditMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/usermanagement/api/UserView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/usermanagement/api/UserViewMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/usermanagement/models/Role.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/usermanagement/models/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/usermanagement/repositories/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/usermanagement/services/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/utils/Utils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/test/java/com/example/projeto/ProductTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/src/test/java/com/example/projeto/ProductTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/auth/api/AuthApi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/auth/api/AuthRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/bootstrap/UserBootstrapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/controllers/ProductController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/controllers/ReviewController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/controllers/UploadFileResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/domain/models/AggregatedRating.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/domain/models/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/domain/models/ProductDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/domain/models/Review.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/domain/models/Status.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/domain/repositories/ProductRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/domain/repositories/ReviewRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/domain/services/FileStorageProperties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/domain/services/FileStorageService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/domain/services/ProductService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/domain/services/ReviewService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/domain/views/CatalogView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/domain/views/ReviewView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/usermanagement/api/CreateUserRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/usermanagement/api/UpdateUserRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/usermanagement/api/UserAdminApi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/usermanagement/api/UserEditMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/usermanagement/api/UserView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/usermanagement/api/UserViewMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/usermanagement/models/Role.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/usermanagement/models/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/usermanagement/repositories/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/usermanagement/services/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/utils/Utils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/services/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/services/ReviewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/resources/rsa.private.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/src/main/resources/rsa.private.key" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,22 +86,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Aplication_2" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.17" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "spring.configuration.checksum": "c53fd45b2f336a44d158902c252e2e1c"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Tiago Oliveira\IdeaProjects\psoft-project-g1\src\main\resources\assets" />
@@ -224,7 +114,6 @@
     <configuration name="ProjetoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="Products" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.ProjetoApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -274,6 +163,7 @@
       <workItem from="1666628236623" duration="35000" />
       <workItem from="1666628284758" duration="459000" />
       <workItem from="1666713450342" duration="1602000" />
+      <workItem from="1666769022547" duration="3582000" />
     </task>
     <task id="LOCAL-00001" summary="Updates to docs">
       <created>1653237491192</created>
@@ -390,7 +280,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updates to docs" />

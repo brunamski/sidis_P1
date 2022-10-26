@@ -73,7 +73,7 @@ public class ReviewController {
 
     @Operation(summary = "US07 - To withdraw one of my reviews")
     @DeleteMapping(value = "/review/{id}/withdraw")
-    @RolesAllowed(Role.REGISTERED)
+    //@RolesAllowed(Role.REGISTERED)
     public ResponseEntity<Review> withdrawReview(@PathVariable("id") @Parameter(description = "The id of the review to withdraw") final Long reviewId) {
         //passar para o service
         int voteCount = voteService.getVotesByReviewId(reviewId);

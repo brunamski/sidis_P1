@@ -28,8 +28,8 @@ public class Product {
     @ElementCollection
     private Set<String> setOfImages = new HashSet<String>();
 
-    @Transient
-    private AggregatedRating aggregatedRating;
+    //@Transient
+    //private AggregatedRating aggregatedRating;
 
 
     protected Product() {

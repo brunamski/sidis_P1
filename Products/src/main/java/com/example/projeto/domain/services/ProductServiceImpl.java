@@ -1,6 +1,5 @@
 package com.example.projeto.domain.services;
 
-import com.example.projeto.domain.models.AggregatedRating;
 import com.example.projeto.domain.models.Product;
 import com.example.projeto.domain.repositories.ProductRepository;
 import com.example.projeto.domain.views.CatalogView;
@@ -46,28 +45,5 @@ public class ProductServiceImpl implements ProductService {
         return productRepository.save(newProduct);
     }
 
-    @Override
-    public AggregatedRating getProductAggregatedRating(Iterable<Review> reviews) {
-        int soma = 0;
-        float totalRatings = 0;
-        float[][] ratingArray = new float[2][6];
 
-        for(Review r: reviews){
-            soma = soma + r.getRating();
-            int rating = r.getRating();
-            ratingArray[0][0]++;        //totalRatings
-            ratingArray[0][rating]++;   //total of a star
-        }
-
-        totalRatings = ratingArray[0][0];
-        ratingArray[1][0] = soma / totalRatings;
-        ratingArray[1][1] = (ratingArray[0][1] / totalRatings) * 100;
-        ratingArray[1][2] = (ratingArray[0][2] / totalRatings) * 100;
-        ratingArray[1][3] = (ratingArray[0][3] / totalRatings) * 100;
-        ratingArray[1][4] = (ratingArray[0][4] / totalRatings) * 100;
-        ratingArray[1][5] = (ratingArray[0][5] / totalRatings) * 100;
-
-        AggregatedRating aggregatedRating = new AggregatedRating(ratingArray[1][0], ratingArray[0][0], ratingArray[1][1], ratingArray[1][2], ratingArray[1][3], ratingArray[1][4], ratingArray[1][5]);
-        return aggregatedRating;
-    }
 }

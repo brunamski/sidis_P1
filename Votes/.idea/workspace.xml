@@ -5,31 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e136609a-c43b-41e2-8831-0774302936d9" name="Changes" comment="Workpackage#5 documentation finished">
-      <change beforePath="$PROJECT_DIR$/../Autentication/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/target/generated-sources/annotations/com/example/projeto/usermanagement/api/UserEditMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/target/generated-sources/annotations/com/example/projeto/usermanagement/api/UserEditMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/target/generated-sources/annotations/com/example/projeto/usermanagement/api/UserViewMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/target/generated-sources/annotations/com/example/projeto/usermanagement/api/UserViewMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Products/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Products/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/models/AggregatedRating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Products/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Products/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Products/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Products/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Products/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Products/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../Products/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Products/src/main/java/com/example/projeto/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Products/src/main/java/com/example/projeto/controllers/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Products/src/main/java/com/example/projeto/domain/models/AggregatedRating.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Products/src/main/java/com/example/projeto/domain/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Products/src/main/java/com/example/projeto/domain/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Products/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Products/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Products/src/main/resources/rsa.private.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Reviews/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/target/generated-sources/annotations/com/example/projeto/usermanagement/api/UserEditMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/target/generated-sources/annotations/com/example/projeto/usermanagement/api/UserEditMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/target/generated-sources/annotations/com/example/projeto/usermanagement/api/UserViewMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/target/generated-sources/annotations/com/example/projeto/usermanagement/api/UserViewMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/projeto/usermanagement/api/UserEditMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/projeto/usermanagement/api/UserEditMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/projeto/usermanagement/api/UserViewMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/projeto/usermanagement/api/UserViewMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/services/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/services/ReviewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/resources/rsa.private.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/rsa.private.key" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,21 +61,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.17" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Tiago Oliveira\IdeaProjects\psoft-project-g1\src\main\resources\assets" />
@@ -99,7 +80,6 @@
     <configuration name="ProjetoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="Votes" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.ProjetoApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -147,6 +127,7 @@
       <workItem from="1666101786460" duration="9063000" />
       <workItem from="1666163563602" duration="8493000" />
       <workItem from="1666628319183" duration="539000" />
+      <workItem from="1666772667276" duration="11000" />
     </task>
     <task id="LOCAL-00001" summary="Updates to docs">
       <created>1653237491192</created>

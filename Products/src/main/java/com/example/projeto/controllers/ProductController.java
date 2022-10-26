@@ -1,6 +1,5 @@
 package com.example.projeto.controllers;
 
-import com.example.projeto.domain.models.AggregatedRating;
 import com.example.projeto.domain.models.Product;
 import com.example.projeto.domain.models.ProductDTO;
 import com.example.projeto.domain.services.FileStorageService;
@@ -65,10 +64,10 @@ public class ProductController {
         Product pr;
         if (optionalProduct.isPresent()) {
             Product p = optionalProduct.get();
-            Iterable<Review> reviews = reviewService.findReviewsBySku(sku);
-            AggregatedRating agg = productService.getProductAggregatedRating(reviews);
-            p.setAggregatedRating(agg);
-            ProductDTO productDTO = new ProductDTO(p.getProductId(),p.getDesignation(),p.getSku(),p.getDescription(),p.getAggregatedRating(),p.getSetOfImages());
+            //Iterable<Review> reviews = reviewService.findReviewsBySku(sku);
+            //AggregatedRating agg = productService.getProductAggregatedRating(reviews);
+            //p.setAggregatedRating(agg);
+            ProductDTO productDTO = new ProductDTO(p.getProductId(),p.getDesignation(),p.getSku(),p.getDescription(),p.getSetOfImages());
             return ResponseEntity.ok().body(productDTO);
         } else {
             String baseURL = "http://localhost:8082/api/public/product/" + sku;
@@ -87,7 +86,8 @@ public class ProductController {
 
 
             Product p = mapper.readValue(response.body(), Product.class);
-            ProductDTO productDTO = new ProductDTO(p.getProductId(),p.getDesignation(),p.getSku(),p.getDescription(),p.getAggregatedRating(),p.getSetOfImages());
+            ProductDTO productDTO = new ProductDTO(p.getProductId(),p.getDesignation(),p.getSku(),p.getDescription(),//p.getAggregatedRating(),
+                    p.getSetOfImages());
 
             return ResponseEntity.ok().body(productDTO);
         }
@@ -99,9 +99,9 @@ public class ProductController {
     public ResponseEntity<Product> getProductsByProductName(@PathVariable("name") final String name) {
         final var product = productService.findByProductName(name)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Product Not Found"));
-        Iterable<Review> reviews = reviewService.findReviewsBySku(product.getSku());
-        AggregatedRating agg = productService.getProductAggregatedRating(reviews);
-        product.setAggregatedRating(agg);
+        //Iterable<Review> reviews = reviewService.findReviewsBySku(product.getSku());
+        //AggregatedRating agg = productService.getProductAggregatedRating(reviews);
+        //product.setAggregatedRating(agg);
         return ResponseEntity.ok().body(product);
     }
 
@@ -118,9 +118,9 @@ public class ProductController {
         Optional<Product> optionalProduct = productService.findBySku(sku);
         if (optionalProduct.isPresent()) {
             Product p = optionalProduct.get();
-            Iterable<Review> reviews = reviewService.findReviewsBySku(sku);
-            AggregatedRating agg = productService.getProductAggregatedRating(reviews);
-            p.setAggregatedRating(agg);
+            //Iterable<Review> reviews = reviewService.findReviewsBySku(sku);
+            //AggregatedRating agg = productService.getProductAggregatedRating(reviews);
+            //p.setAggregatedRating(agg);
             return ResponseEntity.ok().body(p);
         }
         throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Product not found!");
@@ -218,9 +218,9 @@ public class ProductController {
                 .body(resource);
     }
 
-    /*public ResponseEntity<Product> getFromAnotherAPI(@PathVariable(value = "sku") final String sku) {
+    public ResponseEntity<Product> getAggFromReviews(@PathVariable(value = "sku") final String sku) throws IOException, InterruptedException {
 
-        String baseURL = "http://localhost:8082/api/public/product" + sku;
+        String baseURL = "http://localhost:8081/api/public/review/product/aggregatedRating/" + sku;
 
         HttpClient client = HttpClient.newBuilder()
                 .followRedirects(HttpClient.Redirect.ALWAYS).build();
@@ -230,9 +230,13 @@ public class ProductController {
                 .GET()
                 .build();
 
-        HttpResponse response = client.send(request,
-                HttpResponse.BodyHandlers.discarding());
+        HttpResponse<String> response = client.send(request,
+                HttpResponse.BodyHandlers.ofString());
 
-        return ResponseEntity.ok().body();
-    }*/
+        ObjectMapper mapper = new ObjectMapper();
+
+        Product p = mapper.readValue(response.body(), Product.class);
+
+        return ResponseEntity.ok().body(p);
+    }
 }

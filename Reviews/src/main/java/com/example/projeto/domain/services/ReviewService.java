@@ -1,5 +1,6 @@
 package com.example.projeto.domain.services;
 
+import com.example.projeto.domain.models.AggregatedRating;
 import com.example.projeto.domain.models.Review;
 import com.example.projeto.domain.views.ReviewView;
 
@@ -31,4 +32,6 @@ public interface ReviewService {
     void deleteById(Long reviewId);
 
     Review partialUpdate(final Long id, final Review review);
+
+    AggregatedRating getProductAggregatedRating(Iterable<Review> reviews);
 }
