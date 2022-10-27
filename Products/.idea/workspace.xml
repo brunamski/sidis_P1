@@ -5,90 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e136609a-c43b-41e2-8831-0774302936d9" name="Changes" comment="Workpackage#5 documentation finished">
-      <change beforePath="$PROJECT_DIR$/../Autentication/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/.idea/jpa-buddy.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Autentication/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Autentication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/docs/Work Package #2/US04/US04-SD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/docs/Work Package #2/US04/US04-SD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/docs/Work Package #2/US05/US05-SSD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/docs/Work Package #2/US05/US05-SSD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/docs/Work Package #3/US05V2/US05V2-CD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/docs/Work Package #3/US05V2/US05V2-CD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/docs/Work Package #3/US05V2/US05V2-MD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/docs/Work Package #3/US05V2/US05V2-MD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/docs/Work Package #3/US05V2/US05V2-SD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/docs/Work Package #3/US05V2/US05V2-SD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/docs/Work Package #3/US06/US06-CD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/docs/Work Package #3/US06/US06-CD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/docs/Work Package #3/US06/US06-MD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/docs/Work Package #3/US06/US06-MD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/docs/Work Package #3/US06/US06-SD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/docs/Work Package #3/US06/US06-SD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/docs/Work Package #3/US07/US07-CD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/docs/Work Package #3/US07/US07-CD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/docs/Work Package #3/US07/US07-MD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/docs/Work Package #3/US07/US07-MD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/docs/Work Package #3/US07/US07-SD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/docs/Work Package #3/US07/US07-SD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/docs/Work Package #5/US09-CD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/docs/Work Package #5/US09-CD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/docs/Work Package #5/US09-MD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/docs/Work Package #5/US09-MD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/docs/Work Package #5/US09-SD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/docs/Work Package #5/US09-SD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/docs/Work Package #5/US09-SSD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/docs/Work Package #5/US09-SSD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Autentication/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Work Package #2/US04/US04-SD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Work Package #2/US04/US04-SD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Work Package #2/US05/US05-SSD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Work Package #2/US05/US05-SSD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Work Package #3/US05V2/US05V2-CD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Work Package #3/US05V2/US05V2-CD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Work Package #3/US05V2/US05V2-MD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Work Package #3/US05V2/US05V2-MD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Work Package #3/US05V2/US05V2-SD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Work Package #3/US05V2/US05V2-SD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Work Package #3/US06/US06-CD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Work Package #3/US06/US06-CD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Work Package #3/US06/US06-MD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Work Package #3/US06/US06-MD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Work Package #3/US06/US06-SD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Work Package #3/US06/US06-SD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Work Package #3/US07/US07-CD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Work Package #3/US07/US07-CD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Work Package #3/US07/US07-MD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Work Package #3/US07/US07-MD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Work Package #3/US07/US07-SD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Work Package #3/US07/US07-SD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Work Package #5/US09-CD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Work Package #5/US09-CD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Work Package #5/US09-MD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Work Package #5/US09-MD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Work Package #5/US09-SD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Work Package #5/US09-SD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Work Package #5/US09-SSD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Work Package #5/US09-SSD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/.idea/jpa-buddy.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/controllers/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/controllers/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/ProductServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/ReviewService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/ReviewService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/ReviewServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/ReviewServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/api/UserEditMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/api/UserEditMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/api/UserViewMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/api/UserViewMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Reviews/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/docs/Work Package #2/US04/US04-SD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/docs/Work Package #2/US04/US04-SD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/docs/Work Package #2/US05/US05-SSD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/docs/Work Package #2/US05/US05-SSD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/docs/Work Package #3/US05V2/US05V2-CD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/docs/Work Package #3/US05V2/US05V2-CD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/docs/Work Package #3/US05V2/US05V2-MD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/docs/Work Package #3/US05V2/US05V2-MD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/docs/Work Package #3/US05V2/US05V2-SD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/docs/Work Package #3/US05V2/US05V2-SD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/docs/Work Package #3/US06/US06-CD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/docs/Work Package #3/US06/US06-CD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/docs/Work Package #3/US06/US06-MD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/docs/Work Package #3/US06/US06-MD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/docs/Work Package #3/US06/US06-SD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/docs/Work Package #3/US06/US06-SD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/docs/Work Package #3/US07/US07-CD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/docs/Work Package #3/US07/US07-CD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/docs/Work Package #3/US07/US07-MD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/docs/Work Package #3/US07/US07-MD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/docs/Work Package #3/US07/US07-SD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/docs/Work Package #3/US07/US07-SD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/docs/Work Package #5/US09-CD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/docs/Work Package #5/US09-CD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/docs/Work Package #5/US09-MD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/docs/Work Package #5/US09-MD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/docs/Work Package #5/US09-SD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/docs/Work Package #5/US09-SD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/docs/Work Package #5/US09-SSD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/docs/Work Package #5/US09-SSD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/.idea/Votes.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/.idea/jpa-buddy.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/src/main/resources/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Votes/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Votes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/docs/Work Package #2/US04/US04-SD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/docs/Work Package #2/US04/US04-SD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/docs/Work Package #2/US05/US05-SSD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/docs/Work Package #2/US05/US05-SSD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/docs/Work Package #3/US05V2/US05V2-CD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/docs/Work Package #3/US05V2/US05V2-CD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/docs/Work Package #3/US05V2/US05V2-MD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/docs/Work Package #3/US05V2/US05V2-MD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/docs/Work Package #3/US05V2/US05V2-SD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/docs/Work Package #3/US05V2/US05V2-SD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/docs/Work Package #3/US06/US06-CD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/docs/Work Package #3/US06/US06-CD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/docs/Work Package #3/US06/US06-MD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/docs/Work Package #3/US06/US06-MD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/docs/Work Package #3/US06/US06-SD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/docs/Work Package #3/US06/US06-SD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/docs/Work Package #3/US07/US07-CD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/docs/Work Package #3/US07/US07-CD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/docs/Work Package #3/US07/US07-MD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/docs/Work Package #3/US07/US07-MD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/docs/Work Package #3/US07/US07-SD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/docs/Work Package #3/US07/US07-SD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/docs/Work Package #5/US09-CD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/docs/Work Package #5/US09-CD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/docs/Work Package #5/US09-MD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/docs/Work Package #5/US09-MD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/docs/Work Package #5/US09-SD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/docs/Work Package #5/US09-SD.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/docs/Work Package #5/US09-SSD.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/docs/Work Package #5/US09-SSD.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/src/main/resources/data.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +94,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../spring-project-1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Votes" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -171,10 +110,9 @@
   </component>
   <component name="RunManager">
     <configuration name="ProjetoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="projeto" />
+      <module name="Products" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.ProjetoApplication" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -222,6 +160,7 @@
       <workItem from="1666101786460" duration="9063000" />
       <workItem from="1666163563602" duration="8493000" />
       <workItem from="1666882559024" duration="82000" />
+      <workItem from="1666883112393" duration="1143000" />
     </task>
     <task id="LOCAL-00001" summary="Updates to docs">
       <created>1653237491192</created>
@@ -338,7 +277,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updates to docs" />
