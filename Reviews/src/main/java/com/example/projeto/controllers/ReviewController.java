@@ -1,6 +1,7 @@
 package com.example.projeto.controllers;
 
 import com.example.projeto.domain.models.AggregatedRating;
+import com.example.projeto.domain.models.AggregatedRatingDTO;
 import com.example.projeto.domain.models.Review;
 import com.example.projeto.domain.models.Vote;
 import com.example.projeto.domain.services.ReviewService;
@@ -116,6 +117,8 @@ public class ReviewController {
     public AggregatedRating getAggregatedRating(@PathVariable(value = "sku") final String sku) {
         Iterable<Review> reviews = reviewService.findReviewsBySku(sku);
         AggregatedRating agg = reviewService.getProductAggregatedRating(reviews);
+        AggregatedRatingDTO aggDTO = new AggregatedRatingDTO(agg.getAverage(),agg.getTotalRatings(),agg.getFive_star(),agg.getFour_star(),
+                                                              agg.getThree_star(),agg.getTwo_star(),agg.getOne_star());
         return agg;
     }
 }
