@@ -26,6 +26,4 @@ public interface ProductService {
     Product create(Product newProduct);
 
     void addImage(String filename, String sku);
-
-    AggregatedRating getProductAggregatedRating(Iterable<Review> reviews);
 }

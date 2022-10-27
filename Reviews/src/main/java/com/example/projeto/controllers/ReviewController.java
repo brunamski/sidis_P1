@@ -1,5 +1,6 @@
 package com.example.projeto.controllers;
 
+import com.example.projeto.domain.models.AggregatedRating;
 import com.example.projeto.domain.models.Review;
 import com.example.projeto.domain.models.Vote;
 import com.example.projeto.domain.services.ReviewService;
@@ -109,5 +110,12 @@ public class ReviewController {
     @GetMapping(value = "/review/status")
     public Iterable<Review> findReviewsByUserId(HttpServletRequest request) {
         return reviewService.findReviewsByUserId(utils.getUserIdByToken(request));
+    }
+
+    @GetMapping(value = "/public/review/product/aggregatedrating/{sku}")
+    public AggregatedRating getAggregatedRating(@PathVariable(value = "sku") final String sku) {
+        Iterable<Review> reviews = reviewService.findReviewsBySku(sku);
+        AggregatedRating agg = reviewService.getProductAggregatedRating(reviews);
+        return agg;
     }
 }

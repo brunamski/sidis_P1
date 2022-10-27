@@ -5,29 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e136609a-c43b-41e2-8831-0774302936d9" name="Changes" comment="Workpackage#5 documentation finished">
-      <change beforePath="$PROJECT_DIR$/../Autentication/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Autentication/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/projeto/controllers/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/models/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/controllers/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/controllers/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/ProductServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/ReviewService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/ReviewService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/ReviewServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/ReviewServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/api/UserEditMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/api/UserEditMapperImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/api/UserViewMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/api/UserViewMapperImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Reviews/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/controllers/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/controllers/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/controllers/ReviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/services/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/services/ReviewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/target/classes/com/example/projeto/controllers/ProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/target/classes/com/example/projeto/controllers/ReviewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/target/classes/com/example/projeto/controllers/ReviewController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/target/classes/com/example/projeto/domain/services/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/target/classes/com/example/projeto/domain/services/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/target/classes/com/example/projeto/domain/services/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/target/classes/com/example/projeto/domain/services/ProductServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/target/classes/com/example/projeto/domain/services/ReviewService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/target/classes/com/example/projeto/domain/services/ReviewService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/target/classes/com/example/projeto/domain/services/ReviewServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/target/classes/com/example/projeto/domain/services/ReviewServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +88,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Votes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Reviews" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -160,7 +154,7 @@
       <workItem from="1666101786460" duration="9063000" />
       <workItem from="1666163563602" duration="8493000" />
       <workItem from="1666882559024" duration="82000" />
-      <workItem from="1666883112393" duration="1143000" />
+      <workItem from="1666883112393" duration="5605000" />
     </task>
     <task id="LOCAL-00001" summary="Updates to docs">
       <created>1653237491192</created>

@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.nimbusds.jose.shaded.json.annotate.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.http.ResponseEntity;
+
 import javax.persistence.*;
 import javax.validation.constraints.Pattern;
 import java.util.HashSet;

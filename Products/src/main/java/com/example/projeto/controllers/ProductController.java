@@ -70,11 +70,9 @@ public class ProductController {
     @GetMapping(value = "/public/product/{sku}")
     public ResponseEntity<ProductDTO> getDetails(@PathVariable(value = "sku") final String sku) throws IOException, InterruptedException {
         final var optionalProduct = productService.findBySku(sku);
-        Product pr;
         if (optionalProduct.isPresent()) {
             Product p = optionalProduct.get();
-            Iterable<Review> reviews = reviewService.findReviewsBySku(sku);
-            AggregatedRating agg = productService.getProductAggregatedRating(reviews);
+            AggregatedRating agg = getAggFromReviews(sku);
             p.setAggregatedRating(agg);
             ProductDTO productDTO = new ProductDTO(p.getProductId(),p.getDesignation(),p.getSku(),p.getDescription(),p.getAggregatedRating(),p.getSetOfImages());
             return ResponseEntity.ok().body(productDTO);
@@ -229,9 +227,9 @@ public class ProductController {
                 .body(resource);
     }
 
-    /*public ResponseEntity<Product> getFromAnotherAPI(@PathVariable(value = "sku") final String sku) {
+    public AggregatedRating getAggFromReviews(@PathVariable(value = "sku") final String sku) throws IOException, InterruptedException {
 
-        String baseURL = "http://localhost:8082/api/public/product" + sku;
+        String baseURL = "http://localhost:8081/api/public/review/product/aggregatedrating/" + sku;
 
         HttpClient client = HttpClient.newBuilder()
                 .followRedirects(HttpClient.Redirect.ALWAYS).build();
@@ -241,9 +239,13 @@ public class ProductController {
                 .GET()
                 .build();
 
-        HttpResponse response = client.send(request,
-                HttpResponse.BodyHandlers.discarding());
+        HttpResponse<String> response = client.send(request,
+                HttpResponse.BodyHandlers.ofString());
 
-        return ResponseEntity.ok().body();
-    }*/
+        ObjectMapper mapper = new ObjectMapper();
+
+        AggregatedRating aggregatedRating = mapper.readValue(response.body(), AggregatedRating.class);
+
+        return aggregatedRating;
+    }
 }
