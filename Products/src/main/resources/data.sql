@@ -4,13 +4,6 @@ DELETE PRODUCT WHERE Designation='ferro';
 INSERT INTO PRODUCT (designation, description, sku) VALUES ('ferro','O ferro (do latim ferrum) é um elemento químico, símbolo Fe, de número atômico 26 (26 prótons e 26 elétrons) e massa atômica 56 u.', 'SKU0000002');
 DELETE PRODUCT WHERE Designation='bolacha';
 INSERT INTO PRODUCT (designation, description, sku) VALUES ('bolacha','A bolacha é um bolo chato e seco de farinha de diversas formas e tamanhos. Pode ser consumida de diversas maneiras, doce, com recheios, salgada ou acompanhada de especiarias e/ou patês', 'SKU0000003');
-DELETE PRODUCT WHERE Designation='panela';
-INSERT INTO PRODUCT (designation, description, sku) VALUES ('panela','As panelas são uma família de utensílios culinários consideradas por muitos como indispensáveis em qualquer cozinha. São geralmente de forma cilíndrica ou subesférica e normalmente têm uma tampa e uma ou duas pegas (cabos).', 'SKU0000004');
-DELETE PRODUCT WHERE Designation='banana';
-INSERT INTO PRODUCT (designation, description, sku) VALUES ('banana','A banana é uma pseudobaga da bananeira, uma planta herbácea vivaz acaule da família Musaceae . São cultivadas em 130 países. Originárias do sudeste da Ásia são atualmente cultivadas em praticamente todas as regiões tropicais do planeta', 'SKU0000005');
-DELETE PRODUCT WHERE Designation='fiat 500';
-INSERT INTO PRODUCT (designation, description, sku) VALUES ('fiat 500','O fiat 500 (Cinquecento) foi um modelo de minicarro produzido pela Fiat na Italia, entre 1957 e 1975. Criado por Dante Giacosa, o carro utiliza a sigla ZFA 110 para a versão sedã e ZFA 120 para a versão Giardiniera.', 'SKU0000006');
-
 
 INSERT INTO REVIEW (user_Id, sku, rating, text, publishing_Date, fun_Fact, status) VALUES (4,'SKU0000001',5,'Madeira de muita qualidade, fantástica para fabrico de móveis. Recomendo', '1999-06-22', 'June 22nd is the day in 1942 that Erwin Rommel is promoted to Field Marshal after the capture of Tobruk.', 0);
 INSERT INTO REVIEW (user_Id, sku, rating, text, publishing_Date, fun_Fact, status) VALUES (5,'SKU0000001',5,'Madeira muito boa para usar como lenha.', '1998-08-09', 'August 9th is the day in 1965 that Singapore is expelled from Malaysia and becomes the first and only country to date to gain independence unwillingly.', 0);
