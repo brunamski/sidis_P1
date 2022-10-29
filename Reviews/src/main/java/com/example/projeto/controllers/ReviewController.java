@@ -114,11 +114,11 @@ public class ReviewController {
     }
 
     @GetMapping(value = "/public/review/product/aggregatedrating/{sku}")
-    public AggregatedRating getAggregatedRating(@PathVariable(value = "sku") final String sku) {
+    public AggregatedRatingDTO getAggregatedRatingDTO(@PathVariable(value = "sku") final String sku) {
         Iterable<Review> reviews = reviewService.findReviewsBySku(sku);
         AggregatedRating agg = reviewService.getProductAggregatedRating(reviews);
         AggregatedRatingDTO aggDTO = new AggregatedRatingDTO(agg.getAverage(),agg.getTotalRatings(),agg.getFive_star(),agg.getFour_star(),
                                                               agg.getThree_star(),agg.getTwo_star(),agg.getOne_star());
-        return agg;
+        return aggDTO;
     }
 }
