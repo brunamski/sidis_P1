@@ -2,9 +2,8 @@ package com.example.projeto.domain.services;
 
 import java.util.Optional;
 
-import com.example.projeto.domain.models.AggregatedRating;
+import com.example.projeto.domain.models.AggregatedRatingDTO;
 import com.example.projeto.domain.models.Product;
-import com.example.projeto.domain.models.Review;
 import com.example.projeto.domain.views.CatalogView;
 
 
@@ -26,6 +25,4 @@ public interface ProductService {
     Product create(Product newProduct);
 
     void addImage(String filename, String sku);
-
-    AggregatedRating getProductAggregatedRating(Iterable<Review> reviews);
 }

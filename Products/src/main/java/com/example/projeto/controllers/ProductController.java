@@ -1,16 +1,13 @@
 package com.example.projeto.controllers;
 
-import com.example.projeto.domain.models.AggregatedRating;
+import com.example.projeto.domain.models.AggregatedRatingDTO;
 import com.example.projeto.domain.models.Product;
 import com.example.projeto.domain.models.ProductDTO;
-import com.example.projeto.domain.models.Review;
 import com.example.projeto.domain.services.FileStorageService;
 import com.example.projeto.domain.services.ProductService;
-import com.example.projeto.domain.services.ReviewService;
 import com.example.projeto.domain.views.CatalogView;
 import com.example.projeto.usermanagement.models.Role;
 
-import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -23,8 +20,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
-import org.springframework.web.server.ResponseStatusException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.Resource;
@@ -69,7 +64,7 @@ public class ProductController {
         final var optionalProduct = productService.findBySku(sku);
         if (optionalProduct.isPresent()) {
             Product p = optionalProduct.get();
-            AggregatedRating agg = getAggFromReviews(sku);
+            AggregatedRatingDTO agg = getAggFromReviews(sku);
             p.setAggregatedRating(agg);
             ProductDTO productDTO = new ProductDTO(p.getProductId(),p.getDesignation(),p.getSku(),p.getDescription(),p.getAggregatedRating(),p.getSetOfImages());
             return ResponseEntity.ok().body(productDTO);
@@ -104,7 +99,7 @@ public class ProductController {
                  //.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Product Not Found"));
         if (optionalProduct.isPresent()) {
             Product product = optionalProduct.get();
-            AggregatedRating agg = getAggFromReviews(product.getSku());
+            AggregatedRatingDTO agg = getAggFromReviews(product.getSku());
             product.setAggregatedRating(agg);
             ProductDTO productDTO = new ProductDTO(product.getProductId(), product.getDesignation(), product.getSku(), product.getDescription(), product.getAggregatedRating(), product.getSetOfImages());
             return ResponseEntity.ok().body(productDTO);
@@ -144,7 +139,7 @@ public class ProductController {
         Optional<Product> optionalProduct = productService.findBySku(sku);
         if (optionalProduct.isPresent()) {
             Product p = optionalProduct.get();
-            AggregatedRating agg = getAggFromReviews(p.getSku());
+            AggregatedRatingDTO agg = getAggFromReviews(p.getSku());
             p.setAggregatedRating(agg);
             ProductDTO productDTO = new ProductDTO(p.getProductId(),p.getDesignation(),p.getSku(),p.getDescription(),p.getAggregatedRating(),p.getSetOfImages());
             return ResponseEntity.ok().body(productDTO);
@@ -267,7 +262,7 @@ public class ProductController {
                 .body(resource);
     }
 
-    public AggregatedRating getAggFromReviews(@PathVariable(value = "sku") final String sku) throws IOException, InterruptedException {
+    public AggregatedRatingDTO getAggFromReviews(@PathVariable(value = "sku") final String sku) throws IOException, InterruptedException {
 
         String baseURL = "http://localhost:8081/api/public/review/product/aggregatedrating/" + sku;
 
@@ -284,8 +279,8 @@ public class ProductController {
 
         ObjectMapper mapper = new ObjectMapper();
 
-        AggregatedRating aggregatedRating = mapper.readValue(response.body(), AggregatedRating.class);
+        AggregatedRatingDTO aggregatedRatingDTO = mapper.readValue(response.body(), AggregatedRatingDTO.class);
 
-        return aggregatedRating;
+        return aggregatedRatingDTO;
     }
 }

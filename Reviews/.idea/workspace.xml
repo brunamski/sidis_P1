@@ -6,13 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="e136609a-c43b-41e2-8831-0774302936d9" name="Changes" comment="Workpackage#5 documentation finished">
       <change beforePath="$PROJECT_DIR$/../Products/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Products/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Products/src/main/java/com/example/projeto/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Products/src/main/java/com/example/projeto/controllers/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Products/src/main/java/com/example/projeto/domain/models/AggregatedRating.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Products/src/main/java/com/example/projeto/domain/models/AggregatedRatingDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Products/src/main/java/com/example/projeto/domain/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Products/src/main/java/com/example/projeto/domain/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Products/src/main/java/com/example/projeto/domain/models/ProductDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Products/src/main/java/com/example/projeto/domain/models/ProductDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Products/src/main/java/com/example/projeto/domain/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Products/src/main/java/com/example/projeto/domain/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Products/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Products/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Products/target/classes/com/example/projeto/controllers/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Products/target/classes/com/example/projeto/controllers/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Products/target/classes/com/example/projeto/domain/models/AggregatedRating.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Products/target/classes/com/example/projeto/domain/models/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Products/target/classes/com/example/projeto/domain/models/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Products/target/classes/com/example/projeto/domain/models/ProductDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Products/target/classes/com/example/projeto/domain/models/ProductDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Products/target/classes/com/example/projeto/domain/services/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Products/target/classes/com/example/projeto/domain/services/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Products/target/classes/com/example/projeto/domain/services/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Products/target/classes/com/example/projeto/domain/services/ProductServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/controllers/ReviewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/controllers/ReviewController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/ReviewService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/ReviewService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/ReviewServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/ReviewServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +83,8 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -138,6 +146,7 @@
       <workItem from="1666163563602" duration="8493000" />
       <workItem from="1666889543693" duration="1217000" />
       <workItem from="1667071438858" duration="1093000" />
+      <workItem from="1667315548376" duration="1158000" />
     </task>
     <task id="LOCAL-00001" summary="Updates to docs">
       <created>1653237491192</created>

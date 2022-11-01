@@ -11,14 +11,14 @@ public class ProductDTO {
     public final String sku;
     public final String designation;
     public final String description;
-    public final AggregatedRating aggregatedRating;
+    public final AggregatedRatingDTO aggregatedRating;
     public Set<String> setOfImages = new HashSet<String>();
 
     public ProductDTO (@JsonProperty("productId") Long productId,
                        @JsonProperty("designation") String designation,
                        @JsonProperty("sku") String sku,
                        @JsonProperty("description") String description,
-                       AggregatedRating aggregatedRating,
+                       AggregatedRatingDTO aggregatedRating,
                        Set<String> setOfImages){
         this.productId = productId;
         this.sku = sku;

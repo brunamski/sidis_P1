@@ -1,7 +1,5 @@
 package com.example.projeto.domain.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.nimbusds.jose.shaded.json.annotate.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.http.ResponseEntity;
@@ -31,7 +29,7 @@ public class Product {
     private Set<String> setOfImages = new HashSet<String>();
 
     @Transient
-    private AggregatedRating aggregatedRating;
+    private AggregatedRatingDTO aggregatedRating;
 
 
     protected Product() {
