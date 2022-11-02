@@ -23,4 +23,5 @@ INSERT INTO VOTE (reason, review_Id, vote) VALUES ('Concordo a 100%, das melhore
 INSERT INTO VOTE (reason, review_Id, vote) VALUES ('Espere mais uns meses e vai ver se não oxida!', 10, false);
 INSERT INTO VOTE (reason, review_Id, vote) VALUES ('Para já não tenho queixas, não tem um pingo de oxidação.', 10, true);
 INSERT INTO VOTE (reason, review_Id, vote) VALUES ('Isso é por culpa do fogão! A minha está impecável.', 11, false);
+INSERT INTO VOTE (reason, review_Id, vote) VALUES ('Isso é por culpa do fogão! A minha está impecável.', 1, false);
 

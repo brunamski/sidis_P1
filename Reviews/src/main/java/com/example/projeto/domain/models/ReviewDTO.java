@@ -30,6 +30,10 @@ public class ReviewDTO {
         this.numberOfVotes = numberofvotes;
     }
 
+    public int getNumberOfVotes(){
+        return this.numberOfVotes;
+    }
+
     public LocalDate getPublishingDate(){
         return this.publishingDate;
     }

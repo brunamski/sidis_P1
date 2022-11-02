@@ -25,6 +25,7 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -58,7 +59,9 @@ public class ReviewController {
             reviewDTO.setNumberOfVotes(numbervotes);
             reviewDTOS.add(reviewDTO);
         }
-        reviewDTOS.sort(Comparator.comparing(ReviewDTO::getPublishingDate));
+        reviewDTOS.sort(Comparator.comparing(ReviewDTO::getNumberOfVotes)
+                .thenComparing(ReviewDTO::getPublishingDate).reversed());
+
         return reviewDTOS;
     }
 
@@ -133,7 +136,6 @@ public class ReviewController {
 
         HttpResponse<String> response = client.send(request,
                 HttpResponse.BodyHandlers.ofString());
-
         return  Integer.parseInt(response.body());
     }
 }
