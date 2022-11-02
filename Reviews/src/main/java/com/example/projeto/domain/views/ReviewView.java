@@ -5,5 +5,5 @@ public interface ReviewView {
     String getText();
     String getPublishingDate();
     String getFunFact();
-    String getVoteNumber();
+    String getNumberOfVotes();
 }

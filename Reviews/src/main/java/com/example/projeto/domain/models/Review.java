@@ -35,6 +35,8 @@ public class Review {
     @Column(nullable = false)
     private String funFact = retrieveDataFromApi(publishingDate);
 
+    private int numberOfVotes = 0;
+
     protected Review() throws IOException {}
 
 

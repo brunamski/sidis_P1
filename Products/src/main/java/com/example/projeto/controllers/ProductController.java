@@ -281,6 +281,8 @@ public class ProductController {
 
         AggregatedRatingDTO aggregatedRatingDTO = mapper.readValue(response.body(), AggregatedRatingDTO.class);
 
+
+
         return aggregatedRatingDTO;
     }
 }
