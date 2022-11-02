@@ -1,6 +1,7 @@
 package com.example.projeto.domain.services;
 
 import com.example.projeto.domain.models.Vote;
+import com.example.projeto.domain.models.VoteDTO;
 
 public interface VoteService {
 
