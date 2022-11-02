@@ -1,17 +1,3 @@
-DELETE PRODUCT WHERE Designation='madeira';
-INSERT INTO PRODUCT (designation, description, sku) VALUES ('madeira','A madeira é um material produzido a partir do tecido formado pelas plantas lenhosas com funções de sustentação mecânica.', 'SKU0000001');
-DELETE PRODUCT WHERE Designation='ferro';
-INSERT INTO PRODUCT (designation, description, sku) VALUES ('ferro','O ferro (do latim ferrum) é um elemento químico, símbolo Fe, de número atômico 26 (26 prótons e 26 elétrons) e massa atômica 56 u.', 'SKU0000002');
-DELETE PRODUCT WHERE Designation='bolacha';
-INSERT INTO PRODUCT (designation, description, sku) VALUES ('bolacha','A bolacha é um bolo chato e seco de farinha de diversas formas e tamanhos. Pode ser consumida de diversas maneiras, doce, com recheios, salgada ou acompanhada de especiarias e/ou patês', 'SKU0000003');
-
-INSERT INTO REVIEW (user_Id, sku, rating, text, publishing_Date, fun_Fact, status) VALUES (4,'SKU0000001',5,'Madeira de muita qualidade, fantástica para fabrico de móveis. Recomendo', '1999-06-22', 'June 22nd is the day in 1942 that Erwin Rommel is promoted to Field Marshal after the capture of Tobruk.', 0);
-INSERT INTO REVIEW (user_Id, sku, rating, text, publishing_Date, fun_Fact, status) VALUES (5,'SKU0000001',5,'Madeira muito boa para usar como lenha.', '1998-08-09', 'August 9th is the day in 1965 that Singapore is expelled from Malaysia and becomes the first and only country to date to gain independence unwillingly.', 0);
-INSERT INTO REVIEW (user_Id, sku, rating, text, publishing_Date, fun_Fact, status) VALUES (6,'SKU0000001',4,'Muito boa madeira para mesas, fica lindíssima, apenas necessita do verniz adequado.','2001-10-22', 'October 22nd is the day in 1927 that Nikola Tesla exposed his six (6) new inventions including motor with onephase electricity.', 0);
-INSERT INTO REVIEW (user_Id, sku, rating, text, publishing_Date, fun_Fact, status) VALUES (11,'SKU0000001',1,'Madeira péssima para fabricar cadeiras, apodrece muito rapidamente!', '2004-04-29', 'April 29th is the day in 1953 that the first U.S. experimental 3D-TV broadcast showed an episode of Space Patrol on Los Angeles ABC affiliate KECA-TV.', 0);
-INSERT INTO REVIEW (user_Id, sku, rating, text, publishing_Date, fun_Fact, status) VALUES (9,'SKU0000002',4,'Ótimo ferro para fabricar quadros de bicicletas.', '2000-02-13', 'February 13th is the day in 1542 that Catherine Howard, the fifth wife of Henry VIII of England, is executed for adultery.', 0);
-INSERT INTO REVIEW (user_Id, sku, rating, text, publishing_Date, fun_Fact, status) VALUES (4,'SKU0000003',1,'Sabor péssimo, sem palavras!', '1999-05-01', 'May 1st is the day in 1894 that Coxey´s Army, the first significant American protest march, arrives in Washington, D.C.', 0);
-
 INSERT INTO VOTE (reason, review_Id, vote) VALUES ('Concordo plenamente, sou demasiado alto para o carro, mas vou dá-lo à minha filha.', 7, true);
 INSERT INTO VOTE (reason, review_Id, vote) VALUES ('É verdade, também a uso e nunca tive problemas!', 1, true);
 INSERT INTO VOTE (reason, review_Id, vote) VALUES ('É uma questão de hábito!', 12, false);
@@ -24,3 +10,17 @@ INSERT INTO VOTE (reason, review_Id, vote) VALUES ('Verdade, bastou usar durante
 INSERT INTO VOTE (reason, review_Id, vote) VALUES ('Eu até gostei! Acho um exagero este comentário.', 9, false);
 INSERT INTO VOTE (reason, review_Id, vote) VALUES ('Segui a sua review e não me arrependi. Vou começar a usar este ferro frequentemente.', 5, true);
 INSERT INTO VOTE (reason, review_Id, vote) VALUES ('O padrão é demasiado irregular, eu particularmente não gosto muito... depende mesmo dos gostos', 3, false);
+INSERT INTO VOTE (reason, review_Id, vote) VALUES ('Verdade, parece que tem gasolina quando se deita lume!.', 2, true);
+INSERT INTO VOTE (reason, review_Id, vote) VALUES ('Sinceramente só me parece boa para queimar...', 1, false);
+INSERT INTO VOTE (reason, review_Id, vote) VALUES ('Esta madeira é melhor para outro tipo de aplicações.', 4, true);
+INSERT INTO VOTE (reason, review_Id, vote) VALUES ('Passado 1 ano as bicicletas ficam enferrujadas...', 5, false);
+INSERT INTO VOTE (reason, review_Id, vote) VALUES ('Por acaso até gosto mais destas do que das bananas da Madeira!', 8, false);
+INSERT INTO VOTE (reason, review_Id, vote) VALUES ('Isso é muito subjetivo! São as minhas bolachas preferidas!', 6, false);
+INSERT INTO VOTE (reason, review_Id, vote) VALUES ('Serve perfeitamente, apesar de não ser a mais indicada.', 4, false);
+INSERT INTO VOTE (reason, review_Id, vote) VALUES ('É um carro indicado para pessoas pequenas em geral, não necessariamente mulheres!', 7, false);
+INSERT INTO VOTE (reason, review_Id, vote) VALUES ('Verdade, das favoritas dos meus clientes(sou dono de uma fábrica de móveis).', 3, true);
+INSERT INTO VOTE (reason, review_Id, vote) VALUES ('Concordo a 100%, das melhores que comi a nível de qualidade/preço!', 8, true);
+INSERT INTO VOTE (reason, review_Id, vote) VALUES ('Espere mais uns meses e vai ver se não oxida!', 10, false);
+INSERT INTO VOTE (reason, review_Id, vote) VALUES ('Para já não tenho queixas, não tem um pingo de oxidação.', 10, true);
+INSERT INTO VOTE (reason, review_Id, vote) VALUES ('Isso é por culpa do fogão! A minha está impecável.', 11, false);
+

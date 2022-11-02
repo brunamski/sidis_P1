@@ -5,19 +5,79 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e136609a-c43b-41e2-8831-0774302936d9" name="Changes" comment="Workpackage#5 documentation finished">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/models/VoteDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Products/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Products/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Products/src/main/java/com/example/projeto/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Products/src/main/java/com/example/projeto/controllers/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/controllers/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/projeto/controllers/ReviewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/models/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/models/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/models/Vote.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/repositories/VoteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/repositories/VoteRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/services/VoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/services/VoteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/views/ReviewView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/views/ReviewView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/repositories/VoteRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/services/VoteService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/controllers/ReviewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/controllers/ReviewController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/repositories/VoteRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/VoteService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/VoteServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Votes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/controllers/VoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/controllers/VoteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/ProjetoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/ProjetoApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/auth/api/AuthApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/auth/api/AuthApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/auth/api/AuthRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/auth/api/AuthRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/bootstrap/UserBootstrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/bootstrap/UserBootstrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/controllers/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/controllers/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/controllers/ReviewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/controllers/ReviewController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/controllers/UploadFileResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/controllers/UploadFileResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/models/AggregatedRating.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/models/AggregatedRating.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/models/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/models/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/models/ProductDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/models/ProductDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/models/Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/models/Review.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/models/Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/models/Status.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/models/Vote.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/models/Vote.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/repositories/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/repositories/ProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/repositories/ReviewRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/repositories/ReviewRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/repositories/VoteRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/repositories/VoteRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/services/FileStorageProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/services/FileStorageProperties.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/services/FileStorageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/services/FileStorageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/services/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/services/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/services/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/services/ProductServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/services/ReviewService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/services/ReviewService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/services/ReviewServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/services/ReviewServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/services/VoteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/services/VoteService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/services/VoteServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/domain/services/VoteServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/exceptions/FileStorageException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/exceptions/FileStorageException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/exceptions/MyResourceNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/exceptions/MyResourceNotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/usermanagement/api/CreateUserRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/usermanagement/api/CreateUserRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/usermanagement/api/UpdateUserRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/usermanagement/api/UpdateUserRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/usermanagement/api/UserAdminApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/usermanagement/api/UserAdminApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/usermanagement/api/UserEditMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/usermanagement/api/UserEditMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/usermanagement/api/UserView.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/usermanagement/api/UserView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/usermanagement/api/UserViewMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/usermanagement/api/UserViewMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/usermanagement/models/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/usermanagement/models/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/usermanagement/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/usermanagement/models/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/usermanagement/repositories/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/usermanagement/repositories/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/usermanagement/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/usermanagement/services/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/utils/Utils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/generated-sources/annotations/com/example/projeto/usermanagement/api/UserEditMapperImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/generated-sources/annotations/com/example/projeto/usermanagement/api/UserViewMapperImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/ProductTests$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/ProductTests$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/ProductTests$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/ProductTests$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/ProductTests$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/ProductTests$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/ProductTests$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/ProductTests$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/ProductTests$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/ProductTests$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/ProductTests$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/ProductTests$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/ProductTests$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/ProductTests$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/ProductTests$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/ProductTests$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/ProductTests$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/ProductTests$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/ProductTests$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/ProductTests$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/ProductTests$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/ProductTests$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/ProductTests$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/ProductTests$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/UserTests$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/UserTests$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/UserTests$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/UserTests$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/UserTests$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/UserTests$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/UserTests$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/test-classes/com/example/projeto/UserTests$4.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +144,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Votes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Products" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -148,6 +208,7 @@
       <workItem from="1667071438858" duration="1093000" />
       <workItem from="1667315548376" duration="2157000" />
       <workItem from="1667376792361" duration="6461000" />
+      <workItem from="1667404186462" duration="3675000" />
     </task>
     <task id="LOCAL-00001" summary="Updates to docs">
       <created>1653237491192</created>
@@ -287,5 +348,8 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Reviews$ProjetoApplication.ic" NAME="ProjetoApplication Coverage Results" MODIFIED="1667386194593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

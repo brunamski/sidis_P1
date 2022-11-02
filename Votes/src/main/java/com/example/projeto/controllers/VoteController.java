@@ -8,6 +8,7 @@ import com.example.projeto.domain.services.ProductService;
 import com.example.projeto.domain.services.VoteService;
 import com.example.projeto.usermanagement.models.Role;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +19,9 @@ import javax.annotation.security.RolesAllowed;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Optional;
 
+@Tag(name = "Votes", description = "Endpoints for votes")
+@RestController
+@RequestMapping("api")
 public class VoteController {
 
     @Autowired

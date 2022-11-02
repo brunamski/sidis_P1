@@ -3,15 +3,12 @@ package com.example.projeto.controllers;
 import com.example.projeto.domain.models.AggregatedRating;
 import com.example.projeto.domain.models.AggregatedRatingDTO;
 import com.example.projeto.domain.models.Review;
-import com.example.projeto.domain.models.VoteDTO;
+import com.example.projeto.domain.models.ReviewDTO;
 import com.example.projeto.domain.services.ReviewService;
-import com.example.projeto.domain.services.VoteService;
 import com.example.projeto.domain.views.ReviewView;
 import com.example.projeto.usermanagement.models.Role;
 
 import com.example.projeto.utils.Utils;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.nimbusds.jose.shaded.json.JSONArray;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -29,8 +26,9 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
-import java.util.Optional;
 
 @Tag(name = "Reviews", description = "Endpoints for reviews")
 @RestController
@@ -39,9 +37,6 @@ public class ReviewController {
 
     @Autowired
     private ReviewService reviewService;
-
-    @Autowired
-    private VoteService voteService;
 
     @Autowired
     private Utils utils;
@@ -54,15 +49,17 @@ public class ReviewController {
 
     @Operation(summary = "US05 - To obtain the reviews of a product. Sorted by number of votes and reverse chronological publishing date")
     @GetMapping(value = "/public/review/vote/product/{sku}")
-    public Iterable<ReviewView> findReviewsBySkuSortedByVotesAndDate(@PathVariable(value = "sku") final String sku) throws IOException, InterruptedException {
+    public List<ReviewDTO> findReviewsBySkuSortedByVotesAndDate(@PathVariable(value = "sku") final String sku) throws IOException, InterruptedException {
         Iterable<Review> reviews = reviewService.findReviewsBySku(sku);
-
+        List<ReviewDTO> reviewDTOS = new ArrayList();
         for(Review r: reviews){
-            int numberofvotes = getVotes(r.getReviewId());
-
+            int numbervotes = getVotes(r.getReviewId());
+            ReviewDTO reviewDTO = new ReviewDTO(r.getReviewId(), r.getRating(), r.getText(), r.getPublishingDate(), r.getFunFact());
+            reviewDTO.setNumberOfVotes(numbervotes);
+            reviewDTOS.add(reviewDTO);
         }
-
-        return reviewService.findReviewsBySkuSortedByVotesAndDate(sku);
+        reviewDTOS.sort(Comparator.comparing(ReviewDTO::getPublishingDate));
+        return reviewDTOS;
     }
 
     @Operation(summary = "US04 - To review and rate a product")
@@ -75,7 +72,7 @@ public class ReviewController {
         return ResponseEntity.ok().body(review);
     }
 
-    @Operation(summary = "US07 - To withdraw one of my reviews")
+    /*@Operation(summary = "US07 - To withdraw one of my reviews")
     @DeleteMapping(value = "/review/{id}/withdraw")
     @RolesAllowed(Role.REGISTERED)
     public ResponseEntity<Review> withdrawReview(@PathVariable("id") @Parameter(description = "The id of the review to withdraw") final Long reviewId) {
@@ -88,7 +85,7 @@ public class ReviewController {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "No Votes done for this Review!");
         }
         return ResponseEntity.noContent().build();
-    }
+    }*/
 
     @Operation(summary = "US10 - To obtain all pending reviews")
     @GetMapping(value = "/review/pending")
@@ -137,8 +134,6 @@ public class ReviewController {
         HttpResponse<String> response = client.send(request,
                 HttpResponse.BodyHandlers.ofString());
 
-        int numberofvotes = Integer.parseInt(response.toString());
-
-        return numberofvotes;
+        return  Integer.parseInt(response.body());
     }
 }

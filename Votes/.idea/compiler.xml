@@ -21,9 +21,6 @@
         <module name="projeto" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Votes" target="17" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
