@@ -9,4 +9,5 @@ import org.springframework.stereotype.Repository;
 public interface VoteRepository extends CrudRepository<Vote, Long> {
     @Query(value = "SELECT COUNT(*) FROM VOTE v WHERE v.REVIEW_ID = ?1", nativeQuery = true)
     int getVotesByReviewId(Long reviewId);
+
 }
