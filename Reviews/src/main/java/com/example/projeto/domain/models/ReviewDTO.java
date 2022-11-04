@@ -18,6 +18,8 @@ public class ReviewDTO {
 
     public int numberOfVotes = 0;
 
+    public ReviewDTO(){}
+
     public ReviewDTO(Long reviewId, int rating, String text, LocalDate publishingDate, String funFact) throws IOException {
         this.reviewId = reviewId;
         this.rating = rating;

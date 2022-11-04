@@ -1,9 +1,6 @@
 package com.example.projeto.controllers;
 
-import com.example.projeto.domain.models.AggregatedRating;
-import com.example.projeto.domain.models.AggregatedRatingDTO;
-import com.example.projeto.domain.models.Review;
-import com.example.projeto.domain.models.ReviewDTO;
+import com.example.projeto.domain.models.*;
 import com.example.projeto.domain.services.ReviewService;
 import com.example.projeto.domain.views.ReviewView;
 import com.example.projeto.usermanagement.models.Role;
@@ -53,23 +50,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 public class ReviewController {
 
     @Autowired
-    private ModelMapper modelMapper;
-
-    @Autowired
     private ReviewService reviewService;
 
     @Autowired
     private Utils utils;
-
-
-    public ReviewController(ReviewService reviewService) {
-        super();
-        this.reviewService = reviewService;
-    }
-
-
-
-
 
     @Operation(summary = "US05 - To obtain the reviews of a product. Sorted in reverse chronological publishing date")
     @GetMapping(value = "/public/review/product/{sku}")
@@ -93,30 +77,23 @@ public class ReviewController {
 
         return reviewDTOS;
     }
-//401 UNAUTHORIZED
+
     @Operation(summary = "US04 - To review and rate a product")
     @PostMapping(value = "/review")
     @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<Review> create(HttpServletRequest request, @RequestBody Review newReview) {
+    public ResponseEntity<ReviewDTO> create(HttpServletRequest request, @RequestBody Review newReview) throws IOException {
         newReview.setUserId(utils.getUserIdByToken(request));
         final var review= reviewService.create(newReview);
-        return ResponseEntity.ok().body(review);
+        ReviewDTO reviewDTO = new ReviewDTO(review.getReviewId(), review.getRating(), review.getText(), review.getPublishingDate(),review.getFunFact());
+        return ResponseEntity.ok().body(reviewDTO);
     }
-    //401 UNAUTHORIZED
+
     @Operation(summary = "US07 - To withdraw one of my reviews")
-    @DeleteMapping(value = "/review/{reviewId}/withdraw")
-    public ResponseEntity<ReviewDTO> deleteReview(@PathVariable(name = "reviewId") Long reviewId) {
-         reviewService.deleteById(reviewId);
-
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
-
-    /*@Operation(summary = "US07 - To withdraw one of my reviews")
     @DeleteMapping(value = "/review/{id}/withdraw")
     @RolesAllowed(Role.REGISTERED)
-    public ResponseEntity<Review> withdrawReview(@PathVariable("id") @Parameter(description = "The id of the review to withdraw") final Long reviewId) {
+    public ResponseEntity<Review> withdrawReview(@PathVariable("id") @Parameter(description = "The id of the review to withdraw") final Long reviewId) throws IOException, InterruptedException {
         //passar para o service
-        int voteCount = voteService.getVotesByReviewId(reviewId);
+        int voteCount = getVotes(reviewId);
         if(voteCount == 0) {
             reviewService.deleteById(reviewId);
         }
@@ -124,7 +101,7 @@ public class ReviewController {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "No Votes done for this Review!");
         }
         return ResponseEntity.noContent().build();
-    }*/
+    }
 
     @Operation(summary = "US10 - To obtain all pending reviews")
     @GetMapping(value = "/review/pending")
@@ -136,10 +113,11 @@ public class ReviewController {
     @Operation(summary = "US11 - To approve or reject a pending review")
     @PatchMapping(value = "/review/{id}")
     @RolesAllowed(Role.MODERATOR)
-    public ResponseEntity<Review> updateReviewStatus(@PathVariable("id") @Parameter(description = "The id of the review we will update") final Long id,
-                                                     @Valid @RequestBody final Review review) {
+    public ResponseEntity<ReviewDTOStatus> updateReviewStatus(@PathVariable("id") @Parameter(description = "The id of the review we will update") final Long id,
+                                                              @Valid @RequestBody final Review review) throws IOException {
         Review newReview = reviewService.partialUpdate(id, review);
-        return ResponseEntity.ok().body(newReview);
+        ReviewDTOStatus newReviewDTOStatus = new ReviewDTOStatus(newReview.getReviewId(), newReview.getRating(), newReview.getText(), newReview.getPublishingDate(), newReview.getFunFact(), newReview.getStatus());
+        return ResponseEntity.ok().body(newReviewDTOStatus);
     }
 
     @Operation(summary = "US08 - To obtain all my reviews including their status")
