@@ -11,6 +11,7 @@ import com.example.projeto.usermanagement.models.Role;
 import com.example.projeto.utils.Utils;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -31,16 +32,44 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import org.modelmapper.ModelMapper;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.PathVariable;
+
 @Tag(name = "Reviews", description = "Endpoints for reviews")
 @RestController
 @RequestMapping("api")
 public class ReviewController {
 
     @Autowired
+    private ModelMapper modelMapper;
+
+    @Autowired
     private ReviewService reviewService;
 
     @Autowired
     private Utils utils;
+
+
+    public ReviewController(ReviewService reviewService) {
+        super();
+        this.reviewService = reviewService;
+    }
+
+
+
+
 
     @Operation(summary = "US05 - To obtain the reviews of a product. Sorted in reverse chronological publishing date")
     @GetMapping(value = "/public/review/product/{sku}")
@@ -64,15 +93,22 @@ public class ReviewController {
 
         return reviewDTOS;
     }
-
+//401 UNAUTHORIZED
     @Operation(summary = "US04 - To review and rate a product")
     @PostMapping(value = "/review")
-    @RolesAllowed(Role.REGISTERED)
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Review> create(HttpServletRequest request, @RequestBody Review newReview) {
         newReview.setUserId(utils.getUserIdByToken(request));
         final var review= reviewService.create(newReview);
         return ResponseEntity.ok().body(review);
+    }
+    //401 UNAUTHORIZED
+    @Operation(summary = "US07 - To withdraw one of my reviews")
+    @DeleteMapping(value = "/review/{reviewId}/withdraw")
+    public ResponseEntity<ReviewDTO> deleteReview(@PathVariable(name = "reviewId") Long reviewId) {
+         reviewService.deleteById(reviewId);
+
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     /*@Operation(summary = "US07 - To withdraw one of my reviews")

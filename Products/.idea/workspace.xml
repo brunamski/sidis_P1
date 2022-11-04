@@ -5,34 +5,79 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e136609a-c43b-41e2-8831-0774302936d9" name="Changes" comment="Workpackage#5 documentation finished">
-<<<<<<< HEAD
-      <change afterPath="$PROJECT_DIR$/../Reviews/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/models/VoteDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Reviews/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Votes/.idea/runConfigurations.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projeto/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/projeto/controllers/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/controllers/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/controllers/ReviewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/models/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/models/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/models/Vote.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/repositories/VoteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/repositories/VoteRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/services/VoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/services/VoteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/views/ReviewView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/domain/views/ReviewView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/.idea/workspace.xml" afterDir="false" />
-=======
-      <change afterPath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/controllers/VoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/ProjetoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/ProjetoApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/SpringConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/SpringConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/auth/api/AuthApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/auth/api/AuthApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/auth/api/AuthRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/auth/api/AuthRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/bootstrap/UserBootstrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/bootstrap/UserBootstrapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/controllers/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/controllers/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/controllers/UploadFileResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/controllers/UploadFileResponse.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/models/AggregatedRatingDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/models/AggregatedRatingDTO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/models/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/models/Product.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/models/ProductDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/models/ProductDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/repositories/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/repositories/ProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/FileStorageProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/FileStorageProperties.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/FileStorageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/FileStorageService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/ProductService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/services/ProductServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/views/CatalogView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/domain/views/CatalogView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/exceptions/FileStorageException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/exceptions/FileStorageException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/exceptions/MyResourceNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/exceptions/MyResourceNotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/api/CreateUserRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/api/CreateUserRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/api/UpdateUserRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/api/UpdateUserRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/api/UserAdminApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/api/UserAdminApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/api/UserEditMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/api/UserEditMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/api/UserEditMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/api/UserEditMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/api/UserView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/api/UserView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/api/UserViewMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/api/UserViewMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/api/UserViewMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/api/UserViewMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/models/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/models/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/models/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/repositories/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/repositories/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/usermanagement/services/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/projeto/utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/projeto/utils/Utils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/projeto/usermanagement/api/UserEditMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/projeto/usermanagement/api/UserEditMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/projeto/usermanagement/api/UserViewMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/projeto/usermanagement/api/UserViewMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/projeto/ProductTests$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/projeto/ProductTests$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/projeto/ProductTests$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/projeto/ProductTests$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/projeto/ProductTests$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/projeto/ProductTests$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/projeto/ProductTests$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/projeto/ProductTests$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/projeto/ProductTests$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/projeto/ProductTests$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/projeto/ProductTests$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/projeto/ProductTests$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/projeto/ProductTests$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/projeto/ProductTests$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/projeto/ProductTests$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/projeto/ProductTests$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/projeto/ProductTests$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/projeto/ProductTests$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/projeto/ProductTests$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/projeto/ProductTests$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/projeto/ProductTests$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/projeto/ProductTests$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/projeto/ProductTests$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/projeto/ProductTests$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/projeto/ProductTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/projeto/ProductTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/projeto/UserTests$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/projeto/UserTests$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/projeto/UserTests$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/projeto/UserTests$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/projeto/UserTests$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/projeto/UserTests$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/projeto/UserTests$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/projeto/UserTests$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/projeto/UserTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/projeto/UserTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Reviews/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/ProjetoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/ProjetoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/controllers/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/src/main/java/com/example/projeto/controllers/ReviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/target/classes/com/example/projeto/ProjetoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/target/classes/com/example/projeto/ProjetoApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/target/classes/com/example/projeto/controllers/ReviewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/target/classes/com/example/projeto/controllers/ReviewController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/target/classes/com/example/projeto/domain/views/ReviewView.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/target/classes/com/example/projeto/domain/views/ReviewView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/target/generated-sources/annotations/com/example/projeto/usermanagement/api/UserEditMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/target/generated-sources/annotations/com/example/projeto/usermanagement/api/UserEditMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/target/generated-sources/annotations/com/example/projeto/usermanagement/api/UserViewMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/target/generated-sources/annotations/com/example/projeto/usermanagement/api/UserViewMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Votes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/domain/repositories/VoteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/domain/repositories/VoteRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/domain/services/VoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/src/main/java/com/example/projeto/domain/services/VoteService.java" afterDir="false" />
->>>>>>> 4111a7c3395ecd4c2ec9b01a745237d4540b8df9
+      <change beforePath="$PROJECT_DIR$/../Votes/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/controllers/ReviewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/target/classes/com/example/projeto/controllers/ReviewController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +118,7 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
   </component>
@@ -93,12 +138,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "spring.configuration.checksum": "c53fd45b2f336a44d158902c252e2e1c"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/pom.xml" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Tiago Oliveira\IdeaProjects\psoft-project-g1\src\main\resources\assets" />
@@ -109,9 +160,9 @@
   </component>
   <component name="RunManager">
     <configuration name="ProjetoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <option name="ACTIVE_PROFILES" />
       <module name="projeto" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.ProjetoApplication" />
+      <option name="ACTIVE_PROFILES" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -161,13 +212,10 @@
       <workItem from="1666882559024" duration="82000" />
       <workItem from="1666883112393" duration="5605000" />
       <workItem from="1667071178035" duration="1702000" />
-<<<<<<< HEAD
       <workItem from="1667315472676" duration="3071000" />
       <workItem from="1667376757483" duration="2708000" />
-=======
       <workItem from="1667315472676" duration="2709000" />
       <workItem from="1667376770365" duration="3521000" />
->>>>>>> 4111a7c3395ecd4c2ec9b01a745237d4540b8df9
     </task>
     <task id="LOCAL-00001" summary="Updates to docs">
       <created>1653237491192</created>
@@ -284,6 +332,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updates to docs" />
