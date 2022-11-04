@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 
 import javax.persistence.*;
 import javax.validation.constraints.Pattern;
+import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -35,7 +36,7 @@ public class Product {
     protected Product() {
     }
 
-    public Product(String designation, String description, String sku) {
+    public Product(String designation, String description, String sku) throws IOException {
         setDesignation(designation);
         setDescription(description);
         setSku(sku);

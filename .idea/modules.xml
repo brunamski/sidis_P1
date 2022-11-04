@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Votes/projeto.iml" filepath="$PROJECT_DIR$/Votes/projeto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Reviews/projeto (1).iml" filepath="$PROJECT_DIR$/Reviews/projeto (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/Products/projeto (2).iml" filepath="$PROJECT_DIR$/Products/projeto (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/Autentication/projeto (3).iml" filepath="$PROJECT_DIR$/Autentication/projeto (3).iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/sidis_P1.iml" filepath="$PROJECT_DIR$/.idea/sidis_P1.iml" />
+    </modules>
+  </component>
+</project>

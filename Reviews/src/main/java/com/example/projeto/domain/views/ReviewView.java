@@ -5,5 +5,4 @@ public interface ReviewView {
     String getText();
     String getPublishingDate();
     String getFunFact();
-    String getNumberOfVotes();
 }

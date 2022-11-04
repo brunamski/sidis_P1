@@ -169,9 +169,11 @@ public class ProductController {
     @RolesAllowed(Role.ADMIN)
     @PostMapping(value = "/admin/product")
     @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<Product> create(@RequestBody Product newProduct) {
+    public ResponseEntity<ProductDTO> create(HttpServletRequest request, @RequestBody Product newProduct) throws IOException {
         final var product = productService.create(newProduct);
-        return ResponseEntity.ok().body(product);
+        ProductDTO productDTO = new ProductDTO(product.getProductId(),product.getDesignation(),product.getSku(),product.getDescription(),product.getAggregatedRating()
+                ,product.getSetOfImages());
+        return ResponseEntity.ok().body(productDTO);
     }
 
     /*

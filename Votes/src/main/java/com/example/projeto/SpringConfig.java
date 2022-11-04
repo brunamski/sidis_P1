@@ -7,7 +7,7 @@ import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
-import com.example.projeto.domain.services.FileStorageProperties;
+
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,7 +18,6 @@ import org.springframework.web.filter.ShallowEtagHeaderFilter;
 import java.awt.image.BufferedImage;
 
 @Configuration
-@EnableConfigurationProperties({ FileStorageProperties.class })
 public class SpringConfig {
 
     // Etags

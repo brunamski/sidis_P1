@@ -6,6 +6,7 @@ import com.example.projeto.domain.views.ReviewView;
 import com.example.projeto.usermanagement.models.Role;
 
 import com.example.projeto.utils.Utils;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -24,10 +25,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 import org.modelmapper.ModelMapper;
 import org.modelmapper.ModelMapper;
@@ -66,7 +64,7 @@ public class ReviewController {
     public List<ReviewDTO> findReviewsBySkuSortedByVotesAndDate(@PathVariable(value = "sku") final String sku) throws IOException, InterruptedException {
         Iterable<Review> reviews = reviewService.findReviewsBySku(sku);
         List<ReviewDTO> reviewDTOS = new ArrayList();
-        for(Review r: reviews){
+        for (Review r : reviews) {
             int numbervotes = getVotes(r.getReviewId());
             ReviewDTO reviewDTO = new ReviewDTO(r.getReviewId(), r.getRating(), r.getText(), r.getPublishingDate(), r.getFunFact());
             reviewDTO.setNumberOfVotes(numbervotes);
@@ -83,8 +81,8 @@ public class ReviewController {
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<ReviewDTO> create(HttpServletRequest request, @RequestBody Review newReview) throws IOException {
         newReview.setUserId(utils.getUserIdByToken(request));
-        final var review= reviewService.create(newReview);
-        ReviewDTO reviewDTO = new ReviewDTO(review.getReviewId(), review.getRating(), review.getText(), review.getPublishingDate(),review.getFunFact());
+        final var review = reviewService.create(newReview);
+        ReviewDTO reviewDTO = new ReviewDTO(review.getReviewId(), review.getRating(), review.getText(), review.getPublishingDate(), review.getFunFact());
         return ResponseEntity.ok().body(reviewDTO);
     }
 
@@ -94,10 +92,9 @@ public class ReviewController {
     public ResponseEntity<Review> withdrawReview(@PathVariable("id") @Parameter(description = "The id of the review to withdraw") final Long reviewId) throws IOException, InterruptedException {
         //passar para o service
         int voteCount = getVotes(reviewId);
-        if(voteCount == 0) {
+        if (voteCount == 0) {
             reviewService.deleteById(reviewId);
-        }
-        else {
+        } else {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "No Votes done for this Review!");
         }
         return ResponseEntity.noContent().build();
@@ -131,8 +128,8 @@ public class ReviewController {
     public AggregatedRatingDTO getAggregatedRatingDTO(@PathVariable(value = "sku") final String sku) {
         Iterable<Review> reviews = reviewService.findReviewsBySku(sku);
         AggregatedRating agg = reviewService.getProductAggregatedRating(reviews);
-        AggregatedRatingDTO aggDTO = new AggregatedRatingDTO(agg.getAverage(),agg.getTotalRatings(),agg.getFive_star(),agg.getFour_star(),
-                                                              agg.getThree_star(),agg.getTwo_star(),agg.getOne_star());
+        AggregatedRatingDTO aggDTO = new AggregatedRatingDTO(agg.getAverage(), agg.getTotalRatings(), agg.getFive_star(), agg.getFour_star(),
+                agg.getThree_star(), agg.getTwo_star(), agg.getOne_star());
         return aggDTO;
     }
 
@@ -150,6 +147,33 @@ public class ReviewController {
 
         HttpResponse<String> response = client.send(request,
                 HttpResponse.BodyHandlers.ofString());
-        return  Integer.parseInt(response.body());
+        return Integer.parseInt(response.body());
+    }
+
+
+
+    @GetMapping(value = "/public/review/get/{id}")
+    public boolean reviewIsPresent(@PathVariable(value = "id") final Long reviewId) throws IOException, InterruptedException {
+        final var optionalReview = reviewService.getReviewById(reviewId);
+        if (optionalReview.isPresent()) {
+
+            return true;
+        }
+        else {
+            String baseURL = "http://localhost:8081/api/public/review/get/" + reviewId;
+
+            HttpClient client = HttpClient.newHttpClient();
+
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(baseURL))
+                    .GET()
+                    .build();
+
+            HttpResponse<String> response = client.send(request,
+                    HttpResponse.BodyHandlers.ofString());
+
+
+            return Boolean.parseBoolean(response.body());
+        }
     }
 }
