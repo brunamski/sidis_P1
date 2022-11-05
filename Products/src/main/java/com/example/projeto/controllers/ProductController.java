@@ -25,6 +25,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.core.io.Resource;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import javax.annotation.security.RolesAllowed;
 import javax.servlet.http.HttpServletRequest;
@@ -170,6 +171,10 @@ public class ProductController {
     @PostMapping(value = "/admin/product")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<ProductDTO> create(HttpServletRequest request, @RequestBody Product newProduct) throws IOException {
+        Optional<Product> optionalProduct = productService.findBySku(newProduct.getSku());
+        if(!optionalProduct.isEmpty()){
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "Product exists!");
+        }
         final var product = productService.create(newProduct);
         ProductDTO productDTO = new ProductDTO(product.getProductId(),product.getDesignation(),product.getSku(),product.getDescription(),product.getAggregatedRating()
                 ,product.getSetOfImages());
