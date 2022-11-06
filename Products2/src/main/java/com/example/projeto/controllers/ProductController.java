@@ -97,6 +97,17 @@ public class ProductController {
         return ResponseEntity.ok().body(productService.createProduct(newProduct));
     }
 
+    @GetMapping(value = "/public/product/get/{sku}")
+    public boolean reviewIsPresent(@PathVariable(value = "sku") final String sku) throws IOException, InterruptedException {
+        final var optionalProduct = productService.findBySku(sku);
+        if (optionalProduct.isPresent()) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
     /*
      * Handling files as subresources
      */

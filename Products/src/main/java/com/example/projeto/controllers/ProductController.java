@@ -97,6 +97,29 @@ public class ProductController {
         return ResponseEntity.ok().body(productService.createProduct(newProduct));
     }
 
+    @GetMapping(value = "/public/product/get/{sku}")
+    public boolean productIsPresent(@PathVariable(value = "sku") final String sku) throws IOException, InterruptedException {
+        final var optionalProduct = productService.findBySku(sku);
+        if (optionalProduct.isPresent()) {
+            return true;
+        }
+        else {
+            String baseURL = "http://localhost:8084/api/public/product/get/" + sku;
+
+            HttpClient client = HttpClient.newHttpClient();
+
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(baseURL))
+                    .GET()
+                    .build();
+
+            HttpResponse<String> response = client.send(request,
+                    HttpResponse.BodyHandlers.ofString());
+
+            return Boolean.parseBoolean(response.body());
+        }
+    }
+
     /*
      * Handling files as subresources
      */

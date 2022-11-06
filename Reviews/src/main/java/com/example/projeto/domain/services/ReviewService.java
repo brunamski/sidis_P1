@@ -26,7 +26,7 @@ public interface ReviewService {
 
     //Iterable<ReviewView> findReviewsBySkuSortedByVotesAndDate(String sku);
 
-    ReviewDTO createReview(HttpServletRequest request, Review newReview) throws IOException;
+    ReviewDTO createReview(HttpServletRequest request, Review newReview) throws IOException, InterruptedException;
 
     ResponseEntity<Review> withdrawReview(final Long reviewId) throws IOException, InterruptedException;
 

@@ -69,7 +69,7 @@ public class ReviewController {
     @PostMapping(value = "/review")
     @RolesAllowed(Role.REGISTERED)
     @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<ReviewDTO> createReview(HttpServletRequest request, @RequestBody Review newReview) throws IOException {
+    public ResponseEntity<ReviewDTO> createReview(HttpServletRequest request, @RequestBody Review newReview) throws IOException, InterruptedException {
         return ResponseEntity.ok().body(reviewService.createReview(request, newReview));
     }
 
@@ -114,7 +114,7 @@ public class ReviewController {
             return true;
         }
         else {
-            String baseURL = "http://localhost:8081/api/public/review/get/" + reviewId;
+            /*String baseURL = "http://localhost:8081/api/public/review/get/" + reviewId;
 
             HttpClient client = HttpClient.newHttpClient();
 
@@ -126,7 +126,8 @@ public class ReviewController {
             HttpResponse<String> response = client.send(request,
                     HttpResponse.BodyHandlers.ofString());
 
-            return Boolean.parseBoolean(response.body());
+            return Boolean.parseBoolean(response.body());*/
+            return false;
         }
     }
 }

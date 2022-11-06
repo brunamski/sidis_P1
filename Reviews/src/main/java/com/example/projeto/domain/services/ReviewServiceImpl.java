@@ -77,11 +77,15 @@ public class ReviewServiceImpl implements ReviewService{
     }*/
 
     @Override
-    public ReviewDTO createReview(HttpServletRequest request, Review newReview) throws IOException {
-        newReview.setUserId(utils.getUserIdByToken(request));
-        final var review = create(newReview);
-        ReviewDTO reviewDTO = new ReviewDTO(review.getReviewId(), review.getSku(), review.getRating(), review.getText(), review.getPublishingDate(), review.getFunFact());
-        return reviewDTO;
+    public ReviewDTO createReview(HttpServletRequest request, Review newReview) throws IOException, InterruptedException {
+        boolean product = productIsPresent(newReview.getSku());
+        if(product == true) {
+            newReview.setUserId(utils.getUserIdByToken(request));
+            final var review = create(newReview);
+            ReviewDTO reviewDTO = new ReviewDTO(review.getReviewId(), review.getSku(), review.getRating(), review.getText(), review.getPublishingDate(), review.getFunFact());
+            return reviewDTO;
+        }
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Product not found!");
     }
 
     @Override
@@ -197,5 +201,23 @@ public class ReviewServiceImpl implements ReviewService{
                 HttpResponse.BodyHandlers.ofString());
 
         return Integer.parseInt(response.body());
+    }
+
+    public boolean productIsPresent(final String sku) throws IOException, InterruptedException {
+
+        String baseURL = "http://localhost:8080/api/public/product/get/" + sku;
+
+        HttpClient client = HttpClient.newBuilder()
+                .followRedirects(HttpClient.Redirect.ALWAYS).build();
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(baseURL))
+                .GET()
+                .build();
+
+        HttpResponse<String> response = client.send(request,
+                HttpResponse.BodyHandlers.ofString());
+
+        return  Boolean.parseBoolean(response.body());
     }
 }

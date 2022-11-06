@@ -46,7 +46,7 @@ public class VoteServiceImpl implements VoteService{
             VoteDTO voteDTO = new VoteDTO(vote.getVoteId(),vote.getUserId(), vote.getReviewId(), vote.isVote(), vote.getReason());
             return voteDTO;
         }
-        throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Review not found!");
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Review not found!");
     }
 
     public boolean reviewIsPresent(@PathVariable(value = "id") final Long reviewId) throws IOException, InterruptedException {
