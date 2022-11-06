@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public interface VoteService {
 
-    int getVotesByReviewId(Long reviewId);
+    int getVotesByReviewId(Long reviewId) throws IOException, InterruptedException;
 
     /**
      * Create a new Vote and assign its id.

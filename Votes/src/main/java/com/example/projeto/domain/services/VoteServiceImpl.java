@@ -29,7 +29,26 @@ public class VoteServiceImpl implements VoteService{
     private Utils utils;
 
     @Override
-    public int getVotesByReviewId(Long reviewId){return voteRepository.getVotesByReviewId(reviewId);}
+    public int getVotesByReviewId(Long reviewId) throws IOException, InterruptedException {
+        int nvotes = voteRepository.getVotesByReviewId(reviewId);
+
+        String baseURL = "http://localhost:8085/api/public/vote/review/" + reviewId;
+
+        HttpClient client = HttpClient.newBuilder()
+                .followRedirects(HttpClient.Redirect.ALWAYS).build();
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(baseURL))
+                .GET()
+                .build();
+
+        HttpResponse<String> response = client.send(request,
+                HttpResponse.BodyHandlers.ofString());
+
+        nvotes += Integer.parseInt(response.body());
+
+        return nvotes;
+    }
 
     @Override
     public Vote create(Vote newVote){

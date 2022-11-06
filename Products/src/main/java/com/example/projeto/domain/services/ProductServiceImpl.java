@@ -170,9 +170,9 @@ public class ProductServiceImpl implements ProductService {
         List<ProductDTOcat> productDTOcats = mapper.readValue(response.body(), new TypeReference<List<ProductDTOcat>>() {});
 
         return productDTOcats;
-
     }
 
+    @Override
     public AggregatedRatingDTO getProductAggregatedRating(final String sku) throws IOException, InterruptedException  {
         final var optionalProduct = findBySku(sku);
         if (optionalProduct.isPresent()) {

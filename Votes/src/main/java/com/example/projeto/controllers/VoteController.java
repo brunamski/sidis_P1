@@ -42,7 +42,7 @@ public class VoteController {
     }
 
     @GetMapping(value = "/public/vote/review/{reviewId}")
-    public int getVotes(@PathVariable(value = "reviewId") final Long reviewId) {
+    public int getVotes(@PathVariable(value = "reviewId") final Long reviewId) throws IOException, InterruptedException {
         return voteService.getVotesByReviewId(reviewId);
     }
 }
