@@ -20,7 +20,7 @@ public interface ReviewService {
 
     Iterable<Review> findReviewsBySku(String sku);
 
-    Iterable<ReviewView> findReviewsBySkuSortedByDate(String sku);
+    List<ReviewDTOcat> findReviewsBySkuSortedByDate(String sku) throws IOException, InterruptedException;
 
     List<ReviewDTO> findReviewsBySkuSortedByVotesAndDate(final String sku) throws IOException, InterruptedException;
 
@@ -35,6 +35,10 @@ public interface ReviewService {
     List<ReviewDTOStatus> findReviewsByUserId(Long userId) throws IOException, InterruptedException;
 
     Optional<Review> getReviewById(Long reviewId);
+
+    List<ReviewDTOcat> getReviewsCat(String sku) throws IOException, InterruptedException;
+
+    List<ReviewDTO> getReviews(String sku) throws IOException, InterruptedException;
 
     /**
      * Create a new Review and assign its id.

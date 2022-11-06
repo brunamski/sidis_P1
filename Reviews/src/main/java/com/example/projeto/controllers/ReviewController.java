@@ -55,7 +55,7 @@ public class ReviewController {
 
     @Operation(summary = "US05 - To obtain the reviews of a product. Sorted in reverse chronological publishing date")
     @GetMapping(value = "/public/review/product/{sku}")
-    public Iterable<ReviewView> findReviewsBySkuSortedByDate(@PathVariable(value = "sku") final String sku) {
+    public List<ReviewDTOcat> findReviewsBySkuSortedByDate(@PathVariable(value = "sku") final String sku) throws IOException, InterruptedException {
         return reviewService.findReviewsBySkuSortedByDate(sku);
     }
 

@@ -1,9 +1,12 @@
 package com.example.projeto.domain.models;
 
-import javax.persistence.Column;
-import java.io.IOException;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.LocalDate;
 
+@Getter
+@Setter
 public class ReviewDTO {
 
     public Long reviewId;
@@ -22,7 +25,7 @@ public class ReviewDTO {
 
     public ReviewDTO(){}
 
-    public ReviewDTO(Long reviewId, String sku, int rating, String text, LocalDate publishingDate, String funFact) throws IOException {
+    public ReviewDTO(Long reviewId, String sku, int rating, String text, LocalDate publishingDate, String funFact) {
         this.reviewId = reviewId;
         this.sku = sku;
         this.rating = rating;

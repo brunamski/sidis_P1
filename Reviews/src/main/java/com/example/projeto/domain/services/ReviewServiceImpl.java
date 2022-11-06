@@ -4,6 +4,9 @@ import com.example.projeto.domain.models.*;
 import com.example.projeto.domain.repositories.ReviewRepository;
 import com.example.projeto.domain.views.ReviewView;
 import com.example.projeto.utils.Utils;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import io.swagger.v3.oas.annotations.Parameter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -51,8 +54,20 @@ public class ReviewServiceImpl implements ReviewService{
     }
 
     @Override
-    public Iterable<ReviewView> findReviewsBySkuSortedByDate(String sku) {
-        return reviewRepository.findReviewsBySkuSortedByDate(sku);
+    public List<ReviewDTOcat> findReviewsBySkuSortedByDate(String sku) throws IOException, InterruptedException {
+        Iterable<Review> reviews = findReviewsBySku(sku);
+        List<ReviewDTOcat> reviewDTOcatList = new ArrayList();
+        for (Review r : reviews) {
+            ReviewDTOcat reviewDTOcat = new ReviewDTOcat(r.getSku(), r.getRating(), r.getText(), r.getPublishingDate(), r.getFunFact());
+            reviewDTOcatList.add(reviewDTOcat);
+        }
+        List<ReviewDTOcat> reviewDTOcats = getReviewsCat(sku);
+        for (ReviewDTOcat p : reviewDTOcats) {
+            reviewDTOcatList.add(p);
+        }
+
+        reviewDTOcatList.sort(Comparator.comparing(ReviewDTOcat::getPublishingDate).reversed());
+        return reviewDTOcatList;
     }
 
     @Override
@@ -64,6 +79,10 @@ public class ReviewServiceImpl implements ReviewService{
             ReviewDTO reviewDTO = new ReviewDTO(r.getReviewId(), r.getSku(), r.getRating(), r.getText(), r.getPublishingDate(), r.getFunFact());
             reviewDTO.setNumberOfVotes(numbervotes);
             reviewDTOS.add(reviewDTO);
+        }
+        List<ReviewDTO> reviewDTOS1 = getReviews(sku);
+        for (ReviewDTO p : reviewDTOS1) {
+            reviewDTOS.add(p);
         }
         reviewDTOS.sort(Comparator.comparing(ReviewDTO::getNumberOfVotes)
                 .thenComparing(ReviewDTO::getPublishingDate).reversed());
@@ -219,5 +238,74 @@ public class ReviewServiceImpl implements ReviewService{
                 HttpResponse.BodyHandlers.ofString());
 
         return  Boolean.parseBoolean(response.body());
+    }
+
+    @Override
+    public List<ReviewDTO> getReviews(String sku) throws IOException, InterruptedException {
+
+        String baseURL = "http://localhost:8086/api/public/review/vote/product/" + sku;
+
+        HttpClient client = HttpClient.newBuilder()
+                .followRedirects(HttpClient.Redirect.ALWAYS).build();
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(baseURL))
+                .GET()
+                .build();
+
+        HttpResponse<String> response = client.send(request,
+                HttpResponse.BodyHandlers.ofString());
+
+        ObjectMapper mapper = new ObjectMapper();
+
+        List<ReviewDTO> reviewDTOS = mapper.readValue(response.body(), new TypeReference<List<ReviewDTO>>() {});
+
+        return reviewDTOS;
+    }
+
+    @Override
+    public List<ReviewDTOcat> getReviewsCat(String sku) throws IOException, InterruptedException {
+
+        String baseURL = "http://localhost:8086/api/public/review/product/" + sku;
+
+        HttpClient client = HttpClient.newBuilder()
+                .followRedirects(HttpClient.Redirect.ALWAYS).build();
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(baseURL))
+                .GET()
+                .build();
+
+        HttpResponse<String> response = client.send(request,
+                HttpResponse.BodyHandlers.ofString());
+
+        ObjectMapper mapper = new ObjectMapper();
+
+        List<ReviewDTOcat> reviewDTOcats = mapper.readValue(response.body(), new TypeReference<List<ReviewDTOcat>>() {});
+
+        return reviewDTOcats;
+    }
+
+    public List<ReviewDTOStatus> getReviewsByUserId(Long userId) throws IOException, InterruptedException {
+        String baseURL = "http://localhost:8086/api/public/review/status/get/" + userId;
+
+        HttpClient client = HttpClient.newBuilder()
+                .followRedirects(HttpClient.Redirect.ALWAYS).build();
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(baseURL))
+                .GET()
+                .build();
+
+        HttpResponse<String> response = client.send(request,
+                HttpResponse.BodyHandlers.ofString());
+
+        ObjectMapper mapper = new ObjectMapper();
+
+        mapper.registerModule(new JavaTimeModule());
+
+        List<ReviewDTOStatus> reviewDTOStatusList = mapper.readValue(response.body(), new TypeReference<List<ReviewDTOStatus>>() {});
+
+        return reviewDTOStatusList;
     }
 }
