@@ -3,6 +3,7 @@ package com.example.projeto.controllers;
 import com.example.projeto.domain.models.AggregatedRatingDTO;
 import com.example.projeto.domain.models.Product;
 import com.example.projeto.domain.models.ProductDTO;
+import com.example.projeto.domain.models.ProductDTOcat;
 import com.example.projeto.domain.services.FileStorageService;
 import com.example.projeto.domain.services.ProductService;
 import com.example.projeto.domain.views.CatalogView;
@@ -55,20 +56,24 @@ public class ProductController {
 
     @Operation(summary = "US01 - To obtain the catalog of products")
     @GetMapping(value = "/public/product")
-    public Iterable<CatalogView> findCatalog() {
+    public List<ProductDTOcat> findCatalog() throws IOException, InterruptedException {
         return productService.findCatalog();
     }
 
     @Operation(summary = "US02 - To obtain the details of a product")
     @GetMapping(value = "/public/product/{sku}")
     public ResponseEntity<ProductDTO> getDetails(@PathVariable(value = "sku") final String sku) throws IOException, InterruptedException {
-        return productService.getDetails(sku);
+        final var productDTO = productService.getDetails(sku)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Product Not Found"));
+        return ResponseEntity.ok().body(productDTO);
     }
 
     @Operation(summary = "US03 - To search the catalog of products by product name")
     @GetMapping(value = "/public/product/name/{name}")
-    public ResponseEntity<ProductDTO> getProductsByProductName(@PathVariable("name") final String name) throws IOException, InterruptedException {
-        return productService.getProductsByProductName(name);
+    public ResponseEntity<ProductDTO> getProductsByProductName(@PathVariable(value = "name") final String name) throws IOException, InterruptedException {
+        final var productDTO = productService.getProductsByProductName(name)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Product Not Found"));
+        return ResponseEntity.ok().body(productDTO);
     }
 
     @Operation(summary = "US03 - To search the catalog of products by bar code")

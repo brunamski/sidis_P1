@@ -1,0 +1,75 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+hide circle
+skinparam classAttributeIconSize 0
+
+
+class ProductController {
+    +getProductAggregatedRating(String sku): ResponseEntity<Product>
+}
+
+interface ProductService <<interface>> {
+    +findOne(Long productId): Optional<Product>
+    +findBySku(String sku): Optional<Product>
+}
+
+class ProductServiceImpl{
+    +findOne(Long productId): Optional<Product>
+    +findBySku(String sku): Optional<Product>
+}
+
+interface ReviewService <<interface>> {
+    +findReviewsBySku(String sku): Iterable<Review>
+}
+
+class ReviewServiceImpl{
+    +findReviewsBySku(String sku): Iterable<Review>
+}
+
+class Review {
+    - productID
+    - reviewID
+    - text
+    - rating
+    - userId
+    - publishingDate
+    - funFact
+    - statusId
+    Review(Long reviewId, Long productId, String text, Long rating)
+}
+
+class Product {
+    - productId
+    - designation
+    - description
+    - setOfImages
+    - sku
+    Product(Long productId, String designation, String description, String setOfImages, Long sku)
+}
+
+class AggregatedRating {
+    - one_Star
+    - two_Star
+    - three_Star
+    - four_Star
+    - five_Star
+    - totalRatings
+    - average
+    AggregatedRating(String oneStar, String twoStar, String threeStar, String fourStar, String fiveStar, int totalRatings, float average)
+}
+
+ProductController ..> ProductService
+ProductController ..> ReviewService
+ProductServiceImpl ..> Review
+ReviewServiceImpl ..> Review
+ProductService ..> Product
+ProductService ..> AggregatedRating
+Product "1" ..> "0..*" Review: has a
+Product "1" ..> "1" AggregatedRating: has a
+
+ProductServiceImpl .up.|> ProductService
+ReviewServiceImpl .up.|> ReviewService
+
+
+@enduml

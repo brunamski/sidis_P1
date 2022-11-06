@@ -3,8 +3,10 @@ package com.example.projeto.domain.services;
 import com.example.projeto.domain.models.AggregatedRatingDTO;
 import com.example.projeto.domain.models.Product;
 import com.example.projeto.domain.models.ProductDTO;
+import com.example.projeto.domain.models.ProductDTOcat;
 import com.example.projeto.domain.repositories.ProductRepository;
 import com.example.projeto.domain.views.CatalogView;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,6 +20,8 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -27,8 +31,18 @@ public class ProductServiceImpl implements ProductService {
     private ProductRepository productRepository;
 
     @Override
-    public Iterable<CatalogView> findCatalog() {
-        return productRepository.findCatalog();
+    public List<ProductDTOcat> findCatalog() throws IOException, InterruptedException {
+        Iterable<Product> products = productRepository.findCatalog();
+        List<ProductDTOcat> productDTOcatList = new ArrayList();
+        for (Product p : products) {
+            ProductDTOcat productDTOcat = new ProductDTOcat(p.getSku(), p.getDesignation());
+            productDTOcatList.add(productDTOcat);
+        }
+        List<ProductDTOcat> productDTOcats = getCatalog();
+        for (ProductDTOcat p : productDTOcats) {
+            productDTOcatList.add(p);
+        }
+        return productDTOcatList;
     }
 
     @Override
@@ -68,16 +82,16 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public ResponseEntity<ProductDTO> getDetails(final String sku) throws IOException, InterruptedException {
+    public Optional<ProductDTO> getDetails(final String sku) throws IOException, InterruptedException {
         final var optionalProduct = findBySku(sku);
         if (optionalProduct.isPresent()) {
             Product p = optionalProduct.get();
             AggregatedRatingDTO agg = getAggFromReviews(sku);
             p.setAggregatedRating(agg);
             ProductDTO productDTO = new ProductDTO(p.getProductId(),p.getDesignation(),p.getSku(),p.getDescription(),p.getAggregatedRating(),p.getSetOfImages());
-            return ResponseEntity.ok().body(productDTO);
+            return Optional.of(productDTO);
         } else {
-            String baseURL = "http://localhost:8082/api/public/product/" + sku;
+            String baseURL = "http://localhost:8084/api/public/product/" + sku;
 
             HttpClient client = HttpClient.newHttpClient();
 
@@ -91,24 +105,27 @@ public class ProductServiceImpl implements ProductService {
 
             ObjectMapper mapper = new ObjectMapper();
 
-            Product p = mapper.readValue(response.body(), Product.class);
-            ProductDTO productDTO = new ProductDTO(p.getProductId(),p.getDesignation(),p.getSku(),p.getDescription(),p.getAggregatedRating(),p.getSetOfImages());
+            if(response.statusCode() != 200) {
+                return Optional.empty();
+            }
 
-            return ResponseEntity.ok().body(productDTO);
+            ProductDTO productDTO = mapper.readValue(response.body(), ProductDTO.class);
+
+            return Optional.of(productDTO);
         }
     }
 
     @Override
-    public ResponseEntity<ProductDTO> getProductsByProductName(final String name) throws IOException, InterruptedException {
+    public Optional<ProductDTO> getProductsByProductName(final String name) throws IOException, InterruptedException {
         final var optionalProduct  = findByProductName(name);
         if (optionalProduct.isPresent()) {
             Product product = optionalProduct.get();
             AggregatedRatingDTO agg = getAggFromReviews(product.getSku());
             product.setAggregatedRating(agg);
             ProductDTO productDTO = new ProductDTO(product.getProductId(), product.getDesignation(), product.getSku(), product.getDescription(), product.getAggregatedRating(), product.getSetOfImages());
-            return ResponseEntity.ok().body(productDTO);
+            return Optional.of(productDTO);
         } else {
-            String baseURL = "http://localhost:8082/api/public/name/" + name;
+            String baseURL = "http://localhost:8084/api/public/product/name/" + name;
 
             HttpClient client = HttpClient.newHttpClient();
 
@@ -122,11 +139,38 @@ public class ProductServiceImpl implements ProductService {
 
             ObjectMapper mapper = new ObjectMapper();
 
-            Product p = mapper.readValue(response.body(), Product.class);
-            ProductDTO productDTO = new ProductDTO(p.getProductId(),p.getDesignation(),p.getSku(),p.getDescription(),p.getAggregatedRating(),p.getSetOfImages());
+            if(response.statusCode() != 200) {
+                return Optional.empty();
+            }
 
-            return ResponseEntity.ok().body(productDTO);
+            ProductDTO productDTO = mapper.readValue(response.body(), ProductDTO.class);
+
+            return Optional.of(productDTO);
         }
+    }
+
+    @Override
+    public List<ProductDTOcat> getCatalog() throws IOException, InterruptedException {
+
+        String baseURL = "http://localhost:8084/api/public/product";
+
+        HttpClient client = HttpClient.newBuilder()
+                .followRedirects(HttpClient.Redirect.ALWAYS).build();
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(baseURL))
+                .GET()
+                .build();
+
+        HttpResponse<String> response = client.send(request,
+                HttpResponse.BodyHandlers.ofString());
+
+        ObjectMapper mapper = new ObjectMapper();
+
+        List<ProductDTOcat> productDTOcats = mapper.readValue(response.body(), new TypeReference<List<ProductDTOcat>>() {});
+
+        return productDTOcats;
+
     }
 
     public AggregatedRatingDTO getProductAggregatedRating(final String sku) throws IOException, InterruptedException  {

@@ -1,0 +1,42 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+skinparam classAttributeIconSize 0
+hide circle
+hide methods
+
+class AggregatedRating {
+    - one_Star
+    - two_Star
+    - three_Star
+    - four_Star
+    - five_Star
+    - average
+    - totalRatings
+}
+
+class Review {
+    - reviewId
+    - rating
+    - text
+    - sku
+    - userId
+    - publishingDate
+    - status
+    - funfact
+}
+
+class Product {
+    -designation
+    -description
+    -productID
+    -setOfImg
+    -sku
+}
+
+Product "1" -right-- "0..*" Review:  has >
+Product "1" -down-- "1" AggregatedRating:  has >
+
+
+
+@enduml

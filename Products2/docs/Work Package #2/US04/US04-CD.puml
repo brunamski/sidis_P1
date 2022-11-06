@@ -1,0 +1,82 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+hide circle
+skinparam classAttributeIconSize 0
+
+
+class ReviewController {
+    +findReviewsBySkuSortedByDate(@PathVariable(value = "sku") final String sku): Iterable<ReviewView>
+    +findReviewsBySkuSortedByVotesAndDate(@PathVariable(value = "sku") final String sku): Iterable<ReviewView>
+    +create(HttpServletRequest request, @RequestBody Review newReview): ResponseEntity<Review>
+    +withdrawReview(@PathVariable("id") @Parameter(description = "The id of the review to withdraw") final Long reviewId): ResponseEntity<Review>
+    +findAllPendingReviews(): Iterable<Review>
+    +updateReviewStatus(@PathVariable("id") @Parameter(description = "The id of the review we will update") final Long id, @Valid @RequestBody final Review review): ResponseEntity<Review>
+    +findReviewsByUserId(HttpServletRequest request) Iterable<Review>
+}
+
+interface ReviewService <<interface>> {
+    +findAllPendingReviews() : Iterable<Review>
+    +findReviewsBySkuSortedByDate(String sku): Iterable<ReviewView>
+    +findReviewsBySkuSortedByVotesAndDate(String sku): Iterable<ReviewView>
+    +findReviewsByUserId(Long userId): Iterable<Review>
+    +getReviewById(Long reviewId): Optional<Review>
+    +create(Review newReview): Review
+    +deleteById(Long reviewId): void
+    +partialUpdate(final Long id, final Review review): Review
+}
+
+class ReviewServiceImpl{
+    +findAllPendingReviews(): Iterable<Review>
+    +findReviewsBySkuSortedByDate(String sku): Iterable<ReviewView>
+    +findReviewsBySkuSortedByVotesAndDate(String sku): Iterable<ReviewView>
+    +findReviewsByUserId(Long userId): Iterable<Review>
+    +getReviewById(Long reviewId): Optional<Review>
+    +create(Review newReview): Review
+    +deleteById(final Long reviewId): void
+    +partialUpdate(final Long id, final Review review): Review
+}
+
+class Review {
+    - reviewId
+    - sku
+    - userId
+    - rating
+    - text
+    - publishingDate
+    - funfact
+    - statusId
+}
+
+class Product {
+    - productId
+    - designation
+    - description
+    - setOfImages
+    - sku
+    - aggregatedRating
+    Product(Long productId, String designation, String description, String setOfImages, Long sku, Long aggregatedRating)
+}
+
+class ReviewRepository {
+    +findAllPendingReviews(): Iterable<Review>
+    +findReviewsBySkuSortedByDate(String sku): List<ReviewView>
+    +findReviewsBySkuSortedByVotesAndDate(String sku): List<ReviewView>
+    +findReviewsByUserId(Long userId): Iterable<Review>
+    +findApprovedReviews(): Iterable<Review>
+    +findReviewById(Long reviewId): Optional<Review>
+    deleteByIdIfMatch(Long reviewId): void
+}
+
+ReviewRepository "1" --> "0..*" Review:  records
+
+ReviewController ..> ReviewService
+ReviewServiceImpl ..> ReviewRepository
+ReviewServiceImpl ..> Review
+ReviewService ..> Review
+Review "0..*" ..> "1" Product: has a
+
+ReviewServiceImpl .up.|> ReviewService
+
+
+@enduml
