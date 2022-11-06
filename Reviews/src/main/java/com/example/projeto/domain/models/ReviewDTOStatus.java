@@ -11,6 +11,8 @@ import java.time.LocalDate;
 public class ReviewDTOStatus {
     public Long reviewId;
 
+    public String sku;
+
     public int rating;
 
     public String text;
@@ -25,8 +27,9 @@ public class ReviewDTOStatus {
 
     public ReviewDTOStatus(){}
 
-    public ReviewDTOStatus(Long reviewId, int rating, String text, LocalDate publishingDate, String funFact, Status status) throws IOException {
+    public ReviewDTOStatus(Long reviewId, String sku, int rating, String text, LocalDate publishingDate, String funFact, Status status) throws IOException {
         this.reviewId = reviewId;
+        this.sku = sku;
         this.rating = rating;
         this.text = text;
         this.publishingDate = publishingDate;

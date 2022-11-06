@@ -24,8 +24,8 @@ public interface ReviewRepository extends CrudRepository<Review, Long> {
     @Query(value = "SELECT r.RATING AS RATING, r.TEXT AS text, r.PUBLISHING_DATE AS publishingDate, r.FUN_FACT AS funFact FROM Review r WHERE r.sku = ?1 AND r.STATUS = 1 ORDER BY r.PUBLISHING_DATE desc", nativeQuery = true)
     List<ReviewView> findReviewsBySkuSortedByDate(String sku);
 
-    @Query(value = "SELECT r.RATING AS RATING, r.TEXT AS text, r.PUBLISHING_DATE AS publishingDate, r.FUN_FACT AS funFact, COUNT(*) AS voteNumber FROM Review r, Vote v1 WHERE r.sku = ?1 AND v1.REVIEW_ID = r.REVIEW_ID AND r.STATUS = 1 GROUP BY r.REVIEW_ID ORDER BY COUNT(*) desc, r.PUBLISHING_DATE desc", nativeQuery = true)
-    List<ReviewView> findReviewsBySkuSortedByVotesAndDate(String sku);
+    //@Query(value = "SELECT r.RATING AS RATING, r.TEXT AS text, r.PUBLISHING_DATE AS publishingDate, r.FUN_FACT AS funFact, COUNT(*) AS voteNumber FROM Review r, Vote v1 WHERE r.sku = ?1 AND v1.REVIEW_ID = r.REVIEW_ID AND r.STATUS = 1 GROUP BY r.REVIEW_ID ORDER BY COUNT(*) desc, r.PUBLISHING_DATE desc", nativeQuery = true)
+    //List<ReviewView> findReviewsBySkuSortedByVotesAndDate(String sku);
 
     @Query(value = "SELECT * FROM Review r WHERE r.USER_ID = ?1", nativeQuery = true)
     Iterable<Review> findReviewsByUserId(Long userId);

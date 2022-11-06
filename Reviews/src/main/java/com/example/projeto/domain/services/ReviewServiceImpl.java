@@ -1,14 +1,28 @@
 package com.example.projeto.domain.services;
 
-import com.example.projeto.domain.models.AggregatedRating;
-import com.example.projeto.domain.models.Review;
+import com.example.projeto.domain.models.*;
 import com.example.projeto.domain.repositories.ReviewRepository;
 import com.example.projeto.domain.views.ReviewView;
+import com.example.projeto.utils.Utils;
+import io.swagger.v3.oas.annotations.Parameter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.server.ResponseStatusException;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
+import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 import java.util.Optional;
 
 
@@ -17,9 +31,18 @@ public class ReviewServiceImpl implements ReviewService{
     @Autowired
     private ReviewRepository reviewRepository;
 
+    @Autowired
+    private Utils utils;
+
     @Override
-    public Iterable<Review> findAllPendingReviews(){
-        return reviewRepository.findAllPendingReviews();
+    public List<ReviewDTOStatus> findAllPendingReviews() throws IOException, InterruptedException {
+        Iterable<Review> reviews = reviewRepository.findAllPendingReviews();
+        List<ReviewDTOStatus> reviewDTOStatusList = new ArrayList();
+        for (Review r : reviews) {
+            ReviewDTOStatus reviewDTO = new ReviewDTOStatus(r.getReviewId(), r.getSku(), r.getRating(), r.getText(), r.getPublishingDate(), r.getFunFact(), r.getStatus());
+            reviewDTOStatusList.add(reviewDTO);
+        }
+        return reviewDTOStatusList;
     }
 
     @Override
@@ -33,13 +56,62 @@ public class ReviewServiceImpl implements ReviewService{
     }
 
     @Override
+    public List<ReviewDTO> findReviewsBySkuSortedByVotesAndDate(final String sku) throws IOException, InterruptedException {
+        Iterable<Review> reviews = findReviewsBySku(sku);
+        List<ReviewDTO> reviewDTOS = new ArrayList();
+        for (Review r : reviews) {
+            int numbervotes = getVotes(r.getReviewId());
+            ReviewDTO reviewDTO = new ReviewDTO(r.getReviewId(), r.getSku(), r.getRating(), r.getText(), r.getPublishingDate(), r.getFunFact());
+            reviewDTO.setNumberOfVotes(numbervotes);
+            reviewDTOS.add(reviewDTO);
+        }
+        reviewDTOS.sort(Comparator.comparing(ReviewDTO::getNumberOfVotes)
+                .thenComparing(ReviewDTO::getPublishingDate).reversed());
+
+        return reviewDTOS;
+    }
+
+    /*@Override
     public Iterable<ReviewView> findReviewsBySkuSortedByVotesAndDate(String sku) {
         return reviewRepository.findReviewsBySkuSortedByVotesAndDate(sku);
+    }*/
+
+    @Override
+    public ReviewDTO createReview(HttpServletRequest request, Review newReview) throws IOException {
+        newReview.setUserId(utils.getUserIdByToken(request));
+        final var review = create(newReview);
+        ReviewDTO reviewDTO = new ReviewDTO(review.getReviewId(), review.getSku(), review.getRating(), review.getText(), review.getPublishingDate(), review.getFunFact());
+        return reviewDTO;
     }
 
     @Override
-    public Iterable<Review> findReviewsByUserId(Long userId){
-        return reviewRepository.findReviewsByUserId(userId);
+    public ResponseEntity<Review> withdrawReview(final Long reviewId) throws IOException, InterruptedException {
+        int voteCount = getVotes(reviewId);
+        if (voteCount == 0) {
+            deleteById(reviewId);
+        } else {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "No Votes done for this Review!");
+        }
+        return ResponseEntity.noContent().build();
+    }
+    @Override
+    public ReviewDTOStatus updateReviewStatus(final Long id, final Review review) throws IOException {
+        Review newReview = partialUpdate(id, review);
+        ReviewDTOStatus newReviewDTOStatus = new ReviewDTOStatus(newReview.getReviewId(), newReview.getSku(), newReview.getRating(), newReview.getText(), newReview.getPublishingDate(), newReview.getFunFact(), newReview.getStatus());
+        return newReviewDTOStatus;
+    }
+
+    @Override
+    public List<ReviewDTOStatus> findReviewsByUserId(Long userId) throws IOException, InterruptedException {
+        Iterable<Review> reviews = reviewRepository.findReviewsByUserId(userId);
+        List<ReviewDTOStatus> reviewDTOStatuses = new ArrayList();
+        for (Review r : reviews) {
+            int numbervotes = getVotes(r.getReviewId());
+            ReviewDTOStatus reviewDTO = new ReviewDTOStatus(r.getReviewId(), r.getSku(), r.getRating(), r.getText(), r.getPublishingDate(), r.getFunFact(), r.getStatus());
+            reviewDTO.setNumberOfVotes(numbervotes);
+            reviewDTOStatuses.add(reviewDTO);
+        }
+        return reviewDTOStatuses;
     }
 
     @Override
@@ -75,6 +147,15 @@ public class ReviewServiceImpl implements ReviewService{
     }
 
     @Override
+    public AggregatedRatingDTO getAggregatedRatingDTO(final String sku){
+        Iterable<Review> reviews = findReviewsBySku(sku);
+        AggregatedRating agg = getProductAggregatedRating(reviews);
+        AggregatedRatingDTO aggDTO = new AggregatedRatingDTO(agg.getAverage(), agg.getTotalRatings(), agg.getFive_star(), agg.getFour_star(),
+                agg.getThree_star(), agg.getTwo_star(), agg.getOne_star());
+        return aggDTO;
+    }
+
+    @Override
     public AggregatedRating getProductAggregatedRating(Iterable<Review> reviews) {
         int soma = 0;
         float totalRatings = 0;
@@ -96,6 +177,25 @@ public class ReviewServiceImpl implements ReviewService{
         ratingArray[1][5] = (ratingArray[0][5] / totalRatings) * 100;
 
         AggregatedRating aggregatedRating = new AggregatedRating(ratingArray[1][0], ratingArray[0][0], ratingArray[1][1], ratingArray[1][2], ratingArray[1][3], ratingArray[1][4], ratingArray[1][5]);
+
         return aggregatedRating;
+    }
+    @Override
+    public int getVotes(@PathVariable(value = "reviewId") final Long reviewId) throws IOException, InterruptedException {
+
+        String baseURL = "http://localhost:8082/api/public/vote/review/" + reviewId;
+
+        HttpClient client = HttpClient.newBuilder()
+                .followRedirects(HttpClient.Redirect.ALWAYS).build();
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(baseURL))
+                .GET()
+                .build();
+
+        HttpResponse<String> response = client.send(request,
+                HttpResponse.BodyHandlers.ofString());
+
+        return Integer.parseInt(response.body());
     }
 }

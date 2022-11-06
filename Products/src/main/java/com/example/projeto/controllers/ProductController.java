@@ -62,69 +62,13 @@ public class ProductController {
     @Operation(summary = "US02 - To obtain the details of a product")
     @GetMapping(value = "/public/product/{sku}")
     public ResponseEntity<ProductDTO> getDetails(@PathVariable(value = "sku") final String sku) throws IOException, InterruptedException {
-        final var optionalProduct = productService.findBySku(sku);
-        if (optionalProduct.isPresent()) {
-            Product p = optionalProduct.get();
-            AggregatedRatingDTO agg = getAggFromReviews(sku);
-            p.setAggregatedRating(agg);
-            ProductDTO productDTO = new ProductDTO(p.getProductId(),p.getDesignation(),p.getSku(),p.getDescription(),p.getAggregatedRating(),p.getSetOfImages());
-            return ResponseEntity.ok().body(productDTO);
-        } else {
-            String baseURL = "http://localhost:8082/api/public/product/" + sku;
-
-            HttpClient client = HttpClient.newHttpClient();
-
-            HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create(baseURL))
-                    .GET()
-                    .build();
-
-            HttpResponse<String> response = client.send(request,
-                    HttpResponse.BodyHandlers.ofString());
-
-            ObjectMapper mapper = new ObjectMapper();
-
-
-            Product p = mapper.readValue(response.body(), Product.class);
-            ProductDTO productDTO = new ProductDTO(p.getProductId(),p.getDesignation(),p.getSku(),p.getDescription(),p.getAggregatedRating(),p.getSetOfImages());
-
-            return ResponseEntity.ok().body(productDTO);
-        }
-
+        return productService.getDetails(sku);
     }
 
     @Operation(summary = "US03 - To search the catalog of products by product name")
     @GetMapping(value = "/public/product/name/{name}")
     public ResponseEntity<ProductDTO> getProductsByProductName(@PathVariable("name") final String name) throws IOException, InterruptedException {
-        final var optionalProduct  = productService.findByProductName(name);
-                 //.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Product Not Found"));
-        if (optionalProduct.isPresent()) {
-            Product product = optionalProduct.get();
-            AggregatedRatingDTO agg = getAggFromReviews(product.getSku());
-            product.setAggregatedRating(agg);
-            ProductDTO productDTO = new ProductDTO(product.getProductId(), product.getDesignation(), product.getSku(), product.getDescription(), product.getAggregatedRating(), product.getSetOfImages());
-            return ResponseEntity.ok().body(productDTO);
-        } else {
-            String baseURL = "http://localhost:8082/api/public/name/" + name;
-
-            HttpClient client = HttpClient.newHttpClient();
-
-            HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create(baseURL))
-                    .GET()
-                    .build();
-
-            HttpResponse<String> response = client.send(request,
-                    HttpResponse.BodyHandlers.ofString());
-
-            ObjectMapper mapper = new ObjectMapper();
-
-
-            Product p = mapper.readValue(response.body(), Product.class);
-            ProductDTO productDTO = new ProductDTO(p.getProductId(),p.getDesignation(),p.getSku(),p.getDescription(),p.getAggregatedRating(),p.getSetOfImages());
-
-            return ResponseEntity.ok().body(productDTO);
-        }
+        return productService.getProductsByProductName(name);
     }
 
     @Operation(summary = "US03 - To search the catalog of products by bar code")
@@ -137,48 +81,15 @@ public class ProductController {
     @Operation(summary = "US09 - To obtain the aggregated rating of a product")
     @GetMapping(value = "/public/product/rating/{sku}")
     public ResponseEntity<AggregatedRatingDTO> getProductAggregatedRating(@PathVariable("sku") final String sku) throws IOException, InterruptedException {
-        Optional<Product> optionalProduct = productService.findBySku(sku);
-        if (optionalProduct.isPresent()) {
-            Product p = optionalProduct.get();
-            AggregatedRatingDTO agg = getAggFromReviews(p.getSku());
-            return ResponseEntity.ok().body(agg);
-        } else {
-            String baseURL = "http://localhost:8081/api/public/review/product/aggregatedrating/" + sku;
-
-            HttpClient client = HttpClient.newHttpClient();
-
-            HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create(baseURL))
-                    .GET()
-                    .build();
-
-            HttpResponse<String> response = client.send(request,
-                    HttpResponse.BodyHandlers.ofString());
-
-            ObjectMapper mapper = new ObjectMapper();
-
-
-            AggregatedRatingDTO aggregatedRatingDTO = mapper.readValue(response.body(), AggregatedRatingDTO.class);
-
-
-            return ResponseEntity.ok().body(aggregatedRatingDTO);
-        }
-        //throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Product not found!");
+        return ResponseEntity.ok().body(productService.getProductAggregatedRating(sku));
     }
 
     @Operation(summary = "Creates a product")
     @RolesAllowed(Role.ADMIN)
     @PostMapping(value = "/admin/product")
     @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<ProductDTO> create(HttpServletRequest request, @RequestBody Product newProduct) throws IOException {
-        Optional<Product> optionalProduct = productService.findBySku(newProduct.getSku());
-        if(!optionalProduct.isEmpty()){
-            throw new ResponseStatusException(HttpStatus.CONFLICT, "Product exists!");
-        }
-        final var product = productService.create(newProduct);
-        ProductDTO productDTO = new ProductDTO(product.getProductId(),product.getDesignation(),product.getSku(),product.getDescription(),product.getAggregatedRating()
-                ,product.getSetOfImages());
-        return ResponseEntity.ok().body(productDTO);
+    public ResponseEntity<ProductDTO> createProduct(HttpServletRequest request, @RequestBody Product newProduct) throws IOException, InterruptedException {
+        return ResponseEntity.ok().body(productService.createProduct(newProduct));
     }
 
     /*
@@ -265,29 +176,5 @@ public class ProductController {
         return ResponseEntity.ok().contentType(MediaType.parseMediaType(contentType))
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + resource.getFilename() + "\"")
                 .body(resource);
-    }
-
-    public AggregatedRatingDTO getAggFromReviews(@PathVariable(value = "sku") final String sku) throws IOException, InterruptedException {
-
-        String baseURL = "http://localhost:8081/api/public/review/product/aggregatedrating/" + sku;
-
-        HttpClient client = HttpClient.newBuilder()
-                .followRedirects(HttpClient.Redirect.ALWAYS).build();
-
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(baseURL))
-                .GET()
-                .build();
-
-        HttpResponse<String> response = client.send(request,
-                HttpResponse.BodyHandlers.ofString());
-
-        ObjectMapper mapper = new ObjectMapper();
-
-        AggregatedRatingDTO aggregatedRatingDTO = mapper.readValue(response.body(), AggregatedRatingDTO.class);
-
-
-
-        return aggregatedRatingDTO;
     }
 }

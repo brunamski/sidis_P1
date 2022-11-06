@@ -33,47 +33,16 @@ public class VoteController {
     @Autowired
     private VoteService voteService;
 
-    @Autowired
-    private Utils utils;
-
     @Operation(summary = "US06 - To vote for a review")
     @PostMapping(value = "/review/{id}/vote")
     @RolesAllowed(Role.REGISTERED)
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<VoteDTO> vote(@PathVariable(value = "id") Long reviewId, HttpServletRequest request, @RequestBody Vote newVote) throws IOException, InterruptedException {
-        boolean review = reviewIsPresent(reviewId);
-        if (review == true) {
-            newVote.setUserId(utils.getUserIdByToken(request));
-            newVote.setReviewId(reviewId);
-            final var vote = voteService.create(newVote);
-            VoteDTO voteDTO = new VoteDTO(vote.getVoteId(),vote.getUserId(), vote.getReviewId(), vote.isVote(), vote.getReason());
-            return ResponseEntity.ok().body(voteDTO);
-        }
-
-        throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Review not found!");
+            return ResponseEntity.ok().body(voteService.vote(reviewId, request, newVote));
     }
 
     @GetMapping(value = "/public/vote/review/{reviewId}")
     public int getVotes(@PathVariable(value = "reviewId") final Long reviewId) {
-        int numberofvotes = voteService.getVotesByReviewId(reviewId);
-                return numberofvotes;
-    }
-
-    public boolean reviewIsPresent(@PathVariable(value = "id") final Long reviewId) throws IOException, InterruptedException {
-
-        String baseURL = "http://localhost:8081/api/public/review/get/" + reviewId;
-
-        HttpClient client = HttpClient.newBuilder()
-                .followRedirects(HttpClient.Redirect.ALWAYS).build();
-
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(baseURL))
-                .GET()
-                .build();
-
-        HttpResponse<String> response = client.send(request,
-                HttpResponse.BodyHandlers.ofString());
-
-        return  Boolean.parseBoolean(response.body());
+        return voteService.getVotesByReviewId(reviewId);
     }
 }
