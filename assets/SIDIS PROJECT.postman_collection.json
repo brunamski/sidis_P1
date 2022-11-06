@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "dbd7bc4d-18c2-4eed-812b-9e529a498c1b",
+		"_postman_id": "0d516cb6-c429-4370-bd9d-a22e670505f1",
 		"name": "SIDIS PROJECT",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "19169178"
+		"_exporter_id": "17875845"
 	},
 	"item": [
 		{
@@ -112,7 +112,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"username\":\"Bruno@email\",\r\n    \"password\":\"password7\"\r\n}",
+									"raw": "{\r\n    \"username\":\"Tiago@mail.com\",\r\n    \"password\":\"password3\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -188,7 +188,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"username\":\"Rodrigues@mail.com\",\r\n    \"password\":\"mod1\"\r\n}",
+									"raw": "{\r\n    \"username\":\"Alex@mail.com\",\r\n    \"password\":\"mod3\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -582,13 +582,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{hostReview}}{{baseUrl}}/review/4",
+									"raw": "{{hostReview}}{{baseUrl}}/review/13",
 									"host": [
 										"{{hostReview}}{{baseUrl}}"
 									],
 									"path": [
 										"review",
-										"4"
+										"13"
 									]
 								}
 							},
@@ -619,7 +619,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"sku\": \"SKU0000001\",\r\n    \"rating\": 4,\r\n    \"text\": \"Isto é a razão pelo qual dei uma estrela\"\r\n}",
+									"raw": "{\r\n    \"sku\": \"SKU0000001\",\r\n    \"rating\": 4,\r\n    \"text\": \"Isto é a razão pelo qual dei quatro estrelas\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -644,13 +644,13 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{hostReview}}{{baseUrl}}/review/14/withdraw",
+									"raw": "{{hostReview}}{{baseUrl}}/review/13/withdraw",
 									"host": [
 										"{{hostReview}}{{baseUrl}}"
 									],
 									"path": [
 										"review",
-										"14",
+										"13",
 										"withdraw"
 									]
 								}
@@ -716,13 +716,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{hostVote}}{{baseUrl}}/review/1/vote",
+									"raw": "{{hostVote}}{{baseUrl}}/review/13/vote",
 									"host": [
 										"{{hostVote}}{{baseUrl}}"
 									],
 									"path": [
 										"review",
-										"1",
+										"13",
 										"vote"
 									]
 								}
