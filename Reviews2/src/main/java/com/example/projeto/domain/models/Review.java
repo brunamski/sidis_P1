@@ -12,6 +12,8 @@ import org.apache.http.util.EntityUtils;
 import javax.persistence.*;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 @Entity
 @Getter
@@ -29,11 +31,11 @@ public class Review {
     @Column(nullable = false, length = 1000)
     private String text;
     @Column(nullable = false)
-    private LocalDate publishingDate = LocalDate.now();
+    private String publishingDate;
 
     private Status status = Status.PENDING;
     @Column(nullable = false)
-    private String funFact = retrieveDataFromApi(publishingDate);
+    private String funFact;
 
     protected Review() throws IOException {}
 
@@ -44,9 +46,9 @@ public class Review {
         this.text = text;
     }
 
-    public String retrieveDataFromApi(LocalDate publishingDate) throws IOException {
+    public String retrieveDataFromApi(String publishingDate) throws IOException {
         String baseUrl = "http://www.numbersapi.com/";
-        String url = baseUrl + publishingDate.getMonthValue() + "/" + publishingDate.getDayOfMonth() + "/date";
+        String url = baseUrl + publishingDate.substring(3,5) + "/" + publishingDate.substring(0,2) + "/date";
 
         try (CloseableHttpClient client = HttpClients.createDefault()) {
 
@@ -58,6 +60,12 @@ public class Review {
 
             return result;
         }
+    }
+    public void addDataTime() {
+        LocalDateTime myDateObj = LocalDateTime.now();
+        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        String formattedDate = myDateObj.format(myFormatObj);
+        this.publishingDate = formattedDate;
     }
 
     public void applyPatch(final Review newReview) {

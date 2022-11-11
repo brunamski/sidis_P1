@@ -45,6 +45,11 @@ public class ReviewServiceImpl implements ReviewService{
             ReviewDTOStatus reviewDTO = new ReviewDTOStatus(r.getReviewId(), r.getSku(), r.getRating(), r.getText(), r.getPublishingDate(), r.getFunFact(), r.getStatus());
             reviewDTOStatusList.add(reviewDTO);
         }
+
+        List<ReviewDTOStatus> reviewDTOStatusList1 = getPendingReviews();
+        for (ReviewDTOStatus r : reviewDTOStatusList1) {
+            reviewDTOStatusList.add(r);
+        }
         return reviewDTOStatusList;
     }
 
@@ -303,6 +308,27 @@ public class ReviewServiceImpl implements ReviewService{
         ObjectMapper mapper = new ObjectMapper();
 
         mapper.registerModule(new JavaTimeModule());
+
+        List<ReviewDTOStatus> reviewDTOStatusList = mapper.readValue(response.body(), new TypeReference<List<ReviewDTOStatus>>() {});
+
+        return reviewDTOStatusList;
+    }
+
+    public List<ReviewDTOStatus> getPendingReviews() throws IOException, InterruptedException {
+        String baseURL = "http://localhost:8086/api/public/review/pending";
+
+        HttpClient client = HttpClient.newBuilder()
+                .followRedirects(HttpClient.Redirect.ALWAYS).build();
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(baseURL))
+                .GET()
+                .build();
+
+        HttpResponse<String> response = client.send(request,
+                HttpResponse.BodyHandlers.ofString());
+
+        ObjectMapper mapper = new ObjectMapper();
 
         List<ReviewDTOStatus> reviewDTOStatusList = mapper.readValue(response.body(), new TypeReference<List<ReviewDTOStatus>>() {});
 

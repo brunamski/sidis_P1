@@ -14,14 +14,14 @@ public class ReviewDTOcat {
 
     public String text;
 
-    public LocalDate publishingDate;
+    public String publishingDate;
 
     public String funFact;
 
     protected ReviewDTOcat() {
     }
 
-    public ReviewDTOcat(String sku, int rating, String text, LocalDate publishingDate, String funFact) {
+    public ReviewDTOcat(String sku, int rating, String text, String publishingDate, String funFact) {
         this.sku = sku;
         this.rating = rating;
         this.text = text;

@@ -2,36 +2,22 @@ package com.example.projeto.controllers;
 
 import com.example.projeto.domain.models.*;
 import com.example.projeto.domain.services.ReviewService;
-import com.example.projeto.domain.views.ReviewView;
 import com.example.projeto.usermanagement.models.Role;
 
 import com.example.projeto.utils.Utils;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseStatusException;
 import javax.annotation.security.RolesAllowed;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.time.LocalDate;
 import java.util.*;
 
-import org.modelmapper.ModelMapper;
-import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -121,5 +107,10 @@ public class ReviewController {
     @GetMapping(value = "/public/review/status/get/{id}")
     public List<ReviewDTOStatus> getReviewsByUserId(@PathVariable(value = "id") final Long userId) throws IOException, InterruptedException {
         return reviewService.findReviewsByUserId(userId);
+    }
+
+    @GetMapping(value = "/public/review/pending")
+    public List<ReviewDTOStatus> findAllPendingReviews2() throws IOException, InterruptedException {
+        return reviewService.findAllPendingReviews();
     }
 }

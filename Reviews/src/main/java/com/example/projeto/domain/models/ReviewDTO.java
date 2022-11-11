@@ -17,7 +17,7 @@ public class ReviewDTO {
 
     public String text;
 
-    public LocalDate publishingDate;
+    public String publishingDate;
 
     public String funFact;
 
@@ -25,7 +25,7 @@ public class ReviewDTO {
 
     public ReviewDTO(){}
 
-    public ReviewDTO(Long reviewId, String sku, int rating, String text, LocalDate publishingDate, String funFact) {
+    public ReviewDTO(Long reviewId, String sku, int rating, String text, String publishingDate, String funFact) {
         this.reviewId = reviewId;
         this.sku = sku;
         this.rating = rating;
@@ -42,7 +42,7 @@ public class ReviewDTO {
         return this.numberOfVotes;
     }
 
-    public LocalDate getPublishingDate(){
+    public String getPublishingDate(){
         return this.publishingDate;
     }
 }

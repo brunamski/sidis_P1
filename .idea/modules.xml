@@ -3,9 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Votes/projeto.iml" filepath="$PROJECT_DIR$/Votes/projeto.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Reviews/projeto (1).iml" filepath="$PROJECT_DIR$/Reviews/projeto (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/Autentication/projeto (1).iml" filepath="$PROJECT_DIR$/Autentication/projeto (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/Products/projeto (2).iml" filepath="$PROJECT_DIR$/Products/projeto (2).iml" />
-      <module fileurl="file://$PROJECT_DIR$/Autentication/projeto (3).iml" filepath="$PROJECT_DIR$/Autentication/projeto (3).iml" />
+      <module fileurl="file://$PROJECT_DIR$/Reviews/projeto (3).iml" filepath="$PROJECT_DIR$/Reviews/projeto (3).iml" />
+      <module fileurl="file://$PROJECT_DIR$/Products2/projeto (4).iml" filepath="$PROJECT_DIR$/Products2/projeto (4).iml" />
+      <module fileurl="file://$PROJECT_DIR$/Reviews2/projeto (5).iml" filepath="$PROJECT_DIR$/Reviews2/projeto (5).iml" />
+      <module fileurl="file://$PROJECT_DIR$/Votes2/projeto (6).iml" filepath="$PROJECT_DIR$/Votes2/projeto (6).iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/sidis_P1.iml" filepath="$PROJECT_DIR$/.idea/sidis_P1.iml" />
     </modules>
   </component>

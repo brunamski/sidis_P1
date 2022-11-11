@@ -143,7 +143,7 @@
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<mainClass>com.example.projeto.ProjetoApplication</mainClass>
+							<mainClass>com.example.projeto.AuthenticationApplication</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

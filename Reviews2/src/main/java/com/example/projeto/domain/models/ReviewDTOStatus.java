@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.IOException;
-import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -17,7 +16,7 @@ public class ReviewDTOStatus {
 
     public String text;
 
-    public LocalDate publishingDate;
+    public String publishingDate;
 
     public String funFact;
 
@@ -25,9 +24,9 @@ public class ReviewDTOStatus {
 
     public Status status;
 
-    protected ReviewDTOStatus(){}
+    public ReviewDTOStatus() {}
 
-    public ReviewDTOStatus(Long reviewId, String sku, int rating, String text, LocalDate publishingDate, String funFact, Status status) {
+    public ReviewDTOStatus(Long reviewId, String sku, int rating, String text, String publishingDate, String funFact, Status status) throws IOException {
         this.reviewId = reviewId;
         this.sku = sku;
         this.rating = rating;
