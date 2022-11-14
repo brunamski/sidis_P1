@@ -2,15 +2,15 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/Autentication/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Products/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Products2/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Products2/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Reviews/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Reviews2/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Reviews2/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Votes/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Votes/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Votes2/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Votes2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ProductsCOM/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ProductsCOM/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ProductsGET/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ReviewsCOM/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ReviewsCOM/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ReviewsGET/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/VotesCOM/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/VotesCOM/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/VotesGET/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/VotesGET/src/main/resources" charset="UTF-8" />
   </component>
 </project>

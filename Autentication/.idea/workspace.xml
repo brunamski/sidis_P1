@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e136609a-c43b-41e2-8831-0774302936d9" name="Changes" comment="Workpackage#5 documentation finished">
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Products/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Products/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Products/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Products2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Products2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reviews2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Votes2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes2/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e136609a-c43b-41e2-8831-0774302936d9" name="Changes" comment="Workpackage#5 documentation finished" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,7 +85,14 @@
       <recent name="C:\Users\Tiago Oliveira\IdeaProjects\psoft-project-g1\docs\Work Package #3\US05V2" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.ProjetoApplication">
+    <configuration name="AuthenticationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Autentication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.AuthenticationApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProjetoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="Autentication" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.ProjetoApplication" />
@@ -157,6 +150,7 @@
       <workItem from="1667673153753" duration="1266000" />
       <workItem from="1667981629166" duration="21000" />
       <workItem from="1667981665110" duration="1167000" />
+      <workItem from="1668440184059" duration="113000" />
     </task>
     <task id="LOCAL-00001" summary="Updates to docs">
       <created>1653237491192</created>
@@ -273,6 +267,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updates to docs" />

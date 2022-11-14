@@ -20,15 +20,10 @@
         <module name="projeto (4)" />
         <module name="projeto (3)" />
       </profile>
-      <profile name="Maven default annotation processors profile" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="projeto" target="16" />
-      <module name="projeto (1)" target="17" />
+      <module name="projeto (1)" target="16" />
       <module name="projeto (2)" target="16" />
       <module name="projeto (3)" target="16" />
       <module name="projeto (4)" target="16" />
