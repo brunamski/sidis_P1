@@ -21,12 +21,12 @@ public class ProductDTO {
 
     protected ProductDTO(){}
 
-    public ProductDTO (@JsonProperty("productId") Long productId,
-                       @JsonProperty("designation") String designation,
-                       @JsonProperty("sku") String sku,
-                       @JsonProperty("description") String description,
-                       @JsonProperty("aggregatedRating")AggregatedRatingDTO aggregatedRating,
-                       @JsonProperty("setOfImages")Set<String> setOfImages){
+    public ProductDTO (Long productId,
+                       String designation,
+                       String sku,
+                       String description,
+                       AggregatedRatingDTO aggregatedRating,
+                       Set<String> setOfImages){
         this.productId = productId;
         this.sku = sku;
         this.description = description;

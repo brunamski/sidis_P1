@@ -54,11 +54,17 @@ public class ProductController {
     @Autowired
     private FileStorageService fileStorageService;
 
-    /*@Operation(summary = "US01 - To obtain the catalog of products")
-    @GetMapping(value = "/public/product")
+    @Operation(summary = "US01 - To obtain the catalog of products")
+    @GetMapping(value = "/public/products")
     public List<ProductDTOcat> findCatalog() throws IOException, InterruptedException {
         return productService.findCatalog();
     }
+    @GetMapping(value = "/public/my/products")
+    public List<ProductDTOcat> findMyCatalog() throws IOException, InterruptedException {
+        return productService.findMyCatalog();
+    }
+
+
 
     @Operation(summary = "US02 - To obtain the details of a product")
     @GetMapping(value = "/public/product/{sku}")
@@ -70,11 +76,18 @@ public class ProductController {
 
     @Operation(summary = "US03 - To search the catalog of products by product name")
     @GetMapping(value = "/public/product/name/{name}")
-    public ResponseEntity<ProductDTO> getProductsByProductName(@PathVariable("name") final String name) throws IOException, InterruptedException {
+    public ResponseEntity<ProductDTO> getProductsByProductName(@PathVariable(value = "name") final String name) throws IOException, InterruptedException {
         final var productDTO = productService.getProductsByProductName(name)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Product Not Found"));
         return ResponseEntity.ok().body(productDTO);
     }
+    @GetMapping(value = "/public/myproduct/name/{name}")
+    public ResponseEntity<ProductDTO> getMyProductsByProductName(@PathVariable(value = "name") final String name) throws IOException, InterruptedException {
+        final var productDTO = productService.getMyProductsByProductName(name)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Product Not Found"));
+        return ResponseEntity.ok().body(productDTO);
+    }
+
 
     @Operation(summary = "US03 - To search the catalog of products by bar code")
     @GetMapping(value = "/public/product/bar_code/{sku}", produces = MediaType.IMAGE_PNG_VALUE)
@@ -87,7 +100,7 @@ public class ProductController {
     @GetMapping(value = "/public/product/rating/{sku}")
     public ResponseEntity<AggregatedRatingDTO> getProductAggregatedRating(@PathVariable("sku") final String sku) throws IOException, InterruptedException {
         return ResponseEntity.ok().body(productService.getProductAggregatedRating(sku));
-    }*/
+    }
 
     @Operation(summary = "Creates a product")
     @RolesAllowed(Role.ADMIN)
@@ -97,7 +110,7 @@ public class ProductController {
         return ResponseEntity.ok().body(productService.createProduct(newProduct));
     }
 
-    /*@GetMapping(value = "/public/product/get/{sku}")
+    @GetMapping(value = "/public/product/get/{sku}")
     public boolean productIsPresent(@PathVariable(value = "sku") final String sku) throws IOException, InterruptedException {
         final var optionalProduct = productService.findBySku(sku);
         if (optionalProduct.isPresent()) {
@@ -106,7 +119,7 @@ public class ProductController {
         else {
             return false;
         }
-    }*/
+    }
 
     /*
      * Handling files as subresources

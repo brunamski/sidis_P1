@@ -20,6 +20,12 @@
         <module name="projeto (4)" />
         <module name="projeto (3)" />
       </profile>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="rabbitmq-amqp-tutorials" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="projeto" target="16" />
@@ -29,6 +35,7 @@
       <module name="projeto (4)" target="16" />
       <module name="projeto (5)" target="16" />
       <module name="projeto (6)" target="16" />
+      <module name="rabbitmq-amqp-tutorials" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -40,6 +47,7 @@
       <module name="projeto (4)" options="-parameters" />
       <module name="projeto (5)" options="-parameters" />
       <module name="projeto (6)" options="-parameters" />
+      <module name="rabbitmq-amqp-tutorials" options="-parameters" />
     </option>
   </component>
 </project>

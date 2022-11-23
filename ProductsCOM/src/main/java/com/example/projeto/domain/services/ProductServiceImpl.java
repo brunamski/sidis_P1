@@ -30,7 +30,7 @@ public class ProductServiceImpl implements ProductService {
     @Autowired
     private ProductRepository productRepository;
 
-    /*@Override
+    @Override
     public List<ProductDTOcat> findCatalog() throws IOException, InterruptedException {
         Iterable<Product> products = productRepository.findCatalog();
         List<ProductDTOcat> productDTOcatList = new ArrayList();
@@ -38,8 +38,21 @@ public class ProductServiceImpl implements ProductService {
             ProductDTOcat productDTOcat = new ProductDTOcat(p.getSku(), p.getDesignation());
             productDTOcatList.add(productDTOcat);
         }
+        List<ProductDTOcat> productDTOcats = getCatalog();
+        for (ProductDTOcat p : productDTOcats) {
+            productDTOcatList.add(p);
+        }
         return productDTOcatList;
-    }*/
+    }
+    public List<ProductDTOcat> findMyCatalog() throws IOException, InterruptedException {
+        Iterable<Product> products = productRepository.findCatalog();
+        List<ProductDTOcat> productDTOcatList = new ArrayList();
+        for (Product p : products) {
+            ProductDTOcat productDTOcat = new ProductDTOcat(p.getSku(), p.getDesignation());
+            productDTOcatList.add(productDTOcat);
+        }
+        return productDTOcatList;
+    }
 
     @Override
     public Optional<Product> findBySku(final String sku) {
@@ -65,9 +78,14 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public ProductDTO createProduct(Product newProduct) throws IOException, InterruptedException {
+
+        boolean checkProduct = productIsPresent(newProduct.getSku());
+        if (checkProduct == true) {
+            throw new ResponseStatusException(HttpStatus.FOUND, "Product exists!");
+        }
         final var optionalProduct = findBySku(newProduct.getSku());
         if(!optionalProduct.isEmpty()){
-            throw new ResponseStatusException(HttpStatus.CONFLICT, "Product exists!");
+            throw new ResponseStatusException(HttpStatus.FOUND, "Product exists!");
         }
         final var product = create(newProduct);
         AggregatedRatingDTO agg = getAggFromReviews(product.getSku());
@@ -77,7 +95,41 @@ public class ProductServiceImpl implements ProductService {
         return productDTO;
     }
 
-    /* @Override
+
+    public boolean checkProduct(String sku) throws IOException, InterruptedException {
+        final var optionalProduct = findBySku(sku);
+        if (optionalProduct.isPresent()) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    public boolean productIsPresent(String sku) throws IOException, InterruptedException {
+        final var optionalProduct = findBySku(sku);
+        if (optionalProduct.isPresent()) {
+            return true;
+        }
+        else {
+            String baseURL = "http://localhost:8080/api/public/product/get/" + sku;
+
+            HttpClient client = HttpClient.newHttpClient();
+
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(baseURL))
+                    .GET()
+                    .build();
+
+            HttpResponse<String> response = client.send(request,
+                    HttpResponse.BodyHandlers.ofString());
+
+            return Boolean.parseBoolean(response.body());
+        }
+
+
+    }
+
+    @Override
     public Optional<ProductDTO> getDetails(final String sku) throws IOException, InterruptedException {
         final var optionalProduct = findBySku(sku);
         if (optionalProduct.isPresent()) {
@@ -87,28 +139,84 @@ public class ProductServiceImpl implements ProductService {
             ProductDTO productDTO = new ProductDTO(p.getProductId(),p.getDesignation(),p.getSku(),p.getDescription(),p.getAggregatedRating(),p.getSetOfImages());
             return Optional.of(productDTO);
         } else {
-            return Optional.empty();
+            String baseURL = "http://localhost:8080/api/public/product/" + sku;
+
+            HttpClient client = HttpClient.newHttpClient();
+
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(baseURL))
+                    .GET()
+                    .build();
+
+            HttpResponse<String> response = client.send(request,
+                    HttpResponse.BodyHandlers.ofString());
+
+            ObjectMapper mapper = new ObjectMapper();
+
+            if(response.statusCode() != 200) {
+                return Optional.empty();
+            }
+
+            ProductDTO productDTO = mapper.readValue(response.body(), ProductDTO.class);
+
+            return Optional.of(productDTO);
         }
     }
 
     @Override
     public Optional<ProductDTO> getProductsByProductName(final String name) throws IOException, InterruptedException {
-        final var optionalProduct  = findByProductName(name);
-        if (optionalProduct.isPresent()) {
+        Optional<Product> optionalProduct = productRepository.findByProductName(name);
+        if (!optionalProduct.isEmpty()) {
             Product product = optionalProduct.get();
             AggregatedRatingDTO agg = getAggFromReviews(product.getSku());
             product.setAggregatedRating(agg);
             ProductDTO productDTO = new ProductDTO(product.getProductId(), product.getDesignation(), product.getSku(), product.getDescription(), product.getAggregatedRating(), product.getSetOfImages());
             return Optional.of(productDTO);
         } else {
-            return Optional.empty();
+            String baseURL = "http://localhost:8080/api/public/product/name/" + name;
+
+            HttpClient client = HttpClient.newHttpClient();
+
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(baseURL))
+                    .GET()
+                    .build();
+
+            HttpResponse<String> response = client.send(request,
+                    HttpResponse.BodyHandlers.ofString());
+
+            ObjectMapper mapper = new ObjectMapper();
+
+            if(response.statusCode() != 200) {
+                return null;
+            }
+
+            ProductDTO productDTO = mapper.readValue(response.body(), ProductDTO.class);
+
+            return Optional.of(productDTO);
         }
     }
 
     @Override
+    public Optional<ProductDTO> getMyProductsByProductName(final String name) throws IOException, InterruptedException {
+        List<ProductDTO> productDTOList = new ArrayList();
+        Optional<Product> optionalProduct = productRepository.findByProductName(name);
+        if (!optionalProduct.isEmpty()) {
+            Product product = optionalProduct.get();
+            AggregatedRatingDTO agg = getAggFromReviews(product.getSku());
+            product.setAggregatedRating(agg);
+            ProductDTO productDTO = new ProductDTO(product.getProductId(), product.getDesignation(), product.getSku(), product.getDescription(), product.getAggregatedRating(), product.getSetOfImages());
+            productDTOList.add(productDTO);
+            return Optional.of(productDTO);
+        }
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+    }
+
+
+    @Override
     public List<ProductDTOcat> getCatalog() throws IOException, InterruptedException {
 
-        String baseURL = "http://localhost:8081/api/public/product";
+        String baseURL = "http://localhost:8080/api/public/product";
 
         HttpClient client = HttpClient.newBuilder()
                 .followRedirects(HttpClient.Redirect.ALWAYS).build();
@@ -126,9 +234,9 @@ public class ProductServiceImpl implements ProductService {
         List<ProductDTOcat> productDTOcats = mapper.readValue(response.body(), new TypeReference<List<ProductDTOcat>>() {});
 
         return productDTOcats;
-
     }
 
+    @Override
     public AggregatedRatingDTO getProductAggregatedRating(final String sku) throws IOException, InterruptedException  {
         final var optionalProduct = findBySku(sku);
         if (optionalProduct.isPresent()) {
@@ -140,11 +248,11 @@ public class ProductServiceImpl implements ProductService {
             return agg;
         }
     }
-*/
+
     @Override
     public AggregatedRatingDTO getAggFromReviews(@PathVariable("sku") final String sku) throws IOException, InterruptedException {
 
-        String baseURL = "http://localhost:8081/api/public/review/product/aggregatedrating/" + sku;
+        String baseURL = "http://localhost:8080/api/public/review/product/aggregatedrating/" + sku;
 
         HttpClient client = HttpClient.newBuilder()
                 .followRedirects(HttpClient.Redirect.ALWAYS).build();

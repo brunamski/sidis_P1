@@ -11,6 +11,12 @@
         <option value="$PROJECT_DIR$/Reviews2/pom.xml" />
         <option value="$PROJECT_DIR$/Votes2/pom.xml" />
         <option value="$PROJECT_DIR$/VotesCOM/pom.xml" />
+        <option value="$PROJECT_DIR$/ProductsCOM/pom.xml" />
+        <option value="$PROJECT_DIR$/ProductsGET/pom.xml" />
+        <option value="$PROJECT_DIR$/ReviewsCOM/pom.xml" />
+        <option value="$PROJECT_DIR$/ReviewsGET/pom.xml" />
+        <option value="$PROJECT_DIR$/VotesGET/pom.xml" />
+        <option value="$PROJECT_DIR$/rabbitmq-amqp-tutorials/pom.xml" />
       </list>
     </option>
   </component>

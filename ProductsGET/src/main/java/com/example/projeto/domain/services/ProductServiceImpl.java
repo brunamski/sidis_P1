@@ -44,6 +44,15 @@ public class ProductServiceImpl implements ProductService {
         }
         return productDTOcatList;
     }
+    public List<ProductDTOcat> findMyCatalog() throws IOException, InterruptedException {
+        Iterable<Product> products = productRepository.findCatalog();
+        List<ProductDTOcat> productDTOcatList = new ArrayList();
+        for (Product p : products) {
+            ProductDTOcat productDTOcat = new ProductDTOcat(p.getSku(), p.getDesignation());
+            productDTOcatList.add(productDTOcat);
+        }
+        return productDTOcatList;
+    }
 
     @Override
     public Optional<Product> findBySku(final String sku) {
@@ -64,14 +73,19 @@ public class ProductServiceImpl implements ProductService {
         productRepository.save(optionalProduct.get());
     }
 
-    //@Override
-    //public Product create(Product newProduct){ return productRepository.save(newProduct); }
+    @Override
+    public Product create(Product newProduct){ return productRepository.save(newProduct); }
 
-    /*@Override
+    @Override
     public ProductDTO createProduct(Product newProduct) throws IOException, InterruptedException {
+
+        boolean checkProduct = productIsPresent(newProduct.getSku());
+        if (checkProduct == true) {
+            throw new ResponseStatusException(HttpStatus.FOUND, "Product exists!");
+        }
         final var optionalProduct = findBySku(newProduct.getSku());
         if(!optionalProduct.isEmpty()){
-            throw new ResponseStatusException(HttpStatus.CONFLICT, "Product exists!");
+            throw new ResponseStatusException(HttpStatus.FOUND, "Product exists!");
         }
         final var product = create(newProduct);
         AggregatedRatingDTO agg = getAggFromReviews(product.getSku());
@@ -79,7 +93,41 @@ public class ProductServiceImpl implements ProductService {
         ProductDTO productDTO = new ProductDTO(product.getProductId(),product.getDesignation(),product.getSku(),product.getDescription(),product.getAggregatedRating()
                 ,product.getSetOfImages());
         return productDTO;
-    }*/
+    }
+
+
+    public boolean checkProduct(String sku) throws IOException, InterruptedException {
+        final var optionalProduct = findBySku(sku);
+        if (optionalProduct.isPresent()) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    public boolean productIsPresent(String sku) throws IOException, InterruptedException {
+        final var optionalProduct = findBySku(sku);
+        if (optionalProduct.isPresent()) {
+            return true;
+        }
+        else {
+            String baseURL = "http://localhost:8084/api/public/product/get/" + sku;
+
+            HttpClient client = HttpClient.newHttpClient();
+
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(baseURL))
+                    .GET()
+                    .build();
+
+            HttpResponse<String> response = client.send(request,
+                    HttpResponse.BodyHandlers.ofString());
+
+            return Boolean.parseBoolean(response.body());
+        }
+
+
+    }
 
     @Override
     public Optional<ProductDTO> getDetails(final String sku) throws IOException, InterruptedException {
@@ -117,8 +165,8 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Optional<ProductDTO> getProductsByProductName(final String name) throws IOException, InterruptedException {
-        final var optionalProduct  = findByProductName(name);
-        if (optionalProduct.isPresent()) {
+        Optional<Product> optionalProduct = productRepository.findByProductName(name);
+        if (!optionalProduct.isEmpty()) {
             Product product = optionalProduct.get();
             AggregatedRatingDTO agg = getAggFromReviews(product.getSku());
             product.setAggregatedRating(agg);
@@ -140,7 +188,7 @@ public class ProductServiceImpl implements ProductService {
             ObjectMapper mapper = new ObjectMapper();
 
             if(response.statusCode() != 200) {
-                return Optional.empty();
+                return null;
             }
 
             ProductDTO productDTO = mapper.readValue(response.body(), ProductDTO.class);
@@ -148,6 +196,22 @@ public class ProductServiceImpl implements ProductService {
             return Optional.of(productDTO);
         }
     }
+
+    @Override
+    public Optional<ProductDTO> getMyProductsByProductName(final String name) throws IOException, InterruptedException {
+        List<ProductDTO> productDTOList = new ArrayList();
+        Optional<Product> optionalProduct = productRepository.findByProductName(name);
+        if (!optionalProduct.isEmpty()) {
+            Product product = optionalProduct.get();
+            AggregatedRatingDTO agg = getAggFromReviews(product.getSku());
+            product.setAggregatedRating(agg);
+            ProductDTO productDTO = new ProductDTO(product.getProductId(), product.getDesignation(), product.getSku(), product.getDescription(), product.getAggregatedRating(), product.getSetOfImages());
+            productDTOList.add(productDTO);
+            return Optional.of(productDTO);
+        }
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+    }
+
 
     @Override
     public List<ProductDTOcat> getCatalog() throws IOException, InterruptedException {

@@ -5,12 +5,15 @@
     <file url="file://$PROJECT_DIR$/ProductsCOM/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ProductsCOM/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ProductsGET/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ProductsGET/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ReviewsCOM/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ReviewsCOM/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ReviewsGET/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ReviewsGET/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/VotesCOM/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/VotesCOM/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/VotesGET/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/VotesGET/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rabbitmq-amqp-tutorials/src/main/java" charset="UTF-8" />
   </component>
 </project>
