@@ -2,22 +2,36 @@ package com.example.projeto.controllers;
 
 import com.example.projeto.domain.models.*;
 import com.example.projeto.domain.services.ReviewService;
+import com.example.projeto.domain.views.ReviewView;
 import com.example.projeto.usermanagement.models.Role;
 
 import com.example.projeto.utils.Utils;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 import javax.annotation.security.RolesAllowed;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.time.LocalDate;
 import java.util.*;
 
+import org.modelmapper.ModelMapper;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -39,9 +53,9 @@ public class ReviewController {
     @Autowired
     private Utils utils;
 
-    /*@Operation(summary = "US05 - To obtain the reviews of a product. Sorted in reverse chronological publishing date")
+    @Operation(summary = "US05 - To obtain the reviews of a product. Sorted in reverse chronological publishing date")
     @GetMapping(value = "/public/review/product/{sku}")
-    public List<ReviewDTOcat> findReviewsBySkuSortedByDate(@PathVariable(value = "sku") final String sku) {
+    public List<ReviewDTOcat> findReviewsBySkuSortedByDate(@PathVariable(value = "sku") final String sku) throws IOException, InterruptedException {
         return reviewService.findReviewsBySkuSortedByDate(sku);
     }
 
@@ -49,7 +63,7 @@ public class ReviewController {
     @GetMapping(value = "/public/review/vote/product/{sku}")
     public List<ReviewDTO> findReviewsBySkuSortedByVotesAndDate(@PathVariable(value = "sku") final String sku) throws IOException, InterruptedException {
         return reviewService.findReviewsBySkuSortedByVotesAndDate(sku);
-    }*/
+    }
 
     @Operation(summary = "US04 - To review and rate a product")
     @PostMapping(value = "/review")
@@ -66,12 +80,16 @@ public class ReviewController {
         return reviewService.withdrawReview(reviewId);
     }
 
-    /*@Operation(summary = "US10 - To obtain all pending reviews")
+    @Operation(summary = "US10 - To obtain all pending reviews")
     @GetMapping(value = "/review/pending")
     @RolesAllowed(Role.MODERATOR)
     public List<ReviewDTOStatus> findAllPendingReviews() throws IOException, InterruptedException {
         return reviewService.findAllPendingReviews();
-    }*/
+    }
+    @GetMapping(value = "/public/review/pending")
+    public List<ReviewDTOStatus> findAllMyPendingReviews() throws IOException, InterruptedException {
+        return reviewService.findAllMyPendingReviews();
+    }
 
     @Operation(summary = "US11 - To approve or reject a pending review")
     @PatchMapping(value = "/review/{id}")
@@ -81,7 +99,7 @@ public class ReviewController {
         return ResponseEntity.ok().body(reviewService.updateReviewStatus(id, review));
     }
 
-    /*@Operation(summary = "US08 - To obtain all my reviews including their status")
+    @Operation(summary = "US08 - To obtain all my reviews including their status")
     @RolesAllowed(Role.REGISTERED)
     @GetMapping(value = "/review/status")
     public List<ReviewDTOStatus> findReviewsByUserId(HttpServletRequest request) throws IOException, InterruptedException {
@@ -100,17 +118,20 @@ public class ReviewController {
             return true;
         }
         else {
+            /*String baseURL = "http://localhost:8081/api/public/review/get/" + reviewId;
+
+            HttpClient client = HttpClient.newHttpClient();
+
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(baseURL))
+                    .GET()
+                    .build();
+
+            HttpResponse<String> response = client.send(request,
+                    HttpResponse.BodyHandlers.ofString());
+
+            return Boolean.parseBoolean(response.body());*/
             return false;
         }
     }
-
-    @GetMapping(value = "/public/review/status/get/{id}")
-    public List<ReviewDTOStatus> getReviewsByUserId(@PathVariable(value = "id") final Long userId) throws IOException, InterruptedException {
-        return reviewService.findReviewsByUserId(userId);
-    }
-
-    @GetMapping(value = "/public/review/pending")
-    public List<ReviewDTOStatus> findAllPendingReviews2() throws IOException, InterruptedException {
-        return reviewService.findAllPendingReviews();
-    }*/
 }

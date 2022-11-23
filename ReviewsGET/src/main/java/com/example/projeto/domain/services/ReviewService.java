@@ -17,6 +17,7 @@ import java.util.Optional;
 public interface ReviewService {
 
     List<ReviewDTOStatus> findAllPendingReviews() throws IOException, InterruptedException;
+    List<ReviewDTOStatus> findAllMyPendingReviews() throws IOException, InterruptedException;
 
     Iterable<Review> findReviewsBySku(String sku);
 
@@ -26,11 +27,11 @@ public interface ReviewService {
 
     //Iterable<ReviewView> findReviewsBySkuSortedByVotesAndDate(String sku);
 
-    //ReviewDTO createReview(HttpServletRequest request, Review newReview) throws IOException, InterruptedException;
+    ReviewDTO createReview(HttpServletRequest request, Review newReview) throws IOException, InterruptedException;
 
-    //ResponseEntity<Review> withdrawReview(final Long reviewId) throws IOException, InterruptedException;
+    ResponseEntity<Review> withdrawReview(final Long reviewId) throws IOException, InterruptedException;
 
-    //ReviewDTOStatus updateReviewStatus(final Long id, final Review review) throws IOException;
+    ReviewDTOStatus updateReviewStatus(final Long id, final Review review) throws IOException;
 
     List<ReviewDTOStatus> findReviewsByUserId(Long userId) throws IOException, InterruptedException;
 
@@ -40,17 +41,17 @@ public interface ReviewService {
 
     List<ReviewDTO> getReviews(String sku) throws IOException, InterruptedException;
 
-    /*/**
+    /**
      * Create a new Review and assign its id.
      *
      * @param newReview
      * @return
      */
-    //Review create(Review newReview);
+    Review create(Review newReview);
 
-    //void deleteById(Long reviewId);
+    void deleteById(Long reviewId);
 
-    //Review partialUpdate(final Long id, final Review review);
+    Review partialUpdate(final Long id, final Review review);
 
     AggregatedRatingDTO getAggregatedRatingDTO(final String sku);
 

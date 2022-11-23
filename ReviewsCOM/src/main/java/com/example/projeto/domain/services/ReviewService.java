@@ -16,13 +16,14 @@ import java.util.Optional;
 
 public interface ReviewService {
 
-    //List<ReviewDTOStatus> findAllPendingReviews() throws IOException, InterruptedException;
+    List<ReviewDTOStatus> findAllPendingReviews() throws IOException, InterruptedException;
+    List<ReviewDTOStatus> findAllMyPendingReviews() throws IOException, InterruptedException;
 
-    //Iterable<Review> findReviewsBySku(String sku);
+    Iterable<Review> findReviewsBySku(String sku);
 
-    //List<ReviewDTOcat> findReviewsBySkuSortedByDate(String sku);
+    List<ReviewDTOcat> findReviewsBySkuSortedByDate(String sku) throws IOException, InterruptedException;
 
-    //List<ReviewDTO> findReviewsBySkuSortedByVotesAndDate(final String sku) throws IOException, InterruptedException;
+    List<ReviewDTO> findReviewsBySkuSortedByVotesAndDate(final String sku) throws IOException, InterruptedException;
 
     //Iterable<ReviewView> findReviewsBySkuSortedByVotesAndDate(String sku);
 
@@ -32,9 +33,13 @@ public interface ReviewService {
 
     ReviewDTOStatus updateReviewStatus(final Long id, final Review review) throws IOException;
 
-    //List<ReviewDTOStatus> findReviewsByUserId(Long userId) throws IOException, InterruptedException;
+    List<ReviewDTOStatus> findReviewsByUserId(Long userId) throws IOException, InterruptedException;
 
-    //Optional<Review> getReviewById(Long reviewId);
+    Optional<Review> getReviewById(Long reviewId);
+
+    List<ReviewDTOcat> getReviewsCat(String sku) throws IOException, InterruptedException;
+
+    List<ReviewDTO> getReviews(String sku) throws IOException, InterruptedException;
 
     /**
      * Create a new Review and assign its id.
@@ -48,9 +53,9 @@ public interface ReviewService {
 
     Review partialUpdate(final Long id, final Review review);
 
-    //AggregatedRatingDTO getAggregatedRatingDTO(final String sku);
+    AggregatedRatingDTO getAggregatedRatingDTO(final String sku);
 
-    //AggregatedRating getProductAggregatedRating(Iterable<Review> reviews);
+    AggregatedRating getProductAggregatedRating(Iterable<Review> reviews);
 
     int getVotes(final Long reviewId) throws IOException, InterruptedException;
 }

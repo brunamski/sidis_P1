@@ -45,10 +45,18 @@ public class ReviewServiceImpl implements ReviewService{
             ReviewDTOStatus reviewDTO = new ReviewDTOStatus(r.getReviewId(), r.getSku(), r.getRating(), r.getText(), r.getPublishingDate(), r.getFunFact(), r.getStatus());
             reviewDTOStatusList.add(reviewDTO);
         }
-
-        List<ReviewDTOStatus> reviewDTOStatusList1 = getPendingReviews();
-        for (ReviewDTOStatus r : reviewDTOStatusList1) {
+        List<ReviewDTOStatus> reviewDTOStatus = findPendingOtherAPI();
+        for (ReviewDTOStatus r: reviewDTOStatus){
             reviewDTOStatusList.add(r);
+        }
+        return reviewDTOStatusList;
+    }
+    public List<ReviewDTOStatus> findAllMyPendingReviews() throws IOException, InterruptedException {
+        Iterable<Review> reviews = reviewRepository.findAllPendingReviews();
+        List<ReviewDTOStatus> reviewDTOStatusList = new ArrayList();
+        for (Review r : reviews) {
+            ReviewDTOStatus reviewDTO = new ReviewDTOStatus(r.getReviewId(), r.getSku(), r.getRating(), r.getText(), r.getPublishingDate(), r.getFunFact(), r.getStatus());
+            reviewDTOStatusList.add(reviewDTO);
         }
         return reviewDTOStatusList;
     }
@@ -100,7 +108,7 @@ public class ReviewServiceImpl implements ReviewService{
         return reviewRepository.findReviewsBySkuSortedByVotesAndDate(sku);
     }*/
 
-    /*@Override
+    @Override
     public ReviewDTO createReview(HttpServletRequest request, Review newReview) throws IOException, InterruptedException {
         boolean product = productIsPresent(newReview.getSku());
         if(product == true) {
@@ -114,12 +122,9 @@ public class ReviewServiceImpl implements ReviewService{
 
     @Override
     public ResponseEntity<Review> withdrawReview(final Long reviewId) throws IOException, InterruptedException {
-        int voteCount = getVotes(reviewId);
-        if (voteCount == 0) {
-            deleteById(reviewId);
-        } else {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "No Votes done for this Review!");
-        }
+
+        deleteById(reviewId);
+
         return ResponseEntity.noContent().build();
     }
     @Override
@@ -127,7 +132,7 @@ public class ReviewServiceImpl implements ReviewService{
         Review newReview = partialUpdate(id, review);
         ReviewDTOStatus newReviewDTOStatus = new ReviewDTOStatus(newReview.getReviewId(), newReview.getSku(), newReview.getRating(), newReview.getText(), newReview.getPublishingDate(), newReview.getFunFact(), newReview.getStatus());
         return newReviewDTOStatus;
-    }*/
+    }
 
     @Override
     public List<ReviewDTOStatus> findReviewsByUserId(Long userId) throws IOException, InterruptedException {
@@ -147,7 +152,7 @@ public class ReviewServiceImpl implements ReviewService{
         return reviewRepository.findReviewById(reviewId);
     }
 
-    /*@Override
+    @Override
     public Review create(Review newReview){
         return reviewRepository.save(newReview);
     }
@@ -172,7 +177,7 @@ public class ReviewServiceImpl implements ReviewService{
         // database, so concurrency control will still be applied when we try to save
         // this updated object
         return reviewRepository.save(rev);
-    }*/
+    }
 
     @Override
     public AggregatedRatingDTO getAggregatedRatingDTO(final String sku){
@@ -208,6 +213,28 @@ public class ReviewServiceImpl implements ReviewService{
 
         return aggregatedRating;
     }
+
+    public List<ReviewDTOStatus> findPendingOtherAPI() throws IOException, InterruptedException {
+
+        String baseURL = "http://localhost:8086/api/public/review/pending" ;
+
+        HttpClient client = HttpClient.newBuilder()
+                .followRedirects(HttpClient.Redirect.ALWAYS).build();
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(baseURL))
+                .GET()
+                .build();
+
+        HttpResponse<String> response = client.send(request,
+                HttpResponse.BodyHandlers.ofString());
+
+        ObjectMapper mapper = new ObjectMapper();
+
+        List<ReviewDTOStatus> reviewDTOStatuses = mapper.readValue(response.body(), new TypeReference<List<ReviewDTOStatus>>() {});
+
+        return reviewDTOStatuses;
+    }
     @Override
     public int getVotes(@PathVariable(value = "reviewId") final Long reviewId) throws IOException, InterruptedException {
 
@@ -227,7 +254,7 @@ public class ReviewServiceImpl implements ReviewService{
         return Integer.parseInt(response.body());
     }
 
-    /*public boolean productIsPresent(final String sku) throws IOException, InterruptedException {
+    public boolean productIsPresent(final String sku) throws IOException, InterruptedException {
 
         String baseURL = "http://localhost:8080/api/public/product/get/" + sku;
 
@@ -243,7 +270,7 @@ public class ReviewServiceImpl implements ReviewService{
                 HttpResponse.BodyHandlers.ofString());
 
         return  Boolean.parseBoolean(response.body());
-    }*/
+    }
 
     @Override
     public List<ReviewDTO> getReviews(String sku) throws IOException, InterruptedException {
@@ -291,7 +318,7 @@ public class ReviewServiceImpl implements ReviewService{
         return reviewDTOcats;
     }
 
-    /*public List<ReviewDTOStatus> getReviewsByUserId(Long userId) throws IOException, InterruptedException {
+    public List<ReviewDTOStatus> getReviewsByUserId(Long userId) throws IOException, InterruptedException {
         String baseURL = "http://localhost:8086/api/public/review/status/get/" + userId;
 
         HttpClient client = HttpClient.newBuilder()
@@ -308,27 +335,6 @@ public class ReviewServiceImpl implements ReviewService{
         ObjectMapper mapper = new ObjectMapper();
 
         mapper.registerModule(new JavaTimeModule());
-
-        List<ReviewDTOStatus> reviewDTOStatusList = mapper.readValue(response.body(), new TypeReference<List<ReviewDTOStatus>>() {});
-
-        return reviewDTOStatusList;
-    }*/
-
-    public List<ReviewDTOStatus> getPendingReviews() throws IOException, InterruptedException {
-        String baseURL = "http://localhost:8086/api/public/review/pending";
-
-        HttpClient client = HttpClient.newBuilder()
-                .followRedirects(HttpClient.Redirect.ALWAYS).build();
-
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(baseURL))
-                .GET()
-                .build();
-
-        HttpResponse<String> response = client.send(request,
-                HttpResponse.BodyHandlers.ofString());
-
-        ObjectMapper mapper = new ObjectMapper();
 
         List<ReviewDTOStatus> reviewDTOStatusList = mapper.readValue(response.body(), new TypeReference<List<ReviewDTOStatus>>() {});
 

@@ -65,7 +65,7 @@ public class ReviewController {
         return reviewService.findReviewsBySkuSortedByVotesAndDate(sku);
     }
 
-    /*@Operation(summary = "US04 - To review and rate a product")
+    @Operation(summary = "US04 - To review and rate a product")
     @PostMapping(value = "/review")
     @RolesAllowed(Role.REGISTERED)
     @ResponseStatus(HttpStatus.CREATED)
@@ -78,7 +78,7 @@ public class ReviewController {
     @RolesAllowed(Role.REGISTERED)
     public ResponseEntity<Review> withdrawReview(@PathVariable("id") @Parameter(description = "The id of the review to withdraw") final Long reviewId) throws IOException, InterruptedException {
         return reviewService.withdrawReview(reviewId);
-    }*/
+    }
 
     @Operation(summary = "US10 - To obtain all pending reviews")
     @GetMapping(value = "/review/pending")
@@ -86,14 +86,18 @@ public class ReviewController {
     public List<ReviewDTOStatus> findAllPendingReviews() throws IOException, InterruptedException {
         return reviewService.findAllPendingReviews();
     }
+    @GetMapping(value = "/public/review/pending")
+    public List<ReviewDTOStatus> findAllMyPendingReviews() throws IOException, InterruptedException {
+        return reviewService.findAllMyPendingReviews();
+    }
 
-    /*@Operation(summary = "US11 - To approve or reject a pending review")
+    @Operation(summary = "US11 - To approve or reject a pending review")
     @PatchMapping(value = "/review/{id}")
     @RolesAllowed(Role.MODERATOR)
     public ResponseEntity<ReviewDTOStatus> updateReviewStatus(@PathVariable("id") @Parameter(description = "The id of the review we will update") final Long id,
                                                               @Valid @RequestBody final Review review) throws IOException {
         return ResponseEntity.ok().body(reviewService.updateReviewStatus(id, review));
-    }*/
+    }
 
     @Operation(summary = "US08 - To obtain all my reviews including their status")
     @RolesAllowed(Role.REGISTERED)

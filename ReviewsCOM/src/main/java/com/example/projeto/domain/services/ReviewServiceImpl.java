@@ -4,6 +4,9 @@ import com.example.projeto.domain.models.*;
 import com.example.projeto.domain.repositories.ReviewRepository;
 import com.example.projeto.domain.views.ReviewView;
 import com.example.projeto.utils.Utils;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import io.swagger.v3.oas.annotations.Parameter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -34,7 +37,7 @@ public class ReviewServiceImpl implements ReviewService{
     @Autowired
     private Utils utils;
 
-    /*@Override
+    @Override
     public List<ReviewDTOStatus> findAllPendingReviews() throws IOException, InterruptedException {
         Iterable<Review> reviews = reviewRepository.findAllPendingReviews();
         List<ReviewDTOStatus> reviewDTOStatusList = new ArrayList();
@@ -42,22 +45,41 @@ public class ReviewServiceImpl implements ReviewService{
             ReviewDTOStatus reviewDTO = new ReviewDTOStatus(r.getReviewId(), r.getSku(), r.getRating(), r.getText(), r.getPublishingDate(), r.getFunFact(), r.getStatus());
             reviewDTOStatusList.add(reviewDTO);
         }
+        List<ReviewDTOStatus> reviewDTOStatus = findPendingOtherAPI();
+        for (ReviewDTOStatus r: reviewDTOStatus){
+            reviewDTOStatusList.add(r);
+        }
         return reviewDTOStatusList;
-    }*/
+    }
+    public List<ReviewDTOStatus> findAllMyPendingReviews() throws IOException, InterruptedException {
+        Iterable<Review> reviews = reviewRepository.findAllPendingReviews();
+        List<ReviewDTOStatus> reviewDTOStatusList = new ArrayList();
+        for (Review r : reviews) {
+            ReviewDTOStatus reviewDTO = new ReviewDTOStatus(r.getReviewId(), r.getSku(), r.getRating(), r.getText(), r.getPublishingDate(), r.getFunFact(), r.getStatus());
+            reviewDTOStatusList.add(reviewDTO);
+        }
+        return reviewDTOStatusList;
+    }
 
-    /*@Override
+    @Override
     public Iterable<Review> findReviewsBySku(String sku) {
         return reviewRepository.findReviewsBySku(sku);
-    }*/
+    }
 
-    /*@Override
-    public List<ReviewDTOcat> findReviewsBySkuSortedByDate(String sku) {
+    @Override
+    public List<ReviewDTOcat> findReviewsBySkuSortedByDate(String sku) throws IOException, InterruptedException {
         Iterable<Review> reviews = findReviewsBySku(sku);
         List<ReviewDTOcat> reviewDTOcatList = new ArrayList();
         for (Review r : reviews) {
             ReviewDTOcat reviewDTOcat = new ReviewDTOcat(r.getSku(), r.getRating(), r.getText(), r.getPublishingDate(), r.getFunFact());
             reviewDTOcatList.add(reviewDTOcat);
         }
+        List<ReviewDTOcat> reviewDTOcats = getReviewsCat(sku);
+        for (ReviewDTOcat p : reviewDTOcats) {
+            reviewDTOcatList.add(p);
+        }
+
+        reviewDTOcatList.sort(Comparator.comparing(ReviewDTOcat::getPublishingDate).reversed());
         return reviewDTOcatList;
     }
 
@@ -71,11 +93,15 @@ public class ReviewServiceImpl implements ReviewService{
             reviewDTO.setNumberOfVotes(numbervotes);
             reviewDTOS.add(reviewDTO);
         }
+        List<ReviewDTO> reviewDTOS1 = getReviews(sku);
+        for (ReviewDTO p : reviewDTOS1) {
+            reviewDTOS.add(p);
+        }
         reviewDTOS.sort(Comparator.comparing(ReviewDTO::getNumberOfVotes)
                 .thenComparing(ReviewDTO::getPublishingDate).reversed());
 
         return reviewDTOS;
-    }*/
+    }
 
     /*@Override
     public Iterable<ReviewView> findReviewsBySkuSortedByVotesAndDate(String sku) {
@@ -87,8 +113,6 @@ public class ReviewServiceImpl implements ReviewService{
         boolean product = productIsPresent(newReview.getSku());
         if(product == true) {
             newReview.setUserId(utils.getUserIdByToken(request));
-            newReview.addDataTime();
-            newReview.retrieveDataFromApi(newReview.getPublishingDate());
             final var review = create(newReview);
             ReviewDTO reviewDTO = new ReviewDTO(review.getReviewId(), review.getSku(), review.getRating(), review.getText(), review.getPublishingDate(), review.getFunFact());
             return reviewDTO;
@@ -98,12 +122,9 @@ public class ReviewServiceImpl implements ReviewService{
 
     @Override
     public ResponseEntity<Review> withdrawReview(final Long reviewId) throws IOException, InterruptedException {
-        int voteCount = getVotes(reviewId);
-        if (voteCount == 0) {
-            deleteById(reviewId);
-        } else {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "No Votes done for this Review!");
-        }
+
+        deleteById(reviewId);
+
         return ResponseEntity.noContent().build();
     }
     @Override
@@ -113,7 +134,7 @@ public class ReviewServiceImpl implements ReviewService{
         return newReviewDTOStatus;
     }
 
-    /*@Override
+    @Override
     public List<ReviewDTOStatus> findReviewsByUserId(Long userId) throws IOException, InterruptedException {
         Iterable<Review> reviews = reviewRepository.findReviewsByUserId(userId);
         List<ReviewDTOStatus> reviewDTOStatuses = new ArrayList();
@@ -124,12 +145,12 @@ public class ReviewServiceImpl implements ReviewService{
             reviewDTOStatuses.add(reviewDTO);
         }
         return reviewDTOStatuses;
-    }*/
+    }
 
-    /*@Override
+    @Override
     public Optional<Review> getReviewById(Long reviewId) {
         return reviewRepository.findReviewById(reviewId);
-    }*/
+    }
 
     @Override
     public Review create(Review newReview){
@@ -158,16 +179,16 @@ public class ReviewServiceImpl implements ReviewService{
         return reviewRepository.save(rev);
     }
 
-    /*@Override
+    @Override
     public AggregatedRatingDTO getAggregatedRatingDTO(final String sku){
         Iterable<Review> reviews = findReviewsBySku(sku);
         AggregatedRating agg = getProductAggregatedRating(reviews);
         AggregatedRatingDTO aggDTO = new AggregatedRatingDTO(agg.getAverage(), agg.getTotalRatings(), agg.getFive_star(), agg.getFour_star(),
                 agg.getThree_star(), agg.getTwo_star(), agg.getOne_star());
         return aggDTO;
-    }*/
+    }
 
-    /*@Override
+    @Override
     public AggregatedRating getProductAggregatedRating(Iterable<Review> reviews) {
         int soma = 0;
         float totalRatings = 0;
@@ -191,7 +212,29 @@ public class ReviewServiceImpl implements ReviewService{
         AggregatedRating aggregatedRating = new AggregatedRating(ratingArray[1][0], ratingArray[0][0], ratingArray[1][1], ratingArray[1][2], ratingArray[1][3], ratingArray[1][4], ratingArray[1][5]);
 
         return aggregatedRating;
-    }*/
+    }
+
+    public List<ReviewDTOStatus> findPendingOtherAPI() throws IOException, InterruptedException {
+
+        String baseURL = "http://localhost:8081/api/public/review/pending" ;
+
+        HttpClient client = HttpClient.newBuilder()
+                .followRedirects(HttpClient.Redirect.ALWAYS).build();
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(baseURL))
+                .GET()
+                .build();
+
+        HttpResponse<String> response = client.send(request,
+                HttpResponse.BodyHandlers.ofString());
+
+        ObjectMapper mapper = new ObjectMapper();
+
+        List<ReviewDTOStatus> reviewDTOStatuses = mapper.readValue(response.body(), new TypeReference<List<ReviewDTOStatus>>() {});
+
+        return reviewDTOStatuses;
+    }
     @Override
     public int getVotes(@PathVariable(value = "reviewId") final Long reviewId) throws IOException, InterruptedException {
 
@@ -227,5 +270,74 @@ public class ReviewServiceImpl implements ReviewService{
                 HttpResponse.BodyHandlers.ofString());
 
         return  Boolean.parseBoolean(response.body());
+    }
+
+    @Override
+    public List<ReviewDTO> getReviews(String sku) throws IOException, InterruptedException {
+
+        String baseURL = "http://localhost:8081/api/public/review/vote/product/" + sku;
+
+        HttpClient client = HttpClient.newBuilder()
+                .followRedirects(HttpClient.Redirect.ALWAYS).build();
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(baseURL))
+                .GET()
+                .build();
+
+        HttpResponse<String> response = client.send(request,
+                HttpResponse.BodyHandlers.ofString());
+
+        ObjectMapper mapper = new ObjectMapper();
+
+        List<ReviewDTO> reviewDTOS = mapper.readValue(response.body(), new TypeReference<List<ReviewDTO>>() {});
+
+        return reviewDTOS;
+    }
+
+    @Override
+    public List<ReviewDTOcat> getReviewsCat(String sku) throws IOException, InterruptedException {
+
+        String baseURL = "http://localhost:8081/api/public/review/product/" + sku;
+
+        HttpClient client = HttpClient.newBuilder()
+                .followRedirects(HttpClient.Redirect.ALWAYS).build();
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(baseURL))
+                .GET()
+                .build();
+
+        HttpResponse<String> response = client.send(request,
+                HttpResponse.BodyHandlers.ofString());
+
+        ObjectMapper mapper = new ObjectMapper();
+
+        List<ReviewDTOcat> reviewDTOcats = mapper.readValue(response.body(), new TypeReference<List<ReviewDTOcat>>() {});
+
+        return reviewDTOcats;
+    }
+
+    public List<ReviewDTOStatus> getReviewsByUserId(Long userId) throws IOException, InterruptedException {
+        String baseURL = "http://localhost:8081/api/public/review/status/get/" + userId;
+
+        HttpClient client = HttpClient.newBuilder()
+                .followRedirects(HttpClient.Redirect.ALWAYS).build();
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(baseURL))
+                .GET()
+                .build();
+
+        HttpResponse<String> response = client.send(request,
+                HttpResponse.BodyHandlers.ofString());
+
+        ObjectMapper mapper = new ObjectMapper();
+
+        mapper.registerModule(new JavaTimeModule());
+
+        List<ReviewDTOStatus> reviewDTOStatusList = mapper.readValue(response.body(), new TypeReference<List<ReviewDTOStatus>>() {});
+
+        return reviewDTOStatusList;
     }
 }
