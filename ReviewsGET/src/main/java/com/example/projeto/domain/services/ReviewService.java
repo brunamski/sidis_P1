@@ -17,6 +17,7 @@ import java.util.Optional;
 public interface ReviewService {
 
     List<ReviewDTOStatus> findAllPendingReviews() throws IOException, InterruptedException;
+
     List<ReviewDTOStatus> findAllMyPendingReviews() throws IOException, InterruptedException;
 
     Iterable<Review> findReviewsBySku(String sku);
@@ -53,9 +54,9 @@ public interface ReviewService {
 
     Review partialUpdate(final Long id, final Review review);
 
-    AggregatedRatingDTO getAggregatedRatingDTO(final String sku);
+    AggregatedRatingDTO getAggregatedRatingDTO(final String sku) throws IOException, InterruptedException;
 
-    AggregatedRating getProductAggregatedRating(Iterable<Review> reviews);
+    AggregatedRating getProductAggregatedRating(List<ReviewDTOcat> reviews);
 
     int getVotes(final Long reviewId) throws IOException, InterruptedException;
 }

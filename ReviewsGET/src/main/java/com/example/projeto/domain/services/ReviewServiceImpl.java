@@ -180,21 +180,30 @@ public class ReviewServiceImpl implements ReviewService{
     }
 
     @Override
-    public AggregatedRatingDTO getAggregatedRatingDTO(final String sku){
+    public AggregatedRatingDTO getAggregatedRatingDTO(final String sku) throws IOException, InterruptedException {
         Iterable<Review> reviews = findReviewsBySku(sku);
-        AggregatedRating agg = getProductAggregatedRating(reviews);
+        List<ReviewDTOcat> reviewDTOcatList = new ArrayList();
+        for (Review r : reviews) {
+            ReviewDTOcat reviewDTOcat = new ReviewDTOcat(r.getSku(), r.getRating(), r.getText(), r.getPublishingDate(), r.getFunFact());
+            reviewDTOcatList.add(reviewDTOcat);
+        }
+        List<ReviewDTOcat> reviewDTOcats = getReviewsCat(sku);
+        for (ReviewDTOcat p : reviewDTOcats) {
+            reviewDTOcatList.add(p);
+        }
+        AggregatedRating agg = getProductAggregatedRating(reviewDTOcatList);
         AggregatedRatingDTO aggDTO = new AggregatedRatingDTO(agg.getAverage(), agg.getTotalRatings(), agg.getFive_star(), agg.getFour_star(),
                 agg.getThree_star(), agg.getTwo_star(), agg.getOne_star());
         return aggDTO;
     }
 
     @Override
-    public AggregatedRating getProductAggregatedRating(Iterable<Review> reviews) {
+    public AggregatedRating getProductAggregatedRating(List<ReviewDTOcat> reviews) {
         int soma = 0;
         float totalRatings = 0;
         float[][] ratingArray = new float[2][6];
 
-        for(Review r: reviews){
+        for(ReviewDTOcat r: reviews){
             soma = soma + r.getRating();
             int rating = r.getRating();
             ratingArray[0][0]++;        //totalRatings
@@ -298,7 +307,7 @@ public class ReviewServiceImpl implements ReviewService{
     @Override
     public List<ReviewDTOcat> getReviewsCat(String sku) throws IOException, InterruptedException {
 
-        String baseURL = "http://localhost:8086/api/public/review/product/" + sku;
+        String baseURL = "http://localhost:8086/api/public/my/review/product/" + sku;
 
         HttpClient client = HttpClient.newBuilder()
                 .followRedirects(HttpClient.Redirect.ALWAYS).build();

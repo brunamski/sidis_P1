@@ -5,18 +5,20 @@
       <list>
         <option value="$PROJECT_DIR$/Reviews/pom.xml" />
         <option value="$PROJECT_DIR$/Products/pom.xml" />
-        <option value="$PROJECT_DIR$/Autentication/pom.xml" />
         <option value="$PROJECT_DIR$/Votes/pom.xml" />
         <option value="$PROJECT_DIR$/Products2/pom.xml" />
         <option value="$PROJECT_DIR$/Reviews2/pom.xml" />
         <option value="$PROJECT_DIR$/Votes2/pom.xml" />
-        <option value="$PROJECT_DIR$/VotesCOM/pom.xml" />
+        <option value="$PROJECT_DIR$/rabbitmq-amqp-tutorials/pom.xml" />
+        <option value="$PROJECT_DIR$/Autentication/pom.xml" />
         <option value="$PROJECT_DIR$/ProductsCOM/pom.xml" />
         <option value="$PROJECT_DIR$/ProductsGET/pom.xml" />
         <option value="$PROJECT_DIR$/ReviewsCOM/pom.xml" />
         <option value="$PROJECT_DIR$/ReviewsGET/pom.xml" />
+        <option value="$PROJECT_DIR$/VotesCOM/pom.xml" />
         <option value="$PROJECT_DIR$/VotesGET/pom.xml" />
-        <option value="$PROJECT_DIR$/rabbitmq-amqp-tutorials/pom.xml" />
+        <option value="$PROJECT_DIR$/Products2GET/pom.xml" />
+        <option value="$PROJECT_DIR$/Products2COM/pom.xml" />
       </list>
     </option>
   </component>

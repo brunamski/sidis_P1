@@ -64,11 +64,16 @@ public class ProductController {
         return productService.findMyCatalog();
     }
 
-
-
     @Operation(summary = "US02 - To obtain the details of a product")
     @GetMapping(value = "/public/product/{sku}")
     public ResponseEntity<ProductDTO> getDetails(@PathVariable(value = "sku") final String sku) throws IOException, InterruptedException {
+        final var productDTO = productService.getDetails(sku)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Product Not Found"));
+        return ResponseEntity.ok().body(productDTO);
+    }
+
+    @GetMapping(value = "/public/my/product/{sku}")
+    public ResponseEntity<ProductDTO> getMyDetails(@PathVariable(value = "sku") final String sku) throws IOException, InterruptedException {
         final var productDTO = productService.getDetails(sku)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Product Not Found"));
         return ResponseEntity.ok().body(productDTO);
@@ -81,7 +86,7 @@ public class ProductController {
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Product Not Found"));
         return ResponseEntity.ok().body(productDTO);
     }
-    @GetMapping(value = "/public/myproduct/name/{name}")
+    @GetMapping(value = "/public/my/product/name/{name}")
     public ResponseEntity<ProductDTO> getMyProductsByProductName(@PathVariable(value = "name") final String name) throws IOException, InterruptedException {
         final var productDTO = productService.getMyProductsByProductName(name)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Product Not Found"));
@@ -102,14 +107,6 @@ public class ProductController {
         return ResponseEntity.ok().body(productService.getProductAggregatedRating(sku));
     }
 
-    @Operation(summary = "Creates a product")
-    @RolesAllowed(Role.ADMIN)
-    @PostMapping(value = "/admin/product")
-    @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<ProductDTO> createProduct(HttpServletRequest request, @RequestBody Product newProduct) throws IOException, InterruptedException {
-        return ResponseEntity.ok().body(productService.createProduct(newProduct));
-    }
-
     @GetMapping(value = "/public/product/get/{sku}")
     public boolean productIsPresent(@PathVariable(value = "sku") final String sku) throws IOException, InterruptedException {
         final var optionalProduct = productService.findBySku(sku);
@@ -119,57 +116,6 @@ public class ProductController {
         else {
             return false;
         }
-    }
-
-    /*
-     * Handling files as subresources
-     */
-
-    /**
-     * Upload a new image.
-     *
-     * <p>
-     * code based on
-     * https://github.com/callicoder/spring-boot-file-upload-download-rest-api-example
-     *
-     * @param sku
-     * @param file
-     * @return
-     */
-    @Operation(summary = "Uploads an image")
-    @PostMapping("/admin/product/{sku}/image")
-    @RolesAllowed(Role.ADMIN)
-    @ResponseStatus(HttpStatus.CREATED)
-    public UploadFileResponse uploadFile( @PathVariable("sku") final String sku, @RequestParam("file") final MultipartFile file) {
-        final String fileName = fileStorageService.storeFile(file);
-
-        String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentRequestUri()
-                .path("/downloadFile/")
-                .path(fileName)
-                .toUriString();
-
-        productService.addImage(fileName, sku);
-
-        return new UploadFileResponse(fileName, fileDownloadUri, file.getContentType(), file.getSize());
-    }
-
-    /**
-     * Upload a set of images.
-     *
-     * <p>
-     * code based on
-     * https://github.com/callicoder/spring-boot-file-upload-download-rest-api-example
-     *
-     * @param sku
-     * @param files
-     * @return
-     */
-    @Operation(summary = "Upload a set of images")
-    @PostMapping("/admin/product/{sku}/images")
-    @RolesAllowed(Role.ADMIN)
-    @ResponseStatus(HttpStatus.CREATED)
-    public List<UploadFileResponse> uploadMultipleFiles(@PathVariable("sku") final String sku, @RequestParam("files") final MultipartFile[] files) {
-        return Arrays.asList(files).stream().map(f -> uploadFile(sku,f)).collect(Collectors.toList());
     }
 
     /**

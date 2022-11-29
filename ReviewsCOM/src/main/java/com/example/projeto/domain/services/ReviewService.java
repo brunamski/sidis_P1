@@ -17,9 +17,12 @@ import java.util.Optional;
 public interface ReviewService {
 
     List<ReviewDTOStatus> findAllPendingReviews() throws IOException, InterruptedException;
+
     List<ReviewDTOStatus> findAllMyPendingReviews() throws IOException, InterruptedException;
 
     Iterable<Review> findReviewsBySku(String sku);
+
+    List<ReviewDTOcat> findMyReviewsBySku(String sku);
 
     List<ReviewDTOcat> findReviewsBySkuSortedByDate(String sku) throws IOException, InterruptedException;
 

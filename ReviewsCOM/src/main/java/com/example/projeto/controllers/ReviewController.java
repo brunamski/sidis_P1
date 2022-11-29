@@ -53,6 +53,11 @@ public class ReviewController {
     @Autowired
     private Utils utils;
 
+    @GetMapping(value = "/public/my/review/product/{sku}")
+    public List<ReviewDTOcat> findMyReviews(@PathVariable(value = "sku") final String sku){
+        return reviewService.findMyReviewsBySku(sku);
+    }
+
     @Operation(summary = "US05 - To obtain the reviews of a product. Sorted in reverse chronological publishing date")
     @GetMapping(value = "/public/review/product/{sku}")
     public List<ReviewDTOcat> findReviewsBySkuSortedByDate(@PathVariable(value = "sku") final String sku) throws IOException, InterruptedException {

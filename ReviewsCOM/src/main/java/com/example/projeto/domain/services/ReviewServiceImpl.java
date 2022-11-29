@@ -62,6 +62,17 @@ public class ReviewServiceImpl implements ReviewService{
     }
 
     @Override
+    public List<ReviewDTOcat> findMyReviewsBySku(String sku) {
+        Iterable<Review> reviews = reviewRepository.findReviewsBySku(sku);
+        List<ReviewDTOcat> reviewDTOcatList = new ArrayList();
+        for (Review r : reviews) {
+            ReviewDTOcat reviewDTOcat = new ReviewDTOcat(r.getSku(), r.getRating(), r.getText(), r.getPublishingDate(), r.getFunFact());
+            reviewDTOcatList.add(reviewDTOcat);
+        }
+        return reviewDTOcatList;
+    }
+
+    @Override
     public Iterable<Review> findReviewsBySku(String sku) {
         return reviewRepository.findReviewsBySku(sku);
     }

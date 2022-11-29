@@ -107,7 +107,7 @@ public class ReviewController {
     }
 
     @GetMapping(value = "/public/review/product/aggregatedrating/{sku}")
-    public ResponseEntity<AggregatedRatingDTO> getAggregatedRatingDTO(@PathVariable(value = "sku") final String sku) {
+    public ResponseEntity<AggregatedRatingDTO> getAggregatedRatingDTO(@PathVariable(value = "sku") final String sku) throws IOException, InterruptedException {
         return ResponseEntity.ok().body(reviewService.getAggregatedRatingDTO(sku));
     }
 

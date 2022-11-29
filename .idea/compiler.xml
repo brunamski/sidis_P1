@@ -3,6 +3,12 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="rabbitmq-amqp-tutorials" />
+      </profile>
       <profile name="Annotation profile for projeto" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -14,17 +20,13 @@
         </processorPath>
         <module name="projeto (6)" />
         <module name="projeto (5)" />
+        <module name="projeto (8)" />
         <module name="projeto" />
+        <module name="projeto (7)" />
         <module name="projeto (2)" />
         <module name="projeto (1)" />
         <module name="projeto (4)" />
         <module name="projeto (3)" />
-      </profile>
-      <profile name="Maven default annotation processors profile" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="rabbitmq-amqp-tutorials" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -35,6 +37,8 @@
       <module name="projeto (4)" target="16" />
       <module name="projeto (5)" target="16" />
       <module name="projeto (6)" target="16" />
+      <module name="projeto (7)" target="16" />
+      <module name="projeto (8)" target="16" />
       <module name="rabbitmq-amqp-tutorials" target="17" />
     </bytecodeTargetLevel>
   </component>
@@ -47,6 +51,8 @@
       <module name="projeto (4)" options="-parameters" />
       <module name="projeto (5)" options="-parameters" />
       <module name="projeto (6)" options="-parameters" />
+      <module name="projeto (7)" options="-parameters" />
+      <module name="projeto (8)" options="-parameters" />
       <module name="rabbitmq-amqp-tutorials" options="-parameters" />
     </option>
   </component>
