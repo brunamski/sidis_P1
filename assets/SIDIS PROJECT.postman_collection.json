@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "0d516cb6-c429-4370-bd9d-a22e670505f1",
+		"_postman_id": "558d2dd9-430e-4186-a2b4-5459f7b3f0b1",
 		"name": "SIDIS PROJECT",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "17875845"
@@ -340,13 +340,13 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostProduct}}{{baseUrl}}/public/product",
+									"raw": "{{hostProducts2GET}}{{baseUrl}}/public/products",
 									"host": [
-										"{{hostProduct}}{{baseUrl}}"
+										"{{hostProducts2GET}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
-										"product"
+										"products"
 									]
 								}
 							},
@@ -358,9 +358,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostProduct}}{{baseUrl}}/public/product/SKU0000001",
+									"raw": "{{hostProducts2GET}}{{baseUrl}}/public/product/SKU0000001",
 									"host": [
-										"{{hostProduct}}{{baseUrl}}"
+										"{{hostProducts2GET}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
@@ -377,9 +377,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostProduct}}{{baseUrl}}/public/product/name/madeira",
+									"raw": "{{hostProducts2GET}}{{baseUrl}}/public/product/name/madeira",
 									"host": [
-										"{{hostProduct}}{{baseUrl}}"
+										"{{hostProducts2GET}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
@@ -397,9 +397,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostProduct}}{{baseUrl}}/public/product/bar_code/SKU0000001",
+									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/bar_code/SKU0000001",
 									"host": [
-										"{{hostProduct}}{{baseUrl}}"
+										"{{hostProductsGET}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
@@ -417,15 +417,53 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostProduct}}{{baseUrl}}/public/product/rating/SKU0000001",
+									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/rating/SKU0000003",
 									"host": [
-										"{{hostProduct}}{{baseUrl}}"
+										"{{hostProductsGET}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
 										"product",
 										"rating",
-										"SKU0000001"
+										"SKU0000003"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Catalog prod2",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hostProducts2GET}}{{baseUrl}}/public/my/products",
+									"host": [
+										"{{hostProducts2GET}}{{baseUrl}}"
+									],
+									"path": [
+										"public",
+										"my",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Catalog prod1",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hostProductsGET}}{{baseUrl}}/public/my/products",
+									"host": [
+										"{{hostProductsGET}}{{baseUrl}}"
+									],
+									"path": [
+										"public",
+										"my",
+										"products"
 									]
 								}
 							},
@@ -454,6 +492,33 @@
 									"raw": "{{hostProduct}}{{baseUrl}}/admin/product",
 									"host": [
 										"{{hostProduct}}{{baseUrl}}"
+									],
+									"path": [
+										"admin",
+										"product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Creates a product in 2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"designation\": \"FIFA23\",\r\n    \"description\": \"Jogo bugador de mentes\",\r\n    \"sku\": \"SKU0000007\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hostProduct2}}{{baseUrl}}/admin/product",
+									"host": [
+										"{{hostProduct2}}{{baseUrl}}"
 									],
 									"path": [
 										"admin",
