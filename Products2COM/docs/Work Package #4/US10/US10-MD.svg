@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="164px" preserveAspectRatio="none" style="width:219px;height:164px;background:#FFFFFF;" version="1.1" viewBox="0 0 219 164" width="219px" zoomAndPan="magnify"><defs><filter height="300%" id="fdra5sd344s51" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[a09add6ee0fddcff389f16327538483a]
+class ACME--><rect codeLine="6" fill="#FEFECE" filter="url(#fdra5sd344s51)" height="33.0938" id="ACME" style="stroke:#A80036;stroke-width:1.5;" width="39" x="7" y="62.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="33" x="10" y="79.957">ACME</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="45" y1="87.5938" y2="87.5938"/><!--MD5=[eb0e8f8ddfdc21c3fdb48447501fec67]
+class Review--><rect codeLine="9" fill="#FEFECE" filter="url(#fdra5sd344s51)" height="143.7813" id="Review" style="stroke:#A80036;stroke-width:1.5;" width="86" x="119.5" y="7"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="40" x="142.5" y="24.457">Review</text><line style="stroke:#A80036;stroke-width:1.5;" x1="120.5" x2="204.5" y1="32.0938" y2="32.0938"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="46" x="125.5" y="47.5127">-reviewId</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="21" x="125.5" y="61.3486">-sku</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="34" x="125.5" y="75.1846">-userId</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="31" x="125.5" y="89.0205">-rating</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="22" x="125.5" y="102.8564">-text</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="74" x="125.5" y="116.6924">-publishingDate</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="39" x="125.5" y="130.5283">-funfact</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="42" x="125.5" y="144.3643">-statusId</text><!--MD5=[a95533704805e514bcd737d339bc5922]
+link ACME to Review--><path codeLine="20" d="M46.28,79 C65.36,79 94.87,79 119.39,79 " fill="none" id="ACME-Review" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="73.25,67.1758,64.2049,64.2369,64.2049,70.1147,73.25,67.1758" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="77.25" y="72.4951">lists</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="53.9915" y="73.8878">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="91.5895" y="93.712">0..*</text><!--MD5=[c155881cc4e3a2d24749a3f33d20ac34]
+@startuml
+'https://plantuml.com/class-diagram
+skinparam classAttributeIconSize 0
+hide circle
+hide methods
+
+class ACME {
+}
+
+class Review {
+     - reviewId
+     - sku
+     - userId
+     - rating
+     - text
+     - publishingDate
+     - funfact
+     - statusId
+}
+
+ACME "1" -right- - "0..*" Review:  lists >
+
+
+@enduml
+
+@startuml
+skinparam classAttributeIconSize 0
+hide circle
+hide methods
+
+class ACME {
+}
+
+class Review {
+     - reviewId
+     - sku
+     - userId
+     - rating
+     - text
+     - publishingDate
+     - funfact
+     - statusId
+}
+
+ACME "1" -right- - "0..*" Review:  lists >
+
+
+@enduml
+
+PlantUML version 1.2021.11(Sat Oct 02 14:26:11 BST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

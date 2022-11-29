@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e136609a-c43b-41e2-8831-0774302936d9" name="Changes" comment="Workpackage#5 documentation finished">
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Autentication/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Autentication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Autentication/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Products/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Products/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Products/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reviews2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Reviews2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Votes2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Votes2/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/test/java/com/example/projeto/ProductTests.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="29Wk8ksEeufGwI7fHGLZJG14W8C" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/pom.xml" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tiago Oliveira\IdeaProjects\psoft-project-g1\src\main\resources\assets" />
+      <recent name="C:\Users\Tiago Oliveira\IdeaProjects\psoft-project-g1\docs\Work Package #3\US07" />
+      <recent name="C:\Users\Tiago Oliveira\IdeaProjects\psoft-project-g1\docs\Work Package #3\US06" />
+      <recent name="C:\Users\Tiago Oliveira\IdeaProjects\psoft-project-g1\docs\Work Package #3\US05V2" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ProjetoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Products2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.ProjetoApplication" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-17" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e136609a-c43b-41e2-8831-0774302936d9" name="Changes" comment="" />
+      <created>1653236074918</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1653236074918</updated>
+      <workItem from="1653236076435" duration="20131000" />
+      <workItem from="1653643084168" duration="1255000" />
+      <workItem from="1654262407561" duration="2952000" />
+      <workItem from="1654548388808" duration="568000" />
+      <workItem from="1654620836910" duration="116000" />
+      <workItem from="1654683221082" duration="4177000" />
+      <workItem from="1654688111661" duration="126000" />
+      <workItem from="1654789847821" duration="791000" />
+      <workItem from="1654795433091" duration="1384000" />
+      <workItem from="1654897078334" duration="554000" />
+      <workItem from="1654898681240" duration="52000" />
+      <workItem from="1654898825486" duration="29000" />
+      <workItem from="1654968566641" duration="3535000" />
+      <workItem from="1654988025911" duration="1074000" />
+      <workItem from="1655047449543" duration="7183000" />
+      <workItem from="1655056114764" duration="2376000" />
+      <workItem from="1655068244982" duration="7274000" />
+      <workItem from="1655147261533" duration="19372000" />
+      <workItem from="1655389357683" duration="1618000" />
+      <workItem from="1655402073478" duration="643000" />
+      <workItem from="1655457962760" duration="2861000" />
+      <workItem from="1655471697276" duration="159000" />
+      <workItem from="1655472001260" duration="1667000" />
+      <workItem from="1655474471131" duration="453000" />
+      <workItem from="1655475494645" duration="78000" />
+      <workItem from="1663744817219" duration="361000" />
+      <workItem from="1663745211977" duration="3838000" />
+      <workItem from="1664216530283" duration="61000" />
+      <workItem from="1664349926891" duration="965000" />
+      <workItem from="1664356733925" duration="130000" />
+      <workItem from="1665561798573" duration="5456000" />
+      <workItem from="1666101786460" duration="9063000" />
+      <workItem from="1666163563602" duration="8493000" />
+      <workItem from="1666882559024" duration="82000" />
+      <workItem from="1666883112393" duration="5605000" />
+      <workItem from="1667071178035" duration="1702000" />
+      <workItem from="1667315472676" duration="3071000" />
+      <workItem from="1667376757483" duration="2708000" />
+      <workItem from="1667315472676" duration="2709000" />
+      <workItem from="1667376770365" duration="3521000" />
+      <workItem from="1667583207397" duration="2922000" />
+      <workItem from="1667673153772" duration="3583000" />
+      <workItem from="1667744224811" duration="12752000" />
+      <workItem from="1667856453852" duration="428000" />
+      <workItem from="1667941830213" duration="595000" />
+      <workItem from="1667981574843" duration="105000" />
+      <workItem from="1667981705280" duration="603000" />
+    </task>
+    <task id="LOCAL-00001" summary="Updates to docs">
+      <created>1653237491192</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1653237491192</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Workpackage #3 documentation finished and other relevant files updates">
+      <created>1653258426771</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1653258426771</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Minor fix">
+      <created>1653259508532</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1653259508532</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Minor fix">
+      <created>1653259646538</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1653259646538</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Vote class creation">
+      <created>1654687852626</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1654687852626</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Upload/Download Image">
+      <created>1654796482680</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1654796482680</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Workpackage#3 Votes in reviews finished.">
+      <created>1654969654441</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1654969654441</updated>
+    </task>
+    <task id="LOCAL-00008" summary="US05V2 function in controller fix.">
+      <created>1654970589625</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1654970589625</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Some documentation updates">
+      <created>1655157467229</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1655157467229</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Some documentation updates">
+      <created>1655160608395</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1655160608395</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Workpackage#5 finished">
+      <created>1655165593768</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1655165593768</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Workpackage#5 documentation finished">
+      <created>1655167296243</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1655167296243</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Updates to docs" />
+    <MESSAGE value="Workpackage #3 documentation finished and other relevant files updates" />
+    <MESSAGE value="Minor fix" />
+    <MESSAGE value="Vote class creation" />
+    <MESSAGE value="Upload/Download Image" />
+    <MESSAGE value="Workpackage#3 Votes in reviews finished." />
+    <MESSAGE value="US05V2 function in controller fix." />
+    <MESSAGE value="Some documentation updates" />
+    <MESSAGE value="Workpackage#5 finished" />
+    <MESSAGE value="Workpackage#5 documentation finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="Workpackage#5 documentation finished" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/projeto/controllers/ProductController.java</url>
+          <line>101</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

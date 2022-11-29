@@ -1,0 +1,52 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+title Use Case Diagram - ACME
+
+left to right direction
+
+actor : Registered Customer : as Cust
+actor : Anonymous Customer : as Anon
+actor : Moderator : as Mod
+actor : Admin : as Admin
+
+(US01 - To obtain the catalog of products) as (Catalog)
+(US02 - To obtain the details of a product) as (Details)
+(US03 - To search the catalog of products by product name or bar code) as (Search)
+(US04 - To review and rate a product) as (ReviewRate)
+(US05 - To obtain the reviews of a product) as (ReviewProd)
+(US06 - To vote for a review) as (Vote)
+(US07 - To withdraw one of my reviews) as (Withdraw)
+(US08 - To obtain all my reviews including their status) as (Status)
+(US09 - To obtain the aggregated rating of a product) as (Aggregated)
+
+(US10 - To obtain all pending reviews) as (Pending)
+(US11 - To approve or reject a pending review) as (ApproveReject)
+
+(US12 - To “bootstrap” user credential data) as (UserData)
+(US13 - To “bootstrap” products) as (ProductData)
+
+
+Admin --> UserData
+Admin --> ProductData
+
+Anon -up-> Catalog
+Anon -up-> Details
+Anon -up-> Search
+Anon -up-> ReviewProd
+Anon -up-> Aggregated
+
+Cust --> Catalog
+Cust --> Details
+Cust --> Search
+Cust --> ReviewRate
+Cust --> ReviewProd
+Cust --> Vote
+Cust --> Withdraw
+Cust --> Status
+Cust --> Aggregated
+
+Mod --> Pending
+Mod --> ApproveReject
+
+@enduml

@@ -1,0 +1,27 @@
+ @startuml
+'https://plantuml.com/sequence-diagram
+
+autoactivate on
+autonumber
+
+actor "Moderator" as Mod
+participant ":ReviewController" as Ctrl
+participant "reviewService:ReviewService" as Service
+participant "reviewServiceImpl:ReviewServiceImpl" as Impl
+participant "reviewRepo:ReviewRepository" as Repo
+
+activate Mod
+
+Mod -> Ctrl: asks to list all pending reviews
+Ctrl -> Service: findAllPendingReviews()
+Service -> Impl : findAllPendingReviews()
+Impl -> Repo : findAllPendingReviews()
+Repo --> Service: Iterable
+Service --> Ctrl: Iterable
+
+loop for each '<review>' in Iterable
+    Review --> Ctrl: review
+    Ctrl --> Mod: shows pending review
+end loop
+
+@enduml

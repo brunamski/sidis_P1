@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autoactivate on
+autonumber
+
+actor "Moderator" as Mod
+participant ":System" as System
+
+activate Mod
+
+Mod -> System: asks to approve or reject a review
+System --> Mod: shows reviews and their status
+
+
+@enduml

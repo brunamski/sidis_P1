@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1244px" preserveAspectRatio="none" style="width:674px;height:1244px;background:#FFFFFF;" version="1.1" viewBox="0 0 674 1244" width="674px" zoomAndPan="magnify"><defs><filter height="300%" id="f12lw1ss7q8bne" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[ee6344d516906ecc8b439ac61d539e0d]
+class ReviewController--><rect codeLine="7" fill="#FEFECE" filter="url(#f12lw1ss7q8bne)" height="137.9453" id="ReviewController" style="stroke:#A80036;stroke-width:1.5;" width="495" x="165" y="7"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="94" x="365.5" y="24.457">ReviewController</text><line style="stroke:#A80036;stroke-width:1.5;" x1="166" x2="659" y1="32.0938" y2="32.0938"/><line style="stroke:#A80036;stroke-width:1.5;" x1="166" x2="659" y1="40.0938" y2="40.0938"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="360" x="171" y="55.5127">+findReviewsBySkuSortedByDate(final String sku): Iterable&lt;ReviewView&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="409" x="171" y="69.3486">+findReviewsBySkuSortedByVotesAndDate(final String sku): Iterable&lt;ReviewView&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="413" x="171" y="83.1846">+create(HttpServletRequest request, Review newReview): ResponseEntity&lt;Review&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="483" x="171" y="97.0205">+withdrawReview(@PathVariable("id") @Parameter(final Long reviewId): ResponseEntity&lt;Review&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="215" x="171" y="110.8564">+findAllPendingReviews(): Iterable&lt;Review&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="406" x="171" y="124.6924">+updateReviewStatus(final Long id, final Review review): ResponseEntity&lt;Review&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="339" x="171" y="138.5283">+findReviewsByUserId(HttpServletRequest request) Iterable&lt;Review&gt;</text><!--MD5=[0b56730ea20f38f13e8afabab30647d3]
+class ReviewService--><rect codeLine="17" fill="#FEFECE" filter="url(#f12lw1ss7q8bne)" height="166.875" id="ReviewService" style="stroke:#A80036;stroke-width:1.5;" width="398" x="213.5" y="206"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="61" x="382" y="223.457">«interface»</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="81" x="372" y="238.5508">ReviewService</text><line style="stroke:#A80036;stroke-width:1.5;" x1="214.5" x2="610.5" y1="246.1875" y2="246.1875"/><line style="stroke:#A80036;stroke-width:1.5;" x1="214.5" x2="610.5" y1="254.1875" y2="254.1875"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="218" x="219.5" y="269.6064">+findAllPendingReviews() : Iterable&lt;Review&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="337" x="219.5" y="283.4424">+findReviewsBySkuSortedByDate(String sku): Iterable&lt;ReviewView&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="386" x="219.5" y="297.2783">+findReviewsBySkuSortedByVotesAndDate(String sku): Iterable&lt;ReviewView&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="266" x="219.5" y="311.1143">+findReviewsByUserId(Long userId): Iterable&lt;Review&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="250" x="219.5" y="324.9502">+getReviewById(Long reviewId): Optional&lt;Review&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="187" x="219.5" y="338.7861">+create(Review newReview): Review</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="159" x="219.5" y="352.6221">+deleteById(Long reviewId): void</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="281" x="219.5" y="366.458">+partialUpdate(final Long id, final Review review): Review</text><!--MD5=[e5477415c5dbcdabfda1ba2e82d9bcc5]
+class ReviewServiceImpl--><rect codeLine="28" fill="#FEFECE" filter="url(#f12lw1ss7q8bne)" height="151.7813" id="ReviewServiceImpl" style="stroke:#A80036;stroke-width:1.5;" width="398" x="87.5" y="434"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="104" x="234.5" y="451.457">ReviewServiceImpl</text><line style="stroke:#A80036;stroke-width:1.5;" x1="88.5" x2="484.5" y1="459.0938" y2="459.0938"/><line style="stroke:#A80036;stroke-width:1.5;" x1="88.5" x2="484.5" y1="467.0938" y2="467.0938"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="215" x="93.5" y="482.5127">+findAllPendingReviews(): Iterable&lt;Review&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="337" x="93.5" y="496.3486">+findReviewsBySkuSortedByDate(String sku): Iterable&lt;ReviewView&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="386" x="93.5" y="510.1846">+findReviewsBySkuSortedByVotesAndDate(String sku): Iterable&lt;ReviewView&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="266" x="93.5" y="524.0205">+findReviewsByUserId(Long userId): Iterable&lt;Review&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="250" x="93.5" y="537.8564">+getReviewById(Long reviewId): Optional&lt;Review&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="187" x="93.5" y="551.6924">+create(Review newReview): Review</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="182" x="93.5" y="565.5283">+deleteById(final Long reviewId): void</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="281" x="93.5" y="579.3643">+partialUpdate(final Long id, final Review review): Review</text><!--MD5=[eb0e8f8ddfdc21c3fdb48447501fec67]
+class Review--><rect codeLine="39" fill="#FEFECE" filter="url(#f12lw1ss7q8bne)" height="151.7813" id="Review" style="stroke:#A80036;stroke-width:1.5;" width="86" x="252.5" y="863"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="40" x="275.5" y="880.457">Review</text><line style="stroke:#A80036;stroke-width:1.5;" x1="253.5" x2="337.5" y1="888.0938" y2="888.0938"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="46" x="258.5" y="903.5127">-reviewId</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="21" x="258.5" y="917.3486">-sku</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="34" x="258.5" y="931.1846">-userId</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="31" x="258.5" y="945.0205">-rating</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="22" x="258.5" y="958.8564">-text</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="74" x="258.5" y="972.6924">-publishingDate</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="39" x="258.5" y="986.5283">-funfact</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="42" x="258.5" y="1000.3643">-statusId</text><line style="stroke:#A80036;stroke-width:1.5;" x1="253.5" x2="337.5" y1="1006.7813" y2="1006.7813"/><!--MD5=[72136138052d025cffdce3c22fbd185f]
+class Product--><rect codeLine="50" fill="#FEFECE" filter="url(#f12lw1ss7q8bne)" height="137.9453" id="Product" style="stroke:#A80036;stroke-width:1.5;" width="577" x="7" y="1093"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="42" x="274.5" y="1110.457">Product</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="583" y1="1118.0938" y2="1118.0938"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="49" x="13" y="1133.5127">-productId</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="59" x="13" y="1147.3486">-designation</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="57" x="13" y="1161.1846">-description</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="65" x="13" y="1175.0205">-setOfImages</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="21" x="13" y="1188.8564">-sku</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="89" x="13" y="1202.6924">-aggregatedRating</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="583" y1="1209.1094" y2="1209.1094"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="565" x="13" y="1224.5283">Product(Long productId, String designation, String description, String setOfImages, Long sku, Long aggregatedRating)</text><!--MD5=[646427437b77c51076e5aa1bc572221c]
+class ReviewRepository--><rect codeLine="60" fill="#FEFECE" filter="url(#f12lw1ss7q8bne)" height="137.9453" id="ReviewRepository" style="stroke:#A80036;stroke-width:1.5;" width="380" x="105.5" y="647"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="99" x="246" y="664.457">ReviewRepository</text><line style="stroke:#A80036;stroke-width:1.5;" x1="106.5" x2="484.5" y1="672.0938" y2="672.0938"/><line style="stroke:#A80036;stroke-width:1.5;" x1="106.5" x2="484.5" y1="680.0938" y2="680.0938"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="215" x="111.5" y="695.5127">+findAllPendingReviews(): Iterable&lt;Review&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="319" x="111.5" y="709.3486">+findReviewsBySkuSortedByDate(String sku): List&lt;ReviewView&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="368" x="111.5" y="723.1846">+findReviewsBySkuSortedByVotesAndDate(String sku): List&lt;ReviewView&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="266" x="111.5" y="737.0205">+findReviewsByUserId(Long userId): Iterable&lt;Review&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="213" x="111.5" y="750.8564">+findApprovedReviews(): Iterable&lt;Review&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="253" x="111.5" y="764.6924">+findReviewById(Long reviewId): Optional&lt;Review&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="188" x="111.5" y="778.5283">deleteByIdIfMatch(Long reviewId): void</text><!--MD5=[c5c637c91b919388842e6ccc8b21e26a]
+link ReviewRepository to Review--><path codeLine="70" d="M295.5,785.11 C295.5,808.08 295.5,833.93 295.5,857.75 " fill="none" id="ReviewRepository-to-Review" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="295.5,862.8,299.5,853.8,295.5,857.8,291.5,853.8,295.5,862.8" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="43" x="296.5" y="829.4951">records</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="288.1391" y="806.578">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="274.5156" y="852.0347">0..*</text><!--MD5=[d057c3dfebd49e5861f569cf4a1dc708]
+link ReviewController to ReviewService--><path codeLine="72" d="M412.5,145.08 C412.5,162.75 412.5,182.02 412.5,200.54 " fill="none" id="ReviewController-to-ReviewService" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="412.5,205.74,416.5,196.74,412.5,200.74,408.5,196.74,412.5,205.74" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[b3b064fd269ea8760e915da69fd89045]
+link ReviewServiceImpl to ReviewRepository--><path codeLine="73" d="M289.81,586.09 C290.61,604.27 291.47,623.67 292.27,641.75 " fill="none" id="ReviewServiceImpl-to-ReviewRepository" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="292.49,646.82,296.0748,637.6467,292.2617,641.8252,288.0832,638.0121,292.49,646.82" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[a973bd28eaa03343f4887af78abe4722]
+link ReviewServiceImpl to Review--><path codeLine="74" d="M139.2,586.19 C118.4,603.29 99.9,623.5 87.5,647 C58.87,701.24 59.82,730.27 87.5,785 C120.82,850.88 197.35,895.32 247.71,918.63 " fill="none" id="ReviewServiceImpl-to-Review" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="252.5,920.82,245.981,913.4374,247.9536,918.7392,242.6517,920.7117,252.5,920.82" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[b6ab7d3eac32c4c5d65a673aec98eab4]
+link ReviewService to Review--><path codeLine="75" d="M475.86,373.17 C487.24,392.2 497.41,413.04 503.5,434 C547,583.81 573.91,645.8 503.5,785 C470.18,850.88 393.65,895.32 343.29,918.63 " fill="none" id="ReviewService-to-Review" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="338.5,920.82,348.3483,920.7117,343.0464,918.7392,345.019,913.4374,338.5,920.82" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[17b9041a14a9c4b80116b970cb1b8bd8]
+link Review to Product--><path codeLine="76" d="M295.5,1015.13 C295.5,1038.51 295.5,1064.26 295.5,1087.53 " fill="none" id="Review-to-Product" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="295.5,1092.76,299.5,1083.76,295.5,1087.76,291.5,1083.76,295.5,1092.76" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="296.5" y="1059.4951">has a</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="274.5781" y="1036.4071">0..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="288.1391" y="1082.3107">1</text><!--MD5=[9f3ba529bbceff5d2d0651079e8870e0]
+reverse link ReviewService to ReviewServiceImpl--><path codeLine="78" d="M354.75,390.64 C346.38,405.17 337.88,419.91 329.85,433.83 " fill="none" id="ReviewService-backto-ReviewServiceImpl" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="348.81,386.93,364.86,373.11,360.94,393.93,348.81,386.93" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[4a14dbc5c59778dcdc198ee690efb178]
+@startuml
+'https://plantuml.com/class-diagram
+
+hide circle
+skinparam classAttributeIconSize 0
+
+
+class ReviewController {
+    +findReviewsBySkuSortedByDate(final String sku): Iterable<ReviewView>
+    +findReviewsBySkuSortedByVotesAndDate(final String sku): Iterable<ReviewView>
+    +create(HttpServletRequest request, Review newReview): ResponseEntity<Review>
+    +withdrawReview(@PathVariable("id") @Parameter(final Long reviewId): ResponseEntity<Review>
+    +findAllPendingReviews(): Iterable<Review>
+    +updateReviewStatus(final Long id, final Review review): ResponseEntity<Review>
+    +findReviewsByUserId(HttpServletRequest request) Iterable<Review>
+}
+
+interface ReviewService <<interface>> {
+    +findAllPendingReviews() : Iterable<Review>
+    +findReviewsBySkuSortedByDate(String sku): Iterable<ReviewView>
+    +findReviewsBySkuSortedByVotesAndDate(String sku): Iterable<ReviewView>
+    +findReviewsByUserId(Long userId): Iterable<Review>
+    +getReviewById(Long reviewId): Optional<Review>
+    +create(Review newReview): Review
+    +deleteById(Long reviewId): void
+    +partialUpdate(final Long id, final Review review): Review
+}
+
+class ReviewServiceImpl{
+    +findAllPendingReviews(): Iterable<Review>
+    +findReviewsBySkuSortedByDate(String sku): Iterable<ReviewView>
+    +findReviewsBySkuSortedByVotesAndDate(String sku): Iterable<ReviewView>
+    +findReviewsByUserId(Long userId): Iterable<Review>
+    +getReviewById(Long reviewId): Optional<Review>
+    +create(Review newReview): Review
+    +deleteById(final Long reviewId): void
+    +partialUpdate(final Long id, final Review review): Review
+}
+
+class Review {
+    - reviewId
+    - sku
+    - userId
+    - rating
+    - text
+    - publishingDate
+    - funfact
+    - statusId
+}
+
+class Product {
+    - productId
+    - designation
+    - description
+    - setOfImages
+    - sku
+    - aggregatedRating
+    Product(Long productId, String designation, String description, String setOfImages, Long sku, Long aggregatedRating)
+}
+
+class ReviewRepository {
+    +findAllPendingReviews(): Iterable<Review>
+    +findReviewsBySkuSortedByDate(String sku): List<ReviewView>
+    +findReviewsBySkuSortedByVotesAndDate(String sku): List<ReviewView>
+    +findReviewsByUserId(Long userId): Iterable<Review>
+    +findApprovedReviews(): Iterable<Review>
+    +findReviewById(Long reviewId): Optional<Review>
+    deleteByIdIfMatch(Long reviewId): void
+}
+
+ReviewRepository "1" - -> "0..*" Review:  records
+
+ReviewController ..> ReviewService
+ReviewServiceImpl ..> ReviewRepository
+ReviewServiceImpl ..> Review
+ReviewService ..> Review
+Review "0..*" ..> "1" Product: has a
+
+ReviewServiceImpl .up.|> ReviewService
+
+
+@enduml
+
+@startuml
+
+hide circle
+skinparam classAttributeIconSize 0
+
+
+class ReviewController {
+    +findReviewsBySkuSortedByDate(final String sku): Iterable<ReviewView>
+    +findReviewsBySkuSortedByVotesAndDate(final String sku): Iterable<ReviewView>
+    +create(HttpServletRequest request, Review newReview): ResponseEntity<Review>
+    +withdrawReview(@PathVariable("id") @Parameter(final Long reviewId): ResponseEntity<Review>
+    +findAllPendingReviews(): Iterable<Review>
+    +updateReviewStatus(final Long id, final Review review): ResponseEntity<Review>
+    +findReviewsByUserId(HttpServletRequest request) Iterable<Review>
+}
+
+interface ReviewService <<interface>> {
+    +findAllPendingReviews() : Iterable<Review>
+    +findReviewsBySkuSortedByDate(String sku): Iterable<ReviewView>
+    +findReviewsBySkuSortedByVotesAndDate(String sku): Iterable<ReviewView>
+    +findReviewsByUserId(Long userId): Iterable<Review>
+    +getReviewById(Long reviewId): Optional<Review>
+    +create(Review newReview): Review
+    +deleteById(Long reviewId): void
+    +partialUpdate(final Long id, final Review review): Review
+}
+
+class ReviewServiceImpl{
+    +findAllPendingReviews(): Iterable<Review>
+    +findReviewsBySkuSortedByDate(String sku): Iterable<ReviewView>
+    +findReviewsBySkuSortedByVotesAndDate(String sku): Iterable<ReviewView>
+    +findReviewsByUserId(Long userId): Iterable<Review>
+    +getReviewById(Long reviewId): Optional<Review>
+    +create(Review newReview): Review
+    +deleteById(final Long reviewId): void
+    +partialUpdate(final Long id, final Review review): Review
+}
+
+class Review {
+    - reviewId
+    - sku
+    - userId
+    - rating
+    - text
+    - publishingDate
+    - funfact
+    - statusId
+}
+
+class Product {
+    - productId
+    - designation
+    - description
+    - setOfImages
+    - sku
+    - aggregatedRating
+    Product(Long productId, String designation, String description, String setOfImages, Long sku, Long aggregatedRating)
+}
+
+class ReviewRepository {
+    +findAllPendingReviews(): Iterable<Review>
+    +findReviewsBySkuSortedByDate(String sku): List<ReviewView>
+    +findReviewsBySkuSortedByVotesAndDate(String sku): List<ReviewView>
+    +findReviewsByUserId(Long userId): Iterable<Review>
+    +findApprovedReviews(): Iterable<Review>
+    +findReviewById(Long reviewId): Optional<Review>
+    deleteByIdIfMatch(Long reviewId): void
+}
+
+ReviewRepository "1" - -> "0..*" Review:  records
+
+ReviewController ..> ReviewService
+ReviewServiceImpl ..> ReviewRepository
+ReviewServiceImpl ..> Review
+ReviewService ..> Review
+Review "0..*" ..> "1" Product: has a
+
+ReviewServiceImpl .up.|> ReviewService
+
+
+@enduml
+
+PlantUML version 1.2021.11(Sat Oct 02 14:26:11 BST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>
