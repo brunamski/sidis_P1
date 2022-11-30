@@ -31,20 +31,7 @@ public class ProductServiceImpl implements ProductService {
     private ProductRepository productRepository;
 
     @Override
-    public List<ProductDTOcat> findCatalog() throws IOException, InterruptedException {
-        Iterable<Product> products = productRepository.findCatalog();
-        List<ProductDTOcat> productDTOcatList = new ArrayList();
-        for (Product p : products) {
-            ProductDTOcat productDTOcat = new ProductDTOcat(p.getSku(), p.getDesignation());
-            productDTOcatList.add(productDTOcat);
-        }
-        List<ProductDTOcat> productDTOcats = getCatalog();
-        for (ProductDTOcat p : productDTOcats) {
-            productDTOcatList.add(p);
-        }
-        return productDTOcatList;
-    }
-    public List<ProductDTOcat> findMyCatalog(){
+    public List<ProductDTOcat> findCatalog() throws IOException {
         Iterable<Product> products = productRepository.findCatalog();
         List<ProductDTOcat> productDTOcatList = new ArrayList();
         for (Product p : products) {
@@ -72,27 +59,7 @@ public class ProductServiceImpl implements ProductService {
             ProductDTO productDTO = new ProductDTO(p.getProductId(),p.getDesignation(),p.getSku(),p.getDescription(),p.getAggregatedRating(),p.getSetOfImages());
             return Optional.of(productDTO);
         } else {
-            String baseURL = "http://localhost:8080/api/public/product/" + sku;
-
-            HttpClient client = HttpClient.newHttpClient();
-
-            HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create(baseURL))
-                    .GET()
-                    .build();
-
-            HttpResponse<String> response = client.send(request,
-                    HttpResponse.BodyHandlers.ofString());
-
-            ObjectMapper mapper = new ObjectMapper();
-
-            if(response.statusCode() != 200) {
-                return Optional.empty();
-            }
-
-            ProductDTO productDTO = mapper.readValue(response.body(), ProductDTO.class);
-
-            return Optional.of(productDTO);
+            return Optional.empty();
         }
     }
 
@@ -106,79 +73,19 @@ public class ProductServiceImpl implements ProductService {
             ProductDTO productDTO = new ProductDTO(product.getProductId(), product.getDesignation(), product.getSku(), product.getDescription(), product.getAggregatedRating(), product.getSetOfImages());
             return Optional.of(productDTO);
         } else {
-            String baseURL = "http://localhost:8080/api/public/my/product/name/" + name;
-
-            HttpClient client = HttpClient.newHttpClient();
-
-            HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create(baseURL))
-                    .GET()
-                    .build();
-
-            HttpResponse<String> response = client.send(request,
-                    HttpResponse.BodyHandlers.ofString());
-
-            ObjectMapper mapper = new ObjectMapper();
-
-            if(response.statusCode() != 200) {
-                return null;
-            }
-
-            ProductDTO productDTO = mapper.readValue(response.body(), ProductDTO.class);
-
-            return Optional.of(productDTO);
+            return Optional.empty();
         }
     }
 
     @Override
-    public Optional<ProductDTO> getMyProductsByProductName(final String name) throws IOException, InterruptedException {
-        List<ProductDTO> productDTOList = new ArrayList();
-        Optional<Product> optionalProduct = productRepository.findByProductName(name);
-        if (!optionalProduct.isEmpty()) {
-            Product product = optionalProduct.get();
-            AggregatedRatingDTO agg = getAggFromReviews(product.getSku());
-            product.setAggregatedRating(agg);
-            ProductDTO productDTO = new ProductDTO(product.getProductId(), product.getDesignation(), product.getSku(), product.getDescription(), product.getAggregatedRating(), product.getSetOfImages());
-            productDTOList.add(productDTO);
-            return Optional.of(productDTO);
-        }
-        throw new ResponseStatusException(HttpStatus.NOT_FOUND);
-    }
-
-
-    @Override
-    public List<ProductDTOcat> getCatalog() throws IOException, InterruptedException {
-
-        String baseURL = "http://localhost:8080/api/public/my/products";
-
-        HttpClient client = HttpClient.newBuilder()
-                .followRedirects(HttpClient.Redirect.ALWAYS).build();
-
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(baseURL))
-                .GET()
-                .build();
-
-        HttpResponse<String> response = client.send(request,
-                HttpResponse.BodyHandlers.ofString());
-
-        ObjectMapper mapper = new ObjectMapper();
-
-        List<ProductDTOcat> productDTOcats = mapper.readValue(response.body(), new TypeReference<List<ProductDTOcat>>() {});
-
-        return productDTOcats;
-    }
-
-    @Override
-    public AggregatedRatingDTO getProductAggregatedRating(final String sku) throws IOException, InterruptedException  {
+    public Optional<AggregatedRatingDTO> getProductAggregatedRating(final String sku) throws IOException, InterruptedException  {
         final var optionalProduct = findBySku(sku);
         if (optionalProduct.isPresent()) {
             Product p = optionalProduct.get();
-            AggregatedRatingDTO agg = getAggFromReviews(p.getSku());
-            return agg;
+            AggregatedRatingDTO aggDTO = getAggFromReviews(p.getSku());
+            return Optional.of(aggDTO);
         } else {
-            AggregatedRatingDTO agg = getAggFromReviews(sku);
-            return agg;
+            return Optional.empty();
         }
     }
 

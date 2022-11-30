@@ -15,11 +15,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 public interface ProductService {
 
-    List<ProductDTOcat> findCatalog() throws IOException, InterruptedException;
-
-    List<ProductDTOcat> findMyCatalog() throws IOException, InterruptedException;
-
-    List<ProductDTOcat> getCatalog() throws IOException, InterruptedException;
+    List<ProductDTOcat> findCatalog() throws IOException;
 
     Optional<Product> findBySku(String sku);
 
@@ -29,9 +25,7 @@ public interface ProductService {
 
     Optional<ProductDTO> getProductsByProductName(final String name) throws IOException, InterruptedException;
 
-    Optional<ProductDTO> getMyProductsByProductName(final String name) throws IOException, InterruptedException;
-
-    AggregatedRatingDTO getProductAggregatedRating(final String sku) throws IOException, InterruptedException;
+    Optional<AggregatedRatingDTO> getProductAggregatedRating(final String sku) throws IOException, InterruptedException;
 
     AggregatedRatingDTO getAggFromReviews(final String sku) throws IOException, InterruptedException;
 }
