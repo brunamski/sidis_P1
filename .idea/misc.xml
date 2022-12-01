@@ -19,6 +19,7 @@
         <option value="$PROJECT_DIR$/VotesGET/pom.xml" />
         <option value="$PROJECT_DIR$/Products2GET/pom.xml" />
         <option value="$PROJECT_DIR$/Products2COM/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-rabbitmq-tutorial/pom.xml" />
       </list>
     </option>
   </component>
