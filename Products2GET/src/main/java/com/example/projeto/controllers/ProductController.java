@@ -1,7 +1,7 @@
 package com.example.projeto.controllers;
 
 import com.example.projeto.domain.models.AggregatedRatingDTO;
-import com.example.projeto.domain.models.Product;
+import com.example.projeto.rabbitmq.*;
 import com.example.projeto.domain.models.ProductDTO;
 import com.example.projeto.domain.models.ProductDTOcat;
 import com.example.projeto.domain.services.FileStorageService;
@@ -12,6 +12,7 @@ import com.example.projeto.usermanagement.models.Role;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -41,6 +42,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+@RabbitListener(queues = "rabbitmq.queue", id = "listener")    //Provavelmente é preciso algo deste género
 @Tag(name = "Products", description = "Endpoints for products")
 @RestController
 @RequestMapping("api")
