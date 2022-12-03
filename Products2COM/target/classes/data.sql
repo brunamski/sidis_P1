@@ -1,0 +1,12 @@
+DELETE PRODUCT WHERE Designation='madeira';
+INSERT INTO PRODUCT (designation, description, sku) VALUES ('madeira','A madeira é um material produzido a partir do tecido formado pelas plantas lenhosas com funções de sustentação mecânica.', 'SKU0000001');
+DELETE PRODUCT WHERE Designation='ferro';
+INSERT INTO PRODUCT (designation, description, sku) VALUES ('ferro','O ferro (do latim ferrum) é um elemento químico, símbolo Fe, de número atômico 26 (26 prótons e 26 elétrons) e massa atômica 56 u.', 'SKU0000002');
+DELETE PRODUCT WHERE Designation='bolacha';
+INSERT INTO PRODUCT (designation, description, sku) VALUES ('bolacha','A bolacha é um bolo chato e seco de farinha de diversas formas e tamanhos. Pode ser consumida de diversas maneiras, doce, com recheios, salgada ou acompanhada de especiarias e/ou patês', 'SKU0000003');
+DELETE PRODUCT WHERE Designation='panela';
+INSERT INTO PRODUCT (designation, description, sku) VALUES ('panela','As panelas são uma família de utensílios culinários consideradas por muitos como indispensáveis em qualquer cozinha. São geralmente de forma cilíndrica ou subesférica e normalmente têm uma tampa e uma ou duas pegas (cabos).', 'SKU0000004');
+DELETE PRODUCT WHERE Designation='banana';
+INSERT INTO PRODUCT (designation, description, sku) VALUES ('banana','A banana é uma pseudobaga da bananeira, uma planta herbácea vivaz acaule da família Musaceae . São cultivadas em 130 países. Originárias do sudeste da Ásia são atualmente cultivadas em praticamente todas as regiões tropicais do planeta', 'SKU0000005');
+DELETE PRODUCT WHERE Designation='fiat 500';
+INSERT INTO PRODUCT (designation, description, sku) VALUES ('fiat 500','O fiat 500 (Cinquecento) foi um modelo de minicarro produzido pela Fiat na Italia, entre 1957 e 1975. Criado por Dante Giacosa, o carro utiliza a sigla ZFA 110 para a versão sedã e ZFA 120 para a versão Giardiniera.', 'SKU0000006');

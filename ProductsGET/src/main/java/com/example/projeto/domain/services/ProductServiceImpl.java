@@ -5,15 +5,10 @@ import com.example.projeto.domain.models.Product;
 import com.example.projeto.domain.models.ProductDTO;
 import com.example.projeto.domain.models.ProductDTOcat;
 import com.example.projeto.domain.repositories.ProductRepository;
-import com.example.projeto.domain.views.CatalogView;
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.server.ResponseStatusException;
 
 import java.io.IOException;
 import java.net.URI;
@@ -110,5 +105,11 @@ public class ProductServiceImpl implements ProductService {
         AggregatedRatingDTO aggregatedRatingDTO = mapper.readValue(response.body(), AggregatedRatingDTO.class);
 
         return aggregatedRatingDTO;
+    }
+
+    @Override
+    public void create(Product p) throws IOException {
+        Product product = new Product(p.getDesignation(), p.getDescription(), p.getSku());
+        productRepository.save(product);
     }
 }

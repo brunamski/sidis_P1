@@ -1,36 +1,29 @@
 package com.example.projeto.rabbitmq;
 
+import com.example.projeto.domain.models.Product;
+import com.example.projeto.domain.models.ProductDTO;
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.amqp.core.FanoutExchange;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.amqp.core.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.stereotype.Service;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
+@Service
 public class ProductsCOMSender {
 
     @Autowired
-    private RabbitTemplate template;
+    private AmqpTemplate template;
 
     @Autowired
     private FanoutExchange fanout;
 
-    AtomicInteger dots = new AtomicInteger(0);
-
-    AtomicInteger count = new AtomicInteger(0);
-
-    @Scheduled(fixedDelay = 1000, initialDelay = 500)
-    public void send() {
-        StringBuilder builder = new StringBuilder("Hello");
-        if (dots.getAndIncrement() == 3) {
-            dots.set(1);
-        }
-        for (int i = 0; i < dots.get(); i++) {
-            builder.append('.');
-        }
-        builder.append(count.incrementAndGet());
-        String message = builder.toString();
-        template.convertAndSend(fanout.getName(), "", message);
-        System.out.println(" [x] Sent '" + message + "'");
+    public void send(Product p) {
+        template.convertAndSend(fanout.getName(), p);
+        System.out.println(" [x] Sent '" + p + "'");
     }
 }
