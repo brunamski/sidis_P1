@@ -28,4 +28,6 @@ public interface ProductService {
     Optional<AggregatedRatingDTO> getProductAggregatedRating(final String sku) throws IOException, InterruptedException;
 
     AggregatedRatingDTO getAggFromReviews(final String sku) throws IOException, InterruptedException;
+
+    void create(Product p) throws IOException;
 }

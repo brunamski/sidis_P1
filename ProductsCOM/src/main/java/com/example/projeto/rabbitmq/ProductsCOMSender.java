@@ -19,11 +19,10 @@ public class ProductsCOMSender {
     @Autowired
     private AmqpTemplate template;
 
-    @Autowired
-    private FanoutExchange fanout;
+    private String fanout = "products";
 
     public void send(Product p) {
-        template.convertAndSend(fanout.getName(), p);
+        template.convertAndSend(fanout, "", p);
         System.out.println(" [x] Sent '" + p + "'");
     }
 }

@@ -1,53 +1,35 @@
 package com.example.projeto.rabbitmq;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.amqp.core.*;
+import org.springframework.amqp.rabbit.annotation.EnableRabbit;
+import org.springframework.amqp.rabbit.connection.ConnectionFactory;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
+import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
-@Profile({"Rabbit", "pub-sub", "publish-subscribe"})
+@EnableRabbit
 @Configuration
 public class RabbitConfig {
 
     @Bean
-    public FanoutExchange fanout() {
-        return new FanoutExchange("tut.fanout");
+    public MessageConverter jsonMessageConverter() {
+        ObjectMapper objectMapper = new ObjectMapper();
+        return new Jackson2JsonMessageConverter(objectMapper);
     }
 
-    @Profile("receiver")
-    private static class ReceiverConfig {
-
-        @Bean
-        public Queue autoDeleteQueue1() {
-            return new AnonymousQueue();
-        }
-
-        @Bean
-        public Queue autoDeleteQueue2() {
-            return new AnonymousQueue();
-        }
-
-        @Bean
-        public Binding binding1(FanoutExchange fanout,
-                                Queue autoDeleteQueue1) {
-            return BindingBuilder.bind(autoDeleteQueue1).to(fanout);
-        }
-
-        @Bean
-        public Binding binding2(FanoutExchange fanout,
-                                Queue autoDeleteQueue2) {
-            return BindingBuilder.bind(autoDeleteQueue2).to(fanout);
-        }
-
-        @Bean
-        public Products2GETReceiver receiver() {
-            return new Products2GETReceiver();
-        }
-    }
-
-    @Profile("sender")
     @Bean
-    public Products2GETSender sender() {
-        return new Products2GETSender();
+    public AmqpTemplate rabbitTemplate(ConnectionFactory connectionFactory) {
+        final RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
+        rabbitTemplate.setMessageConverter(jsonMessageConverter());
+        return rabbitTemplate;
+    }
+
+    @Bean
+    public Products2GETReceiver receiver() {
+        return new Products2GETReceiver();
     }
 }

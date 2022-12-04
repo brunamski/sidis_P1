@@ -6,6 +6,7 @@ import com.example.projeto.domain.models.ProductDTO;
 import com.example.projeto.domain.models.ProductDTOcat;
 import com.example.projeto.domain.services.FileStorageService;
 import com.example.projeto.domain.services.ProductService;
+import com.example.projeto.rabbitmq.Products2COMSender;
 import com.example.projeto.usermanagement.models.Role;
 
 import io.swagger.v3.oas.annotations.Operation;
@@ -40,12 +41,17 @@ public class ProductController {
     @Autowired
     private FileStorageService fileStorageService;
 
+    @Autowired
+    private Products2COMSender products2COMSender;
+
     @Operation(summary = "Creates a product")
     @RolesAllowed(Role.ADMIN)
     @PostMapping(value = "/admin/product")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<ProductDTO> createProduct(HttpServletRequest request, @RequestBody Product newProduct) throws IOException, InterruptedException {
-        return ResponseEntity.ok().body(productService.createProduct(newProduct));
+        ProductDTO p = productService.createProduct(newProduct);
+        products2COMSender.send(newProduct);
+        return ResponseEntity.ok().body(p);
     }
 
     /*

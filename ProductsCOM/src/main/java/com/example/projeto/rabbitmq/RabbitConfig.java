@@ -24,67 +24,58 @@ import org.springframework.util.ErrorHandler;
 @Configuration
 public class RabbitConfig {
 
-    @Value("${rabbitmq.username}")
-    private String username;
-    @Value("${rabbitmq.password}")
-    private String password;
-    @Value("${rabbitmq.host}")
-    private String host;
-    @Value("${rabbitmq.virtualhost}")
-    private String virtualHost;
+    private String myQueue = "productsCOM";
+
+    private String Queue1 = "productsGET";
+
+    private String Queue2 = "products2GET";
+
+    private String Queue3 = "products2COM";
+
+    private String exchange = "products";
 
 
     @Bean
     public FanoutExchange fanout() {
-        return new FanoutExchange("products");
+        return new FanoutExchange(exchange);
     }
 
     @Bean
     public Queue myQueue() {
-        return new Queue("productsCOM");
+        return new Queue(myQueue, false);
     }
 
     @Bean
     public Queue queue1() {
-        return new Queue("productsGET");
+        return new Queue(Queue1, false);
     }
 
     @Bean
     public Queue queue2() {
-        return new Queue("products2COM");
+        return new Queue(Queue2, false);
     }
 
     @Bean
     public Queue queue3() {
-        return new Queue("products2GET");
+        return new Queue(Queue3, false);
     }
 
     @Bean
-    public Binding binding1(FanoutExchange fanout,
+    public Binding binding1(FanoutExchange exchange,
                             Queue queue1) {
-        return BindingBuilder.bind(queue1).to(fanout);
+        return BindingBuilder.bind(queue1).to(exchange);
     }
 
     @Bean
-    public Binding binding2(FanoutExchange fanout,
+    public Binding binding2(FanoutExchange exchange,
                             Queue queue2) {
-        return BindingBuilder.bind(queue2).to(fanout);
+        return BindingBuilder.bind(queue2).to(exchange);
     }
 
     @Bean
-    public Binding binding3(FanoutExchange fanout,
+    public Binding binding3(FanoutExchange exchange,
                             Queue queue3) {
-        return BindingBuilder.bind(queue3).to(fanout);
-    }
-
-    @Bean
-    public ConnectionFactory connectionFactory() {
-        CachingConnectionFactory connectionFactory = new CachingConnectionFactory();
-        connectionFactory.setVirtualHost(virtualHost);
-        connectionFactory.setHost(host);
-        connectionFactory.setUsername(username);
-        connectionFactory.setPassword(password);
-        return connectionFactory;
+        return BindingBuilder.bind(queue3).to(exchange);
     }
 
     @Bean
@@ -96,10 +87,7 @@ public class RabbitConfig {
     @Bean
     public AmqpTemplate rabbitTemplate(ConnectionFactory connectionFactory) {
         final RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
-        rabbitTemplate.setDefaultReceiveQueue(myQueue().getName());
         rabbitTemplate.setMessageConverter(jsonMessageConverter());
-        rabbitTemplate.setReplyAddress(myQueue().getName());
-        rabbitTemplate.setUseDirectReplyToContainer(false);
         return rabbitTemplate;
     }
 

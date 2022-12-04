@@ -12,13 +12,13 @@ import org.apache.logging.log4j.Logger;
 import java.io.IOException;
 
 @Component
-@RabbitListener(queues = "productsGET")
 public class ProductsGETReceiver {
 
     @Autowired
     private ProductService productService;
 
-    @RabbitHandler
+
+    @RabbitListener(queues = "productsGET")
     public void receiver(Product p) throws IOException {
         productService.create(p);
         System.out.println(" [x] Received '" + p + "'");

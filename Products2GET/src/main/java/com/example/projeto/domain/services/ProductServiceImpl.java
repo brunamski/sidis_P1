@@ -111,4 +111,10 @@ public class ProductServiceImpl implements ProductService {
 
         return aggregatedRatingDTO;
     }
+
+    @Override
+    public void create(Product p) throws IOException {
+        Product product = new Product(p.getDesignation(), p.getDescription(), p.getSku());
+        productRepository.save(product);
+    }
 }

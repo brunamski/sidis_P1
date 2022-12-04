@@ -11,6 +11,7 @@ import com.example.projeto.usermanagement.models.Role;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -43,6 +44,8 @@ public class ProductController {
 
     @Autowired
     private ProductsCOMSender productsCOMSender;
+
+    private String fanout = "products";
 
     @Operation(summary = "Creates a product")
     @RolesAllowed(Role.ADMIN)

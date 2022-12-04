@@ -1,36 +1,25 @@
 package com.example.projeto.rabbitmq;
 
+import com.example.projeto.domain.models.Product;
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.amqp.core.FanoutExchange;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Service;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
+@Service
 public class Products2COMSender {
 
     @Autowired
-    private RabbitTemplate template;
+    private AmqpTemplate template;
 
-    @Autowired
-    private FanoutExchange fanout;
+    private String fanout = "products";
 
-    AtomicInteger dots = new AtomicInteger(0);
-
-    AtomicInteger count = new AtomicInteger(0);
-
-    @Scheduled(fixedDelay = 1000, initialDelay = 500)
-    public void send() {
-        StringBuilder builder = new StringBuilder("Hello");
-        if (dots.getAndIncrement() == 3) {
-            dots.set(1);
-        }
-        for (int i = 0; i < dots.get(); i++) {
-            builder.append('.');
-        }
-        builder.append(count.incrementAndGet());
-        String message = builder.toString();
-        template.convertAndSend(fanout.getName(), "", message);
-        System.out.println(" [x] Sent '" + message + "'");
+    public void send(Product p) {
+        template.convertAndSend(fanout, "", p);
+        System.out.println(" [x] Sent '" + p + "'");
     }
 }
