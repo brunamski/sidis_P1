@@ -66,5 +66,9 @@ public class VoteServiceImpl implements VoteService{
 
         return  Boolean.parseBoolean(response.body());
     }
-
+    @Override
+    public int getVotesByReviewId(Long reviewId){
+        int nvotes = voteRepository.getVotesByReviewId(reviewId);
+        return nvotes;
+    }
 }

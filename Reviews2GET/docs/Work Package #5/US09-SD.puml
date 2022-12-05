@@ -1,0 +1,33 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autoactivate on
+autonumber
+
+actor "Customer" as User
+participant ":ProductController" as Ctrl
+participant "service:ProductService" as Service
+participant "service:ReviewService" as Service2
+participant "repository:ProductRepository" as Repo
+participant "repository:ReviewRepository" as Repo2
+
+
+activate User
+
+User -> Ctrl: asks to get the aggregated rating of a product
+Ctrl -> Service: getProductAggregatedRating(sku)
+Service -> Repo: findBySku(sku)
+Repo --> Repo: findBySku(sku)
+Repo --> Service: product
+Service --> Ctrl: product
+Ctrl -> Service2: findReviewsBySku(sku)
+Service2 -> Repo2: findReviewsBySku(sku)
+Repo2 --> Repo2: findReviewsBySku(sku)
+Repo2 --> Service2: reviews list
+Service2 --> Ctrl: reviews list
+Ctrl -> Service: getProductAggregatedRating(reviews)
+Service --> Ctrl: aggregatedRating
+Ctrl --> User: shows the aggregated rating of the selected product
+
+
+@enduml

@@ -22,4 +22,6 @@ public interface VoteService {
     Vote create(Vote newVote);
 
     VoteDTO vote(Long reviewId, HttpServletRequest request, Vote newVote) throws IOException, InterruptedException;
+
+    int getVotesByReviewId(Long reviewId);
 }

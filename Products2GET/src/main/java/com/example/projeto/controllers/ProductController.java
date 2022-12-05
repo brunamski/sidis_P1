@@ -1,15 +1,10 @@
 package com.example.projeto.controllers;
 
 import com.example.projeto.domain.models.AggregatedRatingDTO;
-import com.example.projeto.rabbitmq.*;
 import com.example.projeto.domain.models.ProductDTO;
 import com.example.projeto.domain.models.ProductDTOcat;
-import com.example.projeto.domain.services.FileStorageService;
 import com.example.projeto.domain.services.ProductService;
-import com.example.projeto.domain.views.CatalogView;
-import com.example.projeto.usermanagement.models.Role;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -17,30 +12,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.Resource;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.server.ResponseStatusException;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-import javax.annotation.security.RolesAllowed;
+
 import javax.servlet.http.HttpServletRequest;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
 
 @RabbitListener(queues = "rabbitmq.queue", id = "listener")    //Provavelmente é preciso algo deste género
 @Tag(name = "Products", description = "Endpoints for products")
@@ -52,9 +34,6 @@ public class ProductController {
 
     @Autowired
     private ProductService productService;
-
-    @Autowired
-    private FileStorageService fileStorageService;
 
     @Operation(summary = "US01 - To obtain the catalog of products")
     @GetMapping(value = "/public/products")
@@ -78,13 +57,6 @@ public class ProductController {
         return ResponseEntity.ok().body(productDTO);
     }
 
-    @Operation(summary = "US03 - To search the catalog of products by bar code")
-    @GetMapping(value = "/public/product/bar_code/{sku}", produces = MediaType.IMAGE_PNG_VALUE)
-    public ResponseEntity<BufferedImage> getProductsByBarCode(@PathVariable("sku") final String sku) throws Exception{
-        BufferedImage image = fileStorageService.getBarcode(sku);
-        return ResponseEntity.ok().body(image);
-    }
-
     @Operation(summary = "US09 - To obtain the aggregated rating of a product")
     @GetMapping(value = "/public/product/rating/{sku}")
     public ResponseEntity<AggregatedRatingDTO> getProductAggregatedRating(@PathVariable("sku") final String sku) throws IOException, InterruptedException {
@@ -102,40 +74,5 @@ public class ProductController {
         else {
             return false;
         }
-    }
-
-    /**
-     *
-     * <p>
-     * code based on
-     * https://github.com/callicoder/spring-boot-file-upload-download-rest-api-example
-     *
-     * @param fileName
-     * @param request
-     * @return
-     */
-    @Operation(summary = "Gets an image")
-    @GetMapping("/public/product/{sku}/images/downloadFile/{fileName:.+}")
-    public ResponseEntity<Resource> downloadFile(@PathVariable final String fileName,
-                                                 final HttpServletRequest request) {
-        // Load file as Resource
-        final Resource resource = fileStorageService.loadFileAsResource(fileName);
-
-        // Try to determine file's content type
-        String contentType = null;
-        try {
-            contentType = request.getServletContext().getMimeType(resource.getFile().getAbsolutePath());
-        } catch (final IOException ex) {
-            logger.info("Could not determine file type.");
-        }
-
-        // Fallback to the default content type if type could not be determined
-        if (contentType == null) {
-            contentType = "application/octet-stream";
-        }
-
-        return ResponseEntity.ok().contentType(MediaType.parseMediaType(contentType))
-                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + resource.getFilename() + "\"")
-                .body(resource);
     }
 }

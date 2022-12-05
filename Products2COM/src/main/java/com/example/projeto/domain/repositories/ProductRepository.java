@@ -1,7 +1,6 @@
 package com.example.projeto.domain.repositories;
 
 import com.example.projeto.domain.models.Product;
-import com.example.projeto.domain.views.CatalogView;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

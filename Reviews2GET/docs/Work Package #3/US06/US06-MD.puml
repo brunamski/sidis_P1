@@ -1,0 +1,30 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+skinparam classAttributeIconSize 0
+hide circle
+hide methods
+
+class Vote {
+    - reviewId
+    - userId
+    - voteId
+    - vote
+    - reason
+}
+
+class Review {
+    - reviewID
+    - rating
+    - text
+    - userID
+    - publishingDate
+    - funfact
+    - status
+    - sku
+}
+
+Review "1" -right-- "0..*" Vote:  Contains >
+
+
+@enduml

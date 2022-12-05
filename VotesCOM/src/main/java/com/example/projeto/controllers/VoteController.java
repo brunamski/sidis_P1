@@ -41,8 +41,8 @@ public class VoteController {
             return ResponseEntity.ok().body(voteService.vote(reviewId, request, newVote));
     }
 
-    /*@GetMapping(value = "/public/vote/review/{reviewId}")
-    public int getVotes(@PathVariable(value = "reviewId") final Long reviewId) {
+    @GetMapping(value = "/public/vote/review/{reviewId}")
+    public int getVotes(@PathVariable(value = "reviewId") final Long reviewId){
         return voteService.getVotesByReviewId(reviewId);
-    }*/
+    }
 }

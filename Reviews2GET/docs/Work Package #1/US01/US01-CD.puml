@@ -1,0 +1,47 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+hide circle
+skinparam classAttributeIconSize 0
+
+
+class ProductController {
+    +findCatalog(): Iterable<CatalogView>
+    +create(Product newProduct): ResponseEntity<Product>
+}
+
+interface ProductService <<interface>> {
+    +findCatalog(): Iterable<CatalogView>
+    +create(Product newProduct)
+}
+
+class ProductServiceImpl{
+    +findCatalog(): Iterable<CatalogView>
+    +create(Product newProduct)
+}
+
+class Product {
+    - productId
+    - designation
+    - description
+    - setOfImages
+    - sku
+    - aggregatedRating
+    Product(Long productId, String designation, String description, String setOfImages, Long sku, float aggregatedRating)
+}
+
+class ProductRepository {
+    +findCatalog():List<CatalogView>
+}
+
+ProductRepository "1" --> "0.." Product:  records
+
+ProductController ..> ProductService
+ProductServiceImpl ..> ProductRepository
+ProductServiceImpl ..> Product
+ProductService ..> Product
+
+ProductServiceImpl .up.|> ProductService
+
+
+@enduml

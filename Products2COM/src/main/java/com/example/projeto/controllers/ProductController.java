@@ -1,10 +1,7 @@
 package com.example.projeto.controllers;
 
-import com.example.projeto.domain.models.AggregatedRatingDTO;
 import com.example.projeto.domain.models.Product;
 import com.example.projeto.domain.models.ProductDTO;
-import com.example.projeto.domain.models.ProductDTOcat;
-import com.example.projeto.domain.services.FileStorageService;
 import com.example.projeto.domain.services.ProductService;
 import com.example.projeto.rabbitmq.Products2COMSender;
 import com.example.projeto.usermanagement.models.Role;
@@ -13,7 +10,6 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -39,9 +35,6 @@ public class ProductController {
     private ProductService productService;
 
     @Autowired
-    private FileStorageService fileStorageService;
-
-    @Autowired
     private Products2COMSender products2COMSender;
 
     @Operation(summary = "Creates a product")
@@ -52,56 +45,5 @@ public class ProductController {
         ProductDTO p = productService.createProduct(newProduct);
         products2COMSender.send(newProduct);
         return ResponseEntity.ok().body(p);
-    }
-
-    /*
-     * Handling files as subresources
-     */
-
-    /**
-     * Upload a new image.
-     *
-     * <p>
-     * code based on
-     * https://github.com/callicoder/spring-boot-file-upload-download-rest-api-example
-     *
-     * @param sku
-     * @param file
-     * @return
-     */
-    @Operation(summary = "Uploads an image")
-    @PostMapping("/admin/product/{sku}/image")
-    @RolesAllowed(Role.ADMIN)
-    @ResponseStatus(HttpStatus.CREATED)
-    public UploadFileResponse uploadFile( @PathVariable("sku") final String sku, @RequestParam("file") final MultipartFile file) {
-        final String fileName = fileStorageService.storeFile(file);
-
-        String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentRequestUri()
-                .path("/downloadFile/")
-                .path(fileName)
-                .toUriString();
-
-        productService.addImage(fileName, sku);
-
-        return new UploadFileResponse(fileName, fileDownloadUri, file.getContentType(), file.getSize());
-    }
-
-    /**
-     * Upload a set of images.
-     *
-     * <p>
-     * code based on
-     * https://github.com/callicoder/spring-boot-file-upload-download-rest-api-example
-     *
-     * @param sku
-     * @param files
-     * @return
-     */
-    @Operation(summary = "Upload a set of images")
-    @PostMapping("/admin/product/{sku}/images")
-    @RolesAllowed(Role.ADMIN)
-    @ResponseStatus(HttpStatus.CREATED)
-    public List<UploadFileResponse> uploadMultipleFiles(@PathVariable("sku") final String sku, @RequestParam("files") final MultipartFile[] files) {
-        return Arrays.asList(files).stream().map(f -> uploadFile(sku,f)).collect(Collectors.toList());
     }
 }

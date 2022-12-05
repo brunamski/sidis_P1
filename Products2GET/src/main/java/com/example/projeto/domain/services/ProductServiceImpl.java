@@ -5,7 +5,6 @@ import com.example.projeto.domain.models.Product;
 import com.example.projeto.domain.models.ProductDTO;
 import com.example.projeto.domain.models.ProductDTOcat;
 import com.example.projeto.domain.repositories.ProductRepository;
-import com.example.projeto.domain.views.CatalogView;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;

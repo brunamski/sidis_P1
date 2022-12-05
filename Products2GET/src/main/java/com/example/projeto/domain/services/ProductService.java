@@ -8,7 +8,6 @@ import com.example.projeto.domain.models.AggregatedRatingDTO;
 import com.example.projeto.domain.models.Product;
 import com.example.projeto.domain.models.ProductDTO;
 import com.example.projeto.domain.models.ProductDTOcat;
-import com.example.projeto.domain.views.CatalogView;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 

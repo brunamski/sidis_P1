@@ -31,11 +31,11 @@ public class Review {
     @Column(nullable = false, length = 1000)
     private String text;
     @Column
-    private String publishingDate;
+    private String publishingDate = addDataTime();
 
     private Status status = Status.PENDING;
     @Column
-    private String funFact;
+    private String funFact = retrieveDataFromApi(publishingDate);
 
     protected Review() throws IOException {}
 
@@ -61,11 +61,11 @@ public class Review {
             return result;
         }
     }
-    public void addDataTime() {
+    public String addDataTime() {
         LocalDateTime myDateObj = LocalDateTime.now();
         DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         String formattedDate = myDateObj.format(myFormatObj);
-        this.publishingDate = formattedDate;
+        return this.publishingDate = formattedDate;
     }
 
     public void applyPatch(final Review newReview) {

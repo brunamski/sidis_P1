@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autoactivate on
+autonumber
+
+actor "Admin" as User
+participant ":data.sql" as Ctrl
+participant "productRepository:ProductRepository" as Repo
+
+activate User
+
+User -> Ctrl: asks to bootstrap products
+loop for each product in data.sql
+    Ctrl -->Repo: checks the products in data.sql
+    Repo --> Ctrl: creates the products
+end loop
+
+
+@enduml
