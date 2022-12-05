@@ -340,9 +340,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostProducts2GET}}{{baseUrl}}/public/products",
+									"raw": "{{hostProductsGET}}{{baseUrl}}/public/products",
 									"host": [
-										"{{hostProducts2GET}}{{baseUrl}}"
+										"{{hostProductsGET}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
@@ -358,9 +358,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostProducts2GET}}{{baseUrl}}/public/product/SKU0000001",
+									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000001",
 									"host": [
-										"{{hostProducts2GET}}{{baseUrl}}"
+										"{{hostProductsGET}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
@@ -377,9 +377,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostProducts2GET}}{{baseUrl}}/public/product/name/madeira",
+									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/name/madeira",
 									"host": [
-										"{{hostProducts2GET}}{{baseUrl}}"
+										"{{hostProductsGET}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
@@ -430,44 +430,6 @@
 								}
 							},
 							"response": []
-						},
-						{
-							"name": "GET Catalog prod2",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{hostProducts2GET}}{{baseUrl}}/public/my/products",
-									"host": [
-										"{{hostProducts2GET}}{{baseUrl}}"
-									],
-									"path": [
-										"public",
-										"my",
-										"products"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "GET Catalog prod1",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{hostProductsGET}}{{baseUrl}}/public/my/products",
-									"host": [
-										"{{hostProductsGET}}{{baseUrl}}"
-									],
-									"path": [
-										"public",
-										"my",
-										"products"
-									]
-								}
-							},
-							"response": []
 						}
 					]
 				},
@@ -489,9 +451,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{hostProduct}}{{baseUrl}}/admin/product",
+									"raw": "{{hostProductsCOM}}{{baseUrl}}/admin/product",
 									"host": [
-										"{{hostProduct}}{{baseUrl}}"
+										"{{hostProductsCOM}}{{baseUrl}}"
 									],
 									"path": [
 										"admin",
@@ -508,7 +470,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"designation\": \"FIFA23\",\r\n    \"description\": \"Jogo bugador de mentes\",\r\n    \"sku\": \"SKU0000007\"\r\n}",
+									"raw": "{\r\n    \"designation\": \"FIFA23\",\r\n    \"description\": \"Jogo bugador de mentes\",\r\n    \"sku\": \"SKU0000028\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -516,9 +478,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{hostProduct2}}{{baseUrl}}/admin/product",
+									"raw": "{{hostProducts2COM}}{{baseUrl}}/admin/product",
 									"host": [
-										"{{hostProduct2}}{{baseUrl}}"
+										"{{hostProducts2COM}}{{baseUrl}}"
 									],
 									"path": [
 										"admin",
@@ -569,19 +531,18 @@
 					"name": "Public",
 					"item": [
 						{
-							"name": "US05 - To Obtain the Reviews of a Product. Sorted by Number of Votes and Reverse Chronological Publishing Date",
+							"name": "US05 - To Obtain the Reviews of a Product. Sorted in Reverse Chronological Publishing Date",
 							"request": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostReview}}{{baseUrl}}/public/review/vote/product/SKU0000001",
+									"raw": "{{hostReviewsGET}}{{baseUrl}}/public/review/product/SKU0000001",
 									"host": [
-										"{{hostReview}}{{baseUrl}}"
+										"{{hostReviewsGET}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
 										"review",
-										"vote",
 										"product",
 										"SKU0000001"
 									]
@@ -590,18 +551,19 @@
 							"response": []
 						},
 						{
-							"name": "US05 - To Obtain the Reviews of a Product. Sorted in Reverse Chronological Publishing Date",
+							"name": "US05 - To Obtain the Reviews of a Product. Sorted by Number of Votes and Reverse Chronological Publishing Date",
 							"request": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostReview}}{{baseUrl}}/public/review/product/SKU0000001",
+									"raw": "{{hostReviewsGET}}{{baseUrl}}/public/review/vote/product/SKU0000001",
 									"host": [
-										"{{hostReview}}{{baseUrl}}"
+										"{{hostReviewsGET}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
 										"review",
+										"vote",
 										"product",
 										"SKU0000001"
 									]
@@ -620,9 +582,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostReview}}{{baseUrl}}/review/pending",
+									"raw": "{{hostReviewsGET}}{{baseUrl}}/review/pending",
 									"host": [
-										"{{hostReview}}{{baseUrl}}"
+										"{{hostReviewsGET}}{{baseUrl}}"
 									],
 									"path": [
 										"review",
@@ -647,13 +609,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{hostReview}}{{baseUrl}}/review/13",
+									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/11",
 									"host": [
-										"{{hostReview}}{{baseUrl}}"
+										"{{hostReviewsCOM}}{{baseUrl}}"
 									],
 									"path": [
 										"review",
-										"13"
+										"11"
 									]
 								}
 							},
@@ -665,9 +627,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostReview}}{{baseUrl}}/review/status",
+									"raw": "{{hostReviewsGET}}{{baseUrl}}/review/status",
 									"host": [
-										"{{hostReview}}{{baseUrl}}"
+										"{{hostReviewsGET}}{{baseUrl}}"
 									],
 									"path": [
 										"review",
@@ -684,7 +646,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"sku\": \"SKU0000001\",\r\n    \"rating\": 4,\r\n    \"text\": \"Isto é a razão pelo qual dei quatro estrelas\"\r\n}",
+									"raw": "{\r\n    \"sku\": \"SKU0000001\",\r\n    \"rating\": 5,\r\n    \"text\": \"Isto é a razão pelo qual dei quatro estrelas\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -692,9 +654,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{hostReview}}{{baseUrl}}/review",
+									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review",
 									"host": [
-										"{{hostReview}}{{baseUrl}}"
+										"{{hostReviewsCOM}}{{baseUrl}}"
 									],
 									"path": [
 										"review"
@@ -709,13 +671,13 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{hostReview}}{{baseUrl}}/review/13/withdraw",
+									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/4/withdraw",
 									"host": [
-										"{{hostReview}}{{baseUrl}}"
+										"{{hostReviewsCOM}}{{baseUrl}}"
 									],
 									"path": [
 										"review",
-										"13",
+										"4",
 										"withdraw"
 									]
 								}
@@ -959,6 +921,10 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "SIDIS Tests",
+			"item": []
 		}
 	]
 }
