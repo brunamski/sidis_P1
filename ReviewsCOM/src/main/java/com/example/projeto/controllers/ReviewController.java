@@ -45,8 +45,11 @@ public class ReviewController {
     @RolesAllowed(Role.REGISTERED)
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<ReviewDTO> createReview(HttpServletRequest request, @RequestBody Review newReview) throws IOException, InterruptedException {
-        reviewsCOMSender.send(newReview);
-        return ResponseEntity.ok().body(reviewService.createReview(request, newReview));
+        ReviewDTO reviewDTO = reviewService.createReview(request, newReview);
+        Review review = new Review(reviewDTO.getSku(),reviewDTO.getRating(),reviewDTO.getText());
+        review.setUserId(utils.getUserIdByToken(request));
+        reviewsCOMSender.send(review);
+        return ResponseEntity.ok().body(reviewDTO);
     }
 
     @Operation(summary = "US07 - To withdraw one of my reviews")

@@ -2,6 +2,7 @@ package com.example.projeto.controllers;
 
 import com.example.projeto.domain.models.*;
 import com.example.projeto.domain.services.ReviewService;
+import com.example.projeto.rabbitmq.Reviews2COMSender;
 import com.example.projeto.usermanagement.models.Role;
 
 import com.example.projeto.utils.Utils;
@@ -52,12 +53,19 @@ public class ReviewController {
     @Autowired
     private Utils utils;
 
+    @Autowired
+    private Reviews2COMSender reviews2COMSender;
+
     @Operation(summary = "US04 - To review and rate a product")
     @PostMapping(value = "/review")
     @RolesAllowed(Role.REGISTERED)
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<ReviewDTO> createReview(HttpServletRequest request, @RequestBody Review newReview) throws IOException, InterruptedException {
-        return ResponseEntity.ok().body(reviewService.createReview(request, newReview));
+        ReviewDTO reviewDTO = reviewService.createReview(request, newReview);
+        Review review = new Review(reviewDTO.getSku(),reviewDTO.getRating(),reviewDTO.getText());
+        review.setUserId(utils.getUserIdByToken(request));
+        reviews2COMSender.send(review);
+        return ResponseEntity.ok().body(reviewDTO);
     }
 
     @Operation(summary = "US07 - To withdraw one of my reviews")
