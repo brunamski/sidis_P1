@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "7978afae-0e74-431d-aed4-56141f6da0ef",
-		"name": "SIDIS PROJECT",
+		"_postman_id": "5602b1c8-2f43-4c27-bef9-dd68e3f767eb",
+		"name": "PSOFT PROJECT G1",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "19169178"
+		"_exporter_id": "17813064"
 	},
 	"item": [
 		{
@@ -44,9 +44,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{hostAuthentication}}{{baseUrl}}/public/login",
+									"raw": "{{host}}{{baseUrl}}/public/login",
 									"host": [
-										"{{hostAuthentication}}{{baseUrl}}"
+										"{{host}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
@@ -71,9 +71,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{hostAuthentication}}{{baseUrl}}/public/register",
+									"raw": "{{host}}{{baseUrl}}/public/register",
 									"host": [
-										"{{hostAuthentication}}{{baseUrl}}"
+										"{{host}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
@@ -112,7 +112,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"username\":\"Tiago@mail.com\",\r\n    \"password\":\"password3\"\r\n}",
+									"raw": "{\r\n    \"username\":\"Pedro@mail.com\",\r\n    \"password\":\"password1\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -120,9 +120,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{hostAuthentication}}{{baseUrl}}/public/login",
+									"raw": "{{host}}{{baseUrl}}/public/login",
 									"host": [
-										"{{hostAuthentication}}{{baseUrl}}"
+										"{{host}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
@@ -147,9 +147,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{hostAuthentication}}{{baseUrl}}/public/register",
+									"raw": "{{host}}{{baseUrl}}/public/register",
 									"host": [
-										"{{hostAuthentication}}{{baseUrl}}"
+										"{{host}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
@@ -188,7 +188,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"username\":\"Alex@mail.com\",\r\n    \"password\":\"mod3\"\r\n}",
+									"raw": "{\r\n    \"username\":\"Rodrigues@mail.com\",\r\n    \"password\":\"mod1\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -196,9 +196,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{hostAuthentication}}{{baseUrl}}/public/login",
+									"raw": "{{host}}{{baseUrl}}/public/login",
 									"host": [
-										"{{hostAuthentication}}{{baseUrl}}"
+										"{{host}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
@@ -223,9 +223,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{hostAuthentication}}{{baseUrl}}/public/register",
+									"raw": "{{host}}{{baseUrl}}/public/register",
 									"host": [
-										"{{hostAuthentication}}{{baseUrl}}"
+										"{{host}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
@@ -329,7 +329,7 @@
 			]
 		},
 		{
-			"name": "Products",
+			"name": "Work Package #1 - Products",
 			"item": [
 				{
 					"name": "Public",
@@ -340,13 +340,13 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostProductsGET}}{{baseUrl}}/public/products",
+									"raw": "{{host}}{{baseUrl}}/public/product",
 									"host": [
-										"{{hostProductsGET}}{{baseUrl}}"
+										"{{host}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
-										"products"
+										"product"
 									]
 								}
 							},
@@ -358,14 +358,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000007",
+									"raw": "{{host}}{{baseUrl}}/public/product/SKU0000001",
 									"host": [
-										"{{hostProductsGET}}{{baseUrl}}"
+										"{{host}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
 										"product",
-										"SKU0000007"
+										"SKU0000001"
 									]
 								}
 							},
@@ -377,9 +377,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/name/madeira",
+									"raw": "{{host}}{{baseUrl}}/public/product/name/madeira",
 									"host": [
-										"{{hostProductsGET}}{{baseUrl}}"
+										"{{host}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
@@ -397,9 +397,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/bar_code/SKU0000001",
+									"raw": "{{host}}{{baseUrl}}/public/product/bar_code/SKU0000001",
 									"host": [
-										"{{hostProductsGET}}{{baseUrl}}"
+										"{{host}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
@@ -410,22 +410,66 @@
 								}
 							},
 							"response": []
+						}
+					]
+				},
+				{
+					"name": "Private",
+					"item": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
 						},
 						{
-							"name": "US09 - To Obtain the Aggregated Rating of a Product",
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Work Package #2 - Reviews",
+			"item": [
+				{
+					"name": "Public",
+					"item": [
+						{
+							"name": "US05 - To Obtain the Reviews of a Product. Sorted in Reverse Chronological Publishing Date",
 							"request": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/rating/SKU0000003",
+									"raw": "{{host}}{{baseUrl}}/public/review/product/SKU0000001",
 									"host": [
-										"{{hostProductsGET}}{{baseUrl}}"
+										"{{host}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
+										"review",
 										"product",
-										"rating",
-										"SKU0000003"
+										"SKU0000001"
 									]
 								}
 							},
@@ -437,13 +481,13 @@
 					"name": "Private",
 					"item": [
 						{
-							"name": "Creates a product",
+							"name": "US04 - To Review and Rate a Product",
 							"request": {
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"designation\": \"FIFA23\",\r\n    \"description\": \"Jogo bugador de mentes\",\r\n    \"sku\": \"SKU0000007\"\r\n}",
+									"raw": "{\r\n    \"sku\": \"SKU0000001\",\r\n    \"rating\": 5,\r\n    \"text\": \"Isto é a razão pelo qual dei uma estrela\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -451,40 +495,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{hostProductsCOM}}{{baseUrl}}/admin/product",
+									"raw": "{{host}}{{baseUrl}}/review",
 									"host": [
-										"{{hostProductsCOM}}{{baseUrl}}"
+										"{{host}}{{baseUrl}}"
 									],
 									"path": [
-										"admin",
-										"product"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Creates a product in 2",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"designation\": \"FIFA23\",\r\n    \"description\": \"Jogo bugador de mentes\",\r\n    \"sku\": \"SKU0000028\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{hostProducts2COM}}{{baseUrl}}/admin/product",
-									"host": [
-										"{{hostProducts2COM}}{{baseUrl}}"
-									],
-									"path": [
-										"admin",
-										"product"
+										"review"
 									]
 								}
 							},
@@ -525,40 +541,20 @@
 			]
 		},
 		{
-			"name": "Reviews",
+			"name": "Work Package #3 - Votes in Reviews",
 			"item": [
 				{
 					"name": "Public",
 					"item": [
-						{
-							"name": "US05 - To Obtain the Reviews of a Product. Sorted in Reverse Chronological Publishing Date",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{hostReviewsGET}}{{baseUrl}}/public/review/product/SKU0000001",
-									"host": [
-										"{{hostReviewsGET}}{{baseUrl}}"
-									],
-									"path": [
-										"public",
-										"review",
-										"product",
-										"SKU0000001"
-									]
-								}
-							},
-							"response": []
-						},
 						{
 							"name": "US05 - To Obtain the Reviews of a Product. Sorted by Number of Votes and Reverse Chronological Publishing Date",
 							"request": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostReviewsGET}}{{baseUrl}}/public/review/vote/product/SKU0000001",
+									"raw": "{{host}}{{baseUrl}}/public/review/vote/product/SKU0000001",
 									"host": [
-										"{{hostReviewsGET}}{{baseUrl}}"
+										"{{host}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
@@ -577,76 +573,13 @@
 					"name": "Private",
 					"item": [
 						{
-							"name": "US10 - To Obtain all Pending Reviews",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{hostReviewsGET}}{{baseUrl}}/review/pending",
-									"host": [
-										"{{hostReviewsGET}}{{baseUrl}}"
-									],
-									"path": [
-										"review",
-										"pending"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "US11 - To Approve or Reject a Pending Review",
-							"request": {
-								"method": "PATCH",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"status\": 1\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/11",
-									"host": [
-										"{{hostReviewsCOM}}{{baseUrl}}"
-									],
-									"path": [
-										"review",
-										"11"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "US08 - To Obtain all my Reviews Including their Status",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{hostReviewsGET}}{{baseUrl}}/review/status",
-									"host": [
-										"{{hostReviewsGET}}{{baseUrl}}"
-									],
-									"path": [
-										"review",
-										"status"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "US04 - To Review and Rate a Product",
+							"name": "US06 - To Vote for a Review",
 							"request": {
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"sku\": \"SKU0000001\",\r\n    \"rating\": 5,\r\n    \"text\": \"Isto é a razão pelo qual dei quatro estrelas\"\r\n}",
+									"raw": "{\r\n    \"vote\": true,\r\n    \"reason\": \"Love it!\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -654,12 +587,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review",
+									"raw": "{{host}}{{baseUrl}}/review/3/vote",
 									"host": [
-										"{{hostReviewsCOM}}{{baseUrl}}"
+										"{{host}}{{baseUrl}}"
 									],
 									"path": [
-										"review"
+										"review",
+										"3",
+										"vote"
 									]
 								}
 							},
@@ -671,13 +606,13 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/4/withdraw",
+									"raw": "{{host}}{{baseUrl}}/review/1/withdraw",
 									"host": [
-										"{{hostReviewsCOM}}{{baseUrl}}"
+										"{{host}}{{baseUrl}}"
 									],
 									"path": [
 										"review",
-										"4",
+										"1",
 										"withdraw"
 									]
 								}
@@ -719,7 +654,7 @@
 			]
 		},
 		{
-			"name": "Votes",
+			"name": "Work Package #4 - Moderated Reviews",
 			"item": [
 				{
 					"name": "Public",
@@ -729,13 +664,31 @@
 					"name": "Private",
 					"item": [
 						{
-							"name": "US06 - To Vote for a Review",
+							"name": "US10 - To Obtain all Pending Reviews",
 							"request": {
-								"method": "POST",
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}{{baseUrl}}/review/pending",
+									"host": [
+										"{{host}}{{baseUrl}}"
+									],
+									"path": [
+										"review",
+										"pending"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "US11 - To Approve or Reject a Pending Review",
+							"request": {
+								"method": "PATCH",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"vote\": true,\r\n    \"reason\": \"Love it!\"\r\n}",
+									"raw": "{\r\n    \"status\": 1\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -743,20 +696,121 @@
 									}
 								},
 								"url": {
-									"raw": "{{hostVote}}{{baseUrl}}/review/13/vote",
+									"raw": "{{host}}{{baseUrl}}/review/1",
 									"host": [
-										"{{hostVote}}{{baseUrl}}"
+										"{{host}}{{baseUrl}}"
 									],
 									"path": [
 										"review",
-										"13",
-										"vote"
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "US08 - To Obtain all my Reviews Including their Status",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}{{baseUrl}}/review/status",
+									"host": [
+										"{{host}}{{baseUrl}}"
+									],
+									"path": [
+										"review",
+										"status"
 									]
 								}
 							},
 							"response": []
 						}
 					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Work Package #5 - Aggregated Ratings",
+			"item": [
+				{
+					"name": "Public",
+					"item": [
+						{
+							"name": "US09 - To Obtain the Aggregated Rating of a Product",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}{{baseUrl}}/public/product/rating/SKU0000001",
+									"host": [
+										"{{host}}{{baseUrl}}"
+									],
+									"path": [
+										"public",
+										"product",
+										"rating",
+										"SKU0000001"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Private",
+					"item": [],
 					"auth": {
 						"type": "bearer",
 						"bearer": [
@@ -802,9 +856,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostProduct}}{{baseUrl}}/public/product/SKU0000001/images/downloadFile/4c5e28fe-892d-4fa4-acf4-5d0e9cb51576.png",
+									"raw": "{{host}}{{baseUrl}}/public/product/SKU0000001/images/downloadFile/4c5e28fe-892d-4fa4-acf4-5d0e9cb51576.png",
 									"host": [
-										"{{hostProduct}}{{baseUrl}}"
+										"{{host}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
@@ -839,9 +893,9 @@
 									]
 								},
 								"url": {
-									"raw": "{{hostProduct}}{{baseUrl}}/admin/product/SKU0000001/image",
+									"raw": "{{host}}{{baseUrl}}/admin/product/SKU0000001/image",
 									"host": [
-										"{{hostProduct}}{{baseUrl}}"
+										"{{host}}{{baseUrl}}"
 									],
 									"path": [
 										"admin",
@@ -864,19 +918,19 @@
 										{
 											"key": "files",
 											"type": "file",
-											"src": "/C:/Users/Tiago Oliveira/IdeaProjects/psoft-project-g1/src/main/resources/assets/madeira.jpg"
+											"src": "/C:/Users/Pedro/Desktop/Faculdade/2Ano/2Semestre/PSOFT/psoft-project-g1/src/main/resources/assets/madeira.jpg"
 										},
 										{
 											"key": "files",
 											"type": "file",
-											"src": "/C:/Users/Tiago Oliveira/IdeaProjects/psoft-project-g1/src/main/resources/assets/madeira_2.jpg"
+											"src": "/C:/Users/Pedro/Desktop/Faculdade/2Ano/2Semestre/PSOFT/psoft-project-g1/src/main/resources/assets/madeira_2.jpg"
 										}
 									]
 								},
 								"url": {
-									"raw": "{{hostProduct}}{{baseUrl}}/admin/product/SKU0000001/images",
+									"raw": "{{host}}{{baseUrl}}/admin/product/SKU0000001/images",
 									"host": [
-										"{{hostProduct}}{{baseUrl}}"
+										"{{host}}{{baseUrl}}"
 									],
 									"path": [
 										"admin",
@@ -919,308 +973,6 @@
 							}
 						}
 					]
-				}
-			]
-		},
-		{
-			"name": "SIDIS Tests",
-			"item": [
-				{
-					"name": "Admin Login",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Authtenticates\", function(){\r",
-									"\r",
-									"    pm.response.to.have.status(200);\r",
-									"\r",
-									"    let token = postman.getResponseHeader(\"Authorization\");\r",
-									"    pm.environment.set(\"token\", token);    \r",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"username\":\"admin1@mail.com\",\r\n    \"password\":\"admin1\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{hostAuthentication}}{{baseUrl}}/public/login",
-							"host": [
-								"{{hostAuthentication}}{{baseUrl}}"
-							],
-							"path": [
-								"public",
-								"login"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get Product",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Get product\", function() {\r",
-									"    pm.response.to.have.status(404);\r",
-									"} );"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000008",
-							"host": [
-								"{{hostProductsGET}}{{baseUrl}}"
-							],
-							"path": [
-								"public",
-								"product",
-								"SKU0000008"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Creates a product Copy",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Get product\", function() {\r",
-									"    pm.response.to.have.status(200);\r",
-									"} );"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"designation\": \"FIFA23\",\r\n    \"description\": \"Jogo bugador de mentes\",\r\n    \"sku\": \"SKU0000008\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{hostProductsCOM}}{{baseUrl}}/admin/product",
-							"host": [
-								"{{hostProductsCOM}}{{baseUrl}}"
-							],
-							"path": [
-								"admin",
-								"product"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get Product",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Get product\", function() {\r",
-									"    pm.response.to.have.status(200);\r",
-									"} );"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000008",
-							"host": [
-								"{{hostProductsGET}}{{baseUrl}}"
-							],
-							"path": [
-								"public",
-								"product",
-								"SKU0000008"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get2 Product",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Get product\", function() {\r",
-									"    pm.response.to.have.status(200);\r",
-									"} );"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{hostProducts2GET}}{{baseUrl}}/public/product/SKU0000008",
-							"host": [
-								"{{hostProducts2GET}}{{baseUrl}}"
-							],
-							"path": [
-								"public",
-								"product",
-								"SKU0000008"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Create2 Product Duplicated",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Get product\", function() {\r",
-									"    pm.response.to.have.status(409);\r",
-									"} );"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"designation\": \"FIFA23\",\r\n    \"description\": \"Jogo bugador de mentes\",\r\n    \"sku\": \"SKU0000008\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{hostProducts2COM}}{{baseUrl}}/admin/product",
-							"host": [
-								"{{hostProducts2COM}}{{baseUrl}}"
-							],
-							"path": [
-								"admin",
-								"product"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get All",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Get product\", function() {\r",
-									"    pm.response.to.have.status(200);\r",
-									"} );"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{hostProductsGET}}{{baseUrl}}/public/products",
-							"host": [
-								"{{hostProductsGET}}{{baseUrl}}"
-							],
-							"path": [
-								"public",
-								"products"
-							]
-						}
-					},
-					"response": []
-				}
-			],
-			"event": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							""
-						]
-					}
-				},
-				{
-					"listen": "test",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							""
-						]
-					}
 				}
 			]
 		}
