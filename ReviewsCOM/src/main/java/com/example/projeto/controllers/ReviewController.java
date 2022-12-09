@@ -56,6 +56,7 @@ public class ReviewController {
     @DeleteMapping(value = "/review/{id}/withdraw")
     @RolesAllowed(Role.REGISTERED)
     public ResponseEntity<Review> withdrawReview(@PathVariable("id") @Parameter(description = "The id of the review to withdraw") final Long reviewId) throws IOException, InterruptedException {
+        reviewsCOMSender.sendId(reviewId);
         return reviewService.withdrawReview(reviewId);
     }
 

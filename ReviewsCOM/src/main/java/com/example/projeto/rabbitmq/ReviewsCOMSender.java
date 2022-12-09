@@ -14,8 +14,15 @@ public class ReviewsCOMSender {
 
     private String fanout = "reviews";
 
+    private String fanoutdel = "reviewsdel";
+
     public void send(Review p) {
         template.convertAndSend(fanout,"",p);
         System.out.println(" [x] Sent '" + p + "'");
+    }
+
+    public void sendId(Long id) {
+        template.convertAndSend(fanoutdel,"",id);
+        System.out.println(" [x] Sent '" + id + "'");
     }
 }

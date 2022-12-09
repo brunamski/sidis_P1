@@ -13,8 +13,14 @@ public class Reviews2COMReceiver {
     private ReviewService reviewService;
 
     @RabbitListener(queues = "reviews2COM")
-    public void receiver(Review p){
-        reviewService.create(p);
-        System.out.println(" [x] Received '" + p + "'");
+    public void receiver(Review r){
+        Review review = reviewService.create(r);
+        System.out.println(" [x] Received '" + review + "'");
+    }
+
+    @RabbitListener(queues = "reviews2COMdel")
+    public void receiverDelete(Long id) {
+        reviewService.deleteById(id);
+        System.out.println(" [x] Deleted review '" + id + "'");
     }
 }

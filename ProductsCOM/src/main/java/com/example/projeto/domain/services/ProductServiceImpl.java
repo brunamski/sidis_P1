@@ -31,17 +31,6 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public void addImage(String filename, String sku) {
-        Optional<Product> optionalProduct = productRepository.findBySku(sku);
-
-        if (!optionalProduct.isPresent()){
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Product Not Found");
-        }
-        optionalProduct.get().addImages(filename);
-        productRepository.save(optionalProduct.get());
-    }
-
-    @Override
     public Product create(Product newProduct){ return productRepository.save(newProduct); }
 
     @Override
@@ -49,11 +38,11 @@ public class ProductServiceImpl implements ProductService {
 
         boolean checkProduct = productIsPresent(newProduct.getSku());
         if (checkProduct == true) {
-            throw new ResponseStatusException(HttpStatus.FOUND, "Product exists!");
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "Product exists!");
         }
         final var optionalProduct = findBySku(newProduct.getSku());
         if(!optionalProduct.isEmpty()){
-            throw new ResponseStatusException(HttpStatus.FOUND, "Product exists!");
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "Product exists!");
         }
         final var product = create(newProduct);
         AggregatedRatingDTO agg = getAggFromReviews(product.getSku());
@@ -62,27 +51,12 @@ public class ProductServiceImpl implements ProductService {
                 ,product.getSetOfImages());
         return productDTO;
     }
-    public boolean productIsPresent(String sku) throws IOException, InterruptedException {
+    public boolean productIsPresent(String sku) {
         final var optionalProduct = findBySku(sku);
         if (optionalProduct.isPresent()) {
             return true;
         }
-        else {
-            /*String baseURL = "http://localhost:8080/api/public/product/get/" + sku;
-
-            HttpClient client = HttpClient.newHttpClient();
-
-            HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create(baseURL))
-                    .GET()
-                    .build();
-
-            HttpResponse<String> response = client.send(request,
-                    HttpResponse.BodyHandlers.ofString());
-
-            return Boolean.parseBoolean(response.body());*/
-            return false;
-        }
+        return false;
     }
 
     @Override

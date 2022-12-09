@@ -49,11 +49,11 @@ public class ProductServiceImpl implements ProductService {
 
         boolean checkProduct = productIsPresent(newProduct.getSku());
         if (checkProduct == true) {
-            throw new ResponseStatusException(HttpStatus.FOUND, "Product exists!");
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "Product exists!");
         }
         final var optionalProduct = findBySku(newProduct.getSku());
         if(!optionalProduct.isEmpty()){
-            throw new ResponseStatusException(HttpStatus.FOUND, "Product exists!");
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "Product exists!");
         }
         final var product = create(newProduct);
         AggregatedRatingDTO agg = getAggFromReviews(product.getSku());

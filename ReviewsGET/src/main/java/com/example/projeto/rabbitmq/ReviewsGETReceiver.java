@@ -21,4 +21,10 @@ public class ReviewsGETReceiver {
         reviewService.create(p);
         System.out.println(" [x] Received '" + p + "'");
     }
+
+    @RabbitListener(queues = "reviewsGETdel")
+    public void receiverDelete(Long id) {
+        reviewService.deleteById(id);
+        System.out.println(" [x] Deleted review '" + id + "'");
+    }
 }

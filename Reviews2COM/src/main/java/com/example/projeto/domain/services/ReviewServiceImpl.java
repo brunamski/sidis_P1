@@ -1,6 +1,7 @@
 package com.example.projeto.domain.services;
 
 import com.example.projeto.domain.models.*;
+import com.example.projeto.domain.repositories.ProductRepository;
 import com.example.projeto.domain.repositories.ReviewRepository;
 import com.example.projeto.utils.Utils;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -30,8 +31,12 @@ import java.util.Optional;
 
 @Service
 public class ReviewServiceImpl implements ReviewService{
+
     @Autowired
     private ReviewRepository reviewRepository;
+
+    @Autowired
+    private ProductRepository productRepository;
 
     @Autowired
     private Utils utils;
@@ -87,21 +92,15 @@ public class ReviewServiceImpl implements ReviewService{
         return reviewRepository.save(rev);
     }
 
-    public boolean productIsPresent(final String sku) throws IOException, InterruptedException {
+    public Optional<Product> findBySku(final String sku) {
+        return productRepository.findBySku(sku);
+    }
 
-        String baseURL = "http://localhost:8080/api/public/product/get/" + sku;
-
-        HttpClient client = HttpClient.newBuilder()
-                .followRedirects(HttpClient.Redirect.ALWAYS).build();
-
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(baseURL))
-                .GET()
-                .build();
-
-        HttpResponse<String> response = client.send(request,
-                HttpResponse.BodyHandlers.ofString());
-
-        return  Boolean.parseBoolean(response.body());
+    public boolean productIsPresent(String sku) {
+        final var optionalProduct = findBySku(sku);
+        if (optionalProduct.isPresent()) {
+            return true;
+        }
+        return false;
     }
 }

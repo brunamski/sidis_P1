@@ -20,8 +20,6 @@ public interface ProductService {
 
     Product create(Product newProduct);
 
-    void addImage(String filename, String sku);
-
     AggregatedRatingDTO getAggFromReviews(final String sku) throws IOException, InterruptedException;
 
     ProductDTO createProduct(Product newProduct) throws IOException, InterruptedException;

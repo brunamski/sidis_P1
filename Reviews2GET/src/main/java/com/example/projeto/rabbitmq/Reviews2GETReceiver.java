@@ -17,8 +17,14 @@ public class Reviews2GETReceiver {
 
 
     @RabbitListener(queues = "reviews2GET")
-    public void receiver(Review p) throws IOException {
+    public void receiver(Review p) {
         reviewService.create(p);
         System.out.println(" [x] Received '" + p + "'");
+    }
+
+    @RabbitListener(queues = "reviews2GETdel")
+    public void receiverDelete(Long id) {
+        reviewService.deleteById(id);
+        System.out.println(" [x] Deleted review '" + id + "'");
     }
 }

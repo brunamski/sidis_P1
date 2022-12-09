@@ -17,4 +17,10 @@ public class ReviewsCOMReceiver {
         reviewService.create(p);
         System.out.println(" [x] Received '" + p + "'");
     }
+
+    @RabbitListener(queues = "reviewsCOMdel")
+    public void receiverDelete(Long id) {
+        reviewService.deleteById(id);
+        System.out.println(" [x] Deleted review '" + id + "'");
+    }
 }
