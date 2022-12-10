@@ -42,11 +42,6 @@ public class Product {
         setSku(sku);
     }
 
-
-    public void addImages(String filename) {
-        setOfImages.add(filename);
-    }
-
     public void setDesignation(String designation) {
         if (designation.length() >= 50){
             throw new IllegalArgumentException("Ultrapassou o limite de 50 caracteres.");
