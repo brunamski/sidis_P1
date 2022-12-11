@@ -1401,7 +1401,7 @@
 					"name": "Delete Review",
 					"item": [
 						{
-							"name": "Customer Login Copy",
+							"name": "Customer Login",
 							"event": [
 								{
 									"listen": "test",
@@ -1445,7 +1445,7 @@
 							"response": []
 						},
 						{
-							"name": "US08 - To Obtain all my Reviews Including their Status Copy",
+							"name": "US08 - To Obtain all my Reviews Including their Status",
 							"event": [
 								{
 									"listen": "test",
@@ -1476,7 +1476,70 @@
 							"response": []
 						},
 						{
-							"name": "US07 - To Withdraw one of my Reviews Copy",
+							"name": "US07 - To Withdraw one of my Reviews",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Authtenticates\", function(){\r",
+											"    pm.response.to.have.status(404);  \r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/100/withdraw",
+									"host": [
+										"{{hostReviewsCOM}}{{baseUrl}}"
+									],
+									"path": [
+										"review",
+										"100",
+										"withdraw"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "US08 - To Obtain all my Reviews Including their Status",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Authtenticates\", function(){\r",
+											"    pm.response.to.have.status(200);  \r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hostReviewsGET}}{{baseUrl}}/review/status",
+									"host": [
+										"{{hostReviewsGET}}{{baseUrl}}"
+									],
+									"path": [
+										"review",
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "US07 - To Withdraw one of my Reviews",
 							"event": [
 								{
 									"listen": "test",
@@ -1494,13 +1557,13 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/14/withdraw",
+									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/3/withdraw",
 									"host": [
 										"{{hostReviewsCOM}}{{baseUrl}}"
 									],
 									"path": [
 										"review",
-										"14",
+										"3",
 										"withdraw"
 									]
 								}
@@ -1508,7 +1571,7 @@
 							"response": []
 						},
 						{
-							"name": "US08 - To Obtain all my Reviews Including their Status Copy 2",
+							"name": "US08 - To Obtain all my Reviews Including their Status",
 							"event": [
 								{
 									"listen": "test",

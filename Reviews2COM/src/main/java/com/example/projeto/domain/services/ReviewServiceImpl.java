@@ -55,6 +55,10 @@ public class ReviewServiceImpl implements ReviewService{
 
     @Override
     public ResponseEntity<Review> withdrawReview(final Long reviewId) throws IOException, InterruptedException {
+        final var rev = reviewRepository.findById(reviewId);
+               if(rev.isEmpty()){
+                   return ResponseEntity.notFound().build();
+               }
         deleteById(reviewId);
         return ResponseEntity.noContent().build();
     }
