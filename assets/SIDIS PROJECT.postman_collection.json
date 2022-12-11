@@ -926,281 +926,649 @@
 			"name": "SIDIS Tests",
 			"item": [
 				{
-					"name": "Admin Login",
-					"event": [
+					"name": "Create Product",
+					"item": [
 						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Authtenticates\", function(){\r",
-									"\r",
-									"    pm.response.to.have.status(200);\r",
-									"\r",
-									"    let token = postman.getResponseHeader(\"Authorization\");\r",
-									"    pm.environment.set(\"token\", token);    \r",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"username\":\"admin1@mail.com\",\r\n    \"password\":\"admin1\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{hostAuthentication}}{{baseUrl}}/public/login",
-							"host": [
-								"{{hostAuthentication}}{{baseUrl}}"
-							],
-							"path": [
-								"public",
-								"login"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get Product",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Get product\", function() {\r",
-									"    pm.response.to.have.status(404);\r",
-									"} );"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000008",
-							"host": [
-								"{{hostProductsGET}}{{baseUrl}}"
-							],
-							"path": [
-								"public",
-								"product",
-								"SKU0000008"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Creates a product Copy",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Get product\", function() {\r",
-									"    pm.response.to.have.status(200);\r",
-									"} );"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
+							"name": "Admin Login",
+							"event": [
 								{
-									"key": "token",
-									"value": "{{token}}",
-									"type": "string"
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Authtenticates\", function(){\r",
+											"\r",
+											"    pm.response.to.have.status(200);\r",
+											"\r",
+											"    let token = postman.getResponseHeader(\"Authorization\");\r",
+											"    pm.environment.set(\"token\", token);    \r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
 								}
-							]
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"admin1@mail.com\",\r\n    \"password\":\"admin1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hostAuthentication}}{{baseUrl}}/public/login",
+									"host": [
+										"{{hostAuthentication}}{{baseUrl}}"
+									],
+									"path": [
+										"public",
+										"login"
+									]
+								}
+							},
+							"response": []
 						},
-						"method": "POST",
-						"header": [
+						{
+							"name": "Get Product",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Get product\", function() {\r",
+											"    pm.response.to.have.status(404);\r",
+											"} );"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000008",
+									"host": [
+										"{{hostProductsGET}}{{baseUrl}}"
+									],
+									"path": [
+										"public",
+										"product",
+										"SKU0000008"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Creates a product Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Get product\", function() {\r",
+											"    pm.response.to.have.status(200);\r",
+											"} );"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"designation\": \"FIFA23\",\r\n    \"description\": \"Jogo bugador de mentes\",\r\n    \"sku\": \"SKU0000008\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hostProductsCOM}}{{baseUrl}}/admin/product",
+									"host": [
+										"{{hostProductsCOM}}{{baseUrl}}"
+									],
+									"path": [
+										"admin",
+										"product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Product",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Get product\", function() {\r",
+											"    pm.response.to.have.status(200);\r",
+											"} );"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000008",
+									"host": [
+										"{{hostProductsGET}}{{baseUrl}}"
+									],
+									"path": [
+										"public",
+										"product",
+										"SKU0000008"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get2 Product",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Get product\", function() {\r",
+											"    pm.response.to.have.status(200);\r",
+											"} );"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hostProducts2GET}}{{baseUrl}}/public/product/SKU0000008",
+									"host": [
+										"{{hostProducts2GET}}{{baseUrl}}"
+									],
+									"path": [
+										"public",
+										"product",
+										"SKU0000008"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create2 Product Duplicated",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Get product\", function() {\r",
+											"    pm.response.to.have.status(409);\r",
+											"} );"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"designation\": \"FIFA23\",\r\n    \"description\": \"Jogo bugador de mentes\",\r\n    \"sku\": \"SKU0000008\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hostProducts2COM}}{{baseUrl}}/admin/product",
+									"host": [
+										"{{hostProducts2COM}}{{baseUrl}}"
+									],
+									"path": [
+										"admin",
+										"product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Get product\", function() {\r",
+											"    pm.response.to.have.status(200);\r",
+											"} );"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hostProductsGET}}{{baseUrl}}/public/products",
+									"host": [
+										"{{hostProductsGET}}{{baseUrl}}"
+									],
+									"path": [
+										"public",
+										"products"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Create Review",
+					"item": [
+						{
+							"name": "Customer Login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Authtenticates\", function(){\r",
+											"\r",
+											"    pm.response.to.have.status(200);\r",
+											"\r",
+											"    let token = postman.getResponseHeader(\"Authorization\");\r",
+											"    pm.environment.set(\"token\", token);    \r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"Tiago@mail.com\",\r\n    \"password\":\"password3\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hostAuthentication}}{{baseUrl}}/public/login",
+									"host": [
+										"{{hostAuthentication}}{{baseUrl}}"
+									],
+									"path": [
+										"public",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Product SKU0000001",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Get product\", function() {\r",
+											"    pm.response.to.have.status(200);\r",
+											"} );"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000001",
+									"host": [
+										"{{hostProductsGET}}{{baseUrl}}"
+									],
+									"path": [
+										"public",
+										"product",
+										"SKU0000001"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "US04 - To Review and Rate a Product Copy",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Authtenticates\", function(){\r",
+											"    pm.response.to.have.status(200); \r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"sku\": \"SKU0000001\",\r\n    \"rating\": 5,\r\n    \"text\": \"Isto é a razão pelo qual dei cinco estrelas\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review",
+									"host": [
+										"{{hostReviewsCOM}}{{baseUrl}}"
+									],
+									"path": [
+										"review"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "US08 - To Obtain all my Reviews Including their Status",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Authtenticates\", function(){\r",
+											"    pm.response.to.have.status(200);   \r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hostReviewsGET}}{{baseUrl}}/review/status",
+									"host": [
+										"{{hostReviewsGET}}{{baseUrl}}"
+									],
+									"path": [
+										"review",
+										"status"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Delete Review",
+					"item": [
+						{
+							"name": "Customer Login Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Authtenticates\", function(){\r",
+											"\r",
+											"    pm.response.to.have.status(200);\r",
+											"\r",
+											"    let token = postman.getResponseHeader(\"Authorization\");\r",
+											"    pm.environment.set(\"token\", token);    \r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"Tiago@mail.com\",\r\n    \"password\":\"password3\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hostAuthentication}}{{baseUrl}}/public/login",
+									"host": [
+										"{{hostAuthentication}}{{baseUrl}}"
+									],
+									"path": [
+										"public",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "US08 - To Obtain all my Reviews Including their Status Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Authtenticates\", function(){\r",
+											"    pm.response.to.have.status(200);  \r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hostReviewsGET}}{{baseUrl}}/review/status",
+									"host": [
+										"{{hostReviewsGET}}{{baseUrl}}"
+									],
+									"path": [
+										"review",
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "US07 - To Withdraw one of my Reviews Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Authtenticates\", function(){\r",
+											"    pm.response.to.have.status(204);  \r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/14/withdraw",
+									"host": [
+										"{{hostReviewsCOM}}{{baseUrl}}"
+									],
+									"path": [
+										"review",
+										"14",
+										"withdraw"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "US08 - To Obtain all my Reviews Including their Status Copy 2",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Authtenticates\", function(){\r",
+											"    pm.response.to.have.status(200);  \r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hostReviewsGET}}{{baseUrl}}/review/status",
+									"host": [
+										"{{hostReviewsGET}}{{baseUrl}}"
+									],
+									"path": [
+										"review",
+										"status"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
 							{
-								"key": "Authorization",
-								"value": "",
-								"type": "text"
+								"key": "token",
+								"value": "{{token}}",
+								"type": "string"
 							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"designation\": \"FIFA23\",\r\n    \"description\": \"Jogo bugador de mentes\",\r\n    \"sku\": \"SKU0000008\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
 							}
 						},
-						"url": {
-							"raw": "{{hostProductsCOM}}{{baseUrl}}/admin/product",
-							"host": [
-								"{{hostProductsCOM}}{{baseUrl}}"
-							],
-							"path": [
-								"admin",
-								"product"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get Product",
-					"event": [
 						{
 							"listen": "test",
 							"script": {
+								"type": "text/javascript",
 								"exec": [
-									"pm.test(\"Get product\", function() {\r",
-									"    pm.response.to.have.status(200);\r",
-									"} );"
-								],
-								"type": "text/javascript"
+									""
+								]
 							}
 						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000008",
-							"host": [
-								"{{hostProductsGET}}{{baseUrl}}"
-							],
-							"path": [
-								"public",
-								"product",
-								"SKU0000008"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get2 Product",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Get product\", function() {\r",
-									"    pm.response.to.have.status(200);\r",
-									"} );"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{hostProducts2GET}}{{baseUrl}}/public/product/SKU0000008",
-							"host": [
-								"{{hostProducts2GET}}{{baseUrl}}"
-							],
-							"path": [
-								"public",
-								"product",
-								"SKU0000008"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Create2 Product Duplicated",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Get product\", function() {\r",
-									"    pm.response.to.have.status(409);\r",
-									"} );"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"designation\": \"FIFA23\",\r\n    \"description\": \"Jogo bugador de mentes\",\r\n    \"sku\": \"SKU0000008\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{hostProducts2COM}}{{baseUrl}}/admin/product",
-							"host": [
-								"{{hostProducts2COM}}{{baseUrl}}"
-							],
-							"path": [
-								"admin",
-								"product"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get All",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Get product\", function() {\r",
-									"    pm.response.to.have.status(200);\r",
-									"} );"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{hostProductsGET}}{{baseUrl}}/public/products",
-							"host": [
-								"{{hostProductsGET}}{{baseUrl}}"
-							],
-							"path": [
-								"public",
-								"products"
-							]
-						}
-					},
-					"response": []
+					]
 				}
 			],
 			"event": [
