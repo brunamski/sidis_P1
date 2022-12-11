@@ -16,7 +16,7 @@ public class ProductDTO {
     public String sku;
     public String designation;
     public String description;
-    public AggregatedRatingDTO aggregatedRating;
+    public AggregatedRating aggregatedRating;
     public Set<String> setOfImages = new HashSet<String>();
 
     protected ProductDTO(){}
@@ -25,7 +25,7 @@ public class ProductDTO {
                        String designation,
                        String sku,
                        String description,
-                       AggregatedRatingDTO aggregatedRating,
+                       AggregatedRating aggregatedRating,
                        Set<String> setOfImages){
         this.productId = productId;
         this.sku = sku;

@@ -32,13 +32,9 @@ public class RabbitConfig {
 
     private String Queue3 = "products2COM";
 
-    private String Queue4 = "reviewsCOM";
+    private String Queue4 = "reviewsCOMprod";
 
-    private String Queue5 = "reviewsGET";
-
-    private String Queue6 = "reviews2GET";
-
-    private String Queue7 = "reviews2COM";
+    private String Queue5 = "reviews2COMprod";
 
     private String exchange = "products";
 
@@ -79,16 +75,6 @@ public class RabbitConfig {
     }
 
     @Bean
-    public Queue queue6() {
-        return new Queue(Queue6, false);
-    }
-
-    @Bean
-    public Queue queue7() {
-        return new Queue(Queue7, false);
-    }
-
-    @Bean
     public Binding binding1(FanoutExchange exchange,
                             Queue queue1) {
         return BindingBuilder.bind(queue1).to(exchange);
@@ -116,18 +102,6 @@ public class RabbitConfig {
     public Binding binding5(FanoutExchange exchange,
                             Queue queue5) {
         return BindingBuilder.bind(queue5).to(exchange);
-    }
-
-    @Bean
-    public Binding binding6(FanoutExchange exchange,
-                            Queue queue6) {
-        return BindingBuilder.bind(queue6).to(exchange);
-    }
-
-    @Bean
-    public Binding binding7(FanoutExchange exchange,
-                            Queue queue7) {
-        return BindingBuilder.bind(queue7).to(exchange);
     }
 
     @Bean

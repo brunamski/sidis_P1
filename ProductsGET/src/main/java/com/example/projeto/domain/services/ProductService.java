@@ -4,10 +4,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
-import com.example.projeto.domain.models.AggregatedRatingDTO;
-import com.example.projeto.domain.models.Product;
-import com.example.projeto.domain.models.ProductDTO;
-import com.example.projeto.domain.models.ProductDTOcat;
+import com.example.projeto.domain.models.*;
 import com.example.projeto.domain.views.CatalogView;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,9 +22,13 @@ public interface ProductService {
 
     Optional<ProductDTO> getProductsByProductName(final String name) throws IOException, InterruptedException;
 
-    Optional<AggregatedRatingDTO> getProductAggregatedRating(final String sku) throws IOException, InterruptedException;
+    Optional<AggregatedRating> getProductAggregatedRating(final String sku);
 
-    AggregatedRatingDTO getAggFromReviews(final String sku) throws IOException, InterruptedException;
+    AggregatedRating getAggregatedRating(final String sku);
 
     void create(Product p) throws IOException;
+
+    void createRev(Review r) throws IOException;
+
+    void deleteRev(Long reviewId) throws IOException;
 }

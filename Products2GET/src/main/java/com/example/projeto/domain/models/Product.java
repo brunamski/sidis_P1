@@ -30,7 +30,7 @@ public class Product {
     private Set<String> setOfImages = new HashSet<String>();
 
     @Transient
-    private AggregatedRatingDTO aggregatedRating;
+    private AggregatedRating aggregatedRating;
 
 
     protected Product() {

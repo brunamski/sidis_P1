@@ -1,6 +1,7 @@
 package com.example.projeto.rabbitmq;
 
 
+import com.example.projeto.domain.models.Product;
 import com.example.projeto.domain.models.Review;
 import com.example.projeto.domain.services.ReviewService;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;

@@ -1,5 +1,6 @@
 package com.example.projeto.controllers;
 
+import com.example.projeto.domain.models.AggregatedRating;
 import com.example.projeto.domain.models.AggregatedRatingDTO;
 import com.example.projeto.domain.models.ProductDTO;
 import com.example.projeto.domain.models.ProductDTOcat;
@@ -57,10 +58,10 @@ public class ProductController {
 
     @Operation(summary = "US09 - To obtain the aggregated rating of a product")
     @GetMapping(value = "/public/product/rating/{sku}")
-    public ResponseEntity<AggregatedRatingDTO> getProductAggregatedRating(@PathVariable("sku") final String sku) throws IOException, InterruptedException {
-        final var aggregatedRatingDTO = productService.getProductAggregatedRating(sku)
+    public ResponseEntity<AggregatedRating> getProductAggregatedRating(@PathVariable("sku") final String sku) throws IOException, InterruptedException {
+        final var aggregatedRating = productService.getProductAggregatedRating(sku)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Product Not Found"));
-        return ResponseEntity.ok().body(aggregatedRatingDTO);
+        return ResponseEntity.ok().body(aggregatedRating);
     }
 
     @GetMapping(value = "/public/product/get/{sku}")

@@ -1,6 +1,7 @@
 package com.example.projeto.rabbitmq;
 
 
+import com.example.projeto.domain.models.Product;
 import com.example.projeto.domain.models.Review;
 import com.example.projeto.domain.services.ReviewService;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -17,7 +18,7 @@ public class ReviewsGETReceiver {
 
 
     @RabbitListener(queues = "reviewsGET")
-    public void receiver(Review p) throws IOException {
+    public void receiver(Review p) {
         reviewService.create(p);
         System.out.println(" [x] Received '" + p + "'");
     }

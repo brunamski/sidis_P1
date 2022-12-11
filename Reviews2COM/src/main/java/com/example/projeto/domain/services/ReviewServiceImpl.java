@@ -107,4 +107,9 @@ public class ReviewServiceImpl implements ReviewService{
         }
         return false;
     }
+
+    @Override
+    public Product createProduct(Product product){
+        return productRepository.save(product);
+    }
 }

@@ -29,6 +29,8 @@ public interface ReviewService {
      */
     Review create(Review newReview);
 
+    Product createProduct(Product product);
+
     void deleteById(Long reviewId);
 
     Review partialUpdate(final Long id, final Review review);

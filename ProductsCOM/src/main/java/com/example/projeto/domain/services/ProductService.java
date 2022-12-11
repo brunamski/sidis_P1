@@ -20,7 +20,5 @@ public interface ProductService {
 
     Product create(Product newProduct);
 
-    AggregatedRatingDTO getAggFromReviews(final String sku) throws IOException, InterruptedException;
-
     ProductDTO createProduct(Product newProduct) throws IOException, InterruptedException;
 }

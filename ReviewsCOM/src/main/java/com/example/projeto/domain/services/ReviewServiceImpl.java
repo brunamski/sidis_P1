@@ -42,7 +42,7 @@ public class ReviewServiceImpl implements ReviewService{
     private Utils utils;
 
     @Override
-    public ReviewDTO createReview(HttpServletRequest request, Review newReview) throws IOException, InterruptedException {
+    public ReviewDTO createReview(HttpServletRequest request, Review newReview) {
         boolean product = productIsPresent(newReview.getSku());
         if(product == true) {
             newReview.setUserId(utils.getUserIdByToken(request));
@@ -54,7 +54,7 @@ public class ReviewServiceImpl implements ReviewService{
     }
 
     @Override
-    public ResponseEntity<Review> withdrawReview(final Long reviewId) throws IOException, InterruptedException {
+    public ResponseEntity<Review> withdrawReview(final Long reviewId) {
         final var rev = reviewRepository.findById(reviewId);
         if(rev.isEmpty()){
             return ResponseEntity.notFound().build();
@@ -106,5 +106,10 @@ public class ReviewServiceImpl implements ReviewService{
             return true;
         }
         return false;
+    }
+
+    @Override
+    public Product createProduct(Product product){
+        return productRepository.save(product);
     }
 }

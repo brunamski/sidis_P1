@@ -37,6 +37,14 @@ public class RabbitConfig {
 
     private String Queue9 = "reviewsCOMup";
 
+    private String Queue10 = "productsGETrev";
+
+    private String Queue11 = "products2GETrev";
+
+    private String Queue12 = "productsGETrevdel";
+
+    private String Queue13 = "products2GETrevdel";
+
     private String exchange = "reviews2";
 
     private String exchangedel = "reviews2del";
@@ -95,6 +103,26 @@ public class RabbitConfig {
     }
 
     @Bean
+    public Queue queue10() {
+        return new Queue(Queue10, false);
+    }
+
+    @Bean
+    public Queue queue11() {
+        return new Queue(Queue11, false);
+    }
+
+    @Bean
+    public Queue queue12() {
+        return new Queue(Queue12, false);
+    }
+
+    @Bean
+    public Queue queue13() {
+        return new Queue(Queue13, false);
+    }
+
+    @Bean
     public Binding binding1(@Qualifier("create") FanoutExchange exchange,
                             Queue queue1) {
         return BindingBuilder.bind(queue1).to(exchange);
@@ -128,6 +156,30 @@ public class RabbitConfig {
     public Binding binding6(@Qualifier("delete") FanoutExchange exchangedel,
                             Queue queue6) {
         return BindingBuilder.bind(queue6).to(exchangedel);
+    }
+
+    @Bean
+    public Binding binding10(@Qualifier("create") FanoutExchange exchange,
+                            Queue queue10) {
+        return BindingBuilder.bind(queue10).to(exchange);
+    }
+
+    @Bean
+    public Binding binding11(@Qualifier("create") FanoutExchange exchange,
+                            Queue queue11) {
+        return BindingBuilder.bind(queue11).to(exchange);
+    }
+
+    @Bean
+    public Binding binding12(@Qualifier("delete") FanoutExchange exchangedel,
+                            Queue queue12) {
+        return BindingBuilder.bind(queue12).to(exchangedel);
+    }
+
+    @Bean
+    public Binding binding13(@Qualifier("delete") FanoutExchange exchangedel,
+                            Queue queue13) {
+        return BindingBuilder.bind(queue13).to(exchangedel);
     }
 
     @Bean

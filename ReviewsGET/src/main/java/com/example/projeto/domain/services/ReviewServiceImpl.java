@@ -2,22 +2,14 @@ package com.example.projeto.domain.services;
 
 import com.example.projeto.domain.models.*;
 import com.example.projeto.domain.repositories.ReviewRepository;
-import com.example.projeto.domain.views.ReviewView;
 import com.example.projeto.utils.Utils;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import io.swagger.v3.oas.annotations.Parameter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.server.ResponseStatusException;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -31,6 +23,7 @@ import java.util.Optional;
 
 @Service
 public class ReviewServiceImpl implements ReviewService{
+
     @Autowired
     private ReviewRepository reviewRepository;
 
@@ -85,18 +78,6 @@ public class ReviewServiceImpl implements ReviewService{
     public Iterable<ReviewView> findReviewsBySkuSortedByVotesAndDate(String sku) {
         return reviewRepository.findReviewsBySkuSortedByVotesAndDate(sku);
     }*/
-
-
-    public ReviewDTO createReview(HttpServletRequest request, Review newReview) throws IOException, InterruptedException {
-        boolean product = productIsPresent(newReview.getSku());
-        if(product == true) {
-            newReview.setUserId(utils.getUserIdByToken(request));
-            final var review = create(newReview);
-            ReviewDTO reviewDTO = new ReviewDTO(review.getReviewId(), review.getSku(), review.getRating(), review.getText(), review.getPublishingDate(), review.getFunFact());
-            return reviewDTO;
-        }
-        throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Product not found!");
-    }
 
     @Override
     public ResponseEntity<Review> withdrawReview(final Long reviewId) throws IOException, InterruptedException {
@@ -214,23 +195,5 @@ public class ReviewServiceImpl implements ReviewService{
                 HttpResponse.BodyHandlers.ofString());
 
         return Integer.parseInt(response.body());
-    }
-
-    public boolean productIsPresent(final String sku) throws IOException, InterruptedException {
-
-        String baseURL = "http://localhost:8080/api/public/product/get/" + sku;
-
-        HttpClient client = HttpClient.newBuilder()
-                .followRedirects(HttpClient.Redirect.ALWAYS).build();
-
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(baseURL))
-                .GET()
-                .build();
-
-        HttpResponse<String> response = client.send(request,
-                HttpResponse.BodyHandlers.ofString());
-
-        return  Boolean.parseBoolean(response.body());
     }
 }

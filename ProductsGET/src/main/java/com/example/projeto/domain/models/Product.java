@@ -30,7 +30,7 @@ public class Product {
     private Set<String> setOfImages = new HashSet<String>();
 
     @Transient
-    private AggregatedRatingDTO aggregatedRating;
+    private AggregatedRating aggregatedRating;
 
 
     protected Product() {
@@ -40,11 +40,6 @@ public class Product {
         setDesignation(designation);
         setDescription(description);
         setSku(sku);
-    }
-
-
-    public void addImages(String filename) {
-        setOfImages.add(filename);
     }
 
     public void setDesignation(String designation) {
