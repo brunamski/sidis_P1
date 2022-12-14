@@ -16,13 +16,20 @@ public class ReviewsCOMSender {
 
     private String fanoutdel = "reviewsdel";
 
-    public void send(Review p) {
-        template.convertAndSend(fanout,"",p);
-        System.out.println(" [x] Sent '" + p + "'");
+    private String fanoutup = "reviewsup";
+
+    public void send(Review r) {
+        template.convertAndSend(fanout,"",r);
+        System.out.println(" [x] Sent '" + r + "'");
     }
 
     public void sendId(Long id) {
         template.convertAndSend(fanoutdel,"",id);
         System.out.println(" [x] Sent '" + id + "'");
+    }
+
+    public void sendUpdate(Review r) {
+        template.convertAndSend(fanoutup,"",r);
+        System.out.println(" [x] Sent '" + r + "'");
     }
 }

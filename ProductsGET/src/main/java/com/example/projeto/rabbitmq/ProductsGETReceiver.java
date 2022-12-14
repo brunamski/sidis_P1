@@ -34,6 +34,12 @@ public class ProductsGETReceiver {
     @RabbitListener(queues = "productsGETrevdel")
     public void receiverDeleteRev(Long reviewId) throws IOException {
         productService.deleteRev(reviewId);
-        System.out.println(" [x] Received '" + reviewId + "'");
+        System.out.println(" [x] Deleted '" + reviewId + "'");
+    }
+
+    @RabbitListener(queues = "productsGETrevup")
+    public void receiverUpdate(Review r) throws IOException {
+        productService.partialUpdate(r);
+        System.out.println(" [x] Updated review '" + r + "'");
     }
 }

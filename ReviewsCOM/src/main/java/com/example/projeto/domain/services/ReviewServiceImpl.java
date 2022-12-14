@@ -63,8 +63,8 @@ public class ReviewServiceImpl implements ReviewService{
         return ResponseEntity.noContent().build();
     }
     @Override
-    public ReviewDTOStatus updateReviewStatus(final Long id, final Review review) throws IOException {
-        Review newReview = partialUpdate(id, review);
+    public ReviewDTOStatus updateReviewStatus(final Review review) throws IOException {
+        Review newReview = partialUpdate(review);
         ReviewDTOStatus newReviewDTOStatus = new ReviewDTOStatus(newReview.getReviewId(), newReview.getSku(), newReview.getRating(), newReview.getText(), newReview.getPublishingDate(), newReview.getFunFact(), newReview.getStatus());
         return newReviewDTOStatus;
     }
@@ -80,10 +80,10 @@ public class ReviewServiceImpl implements ReviewService{
     }
 
     @Override
-    public Review partialUpdate(final Long id, final Review review) {
+    public Review partialUpdate(final Review review) {
         // first let's check if the object exists so we don't create a new object with
         // save
-        final var rev = reviewRepository.findById(id)
+        final var rev = reviewRepository.findById(review.getReviewId())
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Review Not Found"));
 
         // since we got the object from the database we can check the version in memory

@@ -7,6 +7,8 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.io.IOException;
+
 @Component
 public class Reviews2COMReceiver {
 
@@ -23,6 +25,12 @@ public class Reviews2COMReceiver {
     public void receiverDelete(Long id) {
         reviewService.deleteById(id);
         System.out.println(" [x] Deleted review '" + id + "'");
+    }
+
+    @RabbitListener(queues = "reviews2COMup")
+    public void receiverUpdate(Review r) throws IOException {
+        reviewService.updateReviewStatus(r);
+        System.out.println(" [x] Updated review '" + r + "'");
     }
 
     @RabbitListener(queues = "reviews2COMprod")

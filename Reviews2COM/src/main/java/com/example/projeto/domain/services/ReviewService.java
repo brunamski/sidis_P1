@@ -19,7 +19,7 @@ public interface ReviewService {
 
     ResponseEntity<Review> withdrawReview(final Long reviewId) throws IOException, InterruptedException;
 
-    ReviewDTOStatus updateReviewStatus(final Long id, final Review review) throws IOException;
+    ReviewDTOStatus updateReviewStatus(final Review review) throws IOException;
 
     /**
      * Create a new Review and assign its id.
@@ -33,5 +33,5 @@ public interface ReviewService {
 
     void deleteById(Long reviewId);
 
-    Review partialUpdate(final Long id, final Review review);
+    Review partialUpdate(final Review review);
 }

@@ -30,4 +30,6 @@ public interface ProductService {
     void createRev(Review r) throws IOException;
 
     void deleteRev(Long reviewId) throws IOException;
+
+    void partialUpdate(final Review review);
 }

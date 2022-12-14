@@ -77,10 +77,10 @@ public class ReviewController {
     }
 
     @Operation(summary = "US11 - To approve or reject a pending review")
-    @PatchMapping(value = "/review/{id}")
+    @PatchMapping(value = "/review/update")
     @RolesAllowed(Role.MODERATOR)
-    public ResponseEntity<ReviewDTOStatus> updateReviewStatus(@PathVariable("id") @Parameter(description = "The id of the review we will update") final Long id,
-                                                              @Valid @RequestBody final Review review) throws IOException {
-        return ResponseEntity.ok().body(reviewService.updateReviewStatus(id, review));
+    public ResponseEntity<ReviewDTOStatus> updateReviewStatus(@Valid @RequestBody final Review review) throws IOException {
+        reviews2COMSender.sendUpdate(review);
+        return ResponseEntity.ok().body(reviewService.updateReviewStatus(review));
     }
 }

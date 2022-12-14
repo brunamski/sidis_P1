@@ -119,8 +119,6 @@ public class ProductServiceImpl implements ProductService {
 
         AggregatedRating aggregatedRating = new AggregatedRating(ratingArray[1][0], ratingArray[0][0], ratingArray[1][1], ratingArray[1][2], ratingArray[1][3], ratingArray[1][4], ratingArray[1][5]);
 
-
-
         return aggregatedRating;
     }
 
@@ -137,5 +135,23 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public void deleteRev(Long reviewId) throws IOException {
         reviewRepository.deleteByIdIfMatch(reviewId);
+    }
+
+    @Override
+    public void partialUpdate(final Review review) {
+        // first let's check if the object exists so we don't create a new object with
+        // save
+        final var rev = reviewRepository.findById(review.getReviewId())
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Review Not Found"));
+
+        // since we got the object from the database we can check the version in memory
+        // and apply the patch
+        rev.applyPatch(review);
+
+        // in the meantime some other user might have changed this object on the
+        // database, so concurrency control will still be applied when we try to save
+        // this updated object
+
+        reviewRepository.save(rev);
     }
 }

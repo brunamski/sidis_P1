@@ -26,7 +26,7 @@ public class RabbitConfig {
 
     private String Queue5 = "reviews2COMprod";
 
-    private String exchange = "products";
+    private String exchange = "products2";
 
 
     @Bean

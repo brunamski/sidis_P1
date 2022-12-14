@@ -16,7 +16,7 @@ public class Products2COMSender {
     @Autowired
     private AmqpTemplate template;
 
-    private String fanout = "products";
+    private String fanout = "products2";
 
     public void send(Product p) {
         template.convertAndSend(fanout, "", p);

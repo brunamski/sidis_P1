@@ -19,6 +19,8 @@ public class RabbitConfig {
 
     private String myQueue2 = "reviews2COMdel";
 
+    private String myQueue3 = "reviews2COMup";
+
     private String Queue1 = "reviewsGET";
 
     private String Queue2 = "reviews2GET";
@@ -45,9 +47,15 @@ public class RabbitConfig {
 
     private String Queue13 = "products2GETrevdel";
 
+    private String Queue14 = "productsGETrevup";
+
+    private String Queue15 = "products2GETrevup";
+
     private String exchange = "reviews2";
 
     private String exchangedel = "reviews2del";
+
+    private String exchangeup = "reviews2up";
 
 
     @Bean
@@ -63,6 +71,12 @@ public class RabbitConfig {
     }
 
     @Bean
+    @Qualifier("update")
+    public FanoutExchange fanoutUp() {
+        return new FanoutExchange(exchangeup);
+    }
+
+    @Bean
     public Queue myQueue() {
         return new Queue(myQueue, false);
     }
@@ -70,6 +84,11 @@ public class RabbitConfig {
     @Bean
     public Queue myQueue2() {
         return new Queue(myQueue2, false);
+    }
+
+    @Bean
+    public Queue myQueue3() {
+        return new Queue(myQueue3, false);
     }
 
     @Bean
@@ -103,6 +122,21 @@ public class RabbitConfig {
     }
 
     @Bean
+    public Queue queue7() {
+        return new Queue(Queue7, false);
+    }
+
+    @Bean
+    public Queue queue8() {
+        return new Queue(Queue8, false);
+    }
+
+    @Bean
+    public Queue queue9() {
+        return new Queue(Queue9, false);
+    }
+
+    @Bean
     public Queue queue10() {
         return new Queue(Queue10, false);
     }
@@ -120,6 +154,16 @@ public class RabbitConfig {
     @Bean
     public Queue queue13() {
         return new Queue(Queue13, false);
+    }
+
+    @Bean
+    public Queue queue14() {
+        return new Queue(Queue14, false);
+    }
+
+    @Bean
+    public Queue queue15() {
+        return new Queue(Queue15, false);
     }
 
     @Bean
@@ -159,6 +203,24 @@ public class RabbitConfig {
     }
 
     @Bean
+    public Binding binding7(@Qualifier("update") FanoutExchange exchangeup,
+                            Queue queue7) {
+        return BindingBuilder.bind(queue7).to(exchangeup);
+    }
+
+    @Bean
+    public Binding binding8(@Qualifier("update") FanoutExchange exchangeup,
+                            Queue queue8) {
+        return BindingBuilder.bind(queue8).to(exchangeup);
+    }
+
+    @Bean
+    public Binding binding9(@Qualifier("update") FanoutExchange exchangeup,
+                            Queue queue9) {
+        return BindingBuilder.bind(queue9).to(exchangeup);
+    }
+
+    @Bean
     public Binding binding10(@Qualifier("create") FanoutExchange exchange,
                             Queue queue10) {
         return BindingBuilder.bind(queue10).to(exchange);
@@ -180,6 +242,18 @@ public class RabbitConfig {
     public Binding binding13(@Qualifier("delete") FanoutExchange exchangedel,
                             Queue queue13) {
         return BindingBuilder.bind(queue13).to(exchangedel);
+    }
+
+    @Bean
+    public Binding binding14(@Qualifier("update") FanoutExchange exchangeup,
+                             Queue queue14) {
+        return BindingBuilder.bind(queue14).to(exchangeup);
+    }
+
+    @Bean
+    public Binding binding15(@Qualifier("update") FanoutExchange exchangeup,
+                             Queue queue15) {
+        return BindingBuilder.bind(queue15).to(exchangeup);
     }
 
     @Bean

@@ -16,6 +16,8 @@ public class Reviews2COMSender {
 
     private String fanoutdel = "reviews2del";
 
+    private String fanoutup = "reviewsup";
+
     public void send(Review p) {
         template.convertAndSend(fanout,"",p);
         System.out.println(" [x] Sent '" + p + "'");
@@ -24,5 +26,10 @@ public class Reviews2COMSender {
     public void sendId(Long id) {
         template.convertAndSend(fanoutdel,"",id);
         System.out.println(" [x] Sent '" + id + "'");
+    }
+
+    public void sendUpdate(Review r) {
+        template.convertAndSend(fanoutup,"",r);
+        System.out.println(" [x] Sent '" + r + "'");
     }
 }

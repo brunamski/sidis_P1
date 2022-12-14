@@ -28,4 +28,10 @@ public class ReviewsGETReceiver {
         reviewService.deleteById(id);
         System.out.println(" [x] Deleted review '" + id + "'");
     }
+
+    @RabbitListener(queues = "reviewsGETup")
+    public void receiverUpdate(Review r) throws IOException {
+        reviewService.updateReviewStatus(r);
+        System.out.println(" [x] Updated review '" + r + "'");
+    }
 }
