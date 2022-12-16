@@ -3,6 +3,7 @@ package com.example.projeto.domain.services;
 import com.example.projeto.domain.models.*;
 import com.example.projeto.domain.repositories.ProductRepository;
 import com.example.projeto.domain.repositories.ReviewRepository;
+import com.example.projeto.domain.repositories.VoteRepository;
 import com.example.projeto.utils.Utils;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -39,10 +40,13 @@ public class ReviewServiceImpl implements ReviewService{
     private ProductRepository productRepository;
 
     @Autowired
+    private VoteRepository voteRepository;
+
+    @Autowired
     private Utils utils;
 
     @Override
-    public ReviewDTO createReview(HttpServletRequest request, Review newReview) throws IOException, InterruptedException {
+    public ReviewDTO createReview(HttpServletRequest request, Review newReview) {
         boolean product = productIsPresent(newReview.getSku());
         if(product == true) {
             newReview.setUserId(utils.getUserIdByToken(request));
@@ -56,9 +60,15 @@ public class ReviewServiceImpl implements ReviewService{
     @Override
     public ResponseEntity<Review> withdrawReview(final Long reviewId) {
         final var rev = reviewRepository.findById(reviewId);
-               if(rev.isEmpty()){
-                   return ResponseEntity.notFound().build();
-               }
+        if(rev.isEmpty()){
+               return ResponseEntity.notFound().build();
+           }
+
+        int numVotes = voteRepository.getVotesByReviewId(reviewId);
+        if(numVotes != 0) {
+            return ResponseEntity.unprocessableEntity().build();
+        }
+
         deleteById(reviewId);
         return ResponseEntity.noContent().build();
     }
@@ -111,5 +121,10 @@ public class ReviewServiceImpl implements ReviewService{
     @Override
     public Product createProduct(Product product){
         return productRepository.save(product);
+    }
+
+    @Override
+    public Vote create(Vote newVote){
+        return voteRepository.save(newVote);
     }
 }

@@ -2,6 +2,7 @@ package com.example.projeto.domain.services;
 
 import com.example.projeto.domain.models.*;
 import com.example.projeto.domain.repositories.ReviewRepository;
+import com.example.projeto.domain.repositories.VoteRepository;
 import com.example.projeto.utils.Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -26,6 +27,9 @@ public class ReviewServiceImpl implements ReviewService{
 
     @Autowired
     private ReviewRepository reviewRepository;
+
+    @Autowired
+    private VoteRepository voteRepository;
 
     @Autowired
     private Utils utils;
@@ -63,7 +67,7 @@ public class ReviewServiceImpl implements ReviewService{
         Iterable<Review> reviews = findReviewsBySku(sku);
         List<ReviewDTO> reviewDTOS = new ArrayList();
         for (Review r : reviews) {
-            int numbervotes = getVotes(r.getReviewId());
+            int numbervotes = voteRepository.getVotesByReviewId(r.getReviewId());
             ReviewDTO reviewDTO = new ReviewDTO(r.getReviewId(), r.getSku(), r.getRating(), r.getText(), r.getPublishingDate(), r.getFunFact());
             reviewDTO.setNumberOfVotes(numbervotes);
             reviewDTOS.add(reviewDTO);
@@ -98,7 +102,7 @@ public class ReviewServiceImpl implements ReviewService{
         Iterable<Review> reviews = reviewRepository.findReviewsByUserId(userId);
         List<ReviewDTOStatus> reviewDTOStatuses = new ArrayList();
         for (Review r : reviews) {
-            int numbervotes = getVotes(r.getReviewId());
+            int numbervotes = voteRepository.getVotesByReviewId(r.getReviewId());
             ReviewDTOStatus reviewDTO = new ReviewDTOStatus(r.getReviewId(), r.getSku(), r.getRating(), r.getText(), r.getPublishingDate(), r.getFunFact(), r.getStatus());
             reviewDTO.setNumberOfVotes(numbervotes);
             reviewDTOStatuses.add(reviewDTO);
@@ -179,21 +183,7 @@ public class ReviewServiceImpl implements ReviewService{
     }
 
     @Override
-    public int getVotes(@PathVariable(value = "reviewId") final Long reviewId) throws IOException, InterruptedException {
-
-        String baseURL = "http://localhost:8082/api/public/vote/review/" + reviewId;
-
-        HttpClient client = HttpClient.newBuilder()
-                .followRedirects(HttpClient.Redirect.ALWAYS).build();
-
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(baseURL))
-                .GET()
-                .build();
-
-        HttpResponse<String> response = client.send(request,
-                HttpResponse.BodyHandlers.ofString());
-
-        return Integer.parseInt(response.body());
+    public Vote create(Vote newVote){
+        return voteRepository.save(newVote);
     }
 }

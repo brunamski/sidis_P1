@@ -32,17 +32,4 @@ public class VoteController {
 
     @Autowired
     private VoteService voteService;
-
-    /*@Operation(summary = "US06 - To vote for a review")
-    @PostMapping(value = "/review/{id}/vote")
-    @RolesAllowed(Role.REGISTERED)
-    @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<VoteDTO> vote(@PathVariable(value = "id") Long reviewId, HttpServletRequest request, @RequestBody Vote newVote) throws IOException, InterruptedException {
-            return ResponseEntity.ok().body(voteService.vote(reviewId, request, newVote));
-    }*/
-
-    @GetMapping(value = "/public/vote/review/{reviewId}")
-    public int getVotes(@PathVariable(value = "reviewId") final Long reviewId) throws IOException, InterruptedException {
-        return voteService.getVotesByReviewId(reviewId);
-    }
 }
