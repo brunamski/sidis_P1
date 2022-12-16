@@ -34,4 +34,6 @@ public interface ReviewService {
     void deleteById(Long reviewId);
 
     Review partialUpdate(final Review review);
+
+    Vote create(Vote newVote);
 }

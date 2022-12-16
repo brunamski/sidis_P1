@@ -6,6 +6,7 @@ import com.example.projeto.domain.models.Vote;
 import com.example.projeto.domain.models.VoteDTO;
 
 import com.example.projeto.domain.services.VoteService;
+import com.example.projeto.rabbitmq.VotesCOMSender;
 import com.example.projeto.usermanagement.models.Role;
 import com.example.projeto.utils.Utils;
 import io.swagger.v3.oas.annotations.Operation;
@@ -38,11 +39,7 @@ public class VoteController {
     @RolesAllowed(Role.REGISTERED)
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<VoteDTO> vote(@PathVariable(value = "id") Long reviewId, HttpServletRequest request, @RequestBody Vote newVote) throws IOException, InterruptedException {
-            return ResponseEntity.ok().body(voteService.vote(reviewId, request, newVote));
-    }
-
-    @GetMapping(value = "/public/vote/review/{reviewId}")
-    public int getVotes(@PathVariable(value = "reviewId") final Long reviewId){
-        return voteService.getVotesByReviewId(reviewId);
+        VoteDTO voteDTO = voteService.vote(reviewId, request, newVote);
+        return ResponseEntity.ok().body(voteDTO);
     }
 }

@@ -51,6 +51,18 @@ public class RabbitConfig {
 
     private String Queue15 = "products2GETrevup";
 
+    private String Queue16 = "votesCOMrev";
+
+    private String Queue17 = "votes2COMrev";
+
+    private String Queue18 = "votesCOMrevdel";
+
+    private String Queue19 = "votes2COMrevdel";
+
+    private String Queue20 = "votesCOMrevup";
+
+    private String Queue21 = "votes2COMrevup";
+
     private String exchange = "reviews";
 
     private String exchangedel = "reviewsdel";
@@ -167,6 +179,37 @@ public class RabbitConfig {
     }
 
     @Bean
+    public Queue queue16() {
+        return new Queue(Queue16, false);
+    }
+
+    @Bean
+    public Queue queue17() {
+        return new Queue(Queue17, false);
+    }
+
+    @Bean
+    public Queue queue18() {
+        return new Queue(Queue18, false);
+    }
+
+    @Bean
+    public Queue queue19() {
+        return new Queue(Queue19, false);
+    }
+
+    @Bean
+    public Queue queue20() {
+        return new Queue(Queue20, false);
+    }
+
+    @Bean
+    public Queue queue21() {
+        return new Queue(Queue21, false);
+    }
+
+
+    @Bean
     public Binding binding1(@Qualifier("create") FanoutExchange exchange,
                             Queue queue1) {
         return BindingBuilder.bind(queue1).to(exchange);
@@ -254,6 +297,42 @@ public class RabbitConfig {
     public Binding binding15(@Qualifier("update") FanoutExchange exchangeup,
                              Queue queue15) {
         return BindingBuilder.bind(queue15).to(exchangeup);
+    }
+
+    @Bean
+    public Binding binding16(@Qualifier("create") FanoutExchange exchange,
+                             Queue queue16) {
+        return BindingBuilder.bind(queue16).to(exchange);
+    }
+
+    @Bean
+    public Binding binding17(@Qualifier("create") FanoutExchange exchange,
+                             Queue queue17) {
+        return BindingBuilder.bind(queue17).to(exchange);
+    }
+
+    @Bean
+    public Binding binding18(@Qualifier("delete") FanoutExchange exchangedel,
+                             Queue queue18) {
+        return BindingBuilder.bind(queue18).to(exchangedel);
+    }
+
+    @Bean
+    public Binding binding19(@Qualifier("delete") FanoutExchange exchangedel,
+                             Queue queue19) {
+        return BindingBuilder.bind(queue19).to(exchangedel);
+    }
+
+    @Bean
+    public Binding binding20(@Qualifier("update") FanoutExchange exchangeup,
+                             Queue queue20) {
+        return BindingBuilder.bind(queue20).to(exchangeup);
+    }
+
+    @Bean
+    public Binding binding21(@Qualifier("update") FanoutExchange exchangeup,
+                             Queue queue21) {
+        return BindingBuilder.bind(queue21).to(exchangeup);
     }
 
     @Bean

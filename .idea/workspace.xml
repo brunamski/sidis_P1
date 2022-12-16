@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a2ae80fd-bf6b-4d00-be69-ecbdde531680" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Autentication/gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/classes/assets/ACME.postman_environment.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/classes/assets/PSOFT PROJECT G1.postman_collection.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/AuthenticationApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/SecurityConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/SpringConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/auth/api/AuthApi.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/auth/api/AuthRequest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/bootstrap/UserBootstrapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/exceptions/FileStorageException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/exceptions/MyResourceNotFoundException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/usermanagement/api/CreateUserRequest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/usermanagement/api/UpdateUserRequest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/usermanagement/api/UserAdminApi.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/usermanagement/api/UserEditMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/usermanagement/api/UserEditMapperImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/usermanagement/api/UserView.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/usermanagement/api/UserViewMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/usermanagement/api/UserViewMapperImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/usermanagement/models/Role.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/usermanagement/models/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/usermanagement/repositories/UserRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/usermanagement/services/UserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/utils/Utils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/classes/rsa.private.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/classes/rsa.public.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/generated-sources/annotations/com/example/projeto/usermanagement/api/UserEditMapperImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/generated-sources/annotations/com/example/projeto/usermanagement/api/UserViewMapperImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/test-classes/com/example/projeto/UserTests$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/test-classes/com/example/projeto/UserTests$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/test-classes/com/example/projeto/UserTests$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/test-classes/com/example/projeto/UserTests$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autentication/target/test-classes/com/example/projeto/UserTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/assets/ACME.postman_environment.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/assets/PSOFT PROJECT G1.postman_collection.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/assets/ferro.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/assets/madeira.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/assets/madeira_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/Products2COMApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/SecurityConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/SpringConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/controllers/ProductController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/domain/models/AggregatedRatingDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/domain/models/Product.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/domain/models/ProductDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/domain/repositories/ProductRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/domain/services/ProductService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/domain/services/ProductServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/exceptions/FileStorageException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/exceptions/MyResourceNotFoundException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/rabbitmq/Products2COMReceiver.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/rabbitmq/Products2COMSender.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/rabbitmq/RabbitConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/usermanagement/models/Role.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/usermanagement/models/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/usermanagement/repositories/UserRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/utils/Utils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/rsa.private.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/rsa.public.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/uploads/02132613-517e-45f2-bed5-107c12a25bd1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/uploads/2fdea76e-453a-406c-a92c-3a1e881cc65d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/uploads/57050635-b5d5-4e8e-8797-406cb7a0feb3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/classes/uploads/e2eaf5a0-7dca-4114-b3a9-c7e6f59ac86e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/ProductTests$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/ProductTests$10.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/ProductTests$11.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/ProductTests$12.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/ProductTests$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/ProductTests$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/ProductTests$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/ProductTests$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/ProductTests$6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/ProductTests$7.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/ProductTests$8.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/ProductTests$9.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/ProductTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/UserTests$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/UserTests$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/UserTests$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/UserTests$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/UserTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/assets/ACME.postman_environment.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/assets/PSOFT PROJECT G1.postman_collection.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/assets/ferro.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/assets/madeira.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/assets/madeira_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/Products2GETApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/SecurityConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/SpringConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/controllers/ProductController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/domain/models/AggregatedRating.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/domain/models/Product.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/domain/models/ProductDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/domain/models/ProductDTOcat.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/domain/models/Review.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/domain/models/Status.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/domain/repositories/ProductRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/domain/repositories/ReviewRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/domain/services/ProductService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/domain/services/ProductServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/exceptions/FileStorageException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/exceptions/MyResourceNotFoundException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/rabbitmq/Products2GETReceiver.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/rabbitmq/RabbitConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/usermanagement/models/Role.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/usermanagement/models/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/usermanagement/repositories/UserRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/utils/Utils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/rsa.private.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/rsa.public.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/uploads/02132613-517e-45f2-bed5-107c12a25bd1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/uploads/2fdea76e-453a-406c-a92c-3a1e881cc65d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/uploads/57050635-b5d5-4e8e-8797-406cb7a0feb3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/classes/uploads/e2eaf5a0-7dca-4114-b3a9-c7e6f59ac86e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/ProductTests$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/ProductTests$10.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/ProductTests$11.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/ProductTests$12.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/ProductTests$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/ProductTests$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/ProductTests$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/ProductTests$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/ProductTests$6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/ProductTests$7.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/ProductTests$8.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/ProductTests$9.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/ProductTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/UserTests$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/UserTests$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/UserTests$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/UserTests$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/UserTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/assets/ACME.postman_environment.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/assets/PSOFT PROJECT G1.postman_collection.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/assets/ferro.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/assets/madeira.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/assets/madeira_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/ProductsCOMApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/SecurityConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/SpringConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/controllers/ProductController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/domain/models/AggregatedRatingDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/domain/models/Product.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/domain/models/ProductDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/domain/repositories/ProductRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/domain/services/ProductService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/domain/services/ProductServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/exceptions/FileStorageException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/exceptions/MyResourceNotFoundException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/rabbitmq/ProductsCOMReceiver.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/rabbitmq/ProductsCOMSender.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/rabbitmq/RabbitConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/usermanagement/models/Role.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/usermanagement/models/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/usermanagement/repositories/UserRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/utils/Utils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/rsa.private.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/rsa.public.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/uploads/02132613-517e-45f2-bed5-107c12a25bd1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/uploads/2fdea76e-453a-406c-a92c-3a1e881cc65d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/uploads/57050635-b5d5-4e8e-8797-406cb7a0feb3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/classes/uploads/e2eaf5a0-7dca-4114-b3a9-c7e6f59ac86e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/ProductTests$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/ProductTests$10.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/ProductTests$11.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/ProductTests$12.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/ProductTests$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/ProductTests$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/ProductTests$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/ProductTests$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/ProductTests$6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/ProductTests$7.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/ProductTests$8.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/ProductTests$9.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/ProductTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/UserTests$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/UserTests$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/UserTests$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/UserTests$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/UserTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/assets/ACME.postman_environment.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/assets/PSOFT PROJECT G1.postman_collection.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/assets/ferro.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/assets/madeira.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/assets/madeira_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/ProductsGETApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/SecurityConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/SpringConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/controllers/ProductController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/domain/models/AggregatedRating.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/domain/models/AggregatedRatingDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/domain/models/Product.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/domain/models/ProductDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/domain/models/ProductDTOcat.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/domain/models/Review.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/domain/models/Status.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/domain/repositories/ProductRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/domain/repositories/ReviewRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/domain/services/ProductService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/domain/services/ProductServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/domain/views/CatalogView.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/exceptions/FileStorageException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/exceptions/MyResourceNotFoundException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/rabbitmq/ProductsGETReceiver.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/rabbitmq/RabbitConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/usermanagement/models/Role.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/usermanagement/models/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/usermanagement/repositories/UserRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/utils/Utils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/rsa.private.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/rsa.public.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/uploads/02132613-517e-45f2-bed5-107c12a25bd1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/uploads/2fdea76e-453a-406c-a92c-3a1e881cc65d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/uploads/57050635-b5d5-4e8e-8797-406cb7a0feb3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/classes/uploads/e2eaf5a0-7dca-4114-b3a9-c7e6f59ac86e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/ProductTests$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/ProductTests$10.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/ProductTests$11.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/ProductTests$12.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/ProductTests$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/ProductTests$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/ProductTests$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/ProductTests$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/ProductTests$6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/ProductTests$7.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/ProductTests$8.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/ProductTests$9.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/ProductTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/UserTests$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/UserTests$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/UserTests$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/UserTests$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/UserTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/domain/models/Vote.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/domain/repositories/VoteRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/Reviews2COMApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/SecurityConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/SpringConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/controllers/ReviewController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/domain/models/AggregatedRating.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/domain/models/AggregatedRatingDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/domain/models/Product.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/domain/models/Review.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/domain/models/ReviewDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/domain/models/ReviewDTOStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/domain/models/ReviewDTOcat.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/domain/models/Status.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/domain/models/Vote.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/domain/repositories/ProductRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/domain/repositories/ReviewRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/domain/repositories/VoteRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/domain/services/ReviewService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/domain/services/ReviewServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/exceptions/FileStorageException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/exceptions/MyResourceNotFoundException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/rabbitmq/RabbitConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/rabbitmq/Reviews2COMReceiver.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/rabbitmq/Reviews2COMSender.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/usermanagement/models/Role.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/usermanagement/models/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/usermanagement/repositories/UserRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/utils/Utils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/rsa.private.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/classes/rsa.public.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/test-classes/com/example/projeto/UserTests$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/test-classes/com/example/projeto/UserTests$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/test-classes/com/example/projeto/UserTests$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/test-classes/com/example/projeto/UserTests$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2COM/target/test-classes/com/example/projeto/UserTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/domain/models/Vote.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/domain/repositories/VoteRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/Reviews2GETApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/SecurityConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/SpringConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/controllers/ReviewController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/domain/models/AggregatedRating.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/domain/models/AggregatedRatingDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/domain/models/Product.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/domain/models/Review.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/domain/models/ReviewDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/domain/models/ReviewDTOStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/domain/models/ReviewDTOcat.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/domain/models/Status.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/domain/models/Vote.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/domain/repositories/ReviewRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/domain/repositories/VoteRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/domain/services/ReviewService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/domain/services/ReviewServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/domain/views/ReviewView.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/exceptions/FileStorageException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/exceptions/MyResourceNotFoundException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/rabbitmq/RabbitConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/rabbitmq/Reviews2GETReceiver.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/usermanagement/models/Role.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/usermanagement/models/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/usermanagement/repositories/UserRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/utils/Utils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/rsa.private.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/classes/rsa.public.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/test-classes/com/example/projeto/UserTests$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/test-classes/com/example/projeto/UserTests$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/test-classes/com/example/projeto/UserTests$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/test-classes/com/example/projeto/UserTests$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews2GET/target/test-classes/com/example/projeto/UserTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/domain/models/Vote.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/domain/repositories/VoteRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/ReviewsCOMApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/SecurityConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/SpringConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/controllers/ReviewController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/domain/models/AggregatedRating.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/domain/models/AggregatedRatingDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/domain/models/Product.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/domain/models/Review.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/domain/models/ReviewDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/domain/models/ReviewDTOStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/domain/models/ReviewDTOcat.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/domain/models/Status.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/domain/models/Vote.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/domain/repositories/ProductRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/domain/repositories/ReviewRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/domain/repositories/VoteRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/domain/services/ReviewService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/domain/services/ReviewServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/exceptions/FileStorageException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/exceptions/MyResourceNotFoundException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/rabbitmq/RabbitConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/rabbitmq/ReviewsCOMReceiver.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/rabbitmq/ReviewsCOMSender.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/usermanagement/models/Role.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/usermanagement/models/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/usermanagement/repositories/UserRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/utils/Utils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/rsa.private.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/classes/rsa.public.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/test-classes/com/example/projeto/UserTests$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/test-classes/com/example/projeto/UserTests$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/test-classes/com/example/projeto/UserTests$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/test-classes/com/example/projeto/UserTests$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsCOM/target/test-classes/com/example/projeto/UserTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/domain/models/Vote.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/domain/repositories/VoteRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/ReviewsGETApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/SecurityConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/SpringConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/controllers/ReviewController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/domain/models/AggregatedRating.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/domain/models/AggregatedRatingDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/domain/models/Product.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/domain/models/Review.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/domain/models/ReviewDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/domain/models/ReviewDTOStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/domain/models/ReviewDTOcat.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/domain/models/Status.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/domain/models/Vote.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/domain/repositories/ReviewRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/domain/repositories/VoteRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/domain/services/ReviewService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/domain/services/ReviewServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/domain/views/ReviewView.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/exceptions/FileStorageException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/exceptions/MyResourceNotFoundException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/rabbitmq/RabbitConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/rabbitmq/ReviewsGETReceiver.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/usermanagement/models/Role.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/usermanagement/models/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/usermanagement/repositories/UserRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/utils/Utils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/rsa.private.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/classes/rsa.public.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/test-classes/com/example/projeto/UserTests$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/test-classes/com/example/projeto/UserTests$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/test-classes/com/example/projeto/UserTests$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/test-classes/com/example/projeto/UserTests$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReviewsGET/target/test-classes/com/example/projeto/UserTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/projeto (11).iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/SpringConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/Votes2COMApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/controllers/VoteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/models/Review.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/models/Status.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/models/Vote.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/models/VoteDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/repositories/ReviewRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/repositories/VoteRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/services/VoteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/exceptions/FileStorageException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/exceptions/MyResourceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/Votes2COMReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/Votes2COMSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/usermanagement/models/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/usermanagement/models/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/usermanagement/repositories/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/utils/Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/src/main/resources/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/src/main/resources/rsa.private.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/src/main/resources/rsa.public.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/SecurityConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/SpringConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/Votes2COMApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/controllers/VoteController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/domain/models/Review.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/domain/models/Status.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/domain/models/Vote.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/domain/models/VoteDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/domain/repositories/ReviewRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/domain/repositories/VoteRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/domain/services/VoteService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/domain/services/VoteServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/exceptions/FileStorageException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/exceptions/MyResourceNotFoundException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/rabbitmq/RabbitConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/rabbitmq/Votes2COMReceiver.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/rabbitmq/Votes2COMSender.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/usermanagement/models/Role.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/usermanagement/models/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/usermanagement/repositories/UserRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/utils/Utils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/target/classes/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/target/classes/rsa.private.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Votes2COM/target/classes/rsa.public.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/models/Review.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/models/Status.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/repositories/ReviewRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/VotesCOMReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/VotesCOMSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/SecurityConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/SpringConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/VotesCOMApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/controllers/VoteController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/domain/models/Review.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/domain/models/Status.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/domain/models/Vote.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/domain/models/VoteDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/domain/repositories/ReviewRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/domain/repositories/VoteRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/domain/services/VoteService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/domain/services/VoteServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/exceptions/FileStorageException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/exceptions/MyResourceNotFoundException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/rabbitmq/RabbitConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/rabbitmq/VotesCOMReceiver.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/rabbitmq/VotesCOMSender.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/usermanagement/models/Role.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/usermanagement/models/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/usermanagement/repositories/UserRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/utils/Utils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/target/classes/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/target/classes/rsa.private.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesCOM/target/classes/rsa.public.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesGET/gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesGET/src/main/java/com/example/projeto/domain/models/Review.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesGET/src/main/java/com/example/projeto/domain/models/Status.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesGET/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/SecurityConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/SpringConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/VotesGETApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/domain/models/Vote.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/domain/models/VoteDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/domain/repositories/VoteRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/exceptions/FileStorageException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/exceptions/MyResourceNotFoundException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/usermanagement/models/Role.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/usermanagement/models/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/usermanagement/repositories/UserRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/utils/Utils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesGET/target/classes/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesGET/target/classes/rsa.private.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VotesGET/target/classes/rsa.public.key" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/domain/services/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/domain/services/ReviewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/rabbitmq/Reviews2COMReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/rabbitmq/Reviews2COMReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2COM/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/domain/services/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/domain/services/ReviewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/rabbitmq/Reviews2GETReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/rabbitmq/Reviews2GETReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2GET/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/domain/services/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/domain/services/ReviewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/rabbitmq/ReviewsCOMReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/rabbitmq/ReviewsCOMReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsCOM/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/domain/services/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/domain/services/ReviewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/rabbitmq/ReviewsGETReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/rabbitmq/ReviewsGETReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsGET/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/projeto (5).iml" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/projeto (5).iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/controllers/VoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/controllers/VoteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/services/VoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/services/VoteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/src/main/java/com/example/projeto/controllers/VoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesGET/src/main/java/com/example/projeto/controllers/VoteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/src/main/java/com/example/projeto/domain/services/VoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesGET/src/main/java/com/example/projeto/domain/services/VoteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesGET/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/VotesGET/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/ACME.postman_environment.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/ACME.postman_environment.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/SIDIS PROJECT.postman_collection.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/SIDIS PROJECT.postman_collection.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectId" id="2IXxeCuvadWybJ8lIk0meOstplR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bruna\OneDrive\Ambiente de Trabalho\sidis_P1\ReviewsCOM\src\main\java\com\example\projeto" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Compound.sidis">
+    <configuration default="true" type="CompoundRunConfigurationType">
+      <toRun name="Products2COMApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="ProductsCOMApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="VotesGETApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="Products2GETApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="Reviews2GETApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="AuthenticationApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="ReviewsGETApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="Reviews2COMApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="VotesCOMApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="ProductsGETApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="ReviewsCOMApplication" type="SpringBootApplicationConfigurationType" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sidis" type="CompoundRunConfigurationType">
+      <toRun name="Products2COMApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="ProductsCOMApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="VotesGETApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="Products2GETApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="Reviews2GETApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="AuthenticationApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="ReviewsGETApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="Reviews2COMApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="VotesCOMApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="ProductsGETApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="ReviewsCOMApplication" type="SpringBootApplicationConfigurationType" />
+      <method v="2" />
+    </configuration>
+    <configuration name="AuthenticationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="projeto" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.AuthenticationApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Products2COMApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="projeto (8)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.Products2COMApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Products2GETApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="projeto (7)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.Products2GETApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductsCOMApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="projeto (1)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.ProductsCOMApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductsGETApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="projeto (2)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.ProductsGETApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Reviews2COMApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="projeto (9)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.Reviews2COMApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Reviews2GETApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="projeto (10)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.Reviews2GETApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReviewsCOMApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="projeto (3)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.ReviewsCOMApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReviewsGETApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="projeto (4)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.ReviewsGETApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Votes2COMApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="projeto (11)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.Votes2COMApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VotesCOMApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="projeto (5)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.VotesCOMApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VotesGETApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="projeto (6)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.VotesGETApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Compound.sidis" />
+      <item itemvalue="Spring Boot.AuthenticationApplication" />
+      <item itemvalue="Spring Boot.Products2COMApplication" />
+      <item itemvalue="Spring Boot.Products2GETApplication" />
+      <item itemvalue="Spring Boot.ProductsCOMApplication" />
+      <item itemvalue="Spring Boot.ProductsGETApplication" />
+      <item itemvalue="Spring Boot.Reviews2COMApplication" />
+      <item itemvalue="Spring Boot.Reviews2GETApplication" />
+      <item itemvalue="Spring Boot.ReviewsCOMApplication" />
+      <item itemvalue="Spring Boot.ReviewsGETApplication" />
+      <item itemvalue="Spring Boot.VotesCOMApplication" />
+      <item itemvalue="Spring Boot.VotesGETApplication" />
+      <item itemvalue="Spring Boot.Votes2COMApplication" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a2ae80fd-bf6b-4d00-be69-ecbdde531680" name="Changes" comment="" />
+      <created>1670341848726</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670341848726</updated>
+      <workItem from="1670341874521" duration="2449000" />
+      <workItem from="1670782731655" duration="697000" />
+      <workItem from="1671034817035" duration="641000" />
+      <workItem from="1671188693118" duration="2106000" />
+      <workItem from="1671214896592" duration="1152000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

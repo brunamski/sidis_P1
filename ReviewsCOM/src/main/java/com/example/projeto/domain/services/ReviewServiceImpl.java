@@ -3,6 +3,7 @@ package com.example.projeto.domain.services;
 import com.example.projeto.domain.models.*;
 import com.example.projeto.domain.repositories.ProductRepository;
 import com.example.projeto.domain.repositories.ReviewRepository;
+import com.example.projeto.domain.repositories.VoteRepository;
 import com.example.projeto.utils.Utils;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -39,6 +40,9 @@ public class ReviewServiceImpl implements ReviewService{
     private ProductRepository productRepository;
 
     @Autowired
+    private VoteRepository voteRepository;
+
+    @Autowired
     private Utils utils;
 
     @Override
@@ -59,6 +63,12 @@ public class ReviewServiceImpl implements ReviewService{
         if(rev.isEmpty()){
             return ResponseEntity.notFound().build();
         }
+
+        int numVotes = voteRepository.getVotesByReviewId(reviewId);
+        if(numVotes != 0) {
+            return ResponseEntity.unprocessableEntity().build();
+        }
+
         deleteById(reviewId);
         return ResponseEntity.noContent().build();
     }
@@ -111,5 +121,10 @@ public class ReviewServiceImpl implements ReviewService{
     @Override
     public Product createProduct(Product product){
         return productRepository.save(product);
+    }
+
+    @Override
+    public Vote create(Vote newVote){
+        return voteRepository.save(newVote);
     }
 }

@@ -1,8 +1,9 @@
 package com.example.projeto.domain.services;
 
-import com.example.projeto.domain.models.Vote;
-import com.example.projeto.domain.models.VoteDTO;
+import com.example.projeto.domain.models.*;
+import com.example.projeto.domain.repositories.ReviewRepository;
 import com.example.projeto.domain.repositories.VoteRepository;
+import com.example.projeto.rabbitmq.VotesCOMSender;
 import com.example.projeto.utils.Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,12 +19,19 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.Optional;
 
 @Service
 public class VoteServiceImpl implements VoteService{
 
     @Autowired
     private VoteRepository voteRepository;
+
+    @Autowired
+    private ReviewRepository reviewRepository;
+
+    @Autowired
+    private VotesCOMSender votesCOMSender;
 
     @Autowired
     private Utils utils;
@@ -43,32 +51,23 @@ public class VoteServiceImpl implements VoteService{
             newVote.setUserId(utils.getUserIdByToken(request));
             newVote.setReviewId(reviewId);
             final var vote = create(newVote);
+            votesCOMSender.send(vote);
             VoteDTO voteDTO = new VoteDTO(vote.getVoteId(),vote.getUserId(), vote.getReviewId(), vote.isVote(), vote.getReason());
             return voteDTO;
         }
         throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Review not found!");
     }
 
-    public boolean reviewIsPresent(@PathVariable(value = "id") final Long reviewId) throws IOException, InterruptedException {
-
-        String baseURL = "http://localhost:8081/api/public/review/get/" + reviewId;
-
-        HttpClient client = HttpClient.newBuilder()
-                .followRedirects(HttpClient.Redirect.ALWAYS).build();
-
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(baseURL))
-                .GET()
-                .build();
-
-        HttpResponse<String> response = client.send(request,
-                HttpResponse.BodyHandlers.ofString());
-
-        return  Boolean.parseBoolean(response.body());
+    public boolean reviewIsPresent(Long reviewId) {
+        Optional<Review> review = reviewRepository.findReviewById(reviewId);
+        if(review.isPresent()){
+            return true;
+        }
+        return false;
     }
+
     @Override
-    public int getVotesByReviewId(Long reviewId){
-        int nvotes = voteRepository.getVotesByReviewId(reviewId);
-        return nvotes;
+    public Review create(Review newReview){
+        return reviewRepository.save(newReview);
     }
 }

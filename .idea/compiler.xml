@@ -26,6 +26,7 @@
         <module name="projeto (7)" />
         <module name="projeto (9)" />
         <module name="projeto (10)" />
+        <module name="projeto (11)" />
         <module name="projeto (2)" />
         <module name="projeto (1)" />
         <module name="projeto (4)" />
@@ -36,6 +37,7 @@
       <module name="projeto" target="16" />
       <module name="projeto (1)" target="16" />
       <module name="projeto (10)" target="16" />
+      <module name="projeto (11)" target="16" />
       <module name="projeto (2)" target="16" />
       <module name="projeto (3)" target="16" />
       <module name="projeto (4)" target="16" />
@@ -53,6 +55,7 @@
       <module name="projeto" options="-parameters" />
       <module name="projeto (1)" options="-parameters" />
       <module name="projeto (10)" options="-parameters" />
+      <module name="projeto (11)" options="-parameters" />
       <module name="projeto (2)" options="-parameters" />
       <module name="projeto (3)" options="-parameters" />
       <module name="projeto (4)" options="-parameters" />

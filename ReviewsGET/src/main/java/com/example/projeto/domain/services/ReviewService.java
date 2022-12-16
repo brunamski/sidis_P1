@@ -50,5 +50,5 @@ public interface ReviewService {
 
     AggregatedRating getProductAggregatedRating(List<ReviewDTOcat> reviews);
 
-    int getVotes(final Long reviewId) throws IOException, InterruptedException;
+    Vote create(Vote newVote);
 }
