@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "c7ad7d05-2c70-451f-b623-47b7973b235c",
+		"_postman_id": "1d5f3c82-37e5-4c59-88eb-da82ff8bf30e",
 		"name": "SIDIS PROJECT",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "19169178"
@@ -358,14 +358,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000007",
+									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000001",
 									"host": [
 										"{{hostProductsGET}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
 										"product",
-										"SKU0000007"
+										"SKU0000001"
 									]
 								}
 							},
@@ -386,26 +386,6 @@
 										"product",
 										"name",
 										"madeira"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "US03 - To Search the Catalog of Products by Bar Code",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/bar_code/SKU0000001",
-									"host": [
-										"{{hostProductsGET}}{{baseUrl}}"
-									],
-									"path": [
-										"public",
-										"product",
-										"bar_code",
-										"SKU0000001"
 									]
 								}
 							},
@@ -470,7 +450,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"designation\": \"FIFA23\",\r\n    \"description\": \"Jogo bugador de mentes\",\r\n    \"sku\": \"SKU0000028\"\r\n}",
+									"raw": "{\r\n    \"designation\": \"Wildlands\",\r\n    \"description\": \"Jogo bugador da vida\",\r\n    \"sku\": \"SKU0000008\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -601,7 +581,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"status\": 1\r\n}",
+									"raw": "{\r\n    \"reviewId\": 14,\r\n    \"status\": 1\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -609,13 +589,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/11",
+									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/update",
 									"host": [
 										"{{hostReviewsCOM}}{{baseUrl}}"
 									],
 									"path": [
 										"review",
-										"11"
+										"update"
 									]
 								}
 							},
@@ -646,7 +626,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"sku\": \"SKU0000001\",\r\n    \"rating\": 5,\r\n    \"text\": \"Isto é a razão pelo qual dei quatro estrelas\"\r\n}",
+									"raw": "{\r\n    \"sku\": \"SKU0000007\",\r\n    \"rating\": 5,\r\n    \"text\": \"Isto é a razão pelo qual dei cinco estrelas\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -671,13 +651,13 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/4/withdraw",
+									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/14/withdraw",
 									"host": [
 										"{{hostReviewsCOM}}{{baseUrl}}"
 									],
 									"path": [
 										"review",
-										"4",
+										"14",
 										"withdraw"
 									]
 								}
@@ -991,27 +971,27 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000008",
+									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000007",
 									"host": [
 										"{{hostProductsGET}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
 										"product",
-										"SKU0000008"
+										"SKU0000007"
 									]
 								}
 							},
 							"response": []
 						},
 						{
-							"name": "Creates a product Copy",
+							"name": "Creates a product",
 							"event": [
 								{
 									"listen": "test",
 									"script": {
 										"exec": [
-											"pm.test(\"Get product\", function() {\r",
+											"pm.test(\"Create product\", function() {\r",
 											"    pm.response.to.have.status(200);\r",
 											"} );"
 										],
@@ -1040,7 +1020,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"designation\": \"FIFA23\",\r\n    \"description\": \"Jogo bugador de mentes\",\r\n    \"sku\": \"SKU0000008\"\r\n}",
+									"raw": "{\r\n    \"designation\": \"FIFA23\",\r\n    \"description\": \"Jogo bugador de mentes\",\r\n    \"sku\": \"SKU0000007\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1079,14 +1059,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000008",
+									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000007",
 									"host": [
 										"{{hostProductsGET}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
 										"product",
-										"SKU0000008"
+										"SKU0000007"
 									]
 								}
 							},
@@ -1111,14 +1091,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostProducts2GET}}{{baseUrl}}/public/product/SKU0000008",
+									"raw": "{{hostProducts2GET}}{{baseUrl}}/public/product/SKU0000007",
 									"host": [
 										"{{hostProducts2GET}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
 										"product",
-										"SKU0000008"
+										"SKU0000007"
 									]
 								}
 							},
@@ -1131,7 +1111,7 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"pm.test(\"Get product\", function() {\r",
+											"pm.test(\"Create duplicate product\", function() {\r",
 											"    pm.response.to.have.status(409);\r",
 											"} );"
 										],
@@ -1154,7 +1134,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"designation\": \"FIFA23\",\r\n    \"description\": \"Jogo bugador de mentes\",\r\n    \"sku\": \"SKU0000008\"\r\n}",
+									"raw": "{\r\n    \"designation\": \"FIFA23\",\r\n    \"description\": \"Jogo bugador de mentes\",\r\n    \"sku\": \"SKU0000007\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1283,14 +1263,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000001",
+									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000007",
 									"host": [
 										"{{hostProductsGET}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
 										"product",
-										"SKU0000001"
+										"SKU0000007"
 									]
 								}
 							},
@@ -1312,7 +1292,7 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"pm.test(\"Authtenticates\", function(){\r",
+											"pm.test(\"Create review\", function(){\r",
 											"    pm.response.to.have.status(200); \r",
 											"});"
 										],
@@ -1335,7 +1315,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"sku\": \"SKU0000001\",\r\n    \"rating\": 5,\r\n    \"text\": \"Isto é a razão pelo qual dei cinco estrelas\"\r\n}",
+									"raw": "{\r\n    \"sku\": \"SKU0000007\",\r\n    \"rating\": 5,\r\n    \"text\": \"Isto é a razão pelo qual dei cinco estrelas\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1361,7 +1341,7 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"pm.test(\"Authtenticates\", function(){\r",
+											"pm.test(\"Get review\", function(){\r",
 											"    pm.response.to.have.status(200);   \r",
 											"});"
 										],
@@ -1451,7 +1431,7 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"pm.test(\"Authtenticates\", function(){\r",
+											"pm.test(\"Get reviews\", function(){\r",
 											"    pm.response.to.have.status(200);  \r",
 											"});"
 										],
@@ -1482,70 +1462,7 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"pm.test(\"Authtenticates\", function(){\r",
-											"    pm.response.to.have.status(404);  \r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"url": {
-									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/100/withdraw",
-									"host": [
-										"{{hostReviewsCOM}}{{baseUrl}}"
-									],
-									"path": [
-										"review",
-										"100",
-										"withdraw"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "US08 - To Obtain all my Reviews Including their Status",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"Authtenticates\", function(){\r",
-											"    pm.response.to.have.status(200);  \r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{hostReviewsGET}}{{baseUrl}}/review/status",
-									"host": [
-										"{{hostReviewsGET}}{{baseUrl}}"
-									],
-									"path": [
-										"review",
-										"status"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "US07 - To Withdraw one of my Reviews",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"Authtenticates\", function(){\r",
+											"pm.test(\"Delete review\", function(){\r",
 											"    pm.response.to.have.status(204);  \r",
 											"});"
 										],
@@ -1557,13 +1474,13 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/3/withdraw",
+									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/14/withdraw",
 									"host": [
 										"{{hostReviewsCOM}}{{baseUrl}}"
 									],
 									"path": [
 										"review",
-										"3",
+										"14",
 										"withdraw"
 									]
 								}
@@ -1577,7 +1494,70 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"pm.test(\"Authtenticates\", function(){\r",
+											"pm.test(\"Get reviews\", function(){\r",
+											"    pm.response.to.have.status(200);  \r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hostReviewsGET}}{{baseUrl}}/review/status",
+									"host": [
+										"{{hostReviewsGET}}{{baseUrl}}"
+									],
+									"path": [
+										"review",
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "US07 - To Withdraw one of my Reviews",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Delete a non-existing review\", function(){\r",
+											"    pm.response.to.have.status(404);  \r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/14/withdraw",
+									"host": [
+										"{{hostReviewsCOM}}{{baseUrl}}"
+									],
+									"path": [
+										"review",
+										"14",
+										"withdraw"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "US08 - To Obtain all my Reviews Including their Status",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Get reviews\", function(){\r",
 											"    pm.response.to.have.status(200);  \r",
 											"});"
 										],
@@ -1656,16 +1636,6 @@
 								}
 							],
 							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{token}}",
-											"type": "string"
-										}
-									]
-								},
 								"method": "POST",
 								"header": [],
 								"body": {
@@ -1697,166 +1667,9 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"pm.test(\"Obtain pending\", function(){\r",
+											"pm.test(\"All pending\", function(){\r",
 											"\r",
-											"    pm.response.to.have.status(200);\r",
-											"   \r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{hostReviewsGET}}{{baseUrl}}/review/pending",
-									"host": [
-										"{{hostReviewsGET}}{{baseUrl}}"
-									],
-									"path": [
-										"review",
-										"pending"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "US11 - To Approve or Reject a Pending Review",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"Approve a pending review\", function(){\r",
-											"\r",
-											"    pm.response.to.have.status(200);\r",
-											"   \r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "PATCH",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"status\": 1\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/11",
-									"host": [
-										"{{hostReviewsCOM}}{{baseUrl}}"
-									],
-									"path": [
-										"review",
-										"11"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "US10 - To Obtain all Pending Reviews",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"Obtain pending\", function(){\r",
-											"\r",
-											"    pm.response.to.have.status(200);\r",
-											"   \r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{hostReviewsGET}}{{baseUrl}}/review/pending",
-									"host": [
-										"{{hostReviewsGET}}{{baseUrl}}"
-									],
-									"path": [
-										"review",
-										"pending"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "Update Review",
-					"item": [
-						{
-							"name": "Moderator Login",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"Authtenticates\", function(){\r",
-											"\r",
-											"    pm.response.to.have.status(200);\r",
-											"\r",
-											"    let token = postman.getResponseHeader(\"Authorization\");\r",
-											"    pm.environment.set(\"token\", token);    \r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"username\":\"Alex@mail.com\",\r\n    \"password\":\"mod3\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{hostAuthentication}}{{baseUrl}}/public/login",
-									"host": [
-										"{{hostAuthentication}}{{baseUrl}}"
-									],
-									"path": [
-										"public",
-										"login"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "US10 - To Obtain all Pending Reviews",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"Obtain all pending\", function(){\r",
-											"\r",
-											"    pm.response.to.have.status(200); \r",
+											"    pm.response.to.have.status(200);    \r",
 											"});"
 										],
 										"type": "text/javascript"
@@ -1888,7 +1701,7 @@
 										"exec": [
 											"pm.test(\"Approve review\", function(){\r",
 											"\r",
-											"    pm.response.to.have.status(200); \r",
+											"    pm.response.to.have.status(200);    \r",
 											"});"
 										],
 										"type": "text/javascript"
@@ -1900,7 +1713,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"status\": 1\r\n}",
+									"raw": "{\r\n    \"reviewId\": 4,\r\n    \"status\": 1\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1908,13 +1721,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/11",
+									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/update",
 									"host": [
 										"{{hostReviewsCOM}}{{baseUrl}}"
 									],
 									"path": [
 										"review",
-										"11"
+										"update"
 									]
 								}
 							},
@@ -1927,9 +1740,9 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"pm.test(\"Obtain all pending\", function(){\r",
+											"pm.test(\"All pending\", function(){\r",
 											"\r",
-											"    pm.response.to.have.status(200); \r",
+											"    pm.response.to.have.status(200);    \r",
 											"});"
 										],
 										"type": "text/javascript"
@@ -1951,6 +1764,36 @@
 								}
 							},
 							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
 						}
 					]
 				}
