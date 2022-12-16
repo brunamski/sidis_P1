@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "7978afae-0e74-431d-aed4-56141f6da0ef",
+		"_postman_id": "d5e26314-efc0-42d3-aa4f-6188dd108b51",
 		"name": "SIDIS PROJECT",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "19169178"
+		"_exporter_id": "17875845"
 	},
 	"item": [
 		{
@@ -358,14 +358,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000007",
+									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000001",
 									"host": [
 										"{{hostProductsGET}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
 										"product",
-										"SKU0000007"
+										"SKU0000001"
 									]
 								}
 							},
@@ -386,26 +386,6 @@
 										"product",
 										"name",
 										"madeira"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "US03 - To Search the Catalog of Products by Bar Code",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/bar_code/SKU0000001",
-									"host": [
-										"{{hostProductsGET}}{{baseUrl}}"
-									],
-									"path": [
-										"public",
-										"product",
-										"bar_code",
-										"SKU0000001"
 									]
 								}
 							},
@@ -470,7 +450,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"designation\": \"FIFA23\",\r\n    \"description\": \"Jogo bugador de mentes\",\r\n    \"sku\": \"SKU0000028\"\r\n}",
+									"raw": "{\r\n    \"designation\": \"Wildlands\",\r\n    \"description\": \"Jogo bugador da vida\",\r\n    \"sku\": \"SKU0000008\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -601,7 +581,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"status\": 1\r\n}",
+									"raw": "{\r\n    \"reviewId\": 14,\r\n    \"status\": 1\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -609,13 +589,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/11",
+									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/update",
 									"host": [
 										"{{hostReviewsCOM}}{{baseUrl}}"
 									],
 									"path": [
 										"review",
-										"11"
+										"update"
 									]
 								}
 							},
@@ -646,7 +626,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"sku\": \"SKU0000001\",\r\n    \"rating\": 5,\r\n    \"text\": \"Isto é a razão pelo qual dei quatro estrelas\"\r\n}",
+									"raw": "{\r\n    \"sku\": \"SKU0000007\",\r\n    \"rating\": 5,\r\n    \"text\": \"Isto é a razão pelo qual dei cinco estrelas\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -671,13 +651,13 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/4/withdraw",
+									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/14/withdraw",
 									"host": [
 										"{{hostReviewsCOM}}{{baseUrl}}"
 									],
 									"path": [
 										"review",
-										"4",
+										"14",
 										"withdraw"
 									]
 								}
@@ -991,27 +971,27 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000008",
+									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000007",
 									"host": [
 										"{{hostProductsGET}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
 										"product",
-										"SKU0000008"
+										"SKU0000007"
 									]
 								}
 							},
 							"response": []
 						},
 						{
-							"name": "Creates a product Copy",
+							"name": "Creates a product",
 							"event": [
 								{
 									"listen": "test",
 									"script": {
 										"exec": [
-											"pm.test(\"Get product\", function() {\r",
+											"pm.test(\"Create product\", function() {\r",
 											"    pm.response.to.have.status(200);\r",
 											"} );"
 										],
@@ -1040,7 +1020,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"designation\": \"FIFA23\",\r\n    \"description\": \"Jogo bugador de mentes\",\r\n    \"sku\": \"SKU0000008\"\r\n}",
+									"raw": "{\r\n    \"designation\": \"FIFA23\",\r\n    \"description\": \"Jogo bugador de mentes\",\r\n    \"sku\": \"SKU0000007\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1079,14 +1059,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000008",
+									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000007",
 									"host": [
 										"{{hostProductsGET}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
 										"product",
-										"SKU0000008"
+										"SKU0000007"
 									]
 								}
 							},
@@ -1111,14 +1091,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostProducts2GET}}{{baseUrl}}/public/product/SKU0000008",
+									"raw": "{{hostProducts2GET}}{{baseUrl}}/public/product/SKU0000007",
 									"host": [
 										"{{hostProducts2GET}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
 										"product",
-										"SKU0000008"
+										"SKU0000007"
 									]
 								}
 							},
@@ -1131,7 +1111,7 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"pm.test(\"Get product\", function() {\r",
+											"pm.test(\"Create duplicate product\", function() {\r",
 											"    pm.response.to.have.status(409);\r",
 											"} );"
 										],
@@ -1154,7 +1134,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"designation\": \"FIFA23\",\r\n    \"description\": \"Jogo bugador de mentes\",\r\n    \"sku\": \"SKU0000008\"\r\n}",
+									"raw": "{\r\n    \"designation\": \"FIFA23\",\r\n    \"description\": \"Jogo bugador de mentes\",\r\n    \"sku\": \"SKU0000007\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1283,14 +1263,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000001",
+									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000007",
 									"host": [
 										"{{hostProductsGET}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
 										"product",
-										"SKU0000001"
+										"SKU0000007"
 									]
 								}
 							},
@@ -1312,7 +1292,7 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"pm.test(\"Authtenticates\", function(){\r",
+											"pm.test(\"Create review\", function(){\r",
 											"    pm.response.to.have.status(200); \r",
 											"});"
 										],
@@ -1335,7 +1315,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"sku\": \"SKU0000001\",\r\n    \"rating\": 5,\r\n    \"text\": \"Isto é a razão pelo qual dei cinco estrelas\"\r\n}",
+									"raw": "{\r\n    \"sku\": \"SKU0000007\",\r\n    \"rating\": 5,\r\n    \"text\": \"Isto é a razão pelo qual dei cinco estrelas\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1361,7 +1341,7 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"pm.test(\"Authtenticates\", function(){\r",
+											"pm.test(\"Get review\", function(){\r",
 											"    pm.response.to.have.status(200);   \r",
 											"});"
 										],
@@ -1451,7 +1431,7 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"pm.test(\"Authtenticates\", function(){\r",
+											"pm.test(\"Get reviews\", function(){\r",
 											"    pm.response.to.have.status(200);  \r",
 											"});"
 										],
@@ -1482,70 +1462,7 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"pm.test(\"Authtenticates\", function(){\r",
-											"    pm.response.to.have.status(404);  \r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"url": {
-									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/100/withdraw",
-									"host": [
-										"{{hostReviewsCOM}}{{baseUrl}}"
-									],
-									"path": [
-										"review",
-										"100",
-										"withdraw"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "US08 - To Obtain all my Reviews Including their Status",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"Authtenticates\", function(){\r",
-											"    pm.response.to.have.status(200);  \r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{hostReviewsGET}}{{baseUrl}}/review/status",
-									"host": [
-										"{{hostReviewsGET}}{{baseUrl}}"
-									],
-									"path": [
-										"review",
-										"status"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "US07 - To Withdraw one of my Reviews",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"Authtenticates\", function(){\r",
+											"pm.test(\"Delete review\", function(){\r",
 											"    pm.response.to.have.status(204);  \r",
 											"});"
 										],
@@ -1557,13 +1474,13 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/3/withdraw",
+									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/14/withdraw",
 									"host": [
 										"{{hostReviewsCOM}}{{baseUrl}}"
 									],
 									"path": [
 										"review",
-										"3",
+										"14",
 										"withdraw"
 									]
 								}
@@ -1577,7 +1494,70 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"pm.test(\"Authtenticates\", function(){\r",
+											"pm.test(\"Get reviews\", function(){\r",
+											"    pm.response.to.have.status(200);  \r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hostReviewsGET}}{{baseUrl}}/review/status",
+									"host": [
+										"{{hostReviewsGET}}{{baseUrl}}"
+									],
+									"path": [
+										"review",
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "US07 - To Withdraw one of my Reviews",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Delete a non-existing review\", function(){\r",
+											"    pm.response.to.have.status(404);  \r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/14/withdraw",
+									"host": [
+										"{{hostReviewsCOM}}{{baseUrl}}"
+									],
+									"path": [
+										"review",
+										"14",
+										"withdraw"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "US08 - To Obtain all my Reviews Including their Status",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Get reviews\", function(){\r",
 											"    pm.response.to.have.status(200);  \r",
 											"});"
 										],
