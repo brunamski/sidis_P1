@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "1d5f3c82-37e5-4c59-88eb-da82ff8bf30e",
+		"_postman_id": "d9325cdd-e761-4386-9674-b7345e39ea50",
 		"name": "SIDIS PROJECT",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "19169178"
+		"_exporter_id": "17875845"
 	},
 	"item": [
 		{
@@ -236,95 +236,6 @@
 							"response": []
 						}
 					]
-				}
-			]
-		},
-		{
-			"name": "Work Package #0 - Setup",
-			"item": [
-				{
-					"name": "US13 - To “bootstrap” products",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"sku\": \"SKU0000013\",\r\n    \"designation\": \"adafadsf\",\r\n    \"description\": \"Isto é a razão pelo qual dei uma estrela\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{host}}{{baseUrl}}/admin/product",
-							"host": [
-								"{{host}}{{baseUrl}}"
-							],
-							"path": [
-								"admin",
-								"product"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "US12 - To “bootstrap” user credential data",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"username\":\"João@email\",\r\n    \"password\":\"mod5\",\r\n    \"authorities\":[\"MODERATOR\"]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{host}}{{baseUrl}}/admin/user",
-							"host": [
-								"{{host}}{{baseUrl}}"
-							],
-							"path": [
-								"admin",
-								"user"
-							]
-						}
-					},
-					"response": []
-				}
-			],
-			"auth": {
-				"type": "bearer",
-				"bearer": [
-					{
-						"key": "token",
-						"value": "{{token}}",
-						"type": "string"
-					}
-				]
-			},
-			"event": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							""
-						]
-					}
-				},
-				{
-					"listen": "test",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							""
-						]
-					}
 				}
 			]
 		},
@@ -723,146 +634,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{hostVote}}{{baseUrl}}/review/13/vote",
+									"raw": "{{hostVotesCOM}}{{baseUrl}}/review/14/vote",
 									"host": [
-										"{{hostVote}}{{baseUrl}}"
+										"{{hostVotesCOM}}{{baseUrl}}"
 									],
 									"path": [
 										"review",
-										"13",
+										"14",
 										"vote"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"auth": {
-						"type": "bearer",
-						"bearer": [
-							{
-								"key": "token",
-								"value": "{{token}}",
-								"type": "string"
-							}
-						]
-					},
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Work Package #6 - Bonus",
-			"item": [
-				{
-					"name": "Public",
-					"item": [
-						{
-							"name": "Get photo",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{hostProduct}}{{baseUrl}}/public/product/SKU0000001/images/downloadFile/4c5e28fe-892d-4fa4-acf4-5d0e9cb51576.png",
-									"host": [
-										"{{hostProduct}}{{baseUrl}}"
-									],
-									"path": [
-										"public",
-										"product",
-										"SKU0000001",
-										"images",
-										"downloadFile",
-										"4c5e28fe-892d-4fa4-acf4-5d0e9cb51576.png"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "Private",
-					"item": [
-						{
-							"name": "Upload one photo",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "file",
-											"type": "file",
-											"src": "/C:/Users/Pedro/Desktop/Faculdade/2Ano/2Semestre/PSOFT/psoft-project-g1/src/main/resources/assets/ferro.jpg"
-										}
-									]
-								},
-								"url": {
-									"raw": "{{hostProduct}}{{baseUrl}}/admin/product/SKU0000001/image",
-									"host": [
-										"{{hostProduct}}{{baseUrl}}"
-									],
-									"path": [
-										"admin",
-										"product",
-										"SKU0000001",
-										"image"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Upload a Set of Images",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "files",
-											"type": "file",
-											"src": "/C:/Users/Tiago Oliveira/IdeaProjects/psoft-project-g1/src/main/resources/assets/madeira.jpg"
-										},
-										{
-											"key": "files",
-											"type": "file",
-											"src": "/C:/Users/Tiago Oliveira/IdeaProjects/psoft-project-g1/src/main/resources/assets/madeira_2.jpg"
-										}
-									]
-								},
-								"url": {
-									"raw": "{{hostProduct}}{{baseUrl}}/admin/product/SKU0000001/images",
-									"host": [
-										"{{hostProduct}}{{baseUrl}}"
-									],
-									"path": [
-										"admin",
-										"product",
-										"SKU0000001",
-										"images"
 									]
 								}
 							},

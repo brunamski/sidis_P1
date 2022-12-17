@@ -21,4 +21,8 @@ public interface VoteService {
     VoteDTO vote(Long reviewId, HttpServletRequest request, Vote newVote) throws IOException, InterruptedException;
 
     Review create(Review newReview);
+
+    void deleteById(Long reviewId);
+
+    Review partialUpdate(final Review review);
 }

@@ -4,92 +4,564 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2ae80fd-bf6b-4d00-be69-ecbdde531680" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+    <list default="true" id="cad0091b-81f1-4e58-8d71-4f09ebfdfedf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/classes/assets/ACME.postman_environment.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/classes/assets/PSOFT PROJECT G1.postman_collection.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/AuthenticationApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/SpringConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/auth/api/AuthApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/auth/api/AuthRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/bootstrap/UserBootstrapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/exceptions/FileStorageException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/exceptions/MyResourceNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/usermanagement/api/CreateUserRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/usermanagement/api/UpdateUserRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/usermanagement/api/UserAdminApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/usermanagement/api/UserEditMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/usermanagement/api/UserEditMapperImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/usermanagement/api/UserView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/usermanagement/api/UserViewMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/usermanagement/api/UserViewMapperImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/usermanagement/models/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/usermanagement/models/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/usermanagement/repositories/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/usermanagement/services/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/classes/com/example/projeto/utils/Utils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/classes/rsa.private.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/classes/rsa.public.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/generated-sources/annotations/com/example/projeto/usermanagement/api/UserEditMapperImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/generated-sources/annotations/com/example/projeto/usermanagement/api/UserViewMapperImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/test-classes/com/example/projeto/UserTests$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/test-classes/com/example/projeto/UserTests$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/test-classes/com/example/projeto/UserTests$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/test-classes/com/example/projeto/UserTests$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/target/test-classes/com/example/projeto/UserTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/assets/ACME.postman_environment.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/assets/PSOFT PROJECT G1.postman_collection.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/assets/ferro.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/assets/madeira.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/assets/madeira_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/Products2COMApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/SpringConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/controllers/ProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/domain/models/AggregatedRatingDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/domain/models/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/domain/models/ProductDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/domain/repositories/ProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/domain/services/ProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/domain/services/ProductServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/exceptions/FileStorageException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/exceptions/MyResourceNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/rabbitmq/Products2COMReceiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/rabbitmq/Products2COMSender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/rabbitmq/RabbitConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/usermanagement/models/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/usermanagement/models/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/usermanagement/repositories/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/com/example/projeto/utils/Utils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/rsa.private.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/rsa.public.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/uploads/02132613-517e-45f2-bed5-107c12a25bd1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/uploads/2fdea76e-453a-406c-a92c-3a1e881cc65d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/uploads/57050635-b5d5-4e8e-8797-406cb7a0feb3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/classes/uploads/e2eaf5a0-7dca-4114-b3a9-c7e6f59ac86e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/ProductTests$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/ProductTests$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/ProductTests$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/ProductTests$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/ProductTests$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/ProductTests$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/ProductTests$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/ProductTests$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/ProductTests$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/ProductTests$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/ProductTests$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/ProductTests$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/ProductTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/UserTests$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/UserTests$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/UserTests$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/UserTests$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/target/test-classes/com/example/projeto/UserTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/assets/ACME.postman_environment.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/assets/PSOFT PROJECT G1.postman_collection.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/assets/ferro.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/assets/madeira.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/assets/madeira_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/Products2GETApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/SpringConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/controllers/ProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/domain/models/AggregatedRating.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/domain/models/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/domain/models/ProductDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/domain/models/ProductDTOcat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/domain/models/Review.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/domain/models/Status.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/domain/repositories/ProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/domain/repositories/ReviewRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/domain/services/ProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/domain/services/ProductServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/exceptions/FileStorageException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/exceptions/MyResourceNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/rabbitmq/Products2GETReceiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/rabbitmq/RabbitConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/usermanagement/models/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/usermanagement/models/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/usermanagement/repositories/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/com/example/projeto/utils/Utils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/rsa.private.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/rsa.public.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/uploads/02132613-517e-45f2-bed5-107c12a25bd1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/uploads/2fdea76e-453a-406c-a92c-3a1e881cc65d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/uploads/57050635-b5d5-4e8e-8797-406cb7a0feb3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/classes/uploads/e2eaf5a0-7dca-4114-b3a9-c7e6f59ac86e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/ProductTests$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/ProductTests$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/ProductTests$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/ProductTests$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/ProductTests$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/ProductTests$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/ProductTests$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/ProductTests$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/ProductTests$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/ProductTests$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/ProductTests$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/ProductTests$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/ProductTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/UserTests$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/UserTests$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/UserTests$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/UserTests$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/target/test-classes/com/example/projeto/UserTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/assets/ACME.postman_environment.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/assets/PSOFT PROJECT G1.postman_collection.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/assets/ferro.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/assets/madeira.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/assets/madeira_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/ProductsCOMApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/SpringConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/controllers/ProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/domain/models/AggregatedRatingDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/domain/models/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/domain/models/ProductDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/domain/repositories/ProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/domain/services/ProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/domain/services/ProductServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/exceptions/FileStorageException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/exceptions/MyResourceNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/rabbitmq/ProductsCOMReceiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/rabbitmq/ProductsCOMSender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/rabbitmq/RabbitConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/usermanagement/models/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/usermanagement/models/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/usermanagement/repositories/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/com/example/projeto/utils/Utils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/rsa.private.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/rsa.public.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/uploads/02132613-517e-45f2-bed5-107c12a25bd1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/uploads/2fdea76e-453a-406c-a92c-3a1e881cc65d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/uploads/57050635-b5d5-4e8e-8797-406cb7a0feb3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/classes/uploads/e2eaf5a0-7dca-4114-b3a9-c7e6f59ac86e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/ProductTests$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/ProductTests$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/ProductTests$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/ProductTests$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/ProductTests$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/ProductTests$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/ProductTests$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/ProductTests$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/ProductTests$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/ProductTests$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/ProductTests$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/ProductTests$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/ProductTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/UserTests$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/UserTests$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/UserTests$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/UserTests$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/target/test-classes/com/example/projeto/UserTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/src/main/java/com/example/projeto/rabbitmq/ProductsGETReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsGET/src/main/java/com/example/projeto/rabbitmq/ProductsGETReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/assets/ACME.postman_environment.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/assets/PSOFT PROJECT G1.postman_collection.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/assets/ferro.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/assets/madeira.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/assets/madeira_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/ProductsGETApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/SpringConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/controllers/ProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/domain/models/AggregatedRating.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/domain/models/AggregatedRatingDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/domain/models/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/domain/models/ProductDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/domain/models/ProductDTOcat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/domain/models/Review.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/domain/models/Status.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/domain/repositories/ProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/domain/repositories/ReviewRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/domain/services/ProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/domain/services/ProductServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/domain/views/CatalogView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/exceptions/FileStorageException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/exceptions/MyResourceNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/rabbitmq/ProductsGETReceiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/rabbitmq/RabbitConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/usermanagement/models/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/usermanagement/models/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/usermanagement/repositories/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/com/example/projeto/utils/Utils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/rsa.private.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/rsa.public.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/uploads/02132613-517e-45f2-bed5-107c12a25bd1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/uploads/2fdea76e-453a-406c-a92c-3a1e881cc65d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/uploads/57050635-b5d5-4e8e-8797-406cb7a0feb3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/classes/uploads/e2eaf5a0-7dca-4114-b3a9-c7e6f59ac86e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/ProductTests$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/ProductTests$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/ProductTests$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/ProductTests$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/ProductTests$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/ProductTests$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/ProductTests$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/ProductTests$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/ProductTests$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/ProductTests$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/ProductTests$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/ProductTests$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/ProductTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/UserTests$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/UserTests$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/UserTests$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/UserTests$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/target/test-classes/com/example/projeto/UserTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/Reviews2COMApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/SpringConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/controllers/ReviewController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/domain/models/AggregatedRating.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/domain/models/AggregatedRatingDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/domain/models/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/domain/models/Review.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/domain/models/ReviewDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/domain/models/ReviewDTOStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/domain/models/ReviewDTOcat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/domain/models/Status.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/domain/models/Vote.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/domain/repositories/ProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/domain/repositories/ReviewRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/domain/repositories/VoteRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/domain/services/ReviewService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/domain/services/ReviewServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/exceptions/FileStorageException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/exceptions/MyResourceNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/rabbitmq/RabbitConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/rabbitmq/Reviews2COMReceiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/rabbitmq/Reviews2COMSender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/usermanagement/models/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/usermanagement/models/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/usermanagement/repositories/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/com/example/projeto/utils/Utils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/rsa.private.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/classes/rsa.public.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/test-classes/com/example/projeto/UserTests$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/test-classes/com/example/projeto/UserTests$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/test-classes/com/example/projeto/UserTests$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/test-classes/com/example/projeto/UserTests$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/target/test-classes/com/example/projeto/UserTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/Reviews2GETApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/SpringConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/controllers/ReviewController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/domain/models/AggregatedRating.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/domain/models/AggregatedRatingDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/domain/models/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/domain/models/Review.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/domain/models/ReviewDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/domain/models/ReviewDTOStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/domain/models/ReviewDTOcat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/domain/models/Status.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/domain/models/Vote.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/domain/repositories/ReviewRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/domain/repositories/VoteRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/domain/services/ReviewService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/domain/services/ReviewServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/domain/views/ReviewView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/exceptions/FileStorageException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/exceptions/MyResourceNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/rabbitmq/RabbitConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/rabbitmq/Reviews2GETReceiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/usermanagement/models/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/usermanagement/models/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/usermanagement/repositories/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/com/example/projeto/utils/Utils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/rsa.private.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/classes/rsa.public.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/test-classes/com/example/projeto/UserTests$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/test-classes/com/example/projeto/UserTests$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/test-classes/com/example/projeto/UserTests$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/test-classes/com/example/projeto/UserTests$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/target/test-classes/com/example/projeto/UserTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/ReviewsCOMApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/SpringConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/controllers/ReviewController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/domain/models/AggregatedRating.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/domain/models/AggregatedRatingDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/domain/models/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/domain/models/Review.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/domain/models/ReviewDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/domain/models/ReviewDTOStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/domain/models/ReviewDTOcat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/domain/models/Status.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/domain/models/Vote.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/domain/repositories/ProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/domain/repositories/ReviewRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/domain/repositories/VoteRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/domain/services/ReviewService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/domain/services/ReviewServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/exceptions/FileStorageException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/exceptions/MyResourceNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/rabbitmq/RabbitConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/rabbitmq/ReviewsCOMReceiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/rabbitmq/ReviewsCOMSender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/usermanagement/models/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/usermanagement/models/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/usermanagement/repositories/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/com/example/projeto/utils/Utils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/rsa.private.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/classes/rsa.public.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/test-classes/com/example/projeto/UserTests$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/test-classes/com/example/projeto/UserTests$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/test-classes/com/example/projeto/UserTests$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/test-classes/com/example/projeto/UserTests$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/target/test-classes/com/example/projeto/UserTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/ReviewsGETApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/SpringConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/controllers/ReviewController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/domain/models/AggregatedRating.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/domain/models/AggregatedRatingDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/domain/models/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/domain/models/Review.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/domain/models/ReviewDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/domain/models/ReviewDTOStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/domain/models/ReviewDTOcat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/domain/models/Status.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/domain/models/Vote.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/domain/repositories/ReviewRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/domain/repositories/VoteRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/domain/services/ReviewService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/domain/services/ReviewServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/domain/views/ReviewView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/exceptions/FileStorageException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/exceptions/MyResourceNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/rabbitmq/RabbitConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/rabbitmq/ReviewsGETReceiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/usermanagement/models/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/usermanagement/models/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/usermanagement/repositories/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/com/example/projeto/utils/Utils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/rsa.private.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/classes/rsa.public.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/test-classes/com/example/projeto/UserTests$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/test-classes/com/example/projeto/UserTests$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/test-classes/com/example/projeto/UserTests$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/test-classes/com/example/projeto/UserTests$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/target/test-classes/com/example/projeto/UserTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/services/VoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/services/VoteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/Votes2COMReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/Votes2COMReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/Votes2COMSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/Votes2COMSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/SpringConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/Votes2COMApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/controllers/VoteController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/domain/models/Review.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/domain/models/Status.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/domain/models/Vote.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/domain/models/VoteDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/domain/repositories/ReviewRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/domain/repositories/VoteRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/domain/services/VoteService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/domain/services/VoteServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/exceptions/FileStorageException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/exceptions/MyResourceNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/rabbitmq/RabbitConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/rabbitmq/Votes2COMReceiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/rabbitmq/Votes2COMSender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/usermanagement/models/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/usermanagement/models/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/usermanagement/repositories/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/target/classes/com/example/projeto/utils/Utils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/target/classes/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/target/classes/rsa.private.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/target/classes/rsa.public.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/services/VoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/services/VoteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/VotesCOMReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/VotesCOMReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/VotesCOMSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/VotesCOMSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/SpringConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/VotesCOMApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/controllers/VoteController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/domain/models/Review.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/domain/models/Status.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/domain/models/Vote.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/domain/models/VoteDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/domain/repositories/ReviewRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/domain/repositories/VoteRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/domain/services/VoteService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/domain/services/VoteServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/exceptions/FileStorageException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/exceptions/MyResourceNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/rabbitmq/RabbitConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/rabbitmq/VotesCOMReceiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/rabbitmq/VotesCOMSender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/usermanagement/models/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/usermanagement/models/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/usermanagement/repositories/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/target/classes/com/example/projeto/utils/Utils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/target/classes/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/target/classes/rsa.private.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/target/classes/rsa.public.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/SpringConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/VotesGETApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/controllers/VoteController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/domain/models/Review.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/domain/models/Status.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/domain/models/Vote.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/domain/models/VoteDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/domain/repositories/VoteRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/domain/services/VoteService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/domain/services/VoteServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/exceptions/FileStorageException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/exceptions/MyResourceNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/exceptions/RestResponseEntityExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/usermanagement/models/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/usermanagement/models/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/usermanagement/repositories/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/target/classes/com/example/projeto/utils/Utils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/target/classes/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/target/classes/rsa.private.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/target/classes/rsa.public.key" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="JpbToolWindowState">
-    <option name="myId2FirstActivated">
-      <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
-      </map>
-    </option>
-    <option name="myId2Visible">
-      <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
-      </map>
-    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2IXxeCuvadWybJ8lIk0meOstplR" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2IBVjmG9uYtzOdzvVDXbiFUqKn4" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "spring.configuration.checksum": "b79f337ab82c7ce4e360feec2ed39ca7"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Votes2COM" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\bruna\OneDrive\Ambiente de Trabalho\sidis_P1\ReviewsCOM\src\main\java\com\example\projeto" />
+      <recent name="C:\Users\Tiago Oliveira\IdeaProjects\SISDIS\sidis_P1\VotesCOM\src\main\java\com\example\projeto" />
+      <recent name="C:\Users\Tiago Oliveira\IdeaProjects\SISDIS\sidis_P1\Products2COM\src\main\java\com\example\projeto" />
+      <recent name="C:\Users\Tiago Oliveira\IdeaProjects\SISDIS\sidis_P1\Products2GET\src\main\java\com\example\projeto" />
+      <recent name="C:\Users\Tiago Oliveira\IdeaProjects\SISDIS\sidis_P1\ProductsGET\src\main\java\com\example\projeto" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.projeto.domain.repositories" />
+      <recent name="com.example.projeto.domain.models" />
     </key>
   </component>
-  <component name="RunManager" selected="Compound.sidis">
-    <configuration default="true" type="CompoundRunConfigurationType">
-      <toRun name="Products2COMApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="ProductsCOMApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="VotesGETApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="Products2GETApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="Reviews2GETApplication" type="SpringBootApplicationConfigurationType" />
+  <component name="RunManager" selected="Compound.sidis_project">
+    <configuration name="sidis_project" type="CompoundRunConfigurationType">
       <toRun name="AuthenticationApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="ReviewsGETApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="Reviews2COMApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="VotesCOMApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="ProductsGETApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="ReviewsCOMApplication" type="SpringBootApplicationConfigurationType" />
-      <method v="2" />
-    </configuration>
-    <configuration name="sidis" type="CompoundRunConfigurationType">
       <toRun name="Products2COMApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="ProductsCOMApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="VotesGETApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="Products2GETApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="Reviews2GETApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="AuthenticationApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="ReviewsGETApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="Reviews2COMApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="VotesCOMApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="ProductsCOMApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="ProductsGETApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="Reviews2COMApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="Reviews2GETApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="ReviewsCOMApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="ReviewsGETApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="Votes2COMApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="VotesCOMApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="VotesGETApplication" type="SpringBootApplicationConfigurationType" />
       <method v="2" />
     </configuration>
     <configuration name="AuthenticationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="projeto" />
-      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.AuthenticationApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -97,6 +569,7 @@
     <configuration name="Products2COMApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="projeto (8)" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.Products2COMApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -104,6 +577,7 @@
     <configuration name="Products2GETApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="projeto (7)" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.Products2GETApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -111,6 +585,7 @@
     <configuration name="ProductsCOMApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="projeto (1)" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.ProductsCOMApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -118,6 +593,7 @@
     <configuration name="ProductsGETApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="projeto (2)" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.ProductsGETApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -125,6 +601,7 @@
     <configuration name="Reviews2COMApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="projeto (9)" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.Reviews2COMApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -132,6 +609,7 @@
     <configuration name="Reviews2GETApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="projeto (10)" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.Reviews2GETApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -139,6 +617,7 @@
     <configuration name="ReviewsCOMApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="projeto (3)" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.ReviewsCOMApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -146,6 +625,7 @@
     <configuration name="ReviewsGETApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="projeto (4)" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.ReviewsGETApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -153,6 +633,7 @@
     <configuration name="Votes2COMApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="projeto (11)" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.Votes2COMApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -160,6 +641,7 @@
     <configuration name="VotesCOMApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="projeto (5)" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.VotesCOMApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -167,21 +649,22 @@
     <configuration name="VotesGETApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="projeto (6)" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.VotesGETApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Compound.sidis" />
+      <item itemvalue="Compound.sidis_project" />
       <item itemvalue="Spring Boot.AuthenticationApplication" />
-      <item itemvalue="Spring Boot.Products2COMApplication" />
-      <item itemvalue="Spring Boot.Products2GETApplication" />
       <item itemvalue="Spring Boot.ProductsCOMApplication" />
       <item itemvalue="Spring Boot.ProductsGETApplication" />
-      <item itemvalue="Spring Boot.Reviews2COMApplication" />
-      <item itemvalue="Spring Boot.Reviews2GETApplication" />
+      <item itemvalue="Spring Boot.Products2GETApplication" />
+      <item itemvalue="Spring Boot.Products2COMApplication" />
       <item itemvalue="Spring Boot.ReviewsCOMApplication" />
       <item itemvalue="Spring Boot.ReviewsGETApplication" />
+      <item itemvalue="Spring Boot.Reviews2COMApplication" />
+      <item itemvalue="Spring Boot.Reviews2GETApplication" />
       <item itemvalue="Spring Boot.VotesCOMApplication" />
       <item itemvalue="Spring Boot.VotesGETApplication" />
       <item itemvalue="Spring Boot.Votes2COMApplication" />
@@ -190,17 +673,36 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a2ae80fd-bf6b-4d00-be69-ecbdde531680" name="Changes" comment="" />
-      <created>1670341848726</created>
+      <changelist id="cad0091b-81f1-4e58-8d71-4f09ebfdfedf" name="Changes" comment="" />
+      <created>1669655109780</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1670341848726</updated>
-      <workItem from="1670341874521" duration="2449000" />
-      <workItem from="1670782731655" duration="697000" />
-      <workItem from="1671034817035" duration="641000" />
-      <workItem from="1671188693118" duration="2106000" />
-      <workItem from="1671214896592" duration="1152000" />
-      <workItem from="1671217582165" duration="1860000" />
+      <updated>1669655109780</updated>
+      <workItem from="1669655114066" duration="37000" />
+      <workItem from="1669655169069" duration="1195000" />
+      <workItem from="1669736659234" duration="7997000" />
+      <workItem from="1669796133053" duration="642000" />
+      <workItem from="1669820713258" duration="4965000" />
+      <workItem from="1669905191999" duration="3935000" />
+      <workItem from="1669991480734" duration="595000" />
+      <workItem from="1670002082981" duration="23404000" />
+      <workItem from="1670166881669" duration="7902000" />
+      <workItem from="1670188024981" duration="6862000" />
+      <workItem from="1670229786265" duration="984000" />
+      <workItem from="1670240463105" duration="132000" />
+      <workItem from="1670258534941" duration="5649000" />
+      <workItem from="1670345633013" duration="703000" />
+      <workItem from="1670400965900" duration="7035000" />
+      <workItem from="1670428989931" duration="170000" />
+      <workItem from="1670596278286" duration="8131000" />
+      <workItem from="1670778180452" duration="10059000" />
+      <workItem from="1670834196889" duration="2161000" />
+      <workItem from="1670843809670" duration="1289000" />
+      <workItem from="1670857359390" duration="3943000" />
+      <workItem from="1671005694203" duration="3312000" />
+      <workItem from="1671200706630" duration="8386000" />
+      <workItem from="1671281575717" duration="1831000" />
+      <workItem from="1671286958828" duration="4231000" />
     </task>
     <servers />
   </component>
@@ -217,5 +719,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.apache.commons.logging.LogAdapter$Slf4jLocationAwareLog" memberName="logger" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

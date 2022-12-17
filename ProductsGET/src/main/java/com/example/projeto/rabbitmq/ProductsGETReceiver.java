@@ -38,7 +38,7 @@ public class ProductsGETReceiver {
     }
 
     @RabbitListener(queues = "productsGETrevup")
-    public void receiverUpdate(Review r) throws IOException {
+    public void receiverUpdate(Review r) {
         productService.partialUpdate(r);
         System.out.println(" [x] Updated review '" + r + "'");
     }

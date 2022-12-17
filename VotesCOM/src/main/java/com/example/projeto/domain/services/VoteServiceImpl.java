@@ -46,21 +46,26 @@ public class VoteServiceImpl implements VoteService{
 
     @Override
     public VoteDTO vote(Long reviewId, HttpServletRequest request, Vote newVote) throws IOException, InterruptedException {
-        boolean review = reviewIsPresent(reviewId);
-        if (review == true) {
-            newVote.setUserId(utils.getUserIdByToken(request));
-            newVote.setReviewId(reviewId);
-            final var vote = create(newVote);
-            votesCOMSender.send(vote);
-            VoteDTO voteDTO = new VoteDTO(vote.getVoteId(),vote.getUserId(), vote.getReviewId(), vote.isVote(), vote.getReason());
-            return voteDTO;
+        boolean reviewIsPresent = reviewIsPresent(reviewId);
+        if (reviewIsPresent == true) {
+            Review review = reviewRepository.findReviewById(reviewId).get();
+            Status status = review.getStatus();
+            if (status == Status.APPROVED) {
+                newVote.setUserId(utils.getUserIdByToken(request));
+                newVote.setReviewId(reviewId);
+                final var vote = create(newVote);
+                votesCOMSender.send(vote);
+                VoteDTO voteDTO = new VoteDTO(vote.getVoteId(),vote.getUserId(), vote.getReviewId(), vote.isVote(), vote.getReason());
+                return voteDTO;
+            }
+            throw new ResponseStatusException(HttpStatus.UNPROCESSABLE_ENTITY, "Review not APPROVED");
         }
         throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Review not found!");
     }
 
     public boolean reviewIsPresent(Long reviewId) {
-        Optional<Review> review = reviewRepository.findReviewById(reviewId);
-        if(review.isPresent()){
+        final var optionalReview = reviewRepository.findReviewById(reviewId);
+        if(optionalReview.isPresent()){
             return true;
         }
         return false;
@@ -69,5 +74,27 @@ public class VoteServiceImpl implements VoteService{
     @Override
     public Review create(Review newReview){
         return reviewRepository.save(newReview);
+    }
+
+    @Override
+    public Review partialUpdate(final Review review) {
+        // first let's check if the object exists so we don't create a new object with
+        // save
+        final var rev = reviewRepository.findById(review.getReviewId())
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Review Not Found"));
+
+        // since we got the object from the database we can check the version in memory
+        // and apply the patch
+        rev.applyPatch(review);
+
+        // in the meantime some other user might have changed this object on the
+        // database, so concurrency control will still be applied when we try to save
+        // this updated object
+        return reviewRepository.save(rev);
+    }
+
+    @Override
+    public void deleteById(final Long reviewId) {
+        reviewRepository.deleteByIdIfMatch(reviewId);
     }
 }
