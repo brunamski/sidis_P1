@@ -744,20 +744,43 @@
 										],
 										"type": "text/javascript"
 									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"function randomSKU(length=1){\r",
+											"    let randomSKU = \"SKU\";\r",
+											"    for (let i = 0; i < length; i++){\r",
+											"        randomSKU += pm.variables.replaceIn(randomInt(1000000, 9999999));\r",
+											"    }\r",
+											"    return randomSKU;\r",
+											"}\r",
+											"\r",
+											"function randomInt(min, max) {\r",
+											"   return Math.round((Math.random() * Math.abs(max - min)) + min);\r",
+											"}\r",
+											"\r",
+											"STRING_LEN = 1\r",
+											"pm.environment.set('randomSKU', randomSKU(STRING_LEN));\r",
+											""
+										],
+										"type": "text/javascript"
+									}
 								}
 							],
 							"request": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000007",
+									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/{{randomSKU}}",
 									"host": [
 										"{{hostProductsGET}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
 										"product",
-										"SKU0000007"
+										"{{randomSKU}}"
 									]
 								}
 							},
@@ -799,7 +822,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"designation\": \"FIFA23\",\r\n    \"description\": \"Jogo bugador de mentes\",\r\n    \"sku\": \"SKU0000007\"\r\n}",
+									"raw": "{\r\n    \"designation\": \"FIFA23\",\r\n    \"description\": \"Jogo bugador de mentes\",\r\n    \"sku\": \"{{randomSKU}}\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -838,14 +861,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000007",
+									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/{{randomSKU}}",
 									"host": [
 										"{{hostProductsGET}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
 										"product",
-										"SKU0000007"
+										"{{randomSKU}}"
 									]
 								}
 							},
@@ -870,14 +893,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostProducts2GET}}{{baseUrl}}/public/product/SKU0000007",
+									"raw": "{{hostProducts2GET}}{{baseUrl}}/public/product/{{randomSKU}}",
 									"host": [
 										"{{hostProducts2GET}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
 										"product",
-										"SKU0000007"
+										"{{randomSKU}}"
 									]
 								}
 							},
@@ -913,7 +936,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"designation\": \"FIFA23\",\r\n    \"description\": \"Jogo bugador de mentes\",\r\n    \"sku\": \"SKU0000007\"\r\n}",
+									"raw": "{\r\n    \"designation\": \"FIFA23\",\r\n    \"description\": \"Jogo bugador de mentes\",\r\n    \"sku\": \"{{randomSKU}}\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
