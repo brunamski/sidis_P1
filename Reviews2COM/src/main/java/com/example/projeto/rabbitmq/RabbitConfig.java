@@ -15,323 +15,84 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitConfig {
 
-    private String myQueue = "reviews2COM";
-
-    private String myQueue2 = "reviews2COMdel";
-
-    private String myQueue3 = "reviews2COMup";
-
-    private String Queue1 = "reviewsGET";
-
-    private String Queue2 = "reviews2GET";
-
-    private String Queue3 = "reviewsCOM";
-
-    private String Queue4 = "reviewsGETdel";
-
-    private String Queue5 = "reviews2GETdel";
-
-    private String Queue6 = "reviewsCOMdel";
-
-    private String Queue7 = "reviewsGETup";
-
-    private String Queue8 = "reviews2GETup";
-
-    private String Queue9 = "reviewsCOMup";
-
-    private String Queue10 = "productsGETrev";
-
-    private String Queue11 = "products2GETrev";
-
-    private String Queue12 = "productsGETrevdel";
-
-    private String Queue13 = "products2GETrevdel";
-
-    private String Queue14 = "productsGETrevup";
-
-    private String Queue15 = "products2GETrevup";
-
-    private String Queue16 = "votesCOMrev";
-
-    private String Queue17 = "votes2COMrev";
-
-    private String Queue18 = "votesCOMrevdel";
-
-    private String Queue19 = "votes2COMrevdel";
-
-    private String Queue20 = "votesCOMrevup";
-
-    private String Queue21 = "votes2COMrevup";
-
-    private String exchange = "reviews2";
-
-    private String exchangedel = "reviews2del";
-
-    private String exchangeup = "reviews2up";
-
+    @Bean
+    public Queue autoDeleteQueue1() {
+        return new AnonymousQueue();
+    }
 
     @Bean
-    @Qualifier("create")
     public FanoutExchange fanout() {
-        return new FanoutExchange(exchange);
+        return new FanoutExchange("products_create");
     }
 
     @Bean
-    @Qualifier("delete")
-    public FanoutExchange fanoutDel() {
-        return new FanoutExchange(exchangedel);
+    public Queue autoDeleteQueue2() {
+        return new AnonymousQueue();
     }
 
     @Bean
-    @Qualifier("update")
-    public FanoutExchange fanoutUp() {
-        return new FanoutExchange(exchangeup);
+    public FanoutExchange reviewsFanout() {
+        return new FanoutExchange("reviews_create");
     }
 
     @Bean
-    public Queue myQueue() {
-        return new Queue(myQueue, false);
+    public Queue autoDeleteQueue3() {
+        return new AnonymousQueue();
     }
 
     @Bean
-    public Queue myQueue2() {
-        return new Queue(myQueue2, false);
+    public FanoutExchange reviewsUpFanout() {
+        return new FanoutExchange("reviews_update");
     }
 
     @Bean
-    public Queue myQueue3() {
-        return new Queue(myQueue3, false);
+    public Queue autoDeleteQueue4() {
+        return new AnonymousQueue();
     }
 
     @Bean
-    public Queue queue1() {
-        return new Queue(Queue1, false);
+    public FanoutExchange reviewsDelFanout() {
+        return new FanoutExchange("reviews_delete");
     }
 
     @Bean
-    public Queue queue2() {
-        return new Queue(Queue2, false);
+    public Queue autoDeleteQueue5() {
+        return new AnonymousQueue();
     }
 
     @Bean
-    public Queue queue3() {
-        return new Queue(Queue3, false);
+    public FanoutExchange votesFanout() {
+        return new FanoutExchange("votes_create");
     }
 
     @Bean
-    public Queue queue4() {
-        return new Queue(Queue4, false);
+    public Binding binding1(FanoutExchange fanout,
+                            Queue autoDeleteQueue1) {
+        return BindingBuilder.bind(autoDeleteQueue1).to(fanout);
     }
 
     @Bean
-    public Queue queue5() {
-        return new Queue(Queue5, false);
+    public Binding binding2(FanoutExchange reviewsFanout,
+                            Queue autoDeleteQueue2) {
+        return BindingBuilder.bind(autoDeleteQueue2).to(reviewsFanout);
     }
 
     @Bean
-    public Queue queue6() {
-        return new Queue(Queue6, false);
+    public Binding binding3(FanoutExchange reviewsUpFanout,
+                            Queue autoDeleteQueue3) {
+        return BindingBuilder.bind(autoDeleteQueue3).to(reviewsUpFanout);
     }
 
     @Bean
-    public Queue queue7() {
-        return new Queue(Queue7, false);
+    public Binding binding4(FanoutExchange reviewsDelFanout,
+                            Queue autoDeleteQueue4) {
+        return BindingBuilder.bind(autoDeleteQueue4).to(reviewsDelFanout);
     }
 
     @Bean
-    public Queue queue8() {
-        return new Queue(Queue8, false);
-    }
-
-    @Bean
-    public Queue queue9() {
-        return new Queue(Queue9, false);
-    }
-
-    @Bean
-    public Queue queue10() {
-        return new Queue(Queue10, false);
-    }
-
-    @Bean
-    public Queue queue11() {
-        return new Queue(Queue11, false);
-    }
-
-    @Bean
-    public Queue queue12() {
-        return new Queue(Queue12, false);
-    }
-
-    @Bean
-    public Queue queue13() {
-        return new Queue(Queue13, false);
-    }
-
-    @Bean
-    public Queue queue14() {
-        return new Queue(Queue14, false);
-    }
-
-    @Bean
-    public Queue queue15() {
-        return new Queue(Queue15, false);
-    }
-
-    @Bean
-    public Queue queue16() {
-        return new Queue(Queue16, false);
-    }
-
-    @Bean
-    public Queue queue17() {
-        return new Queue(Queue17, false);
-    }
-
-    @Bean
-    public Queue queue18() {
-        return new Queue(Queue18, false);
-    }
-
-    @Bean
-    public Queue queue19() {
-        return new Queue(Queue19, false);
-    }
-
-    @Bean
-    public Queue queue20() {
-        return new Queue(Queue20, false);
-    }
-
-    @Bean
-    public Queue queue21() {
-        return new Queue(Queue21, false);
-    }
-
-    @Bean
-    public Binding binding1(@Qualifier("create") FanoutExchange exchange,
-                            Queue queue1) {
-        return BindingBuilder.bind(queue1).to(exchange);
-    }
-
-    @Bean
-    public Binding binding2(@Qualifier("create") FanoutExchange exchange,
-                            Queue queue2) {
-        return BindingBuilder.bind(queue2).to(exchange);
-    }
-
-    @Bean
-    public Binding binding3(@Qualifier("create") FanoutExchange exchange,
-                            Queue queue3) {
-        return BindingBuilder.bind(queue3).to(exchange);
-    }
-
-    @Bean
-    public Binding binding4(@Qualifier("delete") FanoutExchange exchangedel,
-                            Queue queue4) {
-        return BindingBuilder.bind(queue4).to(exchangedel);
-    }
-
-    @Bean
-    public Binding binding5(@Qualifier("delete") FanoutExchange exchangedel,
-                            Queue queue5) {
-        return BindingBuilder.bind(queue5).to(exchangedel);
-    }
-
-    @Bean
-    public Binding binding6(@Qualifier("delete") FanoutExchange exchangedel,
-                            Queue queue6) {
-        return BindingBuilder.bind(queue6).to(exchangedel);
-    }
-
-    @Bean
-    public Binding binding7(@Qualifier("update") FanoutExchange exchangeup,
-                            Queue queue7) {
-        return BindingBuilder.bind(queue7).to(exchangeup);
-    }
-
-    @Bean
-    public Binding binding8(@Qualifier("update") FanoutExchange exchangeup,
-                            Queue queue8) {
-        return BindingBuilder.bind(queue8).to(exchangeup);
-    }
-
-    @Bean
-    public Binding binding9(@Qualifier("update") FanoutExchange exchangeup,
-                            Queue queue9) {
-        return BindingBuilder.bind(queue9).to(exchangeup);
-    }
-
-    @Bean
-    public Binding binding10(@Qualifier("create") FanoutExchange exchange,
-                            Queue queue10) {
-        return BindingBuilder.bind(queue10).to(exchange);
-    }
-
-    @Bean
-    public Binding binding11(@Qualifier("create") FanoutExchange exchange,
-                            Queue queue11) {
-        return BindingBuilder.bind(queue11).to(exchange);
-    }
-
-    @Bean
-    public Binding binding12(@Qualifier("delete") FanoutExchange exchangedel,
-                            Queue queue12) {
-        return BindingBuilder.bind(queue12).to(exchangedel);
-    }
-
-    @Bean
-    public Binding binding13(@Qualifier("delete") FanoutExchange exchangedel,
-                            Queue queue13) {
-        return BindingBuilder.bind(queue13).to(exchangedel);
-    }
-
-    @Bean
-    public Binding binding14(@Qualifier("update") FanoutExchange exchangeup,
-                             Queue queue14) {
-        return BindingBuilder.bind(queue14).to(exchangeup);
-    }
-
-    @Bean
-    public Binding binding15(@Qualifier("update") FanoutExchange exchangeup,
-                             Queue queue15) {
-        return BindingBuilder.bind(queue15).to(exchangeup);
-    }
-
-    @Bean
-    public Binding binding16(@Qualifier("create") FanoutExchange exchange,
-                             Queue queue16) {
-        return BindingBuilder.bind(queue16).to(exchange);
-    }
-
-    @Bean
-    public Binding binding17(@Qualifier("create") FanoutExchange exchange,
-                             Queue queue17) {
-        return BindingBuilder.bind(queue17).to(exchange);
-    }
-
-    @Bean
-    public Binding binding18(@Qualifier("delete") FanoutExchange exchangedel,
-                             Queue queue18) {
-        return BindingBuilder.bind(queue18).to(exchangedel);
-    }
-
-    @Bean
-    public Binding binding19(@Qualifier("delete") FanoutExchange exchangedel,
-                             Queue queue19) {
-        return BindingBuilder.bind(queue19).to(exchangedel);
-    }
-
-    @Bean
-    public Binding binding20(@Qualifier("update") FanoutExchange exchangeup,
-                             Queue queue20) {
-        return BindingBuilder.bind(queue20).to(exchangeup);
-    }
-
-    @Bean
-    public Binding binding21(@Qualifier("update") FanoutExchange exchangeup,
-                             Queue queue21) {
-        return BindingBuilder.bind(queue21).to(exchangeup);
+    public Binding binding5(FanoutExchange votesFanout,
+                            Queue autoDeleteQueue5) {
+        return BindingBuilder.bind(autoDeleteQueue5).to(votesFanout);
     }
 
     @Bean

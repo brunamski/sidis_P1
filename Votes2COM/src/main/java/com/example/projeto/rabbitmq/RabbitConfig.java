@@ -14,84 +14,68 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitConfig {
 
-    private String myQueue = "votes2COM";
-
-    private String Queue1 = "reviewsGETvote";
-
-    private String Queue2 = "reviews2GETvote";
-
-    private String Queue3 = "reviewsCOMvote";
-
-    private String Queue4 = "reviews2COMvote";
-
-    private String Queue5 = "votesCOM";
-
-    private String exchange = "votes2";
-
-
     @Bean
-    public FanoutExchange fanout() {
-        return new FanoutExchange(exchange);
+    public Queue autoDeleteQueue2() {
+        return new AnonymousQueue();
     }
 
     @Bean
-    public Queue myQueue() {
-        return new Queue(myQueue, false);
+    public FanoutExchange reviewsFanout() {
+        return new FanoutExchange("reviews_create");
     }
 
     @Bean
-    public Queue queue1() {
-        return new Queue(Queue1, false);
+    public Queue autoDeleteQueue3() {
+        return new AnonymousQueue();
     }
 
     @Bean
-    public Queue queue2() {
-        return new Queue(Queue2, false);
+    public FanoutExchange reviewsUpFanout() {
+        return new FanoutExchange("reviews_update");
     }
 
     @Bean
-    public Queue queue3() {
-        return new Queue(Queue3, false);
+    public Queue autoDeleteQueue4() {
+        return new AnonymousQueue();
     }
 
     @Bean
-    public Queue queue4() {
-        return new Queue(Queue4, false);
+    public FanoutExchange reviewsDelFanout() {
+        return new FanoutExchange("reviews_delete");
     }
 
     @Bean
-    public Queue queue5() {
-        return new Queue(Queue5, false);
+    public Queue autoDeleteQueue5() {
+        return new AnonymousQueue();
     }
 
     @Bean
-    public Binding binding1(FanoutExchange exchange,
-                            Queue queue1) {
-        return BindingBuilder.bind(queue1).to(exchange);
+    public FanoutExchange votesFanout() {
+        return new FanoutExchange("votes_create");
     }
 
     @Bean
-    public Binding binding2(FanoutExchange exchange,
-                            Queue queue2) {
-        return BindingBuilder.bind(queue2).to(exchange);
+    public Binding binding2(FanoutExchange reviewsFanout,
+                            Queue autoDeleteQueue2) {
+        return BindingBuilder.bind(autoDeleteQueue2).to(reviewsFanout);
     }
 
     @Bean
-    public Binding binding3(FanoutExchange exchange,
-                            Queue queue3) {
-        return BindingBuilder.bind(queue3).to(exchange);
+    public Binding binding3(FanoutExchange reviewsUpFanout,
+                            Queue autoDeleteQueue2) {
+        return BindingBuilder.bind(autoDeleteQueue2).to(reviewsUpFanout);
     }
 
     @Bean
-    public Binding binding4(FanoutExchange exchange,
-                            Queue queue4) {
-        return BindingBuilder.bind(queue4).to(exchange);
+    public Binding binding4(FanoutExchange reviewsDelFanout,
+                            Queue autoDeleteQueue2) {
+        return BindingBuilder.bind(autoDeleteQueue2).to(reviewsDelFanout);
     }
 
     @Bean
-    public Binding binding5(FanoutExchange exchange,
-                            Queue queue5) {
-        return BindingBuilder.bind(queue5).to(exchange);
+    public Binding binding5(FanoutExchange votesFanout,
+                            Queue autoDeleteQueue5) {
+        return BindingBuilder.bind(autoDeleteQueue5).to(votesFanout);
     }
 
     @Bean

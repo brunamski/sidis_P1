@@ -11,7 +11,7 @@ public class VotesCOMSender {
     @Autowired
     private AmqpTemplate template;
 
-    private String fanout = "votes";
+    private String fanout = "votes_create";
 
     public void send(Vote v) {
         template.convertAndSend(fanout, "", v);

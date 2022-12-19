@@ -22,7 +22,7 @@ public class Products2COMReceiver {
     @Autowired
     private ProductService productService;
 
-    @RabbitListener(queues = "products2COM")
+    @RabbitListener(queues = "#{autoDeleteQueue1.name}")
     public void receiver(Product p){
         productService.create(p);
         System.out.println(" [x] Received '" + p + "'");

@@ -6,6 +6,32 @@
   <component name="ChangeListManager">
     <list default="true" id="cad0091b-81f1-4e58-8d71-4f09ebfdfedf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/rabbitmq/Products2COMReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/rabbitmq/Products2COMReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/rabbitmq/Products2COMSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/rabbitmq/Products2COMSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/rabbitmq/Products2GETReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/rabbitmq/Products2GETReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/rabbitmq/ProductsCOMReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/rabbitmq/ProductsCOMReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/rabbitmq/ProductsCOMSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/rabbitmq/ProductsCOMSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/src/main/java/com/example/projeto/rabbitmq/ProductsGETReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsGET/src/main/java/com/example/projeto/rabbitmq/ProductsGETReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsGET/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/rabbitmq/Reviews2COMReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/rabbitmq/Reviews2COMReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/rabbitmq/Reviews2COMSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/rabbitmq/Reviews2COMSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/rabbitmq/Reviews2GETReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/rabbitmq/Reviews2GETReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/rabbitmq/ReviewsCOMReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/rabbitmq/ReviewsCOMReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/rabbitmq/ReviewsCOMSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/rabbitmq/ReviewsCOMSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/rabbitmq/ReviewsGETReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/rabbitmq/ReviewsGETReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/Votes2COMReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/Votes2COMReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/Votes2COMSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/Votes2COMSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/VotesCOMReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/VotesCOMReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/VotesCOMSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/VotesCOMSender.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +76,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Votes2COM" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Avaliacao2/sidis_P1" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -229,6 +255,8 @@
       <workItem from="1671281575717" duration="1831000" />
       <workItem from="1671286958828" duration="4607000" />
       <workItem from="1671462217965" duration="3335000" />
+      <workItem from="1671483240137" duration="6154000" />
+      <workItem from="1671490240982" duration="100000" />
     </task>
     <servers />
   </component>

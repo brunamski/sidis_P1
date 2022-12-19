@@ -12,11 +12,11 @@ public class Reviews2COMSender {
     @Autowired
     private AmqpTemplate template;
 
-    private String fanout = "reviews2";
+    private String fanout = "reviews_create";
 
-    private String fanoutdel = "reviews2del";
+    private String fanoutdel = "reviews_delete";
 
-    private String fanoutup = "reviewsup";
+    private String fanoutup = "reviews_update";
 
     public void send(Review p) {
         template.convertAndSend(fanout,"",p);

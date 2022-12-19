@@ -16,32 +16,32 @@ public class Reviews2COMReceiver {
     @Autowired
     private ReviewService reviewService;
 
-    @RabbitListener(queues = "reviews2COM")
+    @RabbitListener(queues = "#{autoDeleteQueue2.name}")
     public void receiver(Review r){
         Review review = reviewService.create(r);
         System.out.println(" [x] Received '" + review + "'");
     }
 
-    @RabbitListener(queues = "reviews2COMdel")
+    @RabbitListener(queues = "#{autoDeleteQueue4.name}")
     public void receiverDelete(Long id) {
         reviewService.deleteById(id);
         System.out.println(" [x] Deleted review '" + id + "'");
     }
 
-    @RabbitListener(queues = "reviews2COMup")
+    @RabbitListener(queues = "#{autoDeleteQueue3.name}")
     public void receiverUpdate(Review r) throws IOException {
         reviewService.updateReviewStatus(r);
         System.out.println(" [x] Updated review '" + r + "'");
     }
 
-    @RabbitListener(queues = "reviews2COMprod")
+    @RabbitListener(queues = "#{autoDeleteQueue1.name}")
     public void receiverProduct(Product p){
         reviewService.createProduct(p);
         System.out.println(" [x] Received '" + p + "'");
     }
 
-    @RabbitListener(queues = "reviews2COMvote")
-    public void receiverProduct(Vote v){
+    @RabbitListener(queues = "#{autoDeleteQueue5.name}")
+    public void receiverVote(Vote v){
         reviewService.create(v);
         System.out.println(" [x] Received '" + v + "'");
     }

@@ -26,6 +26,70 @@ import org.springframework.util.ErrorHandler;
 public class RabbitConfig {
 
     @Bean
+    public Queue autoDeleteQueue1() {
+        return new AnonymousQueue();
+    }
+
+    @Bean
+    public FanoutExchange fanout() {
+        return new FanoutExchange("products_create");
+    }
+
+    @Bean
+    public Queue autoDeleteQueue2() {
+        return new AnonymousQueue();
+    }
+
+    @Bean
+    public FanoutExchange reviewsFanout() {
+        return new FanoutExchange("reviews_create");
+    }
+
+    @Bean
+    public Queue autoDeleteQueue3() {
+        return new AnonymousQueue();
+    }
+
+    @Bean
+    public FanoutExchange reviewsUpFanout() {
+        return new FanoutExchange("reviews_update");
+    }
+
+    @Bean
+    public Queue autoDeleteQueue4() {
+        return new AnonymousQueue();
+    }
+
+    @Bean
+    public FanoutExchange reviewsDelFanout() {
+        return new FanoutExchange("reviews_delete");
+    }
+
+    @Bean
+    public Binding binding1(FanoutExchange fanout,
+                            Queue autoDeleteQueue1) {
+        return BindingBuilder.bind(autoDeleteQueue1).to(fanout);
+    }
+
+    @Bean
+    public Binding binding2(FanoutExchange reviewsFanout,
+                            Queue autoDeleteQueue2) {
+        return BindingBuilder.bind(autoDeleteQueue2).to(reviewsFanout);
+    }
+
+    @Bean
+    public Binding binding3(FanoutExchange reviewsUpFanout,
+                            Queue autoDeleteQueue3) {
+        return BindingBuilder.bind(autoDeleteQueue3).to(reviewsUpFanout);
+    }
+
+    @Bean
+    public Binding binding4(FanoutExchange reviewsDelFanout,
+                            Queue autoDeleteQueue4) {
+        return BindingBuilder.bind(autoDeleteQueue4).to(reviewsDelFanout);
+    }
+
+    @Bean
     public MessageConverter jsonMessageConverter() {
         ObjectMapper objectMapper = new ObjectMapper();
         return new Jackson2JsonMessageConverter(objectMapper);

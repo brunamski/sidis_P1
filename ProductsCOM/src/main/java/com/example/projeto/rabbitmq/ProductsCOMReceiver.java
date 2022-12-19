@@ -13,7 +13,7 @@ public class ProductsCOMReceiver {
     @Autowired
     private ProductService productService;
 
-    @RabbitListener(queues = "productsCOM")
+    @RabbitListener(queues = "#{autoDeleteQueue1.name}")
     public void receiver(Product p){
         productService.create(p);
         System.out.println(" [x] Received '" + p + "'");

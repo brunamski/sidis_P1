@@ -19,7 +19,7 @@ public class ProductsCOMSender {
     @Autowired
     private AmqpTemplate template;
 
-    private String fanout = "products";
+    private String fanout = "products_create";
 
     public void send(Product p) {
         template.convertAndSend(fanout, "", p);

@@ -17,26 +17,26 @@ public class Products2GETReceiver {
     private ProductService productService;
 
 
-    @RabbitListener(queues = "products2GET")
+    @RabbitListener(queues = "#{autoDeleteQueue1.name}")
     public void receiver(Product p) throws IOException {
         productService.create(p);
         System.out.println(" [x] Received '" + p + "'");
     }
 
-    @RabbitListener(queues = "products2GETrev")
+    @RabbitListener(queues = "#{autoDeleteQueue2.name}")
     public void receiverCreateRev(Review r) throws IOException {
         productService.createRev(r);
         System.out.println(" [x] Received '" + r + "'");
     }
 
-    @RabbitListener(queues = "products2GETrevdel")
+    @RabbitListener(queues = "#{autoDeleteQueue4.name}")
     public void receiverDeleteRev(Long reviewId) throws IOException {
         productService.deleteRev(reviewId);
         System.out.println(" [x] Deleted '" + reviewId + "'");
     }
 
-    @RabbitListener(queues = "products2GETrevup")
-    public void receiverUpdate(Review r) throws IOException {
+    @RabbitListener(queues = "#{autoDeleteQueue3.name}")
+    public void receiverUpdate(Review r) {
         productService.partialUpdate(r);
         System.out.println(" [x] Updated review '" + r + "'");
     }
