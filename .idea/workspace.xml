@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cad0091b-81f1-4e58-8d71-4f09ebfdfedf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/domain/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/domain/models/Product.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +67,7 @@
       <recent name="com.example.projeto.domain.models" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ProductsGETApplication">
+  <component name="RunManager" selected="Compound.sidis_project">
     <configuration name="sidis_project" type="CompoundRunConfigurationType">
       <toRun name="AuthenticationApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="Products2COMApplication" type="SpringBootApplicationConfigurationType" />
@@ -229,7 +228,7 @@
       <workItem from="1671200706630" duration="8386000" />
       <workItem from="1671281575717" duration="1831000" />
       <workItem from="1671286958828" duration="4607000" />
-      <workItem from="1671462217965" duration="2556000" />
+      <workItem from="1671462217965" duration="3335000" />
     </task>
     <servers />
   </component>
