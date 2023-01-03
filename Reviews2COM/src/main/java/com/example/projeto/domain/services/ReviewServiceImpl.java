@@ -4,6 +4,7 @@ import com.example.projeto.domain.models.*;
 import com.example.projeto.domain.repositories.ProductRepository;
 import com.example.projeto.domain.repositories.ReviewRepository;
 import com.example.projeto.domain.repositories.VoteRepository;
+import com.example.projeto.rabbitmq.Reviews2COMSender;
 import com.example.projeto.utils.Utils;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -45,12 +46,16 @@ public class ReviewServiceImpl implements ReviewService{
     @Autowired
     private Utils utils;
 
+    @Autowired
+    private Reviews2COMSender reviews2COMSender;
+
     @Override
     public ReviewDTO createReview(HttpServletRequest request, Review newReview) {
         boolean product = productIsPresent(newReview.getSku());
         if(product == true) {
             newReview.setUserId(utils.getUserIdByToken(request));
             final var review = create(newReview);
+            reviews2COMSender.send(review);
             ReviewDTO reviewDTO = new ReviewDTO(review.getReviewId(), review.getSku(), review.getRating(), review.getText(), review.getPublishingDate(), review.getFunFact());
             return reviewDTO;
         }
@@ -70,11 +75,13 @@ public class ReviewServiceImpl implements ReviewService{
         }
 
         deleteById(reviewId);
+        reviews2COMSender.sendId(reviewId);
         return ResponseEntity.noContent().build();
     }
     @Override
     public ReviewDTOStatus updateReviewStatus(final Review review) throws IOException {
         Review newReview = partialUpdate(review);
+        reviews2COMSender.sendUpdate(review);
         ReviewDTOStatus newReviewDTOStatus = new ReviewDTOStatus(newReview.getReviewId(), newReview.getSku(), newReview.getRating(), newReview.getText(), newReview.getPublishingDate(), newReview.getFunFact(), newReview.getStatus());
         return newReviewDTOStatus;
     }

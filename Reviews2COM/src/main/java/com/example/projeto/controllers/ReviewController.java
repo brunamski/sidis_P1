@@ -53,18 +53,12 @@ public class ReviewController {
     @Autowired
     private Utils utils;
 
-    @Autowired
-    private Reviews2COMSender reviews2COMSender;
-
     @Operation(summary = "US04 - To review and rate a product")
     @PostMapping(value = "/review")
     @RolesAllowed(Role.REGISTERED)
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<ReviewDTO> createReview(HttpServletRequest request, @RequestBody Review newReview) throws IOException, InterruptedException {
         ReviewDTO reviewDTO = reviewService.createReview(request, newReview);
-        Review review = new Review(reviewDTO.getSku(),reviewDTO.getRating(),reviewDTO.getText());
-        review.setUserId(utils.getUserIdByToken(request));
-        reviews2COMSender.send(review);
         return ResponseEntity.ok().body(reviewDTO);
     }
 
@@ -72,7 +66,6 @@ public class ReviewController {
     @DeleteMapping(value = "/review/{id}/withdraw")
     @RolesAllowed(Role.REGISTERED)
     public ResponseEntity<Review> withdrawReview(@PathVariable("id") @Parameter(description = "The id of the review to withdraw") final Long reviewId) throws IOException, InterruptedException {
-        reviews2COMSender.sendId(reviewId);
         return reviewService.withdrawReview(reviewId);
     }
 
@@ -80,7 +73,6 @@ public class ReviewController {
     @PatchMapping(value = "/review/update")
     @RolesAllowed(Role.MODERATOR)
     public ResponseEntity<ReviewDTOStatus> updateReviewStatus(@Valid @RequestBody final Review review) throws IOException {
-        reviews2COMSender.sendUpdate(review);
         return ResponseEntity.ok().body(reviewService.updateReviewStatus(review));
     }
 }

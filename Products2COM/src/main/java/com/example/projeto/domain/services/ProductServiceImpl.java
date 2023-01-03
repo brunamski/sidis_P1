@@ -4,6 +4,7 @@ import com.example.projeto.domain.models.AggregatedRatingDTO;
 import com.example.projeto.domain.models.Product;
 import com.example.projeto.domain.models.ProductDTO;
 import com.example.projeto.domain.repositories.ProductRepository;
+import com.example.projeto.rabbitmq.Products2COMSender;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -23,6 +24,9 @@ public class ProductServiceImpl implements ProductService {
 
     @Autowired
     private ProductRepository productRepository;
+
+    @Autowired
+    private Products2COMSender products2COMSender;
 
     @Override
     public Optional<Product> findBySku(final String sku) {
@@ -44,6 +48,7 @@ public class ProductServiceImpl implements ProductService {
             throw new ResponseStatusException(HttpStatus.CONFLICT, "Product exists!");
         }
         final var product = create(newProduct);
+        products2COMSender.send(newProduct);
         ProductDTO productDTO = new ProductDTO(product.getProductId(),product.getDesignation(),product.getSku(),product.getDescription(),product.getSetOfImages());
         return productDTO;
     }

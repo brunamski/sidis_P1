@@ -34,16 +34,12 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    @Autowired
-    private Products2COMSender products2COMSender;
-
     @Operation(summary = "Creates a product")
     @RolesAllowed(Role.ADMIN)
     @PostMapping(value = "/admin/product")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<ProductDTO> createProduct(HttpServletRequest request, @RequestBody Product newProduct) throws IOException, InterruptedException {
         ProductDTO p = productService.createProduct(newProduct);
-        products2COMSender.send(newProduct);
         return ResponseEntity.ok().body(p);
     }
 }

@@ -3,6 +3,7 @@ package com.example.projeto.domain.services;
 import com.example.projeto.domain.models.Product;
 import com.example.projeto.domain.models.ProductDTO;
 import com.example.projeto.domain.repositories.ProductRepository;
+import com.example.projeto.rabbitmq.ProductsCOMSender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -15,6 +16,9 @@ public class ProductServiceImpl implements ProductService {
 
     @Autowired
     private ProductRepository productRepository;
+
+    @Autowired
+    private ProductsCOMSender productsCOMSender;
 
     @Override
     public Optional<Product> findBySku(final String sku) {
@@ -36,6 +40,7 @@ public class ProductServiceImpl implements ProductService {
             throw new ResponseStatusException(HttpStatus.CONFLICT, "Product exists!");
         }
         final var product = create(newProduct);
+        productsCOMSender.send(newProduct);
         ProductDTO productDTO = new ProductDTO(product.getProductId(),product.getDesignation(),product.getSku(),product.getDescription(),product.getSetOfImages());
         return productDTO;
     }
