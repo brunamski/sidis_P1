@@ -5,18 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cad0091b-81f1-4e58-8d71-4f09ebfdfedf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/models/Vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/models/Vote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/models/VoteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/models/VoteDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/models/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/models/Review.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/services/VoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/services/VoteService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/Votes2COMReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/Votes2COMReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/Votes2COMSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/Votes2COMSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/models/Vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/models/Vote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/models/VoteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/models/VoteDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/models/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/models/Review.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/services/VoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/services/VoteService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/VotesCOMReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/VotesCOMReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/VotesCOMSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/VotesCOMSender.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,19 +56,21 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/HUAWEI/OneDrive/Ambiente de Trabalho/sidis_P1/Votes2COM/src/main/java/com/example/projeto/domain/models",
     "spring.configuration.checksum": "2a0f49aeecbbe5b3f9e6e087915243aa"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\HUAWEI\OneDrive\Ambiente de Trabalho\sidis_P1\Votes2COM\src\main\java\com\example\projeto\domain\models" />
+      <recent name="C:\Users\HUAWEI\OneDrive\Ambiente de Trabalho\sidis_P1\VotesCOM\src\main\java\com\example\projeto\domain\models" />
       <recent name="C:\Users\Tiago Oliveira\IdeaProjects\SISDIS\sidis_P1\VotesCOM\src\main\java\com\example\projeto" />
       <recent name="C:\Users\Tiago Oliveira\IdeaProjects\SISDIS\sidis_P1\Products2COM\src\main\java\com\example\projeto" />
       <recent name="C:\Users\Tiago Oliveira\IdeaProjects\SISDIS\sidis_P1\Products2GET\src\main\java\com\example\projeto" />
-      <recent name="C:\Users\Tiago Oliveira\IdeaProjects\SISDIS\sidis_P1\ProductsGET\src\main\java\com\example\projeto" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.example.projeto.domain.repositories" />
       <recent name="com.example.projeto.domain.models" />
+      <recent name="com.example.projeto.domain.repositories" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Votes2COMApplication">
@@ -229,7 +228,7 @@
       <workItem from="1671524819101" duration="666000" />
       <workItem from="1671610434591" duration="2241000" />
       <workItem from="1672756014988" duration="2439000" />
-      <workItem from="1672821028143" duration="4653000" />
+      <workItem from="1672821028143" duration="7462000" />
     </task>
     <servers />
   </component>

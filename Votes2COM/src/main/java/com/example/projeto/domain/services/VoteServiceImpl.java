@@ -79,20 +79,21 @@ public class VoteServiceImpl implements VoteService{
     }
 
     @Override
-    public Review create(Review newReview){
-        return reviewRepository.save(newReview);
+    public Review create(ReviewDTO newReviewDTO) throws IOException {
+        Review review = new Review(newReviewDTO.getSku(),newReviewDTO.getRating(),newReviewDTO.getText());
+        return reviewRepository.save(review);
     }
 
     @Override
-    public Review partialUpdate(final Review review) {
+    public Review partialUpdate(final ReviewDTOStatus reviewDTOStatus) throws IOException {
         // first let's check if the object exists so we don't create a new object with
         // save
-        final var rev = reviewRepository.findById(review.getReviewId())
+        final var rev = reviewRepository.findById(reviewDTOStatus.getReviewId())
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Review Not Found"));
 
         // since we got the object from the database we can check the version in memory
         // and apply the patch
-        rev.applyPatch(review);
+                rev.applyPatch(reviewDTOStatus);
 
         // in the meantime some other user might have changed this object on the
         // database, so concurrency control will still be applied when we try to save

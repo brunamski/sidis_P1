@@ -67,7 +67,7 @@ public class Review {
         return this.publishingDate = formattedDate;
     }
 
-    public void applyPatch(final Review newReview) {
+    public void applyPatch(final ReviewDTOStatus newReview) {
         if (newReview.getStatus() != null) {
             setStatus(newReview.getStatus());
         }
