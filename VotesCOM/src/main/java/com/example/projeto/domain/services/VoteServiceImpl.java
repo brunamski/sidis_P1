@@ -45,6 +45,13 @@ public class VoteServiceImpl implements VoteService{
     }
 
     @Override
+    public void create(VoteDTO newVote){
+        Vote v = new Vote(newVote.getVote(),newVote.getReason());
+        v.setUserId(newVote.getUserID());
+        v.setReviewId(newVote.getReviewID());
+    }
+
+    @Override
     public VoteDTO vote(Long reviewId, HttpServletRequest request, Vote newVote) throws IOException, InterruptedException {
         boolean reviewIsPresent = reviewIsPresent(reviewId);
         if (reviewIsPresent == true) {
@@ -54,8 +61,8 @@ public class VoteServiceImpl implements VoteService{
                 newVote.setUserId(utils.getUserIdByToken(request));
                 newVote.setReviewId(reviewId);
                 final var vote = create(newVote);
-                votesCOMSender.send(vote);
-                VoteDTO voteDTO = new VoteDTO(vote.getVoteId(),vote.getUserId(), vote.getReviewId(), vote.isVote(), vote.getReason());
+                VoteDTO voteDTO = new VoteDTO(vote.getVoteId(),vote.getUserId(), vote.getReviewId(), vote.getVote(), vote.getReason());
+                votesCOMSender.send(voteDTO);
                 return voteDTO;
             }
             throw new ResponseStatusException(HttpStatus.UNPROCESSABLE_ENTITY, "Review not APPROVED");

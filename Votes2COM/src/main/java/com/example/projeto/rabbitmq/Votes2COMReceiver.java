@@ -2,6 +2,7 @@ package com.example.projeto.rabbitmq;
 
 import com.example.projeto.domain.models.Review;
 import com.example.projeto.domain.models.Vote;
+import com.example.projeto.domain.models.VoteDTO;
 import com.example.projeto.domain.services.VoteService;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,7 @@ public class Votes2COMReceiver {
     private VoteService voteService;
 
     @RabbitListener(queues = "#{autoDeleteQueue5.name}")
-    public void receiver(Vote v){
+    public void receiver(VoteDTO v){
         voteService.create(v);
         System.out.println(" [x] Received '" + v + "'");
     }

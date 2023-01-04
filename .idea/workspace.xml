@@ -5,21 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cad0091b-81f1-4e58-8d71-4f09ebfdfedf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/domain/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/domain/services/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/rabbitmq/Products2COMReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/rabbitmq/Products2COMReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/rabbitmq/Products2COMSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/rabbitmq/Products2COMSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/domain/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/domain/services/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/rabbitmq/Products2GETReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/rabbitmq/Products2GETReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/domain/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/domain/services/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/rabbitmq/ProductsCOMReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/rabbitmq/ProductsCOMReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/rabbitmq/ProductsCOMSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/rabbitmq/ProductsCOMSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductsGET/src/main/java/com/example/projeto/domain/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsGET/src/main/java/com/example/projeto/domain/services/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductsGET/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsGET/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductsGET/src/main/java/com/example/projeto/rabbitmq/ProductsGETReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsGET/src/main/java/com/example/projeto/rabbitmq/ProductsGETReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/models/Vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/models/Vote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/models/VoteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/models/VoteDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/services/VoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/services/VoteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/Votes2COMReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/Votes2COMReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/Votes2COMSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/Votes2COMSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/models/Vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/models/Vote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/models/VoteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/models/VoteDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/services/VoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/services/VoteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/VotesCOMReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/VotesCOMReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/VotesCOMSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/VotesCOMSender.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,22 +50,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelOrder2" value="2" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RequestMappingsPanelWidth2" value="75" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "spring.configuration.checksum": "2a0f49aeecbbe5b3f9e6e087915243aa"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Tiago Oliveira\IdeaProjects\SISDIS\sidis_P1\VotesCOM\src\main\java\com\example\projeto" />
@@ -81,7 +74,7 @@
       <recent name="com.example.projeto.domain.models" />
     </key>
   </component>
-  <component name="RunManager" selected="Compound.sidis_project">
+  <component name="RunManager" selected="Spring Boot.Votes2COMApplication">
     <configuration name="sidis_project" type="CompoundRunConfigurationType">
       <toRun name="AuthenticationApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="Products2COMApplication" type="SpringBootApplicationConfigurationType" />
@@ -100,7 +93,6 @@
     <configuration name="AuthenticationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="projeto" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.AuthenticationApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -108,7 +100,6 @@
     <configuration name="Products2COMApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="projeto (8)" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.Products2COMApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -116,7 +107,6 @@
     <configuration name="Products2GETApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="projeto (7)" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.Products2GETApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -124,7 +114,6 @@
     <configuration name="ProductsCOMApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="projeto (1)" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.ProductsCOMApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -132,7 +121,6 @@
     <configuration name="ProductsGETApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="projeto (2)" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.ProductsGETApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -140,7 +128,6 @@
     <configuration name="Reviews2COMApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="projeto (9)" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.Reviews2COMApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -148,7 +135,6 @@
     <configuration name="Reviews2GETApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="projeto (10)" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.Reviews2GETApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -156,7 +142,6 @@
     <configuration name="ReviewsCOMApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="projeto (3)" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.ReviewsCOMApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -164,7 +149,6 @@
     <configuration name="ReviewsGETApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="projeto (4)" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.ReviewsGETApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -172,7 +156,6 @@
     <configuration name="Votes2COMApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="projeto (11)" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.Votes2COMApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -180,7 +163,6 @@
     <configuration name="VotesCOMApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="projeto (5)" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.VotesCOMApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -188,7 +170,6 @@
     <configuration name="VotesGETApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="projeto (6)" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.VotesGETApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -247,8 +228,8 @@
       <workItem from="1671490240982" duration="100000" />
       <workItem from="1671524819101" duration="666000" />
       <workItem from="1671610434591" duration="2241000" />
-      <workItem from="1672756014988" duration="2526000" />
-      <workItem from="1672820408759" duration="1574000" />
+      <workItem from="1672756014988" duration="2439000" />
+      <workItem from="1672821028143" duration="4653000" />
     </task>
     <servers />
   </component>

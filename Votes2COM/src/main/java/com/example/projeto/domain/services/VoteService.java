@@ -18,6 +18,8 @@ public interface VoteService {
      */
     Vote create(Vote newVote);
 
+    void create(VoteDTO newVote);
+
     VoteDTO vote(Long reviewId, HttpServletRequest request, Vote newVote) throws IOException, InterruptedException;
 
     Review create(Review newReview);
