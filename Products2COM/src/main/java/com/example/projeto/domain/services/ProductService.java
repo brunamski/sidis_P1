@@ -20,5 +20,7 @@ public interface ProductService {
 
     Product create(Product newProduct);
 
+    void create(ProductDTO p) throws IOException;
+
     ProductDTO createProduct(Product newProduct) throws IOException, InterruptedException;
 }

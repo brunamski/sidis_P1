@@ -3,20 +3,12 @@ package com.example.projeto.domain.services;
 import com.example.projeto.domain.models.*;
 import com.example.projeto.domain.repositories.ProductRepository;
 import com.example.projeto.domain.repositories.ReviewRepository;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -123,8 +115,9 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public void create(Product p) throws IOException {
-        productRepository.save(p);
+    public void create(ProductDTO p) throws IOException {
+        Product product = new Product(p.getDesignation(), p.getDescription(), p.getSku());
+        productRepository.save(product);
     }
 
     @Override

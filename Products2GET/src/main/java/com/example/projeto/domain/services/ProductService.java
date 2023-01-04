@@ -25,7 +25,7 @@ public interface ProductService {
 
     AggregatedRating getAggregatedRating(final String sku);
 
-    void create(Product p) throws IOException;
+    void create(ProductDTO p) throws IOException;
 
     void createRev(Review r) throws IOException;
 

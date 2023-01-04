@@ -1,6 +1,7 @@
 package com.example.projeto.rabbitmq;
 
 import com.example.projeto.domain.models.Product;
+import com.example.projeto.domain.models.ProductDTO;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.amqp.core.FanoutExchange;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -18,7 +19,7 @@ public class Products2COMSender {
 
     private String fanout = "products_create";
 
-    public void send(Product p) {
+    public void send(ProductDTO p) {
         template.convertAndSend(fanout, "", p);
         System.out.println(" [x] Sent '" + p + "'");
     }

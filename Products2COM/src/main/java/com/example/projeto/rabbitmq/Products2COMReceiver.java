@@ -1,6 +1,7 @@
 package com.example.projeto.rabbitmq;
 
 import com.example.projeto.domain.models.Product;
+import com.example.projeto.domain.models.ProductDTO;
 import com.example.projeto.domain.services.ProductService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.amqp.core.*;
@@ -15,6 +16,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.util.StopWatch;
 
+import java.io.IOException;
+
 @EnableRabbit
 @Configuration
 public class Products2COMReceiver {
@@ -23,7 +26,7 @@ public class Products2COMReceiver {
     private ProductService productService;
 
     @RabbitListener(queues = "#{autoDeleteQueue1.name}")
-    public void receiver(Product p){
+    public void receiver(ProductDTO p) throws IOException {
         productService.create(p);
         System.out.println(" [x] Received '" + p + "'");
     }

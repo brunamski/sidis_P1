@@ -6,15 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="cad0091b-81f1-4e58-8d71-4f09ebfdfedf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/controllers/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/domain/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/domain/services/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/controllers/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/rabbitmq/Products2COMReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/rabbitmq/Products2COMReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/rabbitmq/Products2COMSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/rabbitmq/Products2COMSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/domain/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/domain/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/rabbitmq/Products2GETReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/rabbitmq/Products2GETReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/domain/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/domain/services/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/controllers/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/controllers/ReviewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/controllers/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/controllers/ReviewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/controllers/VoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/controllers/VoteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/rabbitmq/ProductsCOMReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/rabbitmq/ProductsCOMReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/rabbitmq/ProductsCOMSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/rabbitmq/ProductsCOMSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/src/main/java/com/example/projeto/domain/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsGET/src/main/java/com/example/projeto/domain/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsGET/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/src/main/java/com/example/projeto/rabbitmq/ProductsGETReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsGET/src/main/java/com/example/projeto/rabbitmq/ProductsGETReceiver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +64,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Avaliacao2/sidis_P1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -242,7 +247,8 @@
       <workItem from="1671490240982" duration="100000" />
       <workItem from="1671524819101" duration="666000" />
       <workItem from="1671610434591" duration="2241000" />
-      <workItem from="1672756014988" duration="2439000" />
+      <workItem from="1672756014988" duration="2526000" />
+      <workItem from="1672820408759" duration="1574000" />
     </task>
     <servers />
   </component>

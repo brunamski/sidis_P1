@@ -37,6 +37,12 @@ public class ProductServiceImpl implements ProductService {
     public Product create(Product newProduct){ return productRepository.save(newProduct); }
 
     @Override
+    public void create(ProductDTO p) throws IOException {
+        Product product = new Product(p.getDesignation(), p.getDescription(), p.getSku());
+        productRepository.save(product);
+    }
+
+    @Override
     public ProductDTO createProduct(Product newProduct) {
 
         boolean checkProduct = productIsPresent(newProduct.getSku());
@@ -48,8 +54,8 @@ public class ProductServiceImpl implements ProductService {
             throw new ResponseStatusException(HttpStatus.CONFLICT, "Product exists!");
         }
         final var product = create(newProduct);
-        products2COMSender.send(newProduct);
         ProductDTO productDTO = new ProductDTO(product.getProductId(),product.getDesignation(),product.getSku(),product.getDescription(),product.getSetOfImages());
+        products2COMSender.send(productDTO);
         return productDTO;
     }
 

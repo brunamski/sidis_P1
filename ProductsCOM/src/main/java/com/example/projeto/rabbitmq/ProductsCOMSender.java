@@ -21,7 +21,7 @@ public class ProductsCOMSender {
 
     private String fanout = "products_create";
 
-    public void send(Product p) {
+    public void send(ProductDTO p) {
         template.convertAndSend(fanout, "", p);
         System.out.println(" [x] Sent '" + p + "'");
     }

@@ -123,8 +123,9 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public void create(Product p) throws IOException {
-        productRepository.save(p);
+    public void create(ProductDTO p) throws IOException {
+        Product product = new Product(p.getDesignation(), p.getDescription(), p.getSku());
+        productRepository.save(product);
     }
 
     @Override

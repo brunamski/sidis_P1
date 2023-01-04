@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.io.IOException;
 import java.util.Optional;
 
 @Service
@@ -29,6 +30,12 @@ public class ProductServiceImpl implements ProductService {
     public Product create(Product newProduct){ return productRepository.save(newProduct); }
 
     @Override
+    public void create(ProductDTO p) throws IOException {
+        Product product = new Product(p.getDesignation(), p.getDescription(), p.getSku());
+        productRepository.save(product);
+    }
+
+    @Override
     public ProductDTO createProduct(Product newProduct) {
 
         boolean checkProduct = productIsPresent(newProduct.getSku());
@@ -40,8 +47,8 @@ public class ProductServiceImpl implements ProductService {
             throw new ResponseStatusException(HttpStatus.CONFLICT, "Product exists!");
         }
         final var product = create(newProduct);
-        productsCOMSender.send(newProduct);
         ProductDTO productDTO = new ProductDTO(product.getProductId(),product.getDesignation(),product.getSku(),product.getDescription(),product.getSetOfImages());
+        productsCOMSender.send(productDTO);
         return productDTO;
     }
 
