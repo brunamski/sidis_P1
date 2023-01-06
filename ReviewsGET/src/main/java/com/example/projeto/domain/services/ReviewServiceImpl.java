@@ -183,7 +183,8 @@ public class ReviewServiceImpl implements ReviewService{
     }
 
     @Override
-    public Vote create(Vote newVote){
-        return voteRepository.save(newVote);
+    public Vote create(VoteDTO newVote){
+        Vote vote = new Vote(newVote.getVote(), newVote.getReason());
+        return voteRepository.save(vote);
     }
 }

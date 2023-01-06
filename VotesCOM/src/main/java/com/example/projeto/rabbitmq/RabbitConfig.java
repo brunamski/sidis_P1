@@ -62,14 +62,14 @@ public class RabbitConfig {
 
     @Bean
     public Binding binding3(FanoutExchange reviewsUpFanout,
-                            Queue autoDeleteQueue2) {
-        return BindingBuilder.bind(autoDeleteQueue2).to(reviewsUpFanout);
+                            Queue autoDeleteQueue3) {
+        return BindingBuilder.bind(autoDeleteQueue3).to(reviewsUpFanout);
     }
 
     @Bean
     public Binding binding4(FanoutExchange reviewsDelFanout,
-                            Queue autoDeleteQueue2) {
-        return BindingBuilder.bind(autoDeleteQueue2).to(reviewsDelFanout);
+                            Queue autoDeleteQueue4) {
+        return BindingBuilder.bind(autoDeleteQueue4).to(reviewsDelFanout);
     }
 
     @Bean

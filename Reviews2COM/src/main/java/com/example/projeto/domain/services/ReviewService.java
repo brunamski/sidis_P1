@@ -29,11 +29,11 @@ public interface ReviewService {
      */
     Review create(Review newReview);
 
-    Product createProduct(Product product);
+    Product createProduct(ProductDTO productDTO) throws IOException;
 
     void deleteById(Long reviewId);
 
     Review partialUpdate(final Review review);
 
-    Vote create(Vote newVote);
+    Vote create(VoteDTO newVote);
 }

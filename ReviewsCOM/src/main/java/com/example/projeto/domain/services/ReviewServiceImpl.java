@@ -126,12 +126,14 @@ public class ReviewServiceImpl implements ReviewService{
     }
 
     @Override
-    public Product createProduct(Product product){
+    public Product createProduct(ProductDTO productDTO) throws IOException {
+        Product product = new Product(productDTO.getDesignation(), productDTO.getDescription(), productDTO.getSku());
         return productRepository.save(product);
     }
 
     @Override
-    public Vote create(Vote newVote){
-        return voteRepository.save(newVote);
+    public Vote create(VoteDTO newVote){
+        Vote vote = new Vote(newVote.getVote(), newVote.getReason());
+        return voteRepository.save(vote);
     }
 }
