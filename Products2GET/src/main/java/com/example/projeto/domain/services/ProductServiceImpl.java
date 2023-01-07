@@ -121,8 +121,9 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public void createRev(Review r) throws IOException {
-        reviewRepository.save(r);
+    public void createRev(ReviewDTO r) throws IOException {
+        Review review = new Review(r.getSku(), r.getRating(), r.getText());
+        reviewRepository.save(review);
     }
 
     @Override
@@ -131,7 +132,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public void partialUpdate(final Review review) {
+    public void partialUpdate(final ReviewDTOStatus review) {
         // first let's check if the object exists so we don't create a new object with
         // save
         final var rev = reviewRepository.findById(review.getReviewId())
@@ -139,7 +140,7 @@ public class ProductServiceImpl implements ProductService {
 
         // since we got the object from the database we can check the version in memory
         // and apply the patch
-        rev.applyPatch(review);
+        rev.applyPatchDTO(review);
 
         // in the meantime some other user might have changed this object on the
         // database, so concurrency control will still be applied when we try to save

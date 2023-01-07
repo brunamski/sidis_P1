@@ -1,8 +1,6 @@
 package com.example.projeto.rabbitmq;
 
-import com.example.projeto.domain.models.Product;
-import com.example.projeto.domain.models.ProductDTO;
-import com.example.projeto.domain.models.Review;
+import com.example.projeto.domain.models.*;
 import com.example.projeto.domain.services.ProductService;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -22,12 +20,12 @@ public class ProductsGETReceiver {
 
     @RabbitListener(queues = "#{autoDeleteQueue1.name}")
     public void receiver(ProductDTO p) throws IOException {
-        productService.create(p);
-        System.out.println(" [x] Received '" + p + "'");
+        Product product = productService.create(p);
+        System.out.println(" [x] Received '" + product + "'");
     }
 
     @RabbitListener(queues = "#{autoDeleteQueue2.name}")
-    public void receiverCreateRev(Review r) throws IOException {
+    public void receiverCreateRev(ReviewDTO r) throws IOException {
         productService.createRev(r);
         System.out.println(" [x] Received '" + r + "'");
     }
@@ -39,7 +37,7 @@ public class ProductsGETReceiver {
     }
 
     @RabbitListener(queues = "#{autoDeleteQueue3.name}")
-    public void receiverUpdate(Review r) {
+    public void receiverUpdate(ReviewDTOStatus r) {
         productService.partialUpdate(r);
         System.out.println(" [x] Updated review '" + r + "'");
     }

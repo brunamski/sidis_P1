@@ -2,6 +2,8 @@ package com.example.projeto.rabbitmq;
 
 
 import com.example.projeto.domain.models.Review;
+import com.example.projeto.domain.models.ReviewDTO;
+import com.example.projeto.domain.models.ReviewDTOStatus;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,7 +20,7 @@ public class ReviewsCOMSender {
 
     private String fanoutup = "reviews_update";
 
-    public void send(Review r) {
+    public void send(ReviewDTO r) {
         template.convertAndSend(fanout,"",r);
         System.out.println(" [x] Sent '" + r + "'");
     }
@@ -28,7 +30,7 @@ public class ReviewsCOMSender {
         System.out.println(" [x] Sent '" + id + "'");
     }
 
-    public void sendUpdate(Review r) {
+    public void sendUpdate(ReviewDTOStatus r) {
         template.convertAndSend(fanoutup,"",r);
         System.out.println(" [x] Sent '" + r + "'");
     }

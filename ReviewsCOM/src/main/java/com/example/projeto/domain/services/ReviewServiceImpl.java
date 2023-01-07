@@ -55,8 +55,8 @@ public class ReviewServiceImpl implements ReviewService{
         if(product == true) {
             newReview.setUserId(utils.getUserIdByToken(request));
             final var review = create(newReview);
-            reviewsCOMSender.send(review);
             ReviewDTO reviewDTO = new ReviewDTO(review.getReviewId(), review.getSku(), review.getRating(), review.getText(), review.getPublishingDate(), review.getFunFact());
+            reviewsCOMSender.send(reviewDTO);
             return reviewDTO;
         }
         throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Product not found!");
@@ -81,14 +81,23 @@ public class ReviewServiceImpl implements ReviewService{
     @Override
     public ReviewDTOStatus updateReviewStatus(final Review review) throws IOException {
         Review newReview = partialUpdate(review);
-        reviewsCOMSender.sendUpdate(review);
         ReviewDTOStatus newReviewDTOStatus = new ReviewDTOStatus(newReview.getReviewId(), newReview.getSku(), newReview.getRating(), newReview.getText(), newReview.getPublishingDate(), newReview.getFunFact(), newReview.getStatus());
+        reviewsCOMSender.sendUpdate(newReviewDTOStatus);
         return newReviewDTOStatus;
     }
 
     @Override
     public Review create(Review newReview){
         return reviewRepository.save(newReview);
+    }
+
+    @Override
+    public void createDTO(ReviewDTO newReview) throws IOException {
+        boolean checkReview = reviewRepository.existsById(newReview.getReviewId());
+        if (checkReview == false) {
+            Review review = new Review(newReview.getSku(), newReview.getRating(), newReview.getText());
+            reviewRepository.save(review);
+        }
     }
 
     @Override
@@ -110,6 +119,14 @@ public class ReviewServiceImpl implements ReviewService{
         // in the meantime some other user might have changed this object on the
         // database, so concurrency control will still be applied when we try to save
         // this updated object
+        return reviewRepository.save(rev);
+    }
+
+    @Override
+    public Review partialUpdateDTO(final ReviewDTOStatus review) {
+        final var rev = reviewRepository.findById(review.getReviewId())
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Review Not Found"));
+        rev.applyPatchDTO(review);
         return reviewRepository.save(rev);
     }
 

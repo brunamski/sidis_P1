@@ -28,8 +28,6 @@ public interface ReviewService {
 
     ResponseEntity<Review> withdrawReview(final Long reviewId) throws IOException, InterruptedException;
 
-    ReviewDTOStatus updateReviewStatus(final Review review) throws IOException;
-
     List<ReviewDTOStatus> findReviewsByUserId(Long userId) throws IOException, InterruptedException;
 
     Optional<Review> getReviewById(Long reviewId);
@@ -40,11 +38,11 @@ public interface ReviewService {
      * @param newReview
      * @return
      */
-    Review create(Review newReview);
+    Review create(ReviewDTO newReview) throws IOException;
 
     void deleteById(Long reviewId);
 
-    Review partialUpdate(final Review review);
+    Review partialUpdate(final ReviewDTOStatus review);
 
     AggregatedRatingDTO getAggregatedRatingDTO(final String sku) throws IOException, InterruptedException;
 

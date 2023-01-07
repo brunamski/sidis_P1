@@ -15,9 +15,9 @@ public class Reviews2COMReceiver {
     private ReviewService reviewService;
 
     @RabbitListener(queues = "#{autoDeleteQueue2.name}")
-    public void receiver(Review r){
-        Review review = reviewService.create(r);
-        System.out.println(" [x] Received '" + review + "'");
+    public void receiver(ReviewDTO r) throws IOException {
+        reviewService.createDTO(r);
+        System.out.println(" [x] Received '" + r + "'");
     }
 
     @RabbitListener(queues = "#{autoDeleteQueue4.name}")
@@ -27,8 +27,8 @@ public class Reviews2COMReceiver {
     }
 
     @RabbitListener(queues = "#{autoDeleteQueue3.name}")
-    public void receiverUpdate(Review r) throws IOException {
-        reviewService.updateReviewStatus(r);
+    public void receiverUpdate(ReviewDTOStatus r) throws IOException {
+        reviewService.partialUpdateDTO(r);
         System.out.println(" [x] Updated review '" + r + "'");
     }
 

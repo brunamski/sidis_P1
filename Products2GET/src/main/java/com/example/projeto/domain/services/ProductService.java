@@ -27,9 +27,9 @@ public interface ProductService {
 
     void create(ProductDTO p) throws IOException;
 
-    void createRev(Review r) throws IOException;
+    void createRev(ReviewDTO r) throws IOException;
 
     void deleteRev(Long reviewId) throws IOException;
 
-    void partialUpdate(final Review review);
+    void partialUpdate(final ReviewDTOStatus review);
 }

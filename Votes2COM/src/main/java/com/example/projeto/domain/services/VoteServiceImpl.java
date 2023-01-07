@@ -49,6 +49,7 @@ public class VoteServiceImpl implements VoteService{
         Vote v = new Vote(newVote.getVote(),newVote.getReason());
         v.setUserId(newVote.getUserID());
         v.setReviewId(newVote.getReviewID());
+        voteRepository.save(v);
     }
 
     @Override

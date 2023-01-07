@@ -6,28 +6,14 @@ import com.example.projeto.domain.repositories.ReviewRepository;
 import com.example.projeto.domain.repositories.VoteRepository;
 import com.example.projeto.rabbitmq.Reviews2COMSender;
 import com.example.projeto.utils.Utils;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import io.swagger.v3.oas.annotations.Parameter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
 import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
 import java.util.Optional;
 
 
@@ -55,8 +41,8 @@ public class ReviewServiceImpl implements ReviewService{
         if(product == true) {
             newReview.setUserId(utils.getUserIdByToken(request));
             final var review = create(newReview);
-            reviews2COMSender.send(review);
             ReviewDTO reviewDTO = new ReviewDTO(review.getReviewId(), review.getSku(), review.getRating(), review.getText(), review.getPublishingDate(), review.getFunFact());
+            reviews2COMSender.send(reviewDTO);
             return reviewDTO;
         }
         throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Product not found!");
@@ -81,14 +67,23 @@ public class ReviewServiceImpl implements ReviewService{
     @Override
     public ReviewDTOStatus updateReviewStatus(final Review review) throws IOException {
         Review newReview = partialUpdate(review);
-        reviews2COMSender.sendUpdate(review);
         ReviewDTOStatus newReviewDTOStatus = new ReviewDTOStatus(newReview.getReviewId(), newReview.getSku(), newReview.getRating(), newReview.getText(), newReview.getPublishingDate(), newReview.getFunFact(), newReview.getStatus());
+        reviews2COMSender.sendUpdate(newReviewDTOStatus);
         return newReviewDTOStatus;
     }
 
     @Override
     public Review create(Review newReview){
         return reviewRepository.save(newReview);
+    }
+
+    @Override
+    public void createDTO(ReviewDTO newReview) throws IOException {
+        boolean checkReview = reviewRepository.existsById(newReview.getReviewId());
+        if (checkReview == false) {
+            Review review = new Review(newReview.getSku(), newReview.getRating(), newReview.getText());
+            reviewRepository.save(review);
+        }
     }
 
     @Override
@@ -110,6 +105,13 @@ public class ReviewServiceImpl implements ReviewService{
         // in the meantime some other user might have changed this object on the
         // database, so concurrency control will still be applied when we try to save
         // this updated object
+        return reviewRepository.save(rev);
+    }
+    @Override
+    public Review partialUpdateDTO(final ReviewDTOStatus review) {
+        final var rev = reviewRepository.findById(review.getReviewId())
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Review Not Found"));
+        rev.applyPatchDTO(review);
         return reviewRepository.save(rev);
     }
 

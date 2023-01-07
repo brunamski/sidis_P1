@@ -73,4 +73,10 @@ public class Review {
             setStatus(newReview.getStatus());
         }
     }
+
+    public void applyPatchDTO(final ReviewDTOStatus newReview) {
+        if (newReview.getStatus() != null) {
+            setStatus(newReview.getStatus());
+        }
+    }
 }

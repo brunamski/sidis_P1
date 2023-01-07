@@ -97,12 +97,6 @@ public class ReviewServiceImpl implements ReviewService{
 
         return ResponseEntity.noContent().build();
     }
-    @Override
-    public ReviewDTOStatus updateReviewStatus(final Review review) throws IOException {
-        Review newReview = partialUpdate(review);
-        ReviewDTOStatus newReviewDTOStatus = new ReviewDTOStatus(newReview.getReviewId(), newReview.getSku(), newReview.getRating(), newReview.getText(), newReview.getPublishingDate(), newReview.getFunFact(), newReview.getStatus());
-        return newReviewDTOStatus;
-    }
 
     @Override
     public List<ReviewDTOStatus> findReviewsByUserId(Long userId) throws IOException, InterruptedException {
@@ -123,8 +117,9 @@ public class ReviewServiceImpl implements ReviewService{
     }
 
     @Override
-    public Review create(Review newReview){
-        return reviewRepository.save(newReview);
+    public Review create(ReviewDTO newReview) throws IOException {
+        Review review = new Review(newReview.getSku(), newReview.getRating(), newReview.getText());
+        return reviewRepository.save(review);
     }
 
     @Override
@@ -133,7 +128,7 @@ public class ReviewServiceImpl implements ReviewService{
     }
 
     @Override
-    public Review partialUpdate(final Review review) {
+    public Review partialUpdate(final ReviewDTOStatus review) {
         // first let's check if the object exists so we don't create a new object with
         // save
         final var rev = reviewRepository.findById(review.getReviewId())
@@ -141,7 +136,7 @@ public class ReviewServiceImpl implements ReviewService{
 
         // since we got the object from the database we can check the version in memory
         // and apply the patch
-        rev.applyPatch(review);
+        rev.applyPatchDTO(review);
 
         // in the meantime some other user might have changed this object on the
         // database, so concurrency control will still be applied when we try to save
