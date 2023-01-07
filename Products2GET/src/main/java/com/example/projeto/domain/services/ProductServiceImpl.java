@@ -53,7 +53,7 @@ public class ProductServiceImpl implements ProductService {
             Product p = optionalProduct.get();
             AggregatedRating agg = getAggregatedRating(sku);
             p.setAggregatedRating(agg);
-            ProductDTO productDTO = new ProductDTO(p.getProductId(),p.getDesignation(),p.getSku(),p.getDescription(),p.getAggregatedRating(),p.getSetOfImages());
+            ProductDTO productDTO = new ProductDTO(p.getProductId(),p.getDesignation(),p.getSku(),p.getDescription(),p.getAggregatedRating());
             return Optional.of(productDTO);
         } else {
             return Optional.empty();
@@ -67,7 +67,7 @@ public class ProductServiceImpl implements ProductService {
             Product product = optionalProduct.get();
             AggregatedRating agg = getAggregatedRating(product.getSku());
             product.setAggregatedRating(agg);
-            ProductDTO productDTO = new ProductDTO(product.getProductId(), product.getDesignation(), product.getSku(), product.getDescription(), product.getAggregatedRating(), product.getSetOfImages());
+            ProductDTO productDTO = new ProductDTO(product.getProductId(), product.getDesignation(), product.getSku(), product.getDescription(), product.getAggregatedRating());
             return Optional.of(productDTO);
         } else {
             return Optional.empty();

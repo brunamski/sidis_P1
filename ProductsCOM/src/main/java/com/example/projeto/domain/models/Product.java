@@ -26,9 +26,6 @@ public class Product {
     @Column(nullable = false, length = 2048)
     private String description;
 
-    @ElementCollection
-    private Set<String> setOfImages = new HashSet<String>();
-
     @Transient
     private AggregatedRatingDTO aggregatedRating;
 
@@ -40,11 +37,6 @@ public class Product {
         setDesignation(designation);
         setDescription(description);
         setSku(sku);
-    }
-
-
-    public void addImages(String filename) {
-        setOfImages.add(filename);
     }
 
     public void setDesignation(String designation) {

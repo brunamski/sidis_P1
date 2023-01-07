@@ -68,4 +68,19 @@ public class RabbitConfig {
     public Products2COMSender sender() {
         return new Products2COMSender();
     }
+
+    @Bean
+    public Queue queueReceiver(){
+        return new Queue("rpc_prod_receiver");
+    }
+
+    @Bean
+    public DirectExchange directExchange(){
+        return new DirectExchange("rpc_prod");
+    }
+
+    @Bean
+    public Binding bindingReceiver(DirectExchange directExchange, Queue queueReceiver){
+        return BindingBuilder.bind(queueReceiver).to(directExchange).with("key");
+    }
 }

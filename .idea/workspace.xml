@@ -5,38 +5,988 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cad0091b-81f1-4e58-8d71-4f09ebfdfedf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/AboutProject.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/DM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/EndpointTable.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/UCD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #0/US12/US12-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #0/US12/US12-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #0/US12/US12-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #0/US12/US12-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #0/US12/US12-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #0/US12/US12-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #0/US12/US12.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #0/US13/US13-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #0/US13/US13-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #0/US13/US13-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #0/US13/US13-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #0/US13/US13-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #0/US13/US13-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #0/US13/US13.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #1/US01/US01-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #1/US01/US01-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #1/US01/US01-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #1/US01/US01-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #1/US01/US01-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #1/US01/US01-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #1/US01/US01.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #1/US02/US02-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #1/US02/US02-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #1/US02/US02-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #1/US02/US02-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #1/US02/US02-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #1/US02/US02-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #1/US02/US02.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #1/US03/US03-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #1/US03/US03-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #1/US03/US03-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #1/US03/US03-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #1/US03/US03-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #1/US03/US03-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #1/US03/US03.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #2/US04/US04-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #2/US04/US04-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #2/US04/US04-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #2/US04/US04-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #2/US04/US04-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #2/US04/US04-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #2/US04/US04-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #2/US04/US04-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #2/US04/US04.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #2/US05/US05-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #2/US05/US05-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #2/US05/US05-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #2/US05/US05-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #2/US05/US05-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #2/US05/US05-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #2/US05/US05-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #2/US05/US05-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #2/US05/US05.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #3/US05V2/US05V2-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #3/US05V2/US05V2-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #3/US05V2/US05V2-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #3/US05V2/US05V2-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #3/US05V2/US05V2-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #3/US05V2/US05V2-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #3/US05V2/US05V2-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #3/US05V2/US05V2-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #3/US05V2/US05V2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #3/US06/US06-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #3/US06/US06-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #3/US06/US06-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #3/US06/US06-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #3/US06/US06-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #3/US06/US06-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #3/US06/US06-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #3/US06/US06-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #3/US06/US06.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #3/US07/US07-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #3/US07/US07-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #3/US07/US07-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #3/US07/US07-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #3/US07/US07-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #3/US07/US07-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #3/US07/US07-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #3/US07/US07-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #3/US07/US07.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #4/US08/US08-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #4/US08/US08-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #4/US08/US08-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #4/US08/US08-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #4/US08/US08-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #4/US08/US08-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #4/US08/US08-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #4/US08/US08-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #4/US08/US08.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #4/US10/US10-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #4/US10/US10-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #4/US10/US10-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #4/US10/US10-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #4/US10/US10-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #4/US10/US10-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #4/US10/US10-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #4/US10/US10-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #4/US10/US10.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #4/US11/US11-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #4/US11/US11-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #4/US11/US11-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #4/US11/US11-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #4/US11/US11-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #4/US11/US11-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #4/US11/US11-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #4/US11/US11-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #4/US11/US11.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #5/US09-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #5/US09-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #5/US09-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #5/US09-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #5/US09-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #5/US09-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #5/US09-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #5/US09-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autentication/docs/Work Package #5/US09.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/AboutProject.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/DM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/EndpointTable.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/UCD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #0/US12/US12-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #0/US12/US12-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #0/US12/US12-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #0/US12/US12-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #0/US12/US12-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #0/US12/US12-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #0/US12/US12.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #0/US13/US13-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #0/US13/US13-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #0/US13/US13-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #0/US13/US13-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #0/US13/US13-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #0/US13/US13-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #0/US13/US13.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #1/US01/US01-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #1/US01/US01-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #1/US01/US01-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #1/US01/US01-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #1/US01/US01-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #1/US01/US01-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #1/US01/US01.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #1/US02/US02-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #1/US02/US02-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #1/US02/US02-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #1/US02/US02-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #1/US02/US02-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #1/US02/US02-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #1/US02/US02.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #1/US03/US03-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #1/US03/US03-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #1/US03/US03-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #1/US03/US03-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #1/US03/US03-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #1/US03/US03-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #1/US03/US03.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #2/US04/US04-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #2/US04/US04-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #2/US04/US04-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #2/US04/US04-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #2/US04/US04-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #2/US04/US04-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #2/US04/US04-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #2/US04/US04-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #2/US04/US04.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #2/US05/US05-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #2/US05/US05-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #2/US05/US05-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #2/US05/US05-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #2/US05/US05-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #2/US05/US05-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #2/US05/US05-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #2/US05/US05-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #2/US05/US05.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #3/US05V2/US05V2-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #3/US05V2/US05V2-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #3/US05V2/US05V2-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #3/US05V2/US05V2-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #3/US05V2/US05V2-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #3/US05V2/US05V2-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #3/US05V2/US05V2-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #3/US05V2/US05V2-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #3/US05V2/US05V2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #3/US06/US06-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #3/US06/US06-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #3/US06/US06-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #3/US06/US06-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #3/US06/US06-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #3/US06/US06-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #3/US06/US06-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #3/US06/US06-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #3/US06/US06.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #3/US07/US07-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #3/US07/US07-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #3/US07/US07-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #3/US07/US07-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #3/US07/US07-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #3/US07/US07-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #3/US07/US07-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #3/US07/US07-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #3/US07/US07.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #4/US08/US08-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #4/US08/US08-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #4/US08/US08-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #4/US08/US08-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #4/US08/US08-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #4/US08/US08-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #4/US08/US08-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #4/US08/US08-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #4/US08/US08.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #4/US10/US10-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #4/US10/US10-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #4/US10/US10-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #4/US10/US10-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #4/US10/US10-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #4/US10/US10-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #4/US10/US10-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #4/US10/US10-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #4/US10/US10.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #4/US11/US11-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #4/US11/US11-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #4/US11/US11-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #4/US11/US11-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #4/US11/US11-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #4/US11/US11-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #4/US11/US11-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #4/US11/US11-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #4/US11/US11.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #5/US09-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #5/US09-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #5/US09-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #5/US09-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #5/US09-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #5/US09-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #5/US09-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #5/US09-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/docs/Work Package #5/US09.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/domain/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/domain/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/domain/models/ProductDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/domain/models/ProductDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/domain/models/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/domain/models/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/domain/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/domain/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/src/main/resources/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/AboutProject.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/DM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/EndpointTable.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/UCD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #0/US12/US12-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #0/US12/US12-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #0/US12/US12-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #0/US12/US12-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #0/US12/US12-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #0/US12/US12-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #0/US12/US12.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #0/US13/US13-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #0/US13/US13-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #0/US13/US13-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #0/US13/US13-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #0/US13/US13-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #0/US13/US13-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #0/US13/US13.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #1/US01/US01-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #1/US01/US01-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #1/US01/US01-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #1/US01/US01-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #1/US01/US01-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #1/US01/US01-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #1/US01/US01.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #1/US02/US02-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #1/US02/US02-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #1/US02/US02-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #1/US02/US02-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #1/US02/US02-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #1/US02/US02-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #1/US02/US02.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #1/US03/US03-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #1/US03/US03-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #1/US03/US03-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #1/US03/US03-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #1/US03/US03-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #1/US03/US03-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #1/US03/US03.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #2/US04/US04-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #2/US04/US04-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #2/US04/US04-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #2/US04/US04-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #2/US04/US04-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #2/US04/US04-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #2/US04/US04-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #2/US04/US04-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #2/US04/US04.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #2/US05/US05-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #2/US05/US05-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #2/US05/US05-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #2/US05/US05-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #2/US05/US05-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #2/US05/US05-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #2/US05/US05-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #2/US05/US05-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #2/US05/US05.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #3/US05V2/US05V2-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #3/US05V2/US05V2-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #3/US05V2/US05V2-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #3/US05V2/US05V2-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #3/US05V2/US05V2-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #3/US05V2/US05V2-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #3/US05V2/US05V2-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #3/US05V2/US05V2-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #3/US05V2/US05V2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #3/US06/US06-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #3/US06/US06-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #3/US06/US06-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #3/US06/US06-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #3/US06/US06-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #3/US06/US06-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #3/US06/US06-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #3/US06/US06-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #3/US06/US06.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #3/US07/US07-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #3/US07/US07-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #3/US07/US07-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #3/US07/US07-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #3/US07/US07-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #3/US07/US07-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #3/US07/US07-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #3/US07/US07-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #3/US07/US07.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #4/US08/US08-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #4/US08/US08-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #4/US08/US08-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #4/US08/US08-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #4/US08/US08-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #4/US08/US08-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #4/US08/US08-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #4/US08/US08-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #4/US08/US08.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #4/US10/US10-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #4/US10/US10-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #4/US10/US10-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #4/US10/US10-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #4/US10/US10-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #4/US10/US10-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #4/US10/US10-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #4/US10/US10-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #4/US10/US10.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #4/US11/US11-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #4/US11/US11-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #4/US11/US11-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #4/US11/US11-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #4/US11/US11-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #4/US11/US11-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #4/US11/US11-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #4/US11/US11-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #4/US11/US11.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #5/US09-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #5/US09-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #5/US09-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #5/US09-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #5/US09-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #5/US09-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #5/US09-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #5/US09-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/docs/Work Package #5/US09.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/domain/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/domain/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/domain/models/ProductDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/domain/models/ProductDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/rabbitmq/Products2GETReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/rabbitmq/Products2GETReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/src/main/resources/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/AboutProject.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/DM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/EndpointTable.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/UCD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #0/US12/US12-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #0/US12/US12-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #0/US12/US12-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #0/US12/US12-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #0/US12/US12-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #0/US12/US12-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #0/US12/US12.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #0/US13/US13-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #0/US13/US13-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #0/US13/US13-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #0/US13/US13-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #0/US13/US13-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #0/US13/US13-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #0/US13/US13.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #1/US01/US01-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #1/US01/US01-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #1/US01/US01-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #1/US01/US01-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #1/US01/US01-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #1/US01/US01-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #1/US01/US01.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #1/US02/US02-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #1/US02/US02-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #1/US02/US02-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #1/US02/US02-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #1/US02/US02-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #1/US02/US02-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #1/US02/US02.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #1/US03/US03-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #1/US03/US03-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #1/US03/US03-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #1/US03/US03-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #1/US03/US03-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #1/US03/US03-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #1/US03/US03.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #2/US04/US04-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #2/US04/US04-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #2/US04/US04-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #2/US04/US04-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #2/US04/US04-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #2/US04/US04-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #2/US04/US04-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #2/US04/US04-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #2/US04/US04.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #2/US05/US05-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #2/US05/US05-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #2/US05/US05-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #2/US05/US05-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #2/US05/US05-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #2/US05/US05-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #2/US05/US05-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #2/US05/US05-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #2/US05/US05.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #3/US05V2/US05V2-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #3/US05V2/US05V2-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #3/US05V2/US05V2-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #3/US05V2/US05V2-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #3/US05V2/US05V2-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #3/US05V2/US05V2-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #3/US05V2/US05V2-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #3/US05V2/US05V2-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #3/US05V2/US05V2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #3/US06/US06-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #3/US06/US06-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #3/US06/US06-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #3/US06/US06-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #3/US06/US06-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #3/US06/US06-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #3/US06/US06-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #3/US06/US06-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #3/US06/US06.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #3/US07/US07-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #3/US07/US07-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #3/US07/US07-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #3/US07/US07-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #3/US07/US07-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #3/US07/US07-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #3/US07/US07-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #3/US07/US07-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #3/US07/US07.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #4/US08/US08-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #4/US08/US08-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #4/US08/US08-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #4/US08/US08-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #4/US08/US08-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #4/US08/US08-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #4/US08/US08-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #4/US08/US08-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #4/US08/US08.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #4/US10/US10-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #4/US10/US10-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #4/US10/US10-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #4/US10/US10-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #4/US10/US10-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #4/US10/US10-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #4/US10/US10-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #4/US10/US10-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #4/US10/US10.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #4/US11/US11-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #4/US11/US11-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #4/US11/US11-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #4/US11/US11-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #4/US11/US11-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #4/US11/US11-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #4/US11/US11-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #4/US11/US11-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #4/US11/US11.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #5/US09-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #5/US09-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #5/US09-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #5/US09-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #5/US09-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #5/US09-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #5/US09-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #5/US09-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/docs/Work Package #5/US09.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/domain/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/domain/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/domain/models/ProductDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/domain/models/ProductDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductsGET/src/main/java/com/example/projeto/domain/models/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsGET/src/main/java/com/example/projeto/domain/models/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductsGET/src/main/java/com/example/projeto/domain/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsGET/src/main/java/com/example/projeto/domain/services/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductsGET/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsGET/src/main/java/com/example/projeto/domain/services/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductsGET/src/main/java/com/example/projeto/rabbitmq/ProductsGETReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsGET/src/main/java/com/example/projeto/rabbitmq/ProductsGETReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/domain/models/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/domain/models/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/domain/services/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/domain/services/ReviewService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/rabbitmq/Reviews2COMReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/rabbitmq/Reviews2COMReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/rabbitmq/Reviews2COMSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/rabbitmq/Reviews2COMSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/domain/models/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/domain/models/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/domain/services/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/domain/services/ReviewService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/rabbitmq/Reviews2GETReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/rabbitmq/Reviews2GETReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/domain/models/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/domain/models/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/domain/services/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/domain/services/ReviewService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/rabbitmq/ReviewsCOMReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/rabbitmq/ReviewsCOMReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/rabbitmq/ReviewsCOMSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/rabbitmq/ReviewsCOMSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/domain/models/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/domain/models/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/domain/models/ReviewDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/domain/models/ReviewDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/domain/services/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/domain/services/ReviewService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/rabbitmq/ReviewsGETReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/rabbitmq/ReviewsGETReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/src/main/resources/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/AboutProject.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/DM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/EndpointTable.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/UCD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #0/US12/US12-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #0/US12/US12-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #0/US12/US12-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #0/US12/US12-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #0/US12/US12-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #0/US12/US12-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #0/US12/US12.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #0/US13/US13-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #0/US13/US13-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #0/US13/US13-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #0/US13/US13-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #0/US13/US13-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #0/US13/US13-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #0/US13/US13.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #1/US01/US01-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #1/US01/US01-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #1/US01/US01-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #1/US01/US01-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #1/US01/US01-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #1/US01/US01-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #1/US01/US01.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #1/US02/US02-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #1/US02/US02-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #1/US02/US02-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #1/US02/US02-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #1/US02/US02-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #1/US02/US02-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #1/US02/US02.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #1/US03/US03-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #1/US03/US03-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #1/US03/US03-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #1/US03/US03-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #1/US03/US03-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #1/US03/US03-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #1/US03/US03.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #2/US04/US04-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #2/US04/US04-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #2/US04/US04-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #2/US04/US04-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #2/US04/US04-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #2/US04/US04-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #2/US04/US04-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #2/US04/US04-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #2/US04/US04.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #2/US05/US05-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #2/US05/US05-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #2/US05/US05-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #2/US05/US05-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #2/US05/US05-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #2/US05/US05-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #2/US05/US05-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #2/US05/US05-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #2/US05/US05.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #3/US05V2/US05V2-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #3/US05V2/US05V2-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #3/US05V2/US05V2-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #3/US05V2/US05V2-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #3/US05V2/US05V2-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #3/US05V2/US05V2-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #3/US05V2/US05V2-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #3/US05V2/US05V2-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #3/US05V2/US05V2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #3/US06/US06-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #3/US06/US06-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #3/US06/US06-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #3/US06/US06-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #3/US06/US06-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #3/US06/US06-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #3/US06/US06-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #3/US06/US06-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #3/US06/US06.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #3/US07/US07-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #3/US07/US07-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #3/US07/US07-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #3/US07/US07-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #3/US07/US07-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #3/US07/US07-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #3/US07/US07-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #3/US07/US07-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #3/US07/US07.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #4/US08/US08-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #4/US08/US08-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #4/US08/US08-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #4/US08/US08-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #4/US08/US08-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #4/US08/US08-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #4/US08/US08-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #4/US08/US08-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #4/US08/US08.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #4/US10/US10-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #4/US10/US10-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #4/US10/US10-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #4/US10/US10-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #4/US10/US10-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #4/US10/US10-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #4/US10/US10-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #4/US10/US10-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #4/US10/US10.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #4/US11/US11-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #4/US11/US11-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #4/US11/US11-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #4/US11/US11-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #4/US11/US11-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #4/US11/US11-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #4/US11/US11-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #4/US11/US11-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #4/US11/US11.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #5/US09-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #5/US09-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #5/US09-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #5/US09-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #5/US09-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #5/US09-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #5/US09-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #5/US09-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/docs/Work Package #5/US09.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/domain/models/Vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/domain/models/Vote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/AboutProject.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/DM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/EndpointTable.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/UCD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #0/US12/US12-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #0/US12/US12-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #0/US12/US12-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #0/US12/US12-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #0/US12/US12-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #0/US12/US12-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #0/US12/US12.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #0/US13/US13-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #0/US13/US13-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #0/US13/US13-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #0/US13/US13-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #0/US13/US13-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #0/US13/US13-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #0/US13/US13.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #1/US01/US01-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #1/US01/US01-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #1/US01/US01-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #1/US01/US01-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #1/US01/US01-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #1/US01/US01-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #1/US01/US01.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #1/US02/US02-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #1/US02/US02-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #1/US02/US02-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #1/US02/US02-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #1/US02/US02-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #1/US02/US02-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #1/US02/US02.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #1/US03/US03-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #1/US03/US03-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #1/US03/US03-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #1/US03/US03-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #1/US03/US03-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #1/US03/US03-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #1/US03/US03.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #2/US04/US04-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #2/US04/US04-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #2/US04/US04-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #2/US04/US04-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #2/US04/US04-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #2/US04/US04-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #2/US04/US04-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #2/US04/US04-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #2/US04/US04.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #2/US05/US05-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #2/US05/US05-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #2/US05/US05-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #2/US05/US05-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #2/US05/US05-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #2/US05/US05-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #2/US05/US05-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #2/US05/US05-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #2/US05/US05.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #3/US05V2/US05V2-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #3/US05V2/US05V2-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #3/US05V2/US05V2-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #3/US05V2/US05V2-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #3/US05V2/US05V2-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #3/US05V2/US05V2-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #3/US05V2/US05V2-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #3/US05V2/US05V2-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #3/US05V2/US05V2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #3/US06/US06-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #3/US06/US06-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #3/US06/US06-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #3/US06/US06-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #3/US06/US06-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #3/US06/US06-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #3/US06/US06-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #3/US06/US06-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #3/US06/US06.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #3/US07/US07-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #3/US07/US07-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #3/US07/US07-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #3/US07/US07-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #3/US07/US07-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #3/US07/US07-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #3/US07/US07-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #3/US07/US07-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #3/US07/US07.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #4/US08/US08-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #4/US08/US08-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #4/US08/US08-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #4/US08/US08-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #4/US08/US08-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #4/US08/US08-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #4/US08/US08-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #4/US08/US08-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #4/US08/US08.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #4/US10/US10-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #4/US10/US10-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #4/US10/US10-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #4/US10/US10-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #4/US10/US10-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #4/US10/US10-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #4/US10/US10-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #4/US10/US10-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #4/US10/US10.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #4/US11/US11-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #4/US11/US11-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #4/US11/US11-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #4/US11/US11-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #4/US11/US11-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #4/US11/US11-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #4/US11/US11-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #4/US11/US11-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #4/US11/US11.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #5/US09-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #5/US09-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #5/US09-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #5/US09-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #5/US09-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #5/US09-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #5/US09-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #5/US09-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/docs/Work Package #5/US09.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/domain/models/Vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/domain/models/Vote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/domain/models/Vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/domain/models/Vote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/AboutProject.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/DM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/EndpointTable.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/UCD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #0/US12/US12-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #0/US12/US12-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #0/US12/US12-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #0/US12/US12-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #0/US12/US12-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #0/US12/US12-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #0/US12/US12.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #0/US13/US13-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #0/US13/US13-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #0/US13/US13-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #0/US13/US13-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #0/US13/US13-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #0/US13/US13-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #0/US13/US13.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #1/US01/US01-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #1/US01/US01-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #1/US01/US01-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #1/US01/US01-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #1/US01/US01-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #1/US01/US01-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #1/US01/US01.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #1/US02/US02-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #1/US02/US02-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #1/US02/US02-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #1/US02/US02-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #1/US02/US02-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #1/US02/US02-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #1/US02/US02.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #1/US03/US03-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #1/US03/US03-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #1/US03/US03-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #1/US03/US03-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #1/US03/US03-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #1/US03/US03-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #1/US03/US03.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #2/US04/US04-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #2/US04/US04-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #2/US04/US04-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #2/US04/US04-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #2/US04/US04-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #2/US04/US04-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #2/US04/US04-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #2/US04/US04-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #2/US04/US04.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #2/US05/US05-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #2/US05/US05-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #2/US05/US05-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #2/US05/US05-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #2/US05/US05-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #2/US05/US05-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #2/US05/US05-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #2/US05/US05-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #2/US05/US05.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #3/US05V2/US05V2-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #3/US05V2/US05V2-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #3/US05V2/US05V2-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #3/US05V2/US05V2-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #3/US05V2/US05V2-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #3/US05V2/US05V2-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #3/US05V2/US05V2-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #3/US05V2/US05V2-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #3/US05V2/US05V2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #3/US06/US06-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #3/US06/US06-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #3/US06/US06-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #3/US06/US06-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #3/US06/US06-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #3/US06/US06-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #3/US06/US06-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #3/US06/US06-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #3/US06/US06.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #3/US07/US07-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #3/US07/US07-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #3/US07/US07-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #3/US07/US07-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #3/US07/US07-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #3/US07/US07-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #3/US07/US07-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #3/US07/US07-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #3/US07/US07.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #4/US08/US08-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #4/US08/US08-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #4/US08/US08-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #4/US08/US08-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #4/US08/US08-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #4/US08/US08-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #4/US08/US08-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #4/US08/US08-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #4/US08/US08.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #4/US10/US10-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #4/US10/US10-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #4/US10/US10-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #4/US10/US10-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #4/US10/US10-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #4/US10/US10-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #4/US10/US10-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #4/US10/US10-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #4/US10/US10.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #4/US11/US11-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #4/US11/US11-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #4/US11/US11-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #4/US11/US11-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #4/US11/US11-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #4/US11/US11-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #4/US11/US11-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #4/US11/US11-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #4/US11/US11.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #5/US09-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #5/US09-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #5/US09-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #5/US09-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #5/US09-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #5/US09-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #5/US09-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #5/US09-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/docs/Work Package #5/US09.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/domain/models/Vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/domain/models/Vote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/AboutProject.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/DM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/EndpointTable.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/UCD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #0/US12/US12-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #0/US12/US12-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #0/US12/US12-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #0/US12/US12-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #0/US12/US12-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #0/US12/US12-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #0/US12/US12.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #0/US13/US13-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #0/US13/US13-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #0/US13/US13-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #0/US13/US13-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #0/US13/US13-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #0/US13/US13-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #0/US13/US13.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #1/US01/US01-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #1/US01/US01-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #1/US01/US01-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #1/US01/US01-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #1/US01/US01-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #1/US01/US01-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #1/US01/US01.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #1/US02/US02-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #1/US02/US02-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #1/US02/US02-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #1/US02/US02-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #1/US02/US02-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #1/US02/US02-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #1/US02/US02.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #1/US03/US03-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #1/US03/US03-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #1/US03/US03-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #1/US03/US03-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #1/US03/US03-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #1/US03/US03-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #1/US03/US03.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #2/US04/US04-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #2/US04/US04-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #2/US04/US04-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #2/US04/US04-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #2/US04/US04-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #2/US04/US04-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #2/US04/US04-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #2/US04/US04-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #2/US04/US04.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #2/US05/US05-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #2/US05/US05-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #2/US05/US05-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #2/US05/US05-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #2/US05/US05-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #2/US05/US05-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #2/US05/US05-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #2/US05/US05-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #2/US05/US05.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #3/US05V2/US05V2-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #3/US05V2/US05V2-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #3/US05V2/US05V2-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #3/US05V2/US05V2-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #3/US05V2/US05V2-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #3/US05V2/US05V2-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #3/US05V2/US05V2-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #3/US05V2/US05V2-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #3/US05V2/US05V2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #3/US06/US06-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #3/US06/US06-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #3/US06/US06-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #3/US06/US06-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #3/US06/US06-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #3/US06/US06-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #3/US06/US06-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #3/US06/US06-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #3/US06/US06.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #3/US07/US07-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #3/US07/US07-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #3/US07/US07-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #3/US07/US07-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #3/US07/US07-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #3/US07/US07-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #3/US07/US07-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #3/US07/US07-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #3/US07/US07.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #4/US08/US08-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #4/US08/US08-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #4/US08/US08-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #4/US08/US08-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #4/US08/US08-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #4/US08/US08-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #4/US08/US08-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #4/US08/US08-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #4/US08/US08.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #4/US10/US10-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #4/US10/US10-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #4/US10/US10-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #4/US10/US10-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #4/US10/US10-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #4/US10/US10-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #4/US10/US10-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #4/US10/US10-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #4/US10/US10.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #4/US11/US11-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #4/US11/US11-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #4/US11/US11-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #4/US11/US11-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #4/US11/US11-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #4/US11/US11-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #4/US11/US11-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #4/US11/US11-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #4/US11/US11.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #5/US09-CD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #5/US09-CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #5/US09-MD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #5/US09-MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #5/US09-SD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #5/US09-SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #5/US09-SSD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #5/US09-SSD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesGET/docs/Work Package #5/US09.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,25 +1031,27 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Avaliacao2/sidis_P1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CurrentState/src/main/java/com/example/projeto/domain/models" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Tiago Oliveira\IdeaProjects\SISDIS\sidis_P1\CurrentState\src\main\java\com\example\projeto\domain\models" />
       <recent name="C:\Users\Tiago Oliveira\IdeaProjects\SISDIS\sidis_P1\ProductsGET\src\main\java\com\example\projeto\domain\models" />
       <recent name="C:\Users\Tiago Oliveira\IdeaProjects\SISDIS\sidis_P1\Products2GET\src\main\java\com\example\projeto\domain\models" />
       <recent name="C:\Users\Tiago Oliveira\IdeaProjects\SISDIS\sidis_P1\VotesCOM\src\main\java\com\example\projeto" />
       <recent name="C:\Users\Tiago Oliveira\IdeaProjects\SISDIS\sidis_P1\Products2COM\src\main\java\com\example\projeto" />
-      <recent name="C:\Users\Tiago Oliveira\IdeaProjects\SISDIS\sidis_P1\Products2GET\src\main\java\com\example\projeto" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.example.projeto.domain.models" />
+      <recent name="com.example.projeto.rabbitmq" />
+      <recent name="com.example.projeto.bootstrap" />
       <recent name="com.example.projeto.domain.repositories" />
+      <recent name="com.example.projeto.domain.models" />
     </key>
   </component>
-  <component name="RunManager" selected="Compound.sidis_project">
+  <component name="RunManager" selected="Spring Boot.Products2GETApplication">
     <configuration name="sidis_project" type="CompoundRunConfigurationType">
       <toRun name="AuthenticationApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="Products2COMApplication" type="SpringBootApplicationConfigurationType" />
@@ -118,6 +1070,14 @@
     <configuration name="AuthenticationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="projeto" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.AuthenticationApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CurrentStateApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="projeto (12)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.projeto.CurrentStateApplication" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -225,6 +1185,7 @@
       <item itemvalue="Spring Boot.VotesCOMApplication" />
       <item itemvalue="Spring Boot.VotesGETApplication" />
       <item itemvalue="Spring Boot.Votes2COMApplication" />
+      <item itemvalue="Spring Boot.CurrentStateApplication" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -269,7 +1230,7 @@
       <workItem from="1672820408759" duration="6723000" />
       <workItem from="1672914264866" duration="82000" />
       <workItem from="1673016881108" duration="16117000" />
-      <workItem from="1673097334465" duration="5550000" />
+      <workItem from="1673097334465" duration="17030000" />
     </task>
     <servers />
   </component>
@@ -288,6 +1249,15 @@
     </option>
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/CurrentState/src/main/java/com/example/projeto/rabbitmq/CurrentStateSender.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="org.apache.commons.logging.LogAdapter$Slf4jLocationAwareLog" memberName="logger" />

@@ -26,9 +26,6 @@ public class Product {
     @Column(nullable = false, length = 2048)
     private String description;
 
-    @ElementCollection
-    private Set<String> setOfImages = new HashSet<String>();
-
     @Transient
     private AggregatedRating aggregatedRating;
 

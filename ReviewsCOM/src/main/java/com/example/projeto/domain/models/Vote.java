@@ -19,14 +19,14 @@ public class Vote {
     private Long reviewId;
 
     @Column(nullable = false)
-    private boolean vote;
+    private Boolean vote;
 
     @Column(nullable = false, length = 1000)
     private String reason;
 
     protected Vote() {}
 
-    public Vote(boolean vote, String reason) {
+    public Vote(Boolean vote, String reason) {
         this.vote = vote;
         this.reason = reason;
     }
