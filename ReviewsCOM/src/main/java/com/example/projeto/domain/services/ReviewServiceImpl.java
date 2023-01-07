@@ -66,7 +66,7 @@ public class ReviewServiceImpl implements ReviewService{
     public ResponseEntity<Review> withdrawReview(final Long reviewId) {
         final var rev = reviewRepository.findById(reviewId);
         if(rev.isEmpty()){
-            return ResponseEntity.notFound().build();
+            return ResponseEntity.unprocessableEntity().build();
         }
 
         int numVotes = voteRepository.getVotesByReviewId(reviewId);
