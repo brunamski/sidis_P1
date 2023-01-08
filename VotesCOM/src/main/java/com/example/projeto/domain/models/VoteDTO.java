@@ -10,11 +10,13 @@ import java.util.Set;
 @Setter
 public class VoteDTO {
 
-    public final Long voteId;
-    public final Long userID;
-    public final Long reviewID;
-    public final Boolean vote;
-    public final String reason;
+    public Long voteId;
+    public Long userID;
+    public Long reviewID;
+    public Boolean vote;
+    public String reason;
+
+    public VoteDTO() {}
 
     public VoteDTO(   Long voteId,
                       Long userId,
