@@ -83,15 +83,4 @@ public class ReviewController {
     public ResponseEntity<AggregatedRatingDTO> getAggregatedRatingDTO(@PathVariable(value = "sku") final String sku) throws IOException, InterruptedException {
         return ResponseEntity.ok().body(reviewService.getAggregatedRatingDTO(sku));
     }
-
-    @GetMapping(value = "/public/review/get/{id}")
-    public boolean reviewIsPresent(@PathVariable(value = "id") final Long reviewId) throws IOException, InterruptedException {
-        final var optionalReview = reviewService.getReviewById(reviewId);
-        if (optionalReview.isPresent()) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
 }

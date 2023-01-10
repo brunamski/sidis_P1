@@ -46,10 +46,13 @@ public class VoteServiceImpl implements VoteService{
 
     @Override
     public void create(VoteDTO newVote){
-        Vote v = new Vote(newVote.getVote(),newVote.getReason());
-        v.setUserId(newVote.getUserID());
-        v.setReviewId(newVote.getReviewID());
-        voteRepository.save(v);
+        boolean voteIsPresent = voteRepository.existsById(newVote.voteId);
+        if(voteIsPresent == false) {
+            Vote v = new Vote(newVote.getVote(), newVote.getReason());
+            v.setUserId(newVote.getUserID());
+            v.setReviewId(newVote.getReviewID());
+            voteRepository.save(v);
+        }
     }
 
     @Override

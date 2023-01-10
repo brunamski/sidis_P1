@@ -48,5 +48,5 @@ public interface ReviewService {
 
     AggregatedRating getProductAggregatedRating(List<ReviewDTOcat> reviews);
 
-    Vote create(VoteDTO newVote);
+    void create(VoteDTO newVote);
 }

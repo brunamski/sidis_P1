@@ -149,8 +149,13 @@ public class ReviewServiceImpl implements ReviewService{
     }
 
     @Override
-    public Vote create(VoteDTO newVote){
-        Vote vote = new Vote(newVote.getVote(), newVote.getReason());
-        return voteRepository.save(vote);
+    public void create(VoteDTO newVote){
+        boolean voteIsPresent = voteRepository.existsById(newVote.voteId);
+        if(voteIsPresent == false) {
+            Vote v = new Vote(newVote.getVote(), newVote.getReason());
+            v.setUserId(newVote.getUserID());
+            v.setReviewId(newVote.getReviewID());
+            voteRepository.save(v);
+        }
     }
 }

@@ -646,6 +646,34 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "US06 - To Vote for a Review Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"vote\": true,\r\n    \"reason\": \"Love it!\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hostVotesCOM}}{{baseUrl}}/vote/product/SKU0000001",
+									"host": [
+										"{{hostVotesCOM}}{{baseUrl}}"
+									],
+									"path": [
+										"vote",
+										"product",
+										"SKU0000001"
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"auth": {
@@ -1065,14 +1093,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000007",
+									"raw": "{{hostProductsGET}}{{baseUrl}}/public/product/SKU0000001",
 									"host": [
 										"{{hostProductsGET}}{{baseUrl}}"
 									],
 									"path": [
 										"public",
 										"product",
-										"SKU0000007"
+										"SKU0000001"
 									]
 								}
 							},
@@ -1117,7 +1145,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"sku\": \"SKU0000007\",\r\n    \"rating\": 5,\r\n    \"text\": \"Isto é a razão pelo qual dei cinco estrelas\"\r\n}",
+									"raw": "{\r\n    \"sku\": \"SKU0000001\",\r\n    \"rating\": 5,\r\n    \"text\": \"Isto é a razão pelo qual dei cinco estrelas\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1328,7 +1356,7 @@
 									"script": {
 										"exec": [
 											"pm.test(\"Delete a non-existing review\", function(){\r",
-											"    pm.response.to.have.status(404);  \r",
+											"    pm.response.to.have.status(422);  \r",
 											"});"
 										],
 										"type": "text/javascript"
@@ -2663,47 +2691,6 @@
 					"response": []
 				},
 				{
-					"name": "US08 - To Obtain all my Reviews Including their Status",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Get review\", function(){\r",
-									"    pm.response.to.have.status(200);   \r",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{hostReviewsGET}}{{baseUrl}}/review/status",
-							"host": [
-								"{{hostReviewsGET}}{{baseUrl}}"
-							],
-							"path": [
-								"review",
-								"status"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "US04 - To Review and Rate a Product",
 					"event": [
 						{
@@ -2720,6 +2707,8 @@
 							"script": {
 								"exec": [
 									"pm.test(\"Create review\", function(){\r",
+									"    var jsonData = JSON.parse(responseBody);\r",
+									"    pm.environment.set(\"revID\", jsonData.reviewId);\r",
 									"    pm.response.to.have.status(200); \r",
 									"});"
 								],
@@ -2778,6 +2767,8 @@
 							"script": {
 								"exec": [
 									"pm.test(\"Create review\", function(){\r",
+									"    var jsonData = JSON.parse(responseBody);\r",
+									"    pm.environment.set(\"revIDnovotes\", jsonData.reviewId);\r",
 									"    pm.response.to.have.status(200); \r",
 									"});"
 								],
@@ -2814,47 +2805,6 @@
 							],
 							"path": [
 								"review"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "US08 - To Obtain all my Reviews Including their Status",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Get review\", function(){\r",
-									"    pm.response.to.have.status(200);   \r",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{hostReviewsGET}}{{baseUrl}}/review/status",
-							"host": [
-								"{{hostReviewsGET}}{{baseUrl}}"
-							],
-							"path": [
-								"review",
-								"status"
 							]
 						}
 					},
@@ -2977,7 +2927,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"reviewId\": 14,\r\n    \"status\": 1\r\n}",
+							"raw": "{\r\n    \"reviewId\": {{revID}},\r\n    \"status\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3112,7 +3062,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{hostReviewsGET}}{{baseUrl}}/public/review/vote/product/SKU0000007",
+							"raw": "{{hostReviewsGET}}{{baseUrl}}/public/review/vote/product/{{randomSKU}}",
 							"host": [
 								"{{hostReviewsGET}}{{baseUrl}}"
 							],
@@ -3121,7 +3071,7 @@
 								"review",
 								"vote",
 								"product",
-								"SKU0000007"
+								"{{randomSKU}}"
 							]
 						}
 					},
@@ -3165,13 +3115,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostVotesCOM}}{{baseUrl}}/review/14/vote",
+							"raw": "{{hostVotesCOM}}{{baseUrl}}/review/{{revID}}/vote",
 							"host": [
 								"{{hostVotesCOM}}{{baseUrl}}"
 							],
 							"path": [
 								"review",
-								"14",
+								"{{revID}}",
 								"vote"
 							]
 						}
@@ -3207,7 +3157,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{hostReviewsGET}}{{baseUrl}}/public/review/vote/product/SKU0000007",
+							"raw": "{{hostReviewsGET}}{{baseUrl}}/public/review/vote/product/{{randomSKU}}",
 							"host": [
 								"{{hostReviewsGET}}{{baseUrl}}"
 							],
@@ -3216,7 +3166,7 @@
 								"review",
 								"vote",
 								"product",
-								"SKU0000007"
+								"{{randomSKU}}"
 							]
 						}
 					},
@@ -3267,47 +3217,6 @@
 					"response": []
 				},
 				{
-					"name": "US08 - To Obtain all my Reviews Including their Status",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Get reviews\", function(){\r",
-									"    pm.response.to.have.status(200);  \r",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{hostReviewsGET}}{{baseUrl}}/review/status",
-							"host": [
-								"{{hostReviewsGET}}{{baseUrl}}"
-							],
-							"path": [
-								"review",
-								"status"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "US07 - To Withdraw one of my Reviews",
 					"event": [
 						{
@@ -3336,13 +3245,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/14/withdraw",
+							"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/{{revID}}/withdraw",
 							"host": [
 								"{{hostReviewsCOM}}{{baseUrl}}"
 							],
 							"path": [
 								"review",
-								"14",
+								"{{revID}}",
 								"withdraw"
 							]
 						}
@@ -3378,55 +3287,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/15/withdraw",
+							"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/{{revIDnovotes}}/withdraw",
 							"host": [
 								"{{hostReviewsCOM}}{{baseUrl}}"
 							],
 							"path": [
 								"review",
-								"15",
+								"{{revIDnovotes}}",
 								"withdraw"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "US08 - To Obtain all my Reviews Including their Status",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Get reviews\", function(){\r",
-									"    pm.response.to.have.status(200);  \r",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{hostReviewsGET}}{{baseUrl}}/review/status",
-							"host": [
-								"{{hostReviewsGET}}{{baseUrl}}"
-							],
-							"path": [
-								"review",
-								"status"
 							]
 						}
 					},
@@ -3461,13 +3329,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/14/withdraw",
+							"raw": "{{hostReviewsCOM}}{{baseUrl}}/review/{{revIDnovotes}}/withdraw",
 							"host": [
 								"{{hostReviewsCOM}}{{baseUrl}}"
 							],
 							"path": [
 								"review",
-								"14",
+								"{{revIDnovotes}}",
 								"withdraw"
 							]
 						}
@@ -3475,15 +3343,15 @@
 					"response": []
 				},
 				{
-					"name": "US08 - To Obtain all my Reviews Including their Status",
+					"name": "US05 - To Obtain the Reviews of a Product. Sorted by Number of Votes and Reverse Chronological Publishing Date",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"Get reviews\", function(){\r",
-									"    pm.response.to.have.status(200);  \r",
-									"});"
+									"pm.test(\"Get Rev ordered by votes\", function() {\r",
+									"    pm.response.to.have.status(200);\r",
+									"} );"
 								],
 								"type": "text/javascript"
 							}
@@ -3503,13 +3371,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{hostReviewsGET}}{{baseUrl}}/review/status",
+							"raw": "{{hostReviewsGET}}{{baseUrl}}/public/review/vote/product/{{randomSKU}}",
 							"host": [
 								"{{hostReviewsGET}}{{baseUrl}}"
 							],
 							"path": [
+								"public",
 								"review",
-								"status"
+								"vote",
+								"product",
+								"{{randomSKU}}"
 							]
 						}
 					},

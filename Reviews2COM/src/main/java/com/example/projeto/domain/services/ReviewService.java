@@ -39,5 +39,5 @@ public interface ReviewService {
 
     Review partialUpdateDTO(ReviewDTOStatus review);
 
-    Vote create(VoteDTO newVote);
+    void create(VoteDTO newVote);
 }
