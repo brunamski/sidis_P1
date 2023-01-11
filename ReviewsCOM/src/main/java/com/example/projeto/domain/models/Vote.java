@@ -24,6 +24,8 @@ public class Vote {
     @Column(nullable = false, length = 1000)
     private String reason;
 
+    private Status status = Status.APPROVED;
+
     protected Vote() {}
 
     public Vote(Boolean vote, String reason) {

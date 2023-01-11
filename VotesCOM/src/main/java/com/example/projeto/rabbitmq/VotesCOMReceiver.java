@@ -37,4 +37,10 @@ public class VotesCOMReceiver {
         voteService.partialUpdate(r);
         System.out.println(" [x] Updated review '" + r + "'");
     }
+
+    @RabbitListener(queues = "#{autoDeleteQueue1.name}")
+    public void receiverProd(ProductDTO p) throws IOException {
+        voteService.create(p);
+        System.out.println(" [x] Received '" + p + "'");
+    }
 }

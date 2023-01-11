@@ -1,25 +1,18 @@
 package com.example.projeto.domain.services;
 
 import com.example.projeto.domain.models.*;
+import com.example.projeto.domain.repositories.ProductRepository;
 import com.example.projeto.domain.repositories.ReviewRepository;
 import com.example.projeto.domain.repositories.VoteRepository;
 import com.example.projeto.rabbitmq.Votes2COMSender;
 import com.example.projeto.utils.Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.util.Optional;
 
 @Service
 public class VoteServiceImpl implements VoteService{
@@ -29,6 +22,9 @@ public class VoteServiceImpl implements VoteService{
 
     @Autowired
     private ReviewRepository reviewRepository;
+
+    @Autowired
+    private ProductRepository productRepository;
 
     @Autowired
     private Votes2COMSender votes2COMSender;
@@ -48,10 +44,21 @@ public class VoteServiceImpl implements VoteService{
     public void create(VoteDTO newVote){
         boolean voteIsPresent = voteRepository.existsById(newVote.voteId);
         if(voteIsPresent == false) {
-            Vote v = new Vote(newVote.getVote(), newVote.getReason());
-            v.setUserId(newVote.getUserID());
-            v.setReviewId(newVote.getReviewID());
-            voteRepository.save(v);
+            final var optionalReview = reviewRepository.findReviewById(newVote.getReviewID());
+            if (optionalReview.isPresent()) {
+                Review review = optionalReview.get();
+                if (review.getStatus() == Status.PENDING) {
+                    Vote v = new Vote(newVote.getVote(), newVote.getReason());
+                    v.setUserId(newVote.getUserID());
+                    v.setReviewId(newVote.getReviewID());
+                    v.setStatus(Status.PENDING);
+                    voteRepository.save(v);
+                }
+                Vote v = new Vote(newVote.getVote(), newVote.getReason());
+                v.setUserId(newVote.getUserID());
+                v.setReviewId(newVote.getReviewID());
+                voteRepository.save(v);
+            }
         }
     }
 
@@ -65,13 +72,33 @@ public class VoteServiceImpl implements VoteService{
                 newVote.setUserId(utils.getUserIdByToken(request));
                 newVote.setReviewId(reviewId);
                 final var vote = create(newVote);
-                VoteDTO voteDTO = new VoteDTO(vote.getVoteId(),vote.getUserId(), vote.getReviewId(), vote.getVote(), vote.getReason());
+                VoteDTO voteDTO = new VoteDTO(vote.getVoteId(),vote.getUserId(), vote.getReviewId(), vote.getVote(), vote.getReason(), vote.getStatus());
                 votes2COMSender.send(voteDTO);
                 return voteDTO;
             }
             throw new ResponseStatusException(HttpStatus.UNPROCESSABLE_ENTITY, "Review not APPROVED");
         }
         throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Review not found!");
+    }
+
+    @Override
+    public VoteDTO voteSKU(String sku, HttpServletRequest request, Vote newVote) throws IOException, InterruptedException {
+        boolean productIsPresent = productIsPresent(sku);
+        if (productIsPresent == true) {
+            Review review = new Review(sku, 0, "");
+            reviewRepository.save(review);
+            ReviewDTO reviewDTO = new ReviewDTO(review.getReviewId(), review.getSku(), review.getRating(), review.getText(), review.getPublishingDate(), review.getFunFact());
+            votes2COMSender.sendReview(reviewDTO);
+
+            newVote.setUserId(utils.getUserIdByToken(request));
+            newVote.setReviewId(review.getReviewId());
+            newVote.setStatus(Status.PENDING);
+            final var vote = create(newVote);
+            VoteDTO voteDTO = new VoteDTO(vote.getVoteId(),vote.getUserId(), vote.getReviewId(), vote.getVote(), vote.getReason(), vote.getStatus());
+            votes2COMSender.send(voteDTO);
+            return voteDTO;
+        }
+        throw new ResponseStatusException(HttpStatus.UNPROCESSABLE_ENTITY, "Product not found!");
     }
 
     public boolean reviewIsPresent(Long reviewId) {
@@ -82,10 +109,24 @@ public class VoteServiceImpl implements VoteService{
         return false;
     }
 
+    public boolean productIsPresent(String sku) {
+        final var optionalProduct = productRepository.findBySku(sku);
+        if(optionalProduct.isPresent()){
+            return true;
+        }
+        return false;
+    }
+
     @Override
     public Review create(ReviewDTO newReviewDTO) throws IOException {
         Review review = new Review(newReviewDTO.getSku(),newReviewDTO.getRating(),newReviewDTO.getText());
         return reviewRepository.save(review);
+    }
+
+    @Override
+    public Product create(ProductDTO newProductDTO) throws IOException {
+        Product product = new Product(newProductDTO.getDesignation(), newProductDTO.getDescription(), newProductDTO.getSku());
+        return productRepository.save(product);
     }
 
     @Override

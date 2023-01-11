@@ -179,8 +179,16 @@ public class ReviewServiceImpl implements ReviewService{
 
     @Override
     public void create(VoteDTO newVote){
-        boolean voteIsPresent = voteRepository.existsById(newVote.voteId);
-        if(voteIsPresent == false) {
+        final var optionalReview = reviewRepository.findReviewById(newVote.getReviewID());
+        if (optionalReview.isPresent()) {
+            Review review = optionalReview.get();
+            if (review.getStatus() == Status.PENDING) {
+                Vote v = new Vote(newVote.getVote(), newVote.getReason());
+                v.setUserId(newVote.getUserID());
+                v.setReviewId(newVote.getReviewID());
+                v.setStatus(Status.PENDING);
+                voteRepository.save(v);
+            }
             Vote v = new Vote(newVote.getVote(), newVote.getReason());
             v.setUserId(newVote.getUserID());
             v.setReviewId(newVote.getReviewID());

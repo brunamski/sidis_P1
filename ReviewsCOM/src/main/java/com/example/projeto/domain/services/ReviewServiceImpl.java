@@ -6,28 +6,14 @@ import com.example.projeto.domain.repositories.ReviewRepository;
 import com.example.projeto.domain.repositories.VoteRepository;
 import com.example.projeto.rabbitmq.ReviewsCOMSender;
 import com.example.projeto.utils.Utils;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import io.swagger.v3.oas.annotations.Parameter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
 import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
 import java.util.Optional;
 
 
@@ -110,7 +96,7 @@ public class ReviewServiceImpl implements ReviewService{
         // first let's check if the object exists so we don't create a new object with
         // save
         final var rev = reviewRepository.findById(review.getReviewId())
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Review Not Found"));
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.UNPROCESSABLE_ENTITY, "Review Not Found"));
 
         // since we got the object from the database we can check the version in memory
         // and apply the patch
@@ -125,7 +111,7 @@ public class ReviewServiceImpl implements ReviewService{
     @Override
     public Review partialUpdateDTO(final ReviewDTOStatus review) {
         final var rev = reviewRepository.findById(review.getReviewId())
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Review Not Found"));
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.UNPROCESSABLE_ENTITY, "Review Not Found"));
         rev.applyPatchDTO(review);
         return reviewRepository.save(rev);
     }
@@ -149,9 +135,17 @@ public class ReviewServiceImpl implements ReviewService{
     }
 
     @Override
-    public void create(VoteDTO newVote){
-        boolean voteIsPresent = voteRepository.existsById(newVote.voteId);
-        if(voteIsPresent == false) {
+    public void create(VoteDTO newVote) {
+        final var optionalReview = reviewRepository.findReviewById(newVote.getReviewID());
+        if (optionalReview.isPresent()) {
+            Review review = optionalReview.get();
+            if (review.getStatus() == Status.PENDING) {
+                Vote v = new Vote(newVote.getVote(), newVote.getReason());
+                v.setUserId(newVote.getUserID());
+                v.setReviewId(newVote.getReviewID());
+                v.setStatus(Status.PENDING);
+                voteRepository.save(v);
+            }
             Vote v = new Vote(newVote.getVote(), newVote.getReason());
             v.setUserId(newVote.getUserID());
             v.setReviewId(newVote.getReviewID());

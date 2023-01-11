@@ -15,6 +15,16 @@ import org.springframework.context.annotation.Configuration;
 public class RabbitConfig {
 
     @Bean
+    public Queue autoDeleteQueue1() {
+        return new AnonymousQueue();
+    }
+
+    @Bean
+    public FanoutExchange fanout() {
+        return new FanoutExchange("products_create");
+    }
+
+    @Bean
     public Queue autoDeleteQueue2() {
         return new AnonymousQueue();
     }
@@ -52,6 +62,12 @@ public class RabbitConfig {
     @Bean
     public FanoutExchange votesFanout() {
         return new FanoutExchange("votes_create");
+    }
+
+    @Bean
+    public Binding binding1(FanoutExchange fanout,
+                            Queue autoDeleteQueue1) {
+        return BindingBuilder.bind(autoDeleteQueue1).to(fanout);
     }
 
     @Bean
@@ -101,6 +117,22 @@ public class RabbitConfig {
         return new Votes2COMSender();
     }
 
+
+    @Bean
+    public Queue queueReceiver(){
+        return new Queue("rpc_prod_receiver");
+    }
+
+    @Bean
+    public DirectExchange directExchange(){
+        return new DirectExchange("rpc_prod");
+    }
+
+    @Bean
+    public Binding bindingReceiver(DirectExchange directExchange, Queue queueReceiver){
+        return BindingBuilder.bind(queueReceiver).to(directExchange).with("key");
+    }
+
     @Bean
     public Queue queueReceiver2(){
         return new Queue("rpc_rev_receiver");
@@ -115,8 +147,6 @@ public class RabbitConfig {
     public Binding bindingReceiver2(DirectExchange directExchange2, Queue queueReceiver2){
         return BindingBuilder.bind(queueReceiver2).to(directExchange2).with("key");
     }
-
-
 
     @Bean
     public Queue queueReceiver3(){

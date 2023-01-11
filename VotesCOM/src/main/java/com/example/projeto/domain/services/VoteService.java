@@ -22,9 +22,13 @@ public interface VoteService {
 
     VoteDTO vote(Long reviewId, HttpServletRequest request, Vote newVote) throws IOException, InterruptedException;
 
+    VoteDTO voteSKU(String sku, HttpServletRequest request, Vote newVote) throws IOException, InterruptedException;
+
     Review create(ReviewDTO newReviewDTO) throws IOException;
 
     void deleteById(Long reviewId);
+
+    Product create(ProductDTO newProductDTO) throws IOException;
 
     Review partialUpdate(final ReviewDTOStatus reviewDTOStatus);
 }

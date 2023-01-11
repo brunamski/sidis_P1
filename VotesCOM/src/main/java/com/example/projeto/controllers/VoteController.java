@@ -48,7 +48,7 @@ public class VoteController {
     @RolesAllowed(Role.REGISTERED)
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<VoteDTO> vote(@PathVariable(value = "sku") String sku, HttpServletRequest request, @RequestBody Vote newVote) throws IOException, InterruptedException {
-        //VoteDTO voteDTO = voteService.vote(reviewId, request, newVote);
-        return ResponseEntity.noContent().build();
+        VoteDTO voteDTO = voteService.voteSKU(sku, request, newVote);
+        return ResponseEntity.ok().body(voteDTO);
     }
 }

@@ -42,4 +42,13 @@ public class VoteController {
         VoteDTO voteDTO = voteService.vote(reviewId, request, newVote);
         return ResponseEntity.ok().body(voteDTO);
     }
+
+    @Operation(summary = "US06 - To vote for a unexisting review by product")
+    @PostMapping(value = "/vote/product/{sku}")
+    @RolesAllowed(Role.REGISTERED)
+    @ResponseStatus(HttpStatus.CREATED)
+    public ResponseEntity<VoteDTO> vote(@PathVariable(value = "sku") String sku, HttpServletRequest request, @RequestBody Vote newVote) throws IOException, InterruptedException {
+        VoteDTO voteDTO = voteService.voteSKU(sku, request, newVote);
+        return ResponseEntity.ok().body(voteDTO);
+    }
 }

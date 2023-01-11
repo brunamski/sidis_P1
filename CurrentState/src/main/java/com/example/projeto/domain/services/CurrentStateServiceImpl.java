@@ -82,7 +82,7 @@ public class CurrentStateServiceImpl implements CurrentStateService {
         Iterable<Vote> voteList = voteRepository.findAll();
         List<VoteDTO> voteDTOList = new ArrayList();
         for (Vote v : voteList) {
-            VoteDTO voteDTO = new VoteDTO(v.getVoteId(), v.getUserId(), v.getReviewId(), v.getVote(), v.getReason());
+            VoteDTO voteDTO = new VoteDTO(v.getVoteId(), v.getUserId(), v.getReviewId(), v.getVote(), v.getReason(), v.getStatus());
             voteDTOList.add(voteDTO);
         }
         return voteDTOList;

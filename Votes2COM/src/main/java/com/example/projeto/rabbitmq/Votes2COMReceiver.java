@@ -21,7 +21,7 @@ public class Votes2COMReceiver {
     }
 
     @RabbitListener(queues = "#{autoDeleteQueue2.name}")
-    public void receiver(ReviewDTO r) throws IOException {
+    public void receiverRev(ReviewDTO r) throws IOException {
         voteService.create(r);
         System.out.println(" [x] Received '" + r + "'");
     }
@@ -36,5 +36,11 @@ public class Votes2COMReceiver {
     public void receiverUpdate(ReviewDTOStatus r) throws IOException {
         voteService.partialUpdate(r);
         System.out.println(" [x] Updated review '" + r + "'");
+    }
+
+    @RabbitListener(queues = "#{autoDeleteQueue1.name}")
+    public void receiverProd(ProductDTO p) throws IOException {
+        voteService.create(p);
+        System.out.println(" [x] Received '" + p + "'");
     }
 }

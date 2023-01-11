@@ -15,18 +15,21 @@ public class VoteDTO {
     public Long reviewID;
     public Boolean vote;
     public String reason;
+    public Status status;
 
-    public VoteDTO() {}
+    public VoteDTO(){}
 
-    public VoteDTO(   Long voteId,
-                      Long userId,
-                      Long reviewID,
-                      Boolean vote,
-                      String reason){
+    public VoteDTO(Long voteId,
+                   Long userId,
+                   Long reviewID,
+                   Boolean vote,
+                   String reason,
+                   Status status){
         this.voteId = voteId;
         this.userID = userId;
         this.reviewID = reviewID;
         this.vote = vote;
         this.reason = reason;
+        this.status = status;
     }
 }
