@@ -119,8 +119,12 @@ public class VoteServiceImpl implements VoteService{
 
     @Override
     public Review create(ReviewDTO newReviewDTO) throws IOException {
-        Review review = new Review(newReviewDTO.getSku(),newReviewDTO.getRating(),newReviewDTO.getText());
-        return reviewRepository.save(review);
+        boolean checkReview = reviewRepository.existsById(newReviewDTO.getReviewId());
+        if (checkReview == false) {
+            Review review = new Review(newReviewDTO.getSku(), newReviewDTO.getRating(), newReviewDTO.getText());
+            return reviewRepository.save(review);
+        }
+        return null;
     }
 
     @Override

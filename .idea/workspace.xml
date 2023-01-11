@@ -6,42 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cad0091b-81f1-4e58-8d71-4f09ebfdfedf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CurrentState/src/main/java/com/example/projeto/domain/models/Vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/CurrentState/src/main/java/com/example/projeto/domain/models/Vote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CurrentState/src/main/java/com/example/projeto/domain/models/VoteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/CurrentState/src/main/java/com/example/projeto/domain/models/VoteDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CurrentState/src/main/java/com/example/projeto/domain/services/CurrentStateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/CurrentState/src/main/java/com/example/projeto/domain/services/CurrentStateServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CurrentState/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/CurrentState/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/domain/models/Vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/domain/models/Vote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/domain/models/VoteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/domain/models/VoteDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/domain/models/Vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/domain/models/Vote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/domain/models/VoteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/domain/models/VoteDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/domain/models/Vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/domain/models/Vote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/domain/models/VoteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/domain/models/VoteDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/domain/models/Vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/domain/models/Vote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/domain/models/VoteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/domain/models/VoteDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/domain/services/ReviewServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/controllers/VoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/controllers/VoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/models/Vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/models/Vote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/models/VoteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/models/VoteDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/services/VoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/services/VoteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/RPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/RPC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/Votes2COMReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/Votes2COMReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/Votes2COMSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/rabbitmq/Votes2COMSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/controllers/VoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/controllers/VoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/models/Vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/models/Vote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/models/VoteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/models/VoteDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/services/VoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/services/VoteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/RPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/RPC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/RabbitConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/VotesCOMReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/VotesCOMReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/VotesCOMSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/rabbitmq/VotesCOMSender.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +47,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/domain/models" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../1201164_1201171_1220393_sidis" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -100,7 +64,7 @@
       <recent name="com.example.projeto.bootstrap" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.VotesCOMApplication">
+  <component name="RunManager" selected="Spring Boot.Reviews2COMApplication">
     <configuration name="sidis_project" type="CompoundRunConfigurationType">
       <toRun name="AuthenticationApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="Products2COMApplication" type="SpringBootApplicationConfigurationType" />
@@ -270,7 +234,8 @@
       <workItem from="1673119493133" duration="5741000" />
       <workItem from="1673385217406" duration="5505000" />
       <workItem from="1673447140460" duration="467000" />
-      <workItem from="1673456366881" duration="8496000" />
+      <workItem from="1673456366881" duration="9108000" />
+      <workItem from="1673468893589" duration="2468000" />
     </task>
     <servers />
   </component>
