@@ -6,6 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="cad0091b-81f1-4e58-8d71-4f09ebfdfedf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/bootstrap/ProductBootstrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2COM/src/main/java/com/example/projeto/bootstrap/Bootstrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/bootstrap/ProductBootstrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Products2GET/src/main/java/com/example/projeto/bootstrap/Bootstrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/bootstrap/ProductBootstrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsCOM/src/main/java/com/example/projeto/bootstrap/Bootstrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsGET/src/main/java/com/example/projeto/bootstrap/ProductBootstrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsGET/src/main/java/com/example/projeto/bootstrap/Bootstrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/bootstrap/ProductBootstrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2COM/src/main/java/com/example/projeto/bootstrap/Bootstrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/bootstrap/ProductBootstrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews2GET/src/main/java/com/example/projeto/bootstrap/Bootstrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/bootstrap/ProductBootstrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsCOM/src/main/java/com/example/projeto/bootstrap/Bootstrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/bootstrap/ProductBootstrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewsGET/src/main/java/com/example/projeto/bootstrap/Bootstrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/bootstrap/ProductBootstrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Votes2COM/src/main/java/com/example/projeto/bootstrap/Bootstrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/bootstrap/ProductBootstrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/bootstrap/Bootstrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/VotesCOM/src/main/java/com/example/projeto/domain/services/VoteServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +75,7 @@
       <recent name="com.example.projeto.bootstrap" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Reviews2COMApplication">
+  <component name="RunManager" selected="Spring Boot.VotesCOMApplication">
     <configuration name="sidis_project" type="CompoundRunConfigurationType">
       <toRun name="AuthenticationApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="Products2COMApplication" type="SpringBootApplicationConfigurationType" />
@@ -235,7 +246,7 @@
       <workItem from="1673385217406" duration="5505000" />
       <workItem from="1673447140460" duration="467000" />
       <workItem from="1673456366881" duration="9108000" />
-      <workItem from="1673468893589" duration="2468000" />
+      <workItem from="1673468893589" duration="4802000" />
     </task>
     <servers />
   </component>

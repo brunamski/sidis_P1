@@ -11,13 +11,12 @@ import java.io.IOException;
 
 @Component
 @Profile("bootstrap")
-public class ProductBootstrapper implements CommandLineRunner {
+public class Bootstrapper implements CommandLineRunner {
 
     @Autowired
     private RPC rpc;
 
     @Override
-    @Scheduled(fixedDelay = 1000, initialDelay = 500)
     public void run(String... args) throws IOException {
         rpc.helper();
     }
